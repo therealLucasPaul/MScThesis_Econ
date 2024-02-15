@@ -1,0 +1,112 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[
+	left 	= 2.54cm,
+	right 	= 2.54cm, 
+	top 		= 2.54cm,
+	bottom 	= 2.54cm,
+]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource[]{ref.bib}
+\addbibresource[]{DevEcon_Project.txt}
+\renewcommand{\baselinestretch}{1.25} 
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	colorlinks = true,
+	urlcolor   = blue,
+	linkcolor  = black, 
+	citecolor  = blue, 
+}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\slshape Unterweger}
+\chead{}
+\rhead{\slshape \nouppercase{\leftmark}}
+
+\usepackage{titlesec,xcolor}
+\titleformat{\section}{\bfseries}{\thesection}{0.5em}{}
+\titlespacing{\section}{0pt}{3ex plus 1ex minus 0.2ex}{10pt}
+\setlength{\headheight}{14.49998pt}
+
+\usepackage{titlesec,xcolor}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing{\subsection}{0pt}{3ex plus 1ex minus 0.2ex}{10pt}
+\setlength{\headheight}{14.49998pt}
+
+
+%------------------------------------------------------------------%
+
+\author{Lucas Paul Unterweger}
+\title{On the Duality of Frequentist Point Estimates and Bayesian Shrinkage Priors: An Extension based on the Triple-Gamma-Prior}
+
+
+\begin{document}
+
+\begin{titlepage}
+\center
+\vfill
+\includegraphics[scale=0.1]{WU.png}
+\vfill
+\begin{tabular}[t]{lc}
+Student-ID:  & 11913169 \\
+Degree Program: & 
+Master of Science in Economics (Science Track) \\
+Examiner: & Peter Knaus, PhD \\
+Submission date: & TBA \\
+\end{tabular}
+\vfill
+{\large \textbf{On the Duality of Frequentist Point Estimates and Bayesian Shrinkage Priors}\\
+\normalsize \textit{An Extension based on the Triple-Gamma-Prior}}
+\vfill
+by\\ \vspace{3mm}
+{\Large Lucas Unterweger \href{https://github.com/therealLucasPaul}{\includegraphics[scale=0.01]{GitHub.png}}}\\
+(Student-ID: 11913169)\\
+\vfill
+
+\thispagestyle{empty}
+\pagebreak
+\end{titlepage}
+\newcounter{savepage}
+\pagenumbering{roman}
+\thispagestyle{empty}
+
+\begin{abstract}
+Lorem ipsum...
+\end{abstract}
+
+\clearpage
+\thispagestyle{plain}
+\tableofcontents
+\pagebreak
+\setcounter{savepage}{\arabic{page}}
+\pagenumbering{arabic}
+
+\pagebreak
+\section{Introduction}
+\section{Theoretical Section}
+\section{Simulation Section}
+
+\pagebreak
+\pagenumbering{roman}
+\setcounter{page}{\thesavepage}
+\pagestyle{plain}
+\addcontentsline{toc}{section}{References}
+%\bibliographystyle{apalike}
+%\bibliography{ref.bib}
+\printbibliography[]
+\clearpage
+\appendix
+\end{document}
