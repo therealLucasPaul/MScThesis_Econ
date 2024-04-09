@@ -16,5 +16,164 @@
   {}
 \endgroup
 
+
+\refsection{0}
+  \datalist[entry]{apa/apasortcite//global/global}
+    \entry{TGP2020}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=77d9dfbba2e075ba7c86c1cba3f09301}{%
+           family={Cadonna},
+           familyi={C\bibinitperiod},
+           given={Annalisa},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83485dfde2678ca0bd6138144fcfe9ff}{%
+           family={Frühwirth-Schnatter},
+           familyi={F\bibinithyphendelim S\bibinitperiod},
+           given={Sylvia},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=71ef178c5c96a28a8cc0b2c039f28c4d}{%
+           family={Knaus},
+           familyi={K\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6bda8ea8fffb9db40938e55fae540ade}
+      \strng{fullhash}{720189161339c81ffba130b3cc17e40a}
+      \strng{bibnamehash}{720189161339c81ffba130b3cc17e40a}
+      \strng{authorbibnamehash}{720189161339c81ffba130b3cc17e40a}
+      \strng{authornamehash}{6bda8ea8fffb9db40938e55fae540ade}
+      \strng{authorfullhash}{720189161339c81ffba130b3cc17e40a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2225-1146}
+      \field{journaltitle}{Econometrics}
+      \field{number}{2}
+      \field{title}{Triple the gamma—a unifying shrinkage prior for variance and variable selection in sparse state space and TVP models}
+      \field{type}{Journal Article}
+      \field{volume}{8}
+      \field{year}{2020}
+      \field{pages}{20}
+      \range{pages}{1}
+    \endentry
+    \entry{Lazar2010}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=94450007bdafc0aa147d307f4416ba81}{%
+           family={Lazar},
+           familyi={L\bibinitperiod},
+           given={Nicole},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{94450007bdafc0aa147d307f4416ba81}
+      \strng{fullhash}{94450007bdafc0aa147d307f4416ba81}
+      \strng{bibnamehash}{94450007bdafc0aa147d307f4416ba81}
+      \strng{authorbibnamehash}{94450007bdafc0aa147d307f4416ba81}
+      \strng{authornamehash}{94450007bdafc0aa147d307f4416ba81}
+      \strng{authorfullhash}{94450007bdafc0aa147d307f4416ba81}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1939-5108}
+      \field{journaltitle}{Wiley Interdisciplinary Reviews: Computational Statistics}
+      \field{number}{2}
+      \field{title}{Ockham's razor}
+      \field{type}{Journal Article}
+      \field{volume}{2}
+      \field{year}{2010}
+      \field{pages}{243\bibrangedash 246}
+      \range{pages}{4}
+    \endentry
+  \enddatalist
+  \datalist[entry]{apa/global//global/global}
+    \entry{TGP2020}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=77d9dfbba2e075ba7c86c1cba3f09301}{%
+           family={Cadonna},
+           familyi={C\bibinitperiod},
+           given={Annalisa},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83485dfde2678ca0bd6138144fcfe9ff}{%
+           family={Frühwirth-Schnatter},
+           familyi={F\bibinithyphendelim S\bibinitperiod},
+           given={Sylvia},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=71ef178c5c96a28a8cc0b2c039f28c4d}{%
+           family={Knaus},
+           familyi={K\bibinitperiod},
+           given={Peter},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{6bda8ea8fffb9db40938e55fae540ade}
+      \strng{fullhash}{720189161339c81ffba130b3cc17e40a}
+      \strng{bibnamehash}{720189161339c81ffba130b3cc17e40a}
+      \strng{authorbibnamehash}{720189161339c81ffba130b3cc17e40a}
+      \strng{authornamehash}{6bda8ea8fffb9db40938e55fae540ade}
+      \strng{authorfullhash}{720189161339c81ffba130b3cc17e40a}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2225-1146}
+      \field{journaltitle}{Econometrics}
+      \field{number}{2}
+      \field{title}{Triple the gamma—a unifying shrinkage prior for variance and variable selection in sparse state space and TVP models}
+      \field{type}{Journal Article}
+      \field{volume}{8}
+      \field{year}{2020}
+      \field{pages}{20}
+      \range{pages}{1}
+    \endentry
+    \entry{Lazar2010}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=94450007bdafc0aa147d307f4416ba81}{%
+           family={Lazar},
+           familyi={L\bibinitperiod},
+           given={Nicole},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{94450007bdafc0aa147d307f4416ba81}
+      \strng{fullhash}{94450007bdafc0aa147d307f4416ba81}
+      \strng{bibnamehash}{94450007bdafc0aa147d307f4416ba81}
+      \strng{authorbibnamehash}{94450007bdafc0aa147d307f4416ba81}
+      \strng{authornamehash}{94450007bdafc0aa147d307f4416ba81}
+      \strng{authorfullhash}{94450007bdafc0aa147d307f4416ba81}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1939-5108}
+      \field{journaltitle}{Wiley Interdisciplinary Reviews: Computational Statistics}
+      \field{number}{2}
+      \field{title}{Ockham's razor}
+      \field{type}{Journal Article}
+      \field{volume}{2}
+      \field{year}{2010}
+      \field{pages}{243\bibrangedash 246}
+      \range{pages}{4}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

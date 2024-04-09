@@ -15,6 +15,7 @@
 \usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{caption}
+\usepackage{amssymb}
 
 \usepackage[style=apa, backend=biber]{biblatex}
 \addbibresource[]{ref.bib}
@@ -46,6 +47,13 @@
 \titlespacing{\subsection}{0pt}{3ex plus 1ex minus 0.2ex}{10pt}
 \setlength{\headheight}{14.49998pt}
 
+%% Command Overrides
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+\newcommand{\MC}{\textbf{(Missing Citation)}} %Command to signal missing citations
+
+
 
 %------------------------------------------------------------------%
 
@@ -68,7 +76,7 @@ Examiner: & Peter Knaus, PhD \\
 Submission date: & TBA \\
 \end{tabular}
 \vfill
-{\large \textbf{On the Duality of Frequentist Point Estimates and Bayesian Shrinkage Priors}\\
+{\large \textbf{Triple-Gamma-Regularization} \textit{or}\\ \textbf{On the Duality of Frequentist Point Estimates and Bayesian Shrinkage Priors}\\
 \normalsize \textit{An Extension based on the Triple-Gamma-Prior}}
 \vfill
 by\\ \vspace{3mm}
@@ -97,7 +105,7 @@ Lorem ipsum...
 \pagebreak
 %----- Introduction -----
 \section{Introduction}
-
+Willam of Ockham, born in Ockham, Surrey, probably lived between 1287 and 1348 and is nowadays recognized as a pre-eminent philosopher of the middle ages. Although     his name itself is no common knowledge, a principle carrying his name is: \textit{Ockham's Razor}. Interestingly, the main formulation of the principle (\textit{Entia non sunt multiplicanda praeter necessitatem} [plurality should not be posited without necessity]) can not be traced back to Ockham directly, but variations of it can be found in Ockham's writings. Since then nonetheless, the principle has long been used by statisticians and other researchers as a a scientific credo to capture the notion that "the simpler of two explanations is to be preferred" \parencite{Lazar2010}.  
 %----- Literature Review -----
 \section{Literature Review}
 \subsection{Bayesian View}
@@ -112,9 +120,87 @@ Lorem ipsum...
 \subsubsection{Shrinkage Priors}
 \subsection{Duality of the Ridge Regression}
 %----- Model Setup and Derivation
+\newpage
 \section{Model Setup and Derivation}
-Mathematical derivation of TGP into frequentist view?
+Coming to the theoretical framework of the \textit{triple-gamma-regularization}, let's assume we have a response variable $y$ and $p$ predictors along with $n$ data points. More formally, let $y=[y_1  \quad y_2 \cdots y_n]^T$ and $x_i = [x_{i1} \quad x_{i2} \cdots x_{in}]^T$ with $\forall i\in \{1,...,n\}: y_i, x_i \in \mathbb{R}$. Here, $x_i$ is the $i$-th predictor, thus resulting in the design matrix $X = [x_1 \quad x_2 \cdots x_p]$. \\
 
+Starting from the Bayesian framework, the standard linear regression model is given by
+\[
+y_i = x_i^T\cdot \beta + \varepsilon_i \quad i\in \{1,...,n\} 
+\]
+with the assumed distribution of $\varepsilon_i \sim N(0,\sigma^2)$. Thus it follows that $y\sim N_n(X\beta,\sigma^2I)$. The posterior distribution of the parameter vector $\beta$, according to Bayes' Rule, is then proportional to the product of the likelihood of the data and the prior distribution, which can be seen in equation \ref{eq:bayes}.
+\begin{equation}\label{eq:bayes}
+p(\beta|y, X, \sigma^2) \propto \mathcal{L}(y|\beta, \sigma^2, X)\times p(\beta)
+\end{equation}	
+
+As stated above, each data point $y_i$ is assumed to be identically and independently drawn from a normal distribution with mean $X\beta$ and variance $\sigma_i^2$, thus:
+\begin{align}
+\mathcal{L}(\mathbf{y}|\beta, \sigma^2, X) 	&= \prod_i^n p(y_i|\beta, \sigma^2, X_i) \nonumber\\
+						&= \prod_i^n \frac{1}{\sqrt{2\pi\sigma^2}} \exp\left(-\frac{1}{2}\left(\frac{x_i-\mu}{\sigma}\right)^2\right) \nonumber\\
+						&= \frac{1}{(2\pi\sigma^2)^{n/2}}\exp\left(-\frac{1}{2\sigma^2}(\mathbf{y}-\mathbf{X}\beta)^\top(\mathbf{y}-\mathbf{X}\beta)\right) \label{eq:likelihood}
+\end{align}
+
+The log of the likelihood function is then given by 
+\begin{align*}
+\log \mathcal{L}( \mathbf{y} |\beta, \sigma^2 , \mathbf{X}) &= \log \left( \frac{1}{(2\pi\sigma^2)^{n/2}} \exp\left(-\frac{1}{2\sigma^2} (\mathbf{y} - \mathbf{X}\beta)^\top (\mathbf{y} - \mathbf{X}\beta)\right) \right) \\
+&= \log \left( \frac{1}{(2\pi\sigma^2)^{n/2}} \right) + \log \exp\left(-\frac{1}{2\sigma^2} (\mathbf{y} - \mathbf{X}\beta)^\top (\mathbf{y} - \mathbf{X}\beta)\right) \\
+&= -\frac{n}{2} \log(2\pi\sigma^2) - \frac{1}{2\sigma^2} (\mathbf{y} - \mathbf{X}\beta)^\top (\mathbf{y} - \mathbf{X}\beta)\\
+&\propto - \frac{1}{2\sigma^2} (\mathbf{y} - \mathbf{X}\beta)^\top (\mathbf{y} - \mathbf{X}\beta) = - \frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2\\
+\end{align*}
+
+The marginal prior distribution for the parameter vector $\beta$ stems from the Triple-Gamma-Prior constructed in \textcite{TGP2020} given in formula Theorem 1 (a) and is given by
+\begin{align*}
+p(\sqrt{\beta_j}|\phi^\xi, a^\xi, c^\xi) &= \frac{\Gamma(c^\xi + \frac{1}{2})}{\sqrt{2\pi \phi^\xi}\cdot B(a^\xi, c^\xi)}\cdot U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right)\\
+&\propto U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right)
+\end{align*}
+As this prior is specified for the parameter $\sqrt{\beta_j}$, we transform the prior by squaring the parameter to gain
+\begin{align*}
+p(\beta_j|\phi^\xi, a^\xi, c^\xi) &\propto U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right)
+\end{align*}
+Now, assuming that the parameters are independent a priori, the prior distribution is given by
+\begin{align}
+p(\beta) 	&= \prod_j^p p(\beta_j) \nonumber\\
+			&= \prod_j^p p(\beta_j|\phi^\xi, a^\xi, c^\xi) \nonumber\\
+			&\propto \prod_j^p U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right) \nonumber\\
+			&= \prod_j^p \frac{1}{\Gamma(c^\xi + \frac{1}{2})}\int_0^\infty e^{-(\frac{\beta_j^2}{2\phi^\xi})t}t^{c^\xi + \frac{1}{2}-1}(1+t)^{\frac{3}{2}-a^\xi-c^\xi + \frac{1}{2}-1}dt \nonumber\\
+			&\propto \prod_j^p \int_0^\infty \exp\left(-\frac{\beta_j^2}{2\phi^\xi}t\right)t^{c^\xi - \frac{1}{2}}(1+t)^{1-a^\xi-c^\xi} dt \label{eq:prior}
+\end{align}
+
+Here, in line 1 the assumption of independence between the parameters has been used to describe the distribution of the parameter vector as the product of its individual parameter distributions. In line 2, the marginal prior from \textcite{TGP2020} has been used as the prior distribution for each individual parameter $\beta_j$. In line 3, scaling parameters have been removed by using the proportionality assumption. The last two lines of the derivation insert the definition of the confluent hyper-geometric function of the second kind and again apply proportionality.\\
+
+Taking the $\log$ of the prior distribution and using the properties of the logarithmic function yields the general result
+\[
+\log(p(\beta))=\log(\prod_j^p p(\beta_j|\phi^\xi, a^\xi, c^\xi))=\sum_j^p \log(p(\beta_j|\phi^\xi, a^\xi, c^\xi))
+\]
+
+A common approach to estimation in regularization settings is the \textit{maximum a posteriori probability (MAP)} estimator \MC ,which is defined as
+\[
+\hat{\beta}_{MAP}(x) = \underset{\beta \in \mathbb{R}^p}{\argmax}\left\{f(x|\beta)g(\beta)\right\}
+\]
+where $f(x|\beta)$ describes the the probability density function of a variable $x$, which is parametrized by the parameter vector $\beta$. The second function $g(\beta)$ incorporates our prior information about the parameter vector $\beta$ into the optimization problem.\\  
+
+Returning to our specific problem at hand, the posterior distribution of our parameter vector $\mathbf{\beta}$ can be retrieved by applying Bayes' theorem and the previously gained results in equations \ref{eq:prior} and \ref{eq:likelihood}. Thus, the posterior distribution of the parameter vector $\beta$ is proportional to
+\begin{align}
+p(\beta|y, X, \sigma^2) 	&\propto p(y|X,\beta,\sigma)\times p(\beta) \nonumber\\
+						&\propto \frac{1}{(2\pi\sigma^2)^{n/2}}e^{-\frac{1}{2\sigma^2}(y-X\beta)^T(y-X\beta)} \times \prod_j^p U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right)\label{eq:posterior}
+\end{align} 
+
+Making use of the monotonicity of the logarithmic function and seeing that it is easier to optimize the log-posterior, Taking the log of the posterior probability distribution, we take the log of result \ref{eq:posterior}. 
+\begin{align}
+\log(\beta| X, y, \sigma^2) 	&= \log\left(\frac{1}{(2\pi\sigma^2)^{n/2}}\right) - \frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2 + \log\left(\prod_j^p U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right)\right)\nonumber\\
+							&= \log\left(\frac{1}{(2\pi\sigma^2)^{n/2}}\right) - \frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2 + \sum_j^p \log\left(U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right)\right)\nonumber\\
+							&\propto -\frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2 + \sum_j^p \log\left(U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right)\right)\nonumber\\
+\end{align}
+By minimizing the negative log-posterior, we can retrieve the \textit{maximum a posteriori probability (MAP)} estimator using \textbf{Triple-Gamma-Regularization}:
+\begin{equation}
+\hat{\beta}_{MAP} = \underset{\beta \in \mathbb{R}^p}{\argmin} \left(\frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2 - \sum_j^p \log\left(U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right)\right)\right) 
+\end{equation}
+
+\newpage
+\textbf{BREAK}
+\begin{equation}
+U(a,b,z) = \frac{1}{\Gamma(a)}\int_0^\infty e^{-zt}t^{a-1}(1+t)^{b-a-1}dt
+\end{equation}
 %----- Simulation Section
 \section{Simulation Section}
 Use the earlier derivation, code up the functions and simulate data to check behaviour for different datasets. Compare to base OLS, Ridge and Lasso Regression?

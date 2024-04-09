@@ -1,0 +1,129 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[
+	left 	= 2.54cm,
+	right 	= 2.54cm, 
+	top 		= 2.54cm,
+	bottom 	= 2.54cm,
+]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{lscape}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{caption}
+
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource[]{ref.bib}
+\addbibresource[]{DevEcon_Project.txt}
+\renewcommand{\baselinestretch}{1.25} 
+
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+	colorlinks = true,
+	urlcolor   = blue,
+	linkcolor  = black, 
+	citecolor  = blue, 
+}
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{\slshape Unterweger}
+\chead{}
+\rhead{\slshape \nouppercase{\leftmark}}
+
+\usepackage{titlesec,xcolor}
+\titleformat{\section}{\bfseries}{\thesection}{0.5em}{}
+\titlespacing{\section}{0pt}{3ex plus 1ex minus 0.2ex}{10pt}
+\setlength{\headheight}{14.49998pt}
+
+\usepackage{titlesec,xcolor}
+\titleformat{\subsection}{\bfseries}{\thesubsection}{0.5em}{}
+\titlespacing{\subsection}{0pt}{3ex plus 1ex minus 0.2ex}{10pt}
+\setlength{\headheight}{14.49998pt}
+
+\author{Lucas Paul Unterweger}
+\title{Mathematical Notes MSc Thesis}
+\begin{document}
+\maketitle
+
+\section{Important Prior Distributions}
+
+\textbf{Normal Distribution}
+\[
+f(x|\mu, \sigma) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
+\]
+
+\textbf{Gamma Distribution}
+\begin{equation*}
+f(x|\alpha,\beta) = \frac{\beta^\alpha}{\Gamma(\alpha)} x^{\alpha-1} e^{-\beta x}, \quad x > 0
+\end{equation*}
+where $\alpha$ is the shape parameter, $\beta$ is the rate parameter, and $\Gamma(\cdot)$ is the gamma function.
+
+\textbf{Beta Distribution}
+\begin{equation*}
+f(x|a,b) = \frac{x^{a-1}(1-x)^{b-1}}{B(a,b)}
+\end{equation*}
+where $x \in [0,1]$, $a > 0$, $b > 0$, and $B(a,b)$ is the Beta function defined as:
+\begin{equation*}
+B(a,b) = \frac{\Gamma(a)\Gamma(b)}{\Gamma(a+b)}
+\end{equation*}
+where $\Gamma$ is the gamma function.\\
+
+\section{Other Functions}
+\textbf{Confluent Hyper-Geometrics Function of the second kind (Tricomi's (confluent hypergeometric) function)}
+\[
+U(a,b,z) = \frac{1}{\Gamma(a)}\int_0^\infty e^{-zt}t^{a-1}(1+t)^{b-a-1}dt
+\]
+\textbf{Marginal Prior with $\phi^\xi = \frac{2c^\xi}{\kappa_B^2a^\xi}$}
+\begin{align*}
+p(\sqrt{\theta_j}|\phi^\xi, a^\xi, c^\xi) &= \frac{\Gamma(c^\xi + \frac{1}{2})}{\sqrt{2\pi \phi^\xi}\cdot B(a^\xi, c^\xi)}\cdot U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\theta_j}{2\phi^\xi}\right)\\
+&\propto U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\theta_j}{2\phi^\xi}\right)
+\end{align*}
+
+
+
+\section{Bayesian Regression}
+Consider a Bayesian regression model where the relationship between the independent variable $x$ and the dependent variable $y$ is modeled as:
+\begin{equation*}
+y = \beta_0 + \beta_1 x + \epsilon
+\end{equation*}
+where $\epsilon$ is the error term assumed to follow a normal distribution with mean $0$ and variance $\sigma^2$.
+
+We assume the following conjugate prior distributions for the parameters:
+\begin{align*}
+\beta_0 & \sim \mathcal{N}(\mu_0, \tau_0^2) \\
+\beta_1 & \sim \mathcal{N}(\mu_1, \tau_1^2) \\
+\sigma^2 & \sim \text{Inv-Gamma}(\alpha, \beta)
+\end{align*}
+
+The likelihood function for the observed data $(x_i, y_i)$, $i = 1, \ldots, n$, is given by:
+\begin{equation*}
+L(\beta_0, \beta_1, \sigma^2 | x, y) = \prod_{i=1}^{n} f(y_i | \beta_0, \beta_1, x_i, \sigma^2)
+\end{equation*}
+where $f(y_i | \beta_0, \beta_1, x_i, \sigma^2)$ is the probability density function (PDF) of the normal distribution.
+
+The posterior distribution of the parameters, denoted as $\pi(\beta_0, \beta_1, \sigma^2 | x, y)$, is proportional to the product of the likelihood function and the prior distributions:
+\begin{equation*}
+\pi(\beta_0, \beta_1, \sigma^2 | x, y) \propto L(\beta_0, \beta_1, \sigma^2 | x, y) \times \pi(\beta_0) \times \pi(\beta_1) \times \pi(\sigma^2)
+\end{equation*}
+
+The maximum a posteriori (MAP) estimation involves maximizing the log-posterior function:
+\begin{equation*}
+\ell(\beta_0, \beta_1, \sigma^2 | x, y) = \sum_{i=1}^{n} \log f(y_i | \beta_0, \beta_1, x_i, \sigma^2) + \log \pi(\beta_0) + \log \pi(\beta_1) + \log \pi(\sigma^2)
+\end{equation*}
+with respect to the parameters $\beta_0$, $\beta_1$, and $\sigma^2$.
+
+The estimates of the parameters, denoted as $\hat{\beta}_0$, $\hat{\beta}_1$, and $\hat{\sigma}^2$, can be obtained by maximizing the log-posterior function.
+
+\newpage
+
+\section{Derviation Idea}
+\begin{equation*}
+post(\beta, \sigma^2 | x, y) \propto L(\beta, \sigma^2 | x, y) \times prior(\beta, \sigma^2)
+\end{equation*}
+\end{document}

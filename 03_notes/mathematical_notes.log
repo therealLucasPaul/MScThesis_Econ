@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.15)  9 APR 2024 17:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.15)  3 APR 2024 13:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**./MScThesis_Econ.tex
-(MScThesis_Econ.tex
+**./mathematical_notes.tex
+(mathematical_notes.tex
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
 (C:\Program Files\MiKTeX 2.9\tex/latex/base\article.cls
@@ -254,17 +254,6 @@ Package caption Info: Standard document class detected.
 \c@caption@flags=\count285
 \c@continuedfloat=\count286
 )
-(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-))
 (C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
 
@@ -678,7 +667,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip81
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 31.
+Package hyperref Info: Option `colorlinks' set `true' on input line 30.
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
@@ -730,27 +719,27 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 
 \@quotelevel=\count436
 \@quotereset=\count437
-(MScThesis_Econ.aux)
-\openout1 = `MScThesis_Econ.aux'.
+(mathematical_notes.aux)
+\openout1 = `mathematical_notes.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 64.
-LaTeX Font Info:    ... okay on input line 64.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -840,115 +829,61 @@ File: english.lbx 2023/03/05 v3.19 biblatex localization (PK/MW)
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
 (biblatex)             Assuming data encoding 'utf8'.
-\openout3 = `MScThesis_Econ.bcf'.
+\openout3 = `mathematical_notes.bcf'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'MScThesis_Econ.bbl' found.
+Package biblatex Info: ... file 'mathematical_notes.bbl' found.
 
-(MScThesis_Econ.bbl)
-Package biblatex Info: Reference section=0 on input line 64.
-Package biblatex Info: Reference segment=0 on input line 64.
-Package hyperref Info: Link coloring ON on input line 64.
- (MScThesis_Econ.out) (MScThesis_Econ.out)
+(mathematical_notes.bbl)
+Package biblatex Info: Reference section=0 on input line 51.
+Package biblatex Info: Reference segment=0 on input line 51.
+Package hyperref Info: Link coloring ON on input line 51.
+ (mathematical_notes.out) (mathematical_notes.out)
 \@outlinefile=\write4
-\openout4 = `MScThesis_Econ.out'.
-
-<WU.png, id=82, 2007.5pt x 1039.885pt>
-File: WU.png Graphic file (type png)
-<use WU.png>
-Package pdftex.def Info: WU.png  used on input line 69.
-(pdftex.def)             Requested size: 200.76175pt x 103.99458pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 71.
+\openout4 = `mathematical_notes.out'.
 
 
-(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 71.
-
-
-(C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<GitHub.png, id=85, 3854.4pt x 2168.1pt>
-File: GitHub.png Graphic file (type png)
-<use GitHub.png>
-Package pdftex.def Info: GitHub.png  used on input line 83.
-(pdftex.def)             Requested size: 38.52272pt x 21.66904pt.
- [1
-
-{C:/Users/Lucas Paul/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map} <./W
-U.png> <./GitHub.png>]
-\c@savepage=\count444
- [1] (MScThesis_Econ.toc)
-\tf@toc=\write5
-\openout5 = `MScThesis_Econ.toc'.
-
- [2
-
-]
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.123 \newpage
-               [1]
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
+Underfull \hbox (badness 10000) in paragraph at lines 74--76
 
  []
 
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 169--170
+[1
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 179--181
-
- []
-
-[3]
-Overfull \hbox (8.63109pt too wide) detected at line 193
-[]
- []
-
-[4] [5] [3] (MScThesis_Econ.aux)
+{C:/Users/Lucas Paul/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map}]
+[2] [3] (mathematical_notes.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
-Package rerunfilecheck Info: File `MScThesis_Econ.out' has not changed.
-(rerunfilecheck)             Checksum: 310FD7A4085C13AEECA47083524A0984;3176.
-Package logreq Info: Writing requests to 'MScThesis_Econ.run.xml'.
-\openout1 = `MScThesis_Econ.run.xml'.
+Package rerunfilecheck Info: File `mathematical_notes.out' has not changed.
+(rerunfilecheck)             Checksum: 7F85189BE46970A7DD5487CFDF2EDA49;577.
+Package logreq Info: Writing requests to 'mathematical_notes.run.xml'.
+\openout1 = `mathematical_notes.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 22292 strings out of 475551
- 386076 string characters out of 5770464
- 1934238 words of memory out of 5000000
- 43216 multiletter control sequences out of 15000+600000
- 566200 words of font info for 65 fonts, out of 8000000 for 9000
+ 21436 strings out of 475551
+ 373767 string characters out of 5770464
+ 1931238 words of memory out of 5000000
+ 42413 multiletter control sequences out of 15000+600000
+ 563801 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 66i,12n,81p,827b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.
-pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
-msfonts/symbols/msbm10.pfb>
-Output written on MScThesis_Econ.pdf (9 pages, 410636 bytes).
+ 66i,11n,81p,693b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Pr
+ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Fi
+les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fo
+nts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmr6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
+Output written on mathematical_notes.pdf (3 pages, 162027 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
- 37 named destinations out of 1000 (max. 500000)
- 171 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 103 PDF objects out of 1000 (max. 8388607)
+ 8 named destinations out of 1000 (max. 500000)
+ 33 words of extra memory for PDF output out of 10000 (max. 10000000)
 
