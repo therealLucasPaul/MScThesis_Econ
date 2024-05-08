@@ -95,6 +95,49 @@
       \field{pages}{243\bibrangedash 246}
       \range{pages}{4}
     \endentry
+    \entry{Tricomi1947}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c54cf2b98f346dbaff84f7f733e4fd07}{%
+           family={Tricomi},
+           familyi={T\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \strng{fullhash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \strng{bibnamehash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \strng{authorbibnamehash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \strng{authornamehash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \strng{authorfullhash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Studio delle funzioni ipergeometriche confluenti pouendo in primo piano — invece della coppiaMk,mKk,mdelle funzioni di Whittaker — la funzioneF(a, c; x) di Pochhammer-Kummer e un'analoga funzione che viene designata conG(a, c; x). È dedicata particolare attenzione alla determinazione del comportamento asintotico al divergere dix o dei parametri.}
+      \field{issn}{1618-1891}
+      \field{journaltitle}{Annali di Matematica Pura ed Applicata}
+      \field{note}{Paper for hypergeometric function of second kind.}
+      \field{number}{1}
+      \field{title}{Sulle funzioni ipergeometriche confluenti}
+      \field{type}{Journal Article}
+      \field{volume}{26}
+      \field{year}{1947}
+      \field{pages}{141\bibrangedash 175}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1007/BF02415375
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF02415375
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF02415375
+      \endverb
+    \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
     \entry{TGP2020}{article}{}
@@ -173,7 +216,51 @@
       \field{pages}{243\bibrangedash 246}
       \range{pages}{4}
     \endentry
+    \entry{Tricomi1947}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c54cf2b98f346dbaff84f7f733e4fd07}{%
+           family={Tricomi},
+           familyi={T\bibinitperiod},
+           given={Francesco},
+           giveni={F\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \strng{fullhash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \strng{bibnamehash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \strng{authorbibnamehash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \strng{authornamehash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \strng{authorfullhash}{c54cf2b98f346dbaff84f7f733e4fd07}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Studio delle funzioni ipergeometriche confluenti pouendo in primo piano — invece della coppiaMk,mKk,mdelle funzioni di Whittaker — la funzioneF(a, c; x) di Pochhammer-Kummer e un'analoga funzione che viene designata conG(a, c; x). È dedicata particolare attenzione alla determinazione del comportamento asintotico al divergere dix o dei parametri.}
+      \field{issn}{1618-1891}
+      \field{journaltitle}{Annali di Matematica Pura ed Applicata}
+      \field{note}{Paper for hypergeometric function of second kind.}
+      \field{number}{1}
+      \field{title}{Sulle funzioni ipergeometriche confluenti}
+      \field{type}{Journal Article}
+      \field{volume}{26}
+      \field{year}{1947}
+      \field{pages}{141\bibrangedash 175}
+      \range{pages}{35}
+      \verb{doi}
+      \verb 10.1007/BF02415375
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF02415375
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF02415375
+      \endverb
+    \endentry
   \enddatalist
+  \missing{ESLpage398}
 \endrefsection
 \endinput
 

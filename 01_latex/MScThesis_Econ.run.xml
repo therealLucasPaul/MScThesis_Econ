@@ -84,7 +84,6 @@
     </requires>
     <requires type="editable">
       <file>ref.bib</file>
-      <file>DevEcon_Project.txt</file>
     </requires>
   </external>
 </requests>

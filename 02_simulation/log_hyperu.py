@@ -84,7 +84,7 @@ class log_hyperu_shift(torch.autograd.Function):
     def forward(ctx, a, b, x):
 
         u_res = robust_hyperu(a, b, x)
-        result = torch.log(u_res) # TODO: Add +1 for shift version
+        result = torch.log(u_res+1)
 
         ctx.mark_non_differentiable(a)
         ctx.mark_non_differentiable(b)
