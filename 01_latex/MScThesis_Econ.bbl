@@ -63,6 +63,93 @@
       \field{pages}{20}
       \range{pages}{1}
     \endentry
+    \entry{ESL2009}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce884cc144616c39e723a8fe2eb3c879}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Jerome\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce884cc144616c39e723a8fe2eb3c879}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Jerome\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{45eb7d473651da447f1d77717e7f8650}
+      \strng{fullhash}{128c322c499b8780d79e31a8740aac52}
+      \strng{bibnamehash}{128c322c499b8780d79e31a8740aac52}
+      \strng{authorbibnamehash}{128c322c499b8780d79e31a8740aac52}
+      \strng{authornamehash}{45eb7d473651da447f1d77717e7f8650}
+      \strng{authorfullhash}{128c322c499b8780d79e31a8740aac52}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The elements of statistical learning: data mining, inference, and prediction}
+      \field{type}{Book}
+      \field{volume}{2}
+      \field{year}{2009}
+    \endentry
+    \entry{Taxonomy2017}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ed1b962bfbafbd86c7c79e24054fa4d7}{%
+           family={Kukačka},
+           familyi={K\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb058a8ecaabe83254678725b4b97e6b}{%
+           family={Golkov},
+           familyi={G\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1bd2b6b6ca2fc15a90f164070b626131}{%
+           family={Cremers},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5fabb9242492c85bf548a928be8cdc3f}
+      \strng{fullhash}{1456dde0071268bbef366c233397f592}
+      \strng{bibnamehash}{1456dde0071268bbef366c233397f592}
+      \strng{authorbibnamehash}{1456dde0071268bbef366c233397f592}
+      \strng{authornamehash}{5fabb9242492c85bf548a928be8cdc3f}
+      \strng{authorfullhash}{1456dde0071268bbef366c233397f592}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1710.10686}
+      \field{title}{Regularization for deep learning: A taxonomy}
+      \field{type}{Journal Article}
+      \field{year}{2017}
+    \endentry
     \entry{Lazar2010}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=94450007bdafc0aa147d307f4416ba81}{%
@@ -184,6 +271,93 @@
       \field{pages}{20}
       \range{pages}{1}
     \endentry
+    \entry{ESL2009}{book}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce884cc144616c39e723a8fe2eb3c879}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Jerome\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ce884cc144616c39e723a8fe2eb3c879}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Jerome\bibnamedelima H},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{45eb7d473651da447f1d77717e7f8650}
+      \strng{fullhash}{128c322c499b8780d79e31a8740aac52}
+      \strng{bibnamehash}{128c322c499b8780d79e31a8740aac52}
+      \strng{authorbibnamehash}{128c322c499b8780d79e31a8740aac52}
+      \strng{authornamehash}{45eb7d473651da447f1d77717e7f8650}
+      \strng{authorfullhash}{128c322c499b8780d79e31a8740aac52}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{The elements of statistical learning: data mining, inference, and prediction}
+      \field{type}{Book}
+      \field{volume}{2}
+      \field{year}{2009}
+    \endentry
+    \entry{Taxonomy2017}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=ed1b962bfbafbd86c7c79e24054fa4d7}{%
+           family={Kukačka},
+           familyi={K\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=fb058a8ecaabe83254678725b4b97e6b}{%
+           family={Golkov},
+           familyi={G\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1bd2b6b6ca2fc15a90f164070b626131}{%
+           family={Cremers},
+           familyi={C\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5fabb9242492c85bf548a928be8cdc3f}
+      \strng{fullhash}{1456dde0071268bbef366c233397f592}
+      \strng{bibnamehash}{1456dde0071268bbef366c233397f592}
+      \strng{authorbibnamehash}{1456dde0071268bbef366c233397f592}
+      \strng{authornamehash}{5fabb9242492c85bf548a928be8cdc3f}
+      \strng{authorfullhash}{1456dde0071268bbef366c233397f592}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1710.10686}
+      \field{title}{Regularization for deep learning: A taxonomy}
+      \field{type}{Journal Article}
+      \field{year}{2017}
+    \endentry
     \entry{Lazar2010}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=94450007bdafc0aa147d307f4416ba81}{%
@@ -261,6 +435,7 @@
     \endentry
   \enddatalist
   \missing{ESLpage398}
+  \missing{Vapnik1991}
 \endrefsection
 \endinput
 

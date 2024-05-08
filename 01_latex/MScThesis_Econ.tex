@@ -17,6 +17,18 @@
 \usepackage{caption}
 \usepackage{amssymb}
 
+% Colorbox for Notes ------
+\usepackage{tcolorbox}
+\usepackage{xcolor}
+\definecolor{lightblue}{RGB}{173,216,230}
+
+\newenvironment{lightbluebox}{%
+    \begin{tcolorbox}[colback=lightblue, colframe=lightblue, fontupper=\itshape]%
+}{%
+    \end{tcolorbox}%
+}
+%---------------------------
+
 \usepackage[style=apa, backend=biber]{biblatex}
 \addbibresource[]{ref.bib}
 \renewcommand{\baselinestretch}{1.25} 
@@ -105,13 +117,6 @@ Lorem ipsum...
 %----- Introduction -----
 \section{Introduction}
 Willam of Ockham, born in Ockham, Surrey, probably lived between 1287 and 1348 and is nowadays recognized as a pre-eminent philosopher of the middle ages. Although     his name itself is no common knowledge, a principle carrying his name is: \textit{Ockham's Razor}. Interestingly, the main formulation of the principle (\textit{Entia non sunt multiplicanda praeter necessitatem} [plurality should not be posited without necessity]) can not be traced back to Ockham directly, but variations of it can be found in Ockham's writings. Since then nonetheless, the principle has long been used by statisticians and other researchers as a a scientific credo to capture the notion that "the simpler of two explanations is to be preferred" \parencite{Lazar2010}.  
-%----- Literature Review -----
-
-
-\section{Literature Review}
-\subsection{Bayesian View}
-\subsection{Frequentist View}
-
 
 %----- Theoretical Section
 \section{Theoretical Section}\label{sec:theorysuper}
@@ -124,6 +129,42 @@ General problem: Fit vs. Complexity. What to choose and where is the optimal bal
 Solutions (find source, seen in LMU course): (1) More data (Not always feasible) (2) Better data (Same issue) (3) Reduce Model Complexity (Regularization) (4) Less aggressive optimization (Maybe short review; Idea: Stop optimization when generalization error degrades)
 
 \subsubsection{Regularization}
+
+Focusing on option three to battle model complexity, regularization methods have been studied thoroughly since the 1990s. However, the emergence of data science - and especially machine learning - as a standalone field of study has led to a broader meaning of the term \textit{regularization}. This phenomenon has been discussed by \textcite{Taxonomy2017}, where the authors establish a taxonomy to distinguish between multiple different definitions. In the traditional sense, as can be seen in \textcite[167--170]{ESL2009}, \textit{regularization} refers to a general class of problems of the form
+\[
+\underset{f \in \mathcal{H}}{\min}\left\{\sum_{i=1}^N L(y_i, f(x_i)) + \lambda{J}(f)\right\}
+\]
+where $L(.)$ refers to a loss function defined as some function of the true values and the predicted values and $J(f)$ is penalty based on the chosen functional from a space of functions $\mathcal{H}$. In the context of penalized linear regression, this is equivalent to finding the set of risk minimizing coefficients $\hat{\beta}$ from the set of all possible combinations of coefficients $\boldsymbol{\beta}$. \MC Thus, resulting in the general class of regularization problems of the form:
+\[
+\underset{\beta \in \boldsymbol{\beta}}{\min}\left\{\sum_{i=1}^N L(y_i, f_\beta(x_i)) + \lambda{J}(\beta)\right\}
+\]
+where $f_\beta(x_i)$ is a linear function of the inputs $x_i$ parametrized by the coefficients $\beta$. Hence, in this setting, regularization deals with penalizing the risk function based on the value of the chosen set of coefficients. \\
+However, this only describes a subset of \textit{regularization} methods as stated by \textcite{Taxonomy2017}. The authors use a more general definition of regularization:\\
+
+\textbf{Defintion 1. Regularization} is any supplementary technique that aims at making the model generalize better, i.e. produce better results on the test set.\\
+
+Building on that, they split up the majority of \textit{regularization} methods into  (1) methods applied to the data set like transformations or modifications of the inputs, (2) methods altering the selected model family , (3) methods applied to the error/loss function $L(y_i, f_\beta(x_i))$ , (4) methods applied to regularization/penalty term as described above and (5) alterations of the optimization procedure itself. 
+
+\begin{lightbluebox}
+Vielleicht noch genauer auf die Taxonomy eingehen? 
+\end{lightbluebox} 
+
+Unsurprisingly, this thesis is concerned with the fourth group of regularization methods, which add a penalty/regularizer term $J(\beta)$ into the risk function, but before advancing to literature that deals with this kind of problem, it is necessary to establish a terminology which will be used throughout this thesis. \textbf{TODO}
+
+Let $\mathcal{D}$ be a training data set with $n \in \mathbb{N}$ observations, where every  consists of a target variable $y_i \in \mathbb{R}$ along with a number of corresponding inputs $x_i \in \mathbb{R}$. Given a linear function $f_\beta(x_i)$ of the inputs parametrized by coefficients $\beta \in \boldsymbol{\beta}$, $L(y_i f_\beta(x_i))$ is the \textbf{Loss} function measuring the discrepancy between the actual target $y_i$ and the output of the linear function $f_\beta(x_i)$. According to \textcite{Vapnik1991}, the \textbf{Empirical Risk Functional} is then 
+\[
+R_{emp}(\beta) = \frac{1}{n} \sum_{i=1}^n L(y_i, f_\beta(x_i)).
+\]
+\textbf{Regularization} in this thesis' context refers then to adding some penalty function $J(\beta)$ dependent on the set of parameters $\beta$, multiplied by some weighting parameter $\lambda$, to the empirical risk functional $R_{emp}(\beta)$. Thus, $R_{reg} = R_{emp}(\beta) + \lambda\cdot J(\beta)$. This results in the overall optimization problem
+\begin{align*}
+&\underset{\beta \in \boldsymbol{\beta}}{\argmin}\left\{R_{reg}(\beta)\right\}\\
+&=\underset{\beta \in \boldsymbol{\beta}}{\argmin}\left\{R_{emp}(\beta) + \lambda\cdot J(\beta)\right\}\\
+&=\underset{\beta \in \boldsymbol{\beta}}{\argmin}\left\{\sum_{i=1}^n L(y_i, f_\beta(x_i)) + \lambda\cdot J(\beta)\right\}
+\end{align*}
+
+It is important to note here that as $J(\beta)$ is only a function of the coefficients $\beta$, it only affects the generalization error of the model, not the training error given by the empirical risk functional $R_{emp}(\beta)$.
+
+\begin{lightbluebox}
 Ad Solution (3) because it is relatively easy to implement: Simple approach => Start with simplest model and iteratively add one feature OR iteratively get rid of feature by feature. (Problem: Very arbitrary and hard to reasonably do) Thus, adjust risk function minimization. Important: Regularization adjusts generalization error, not training error!
 
 Short break: Talk about Taxonomy by Kukacka et al 2017 on the differing use of the term "regularization" 
@@ -133,6 +174,17 @@ What is needed:
 R_{reg}(\beta) = R_{emp}(\beta)+ \lambda \cdot J(\beta)
 \]
 where $R_{emp}(\beta) = \sum_i^n L(y_i, f(x_i, \beta))$. Note: Regularization term does not depend on data, just on parametrization. $\lambda$ controls the strength of regularization. Thus, $\lambda = 0$ means simple MSE optimization and $\lambda \to \infty$ chooses simplest model. As $\lambda$ is set manually, this also bears some problems. However, typical solution is cross-validation. 
+
+\textbf{Literature}
+\parencite{Taxonomy2017}
+\end{lightbluebox}
+\newpage
+
+%----- Literature Review -----
+\section{Literature Review}
+
+The concept of a penalized regression has been around for quite some time and been studied widely in various fields of scientific research. 
+
 \subsubsection{Short Deviation to Bayesian Shrinkage Priors}
 
 \subsection{Duality of the Ridge Regression}
