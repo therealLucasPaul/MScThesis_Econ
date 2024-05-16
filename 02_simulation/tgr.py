@@ -10,7 +10,7 @@ import log_hyperu as hyperu
 class TripleGammaRegularization(nn.Module):
     def __init__(self, num_features):
         super(TripleGammaRegularization, self).__init__()
-        self.linear = nn.Linear(4, 1)
+        self.linear = nn.Linear(12, 1, bias=False)
 
     def forward(self, x):
         return self.linear(x)

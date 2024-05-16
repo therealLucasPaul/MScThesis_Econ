@@ -16,6 +16,7 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{amssymb}
+\usepackage{tikz}
 
 % Colorbox for Notes ------
 \usepackage{tcolorbox}
@@ -119,6 +120,7 @@ Lorem ipsum...
 Willam of Ockham, born in Ockham, Surrey, probably lived between 1287 and 1348 and is nowadays recognized as a pre-eminent philosopher of the middle ages. Although     his name itself is no common knowledge, a principle carrying his name is: \textit{Ockham's Razor}. Interestingly, the main formulation of the principle (\textit{Entia non sunt multiplicanda praeter necessitatem} [plurality should not be posited without necessity]) can not be traced back to Ockham directly, but variations of it can be found in Ockham's writings. Since then nonetheless, the principle has long been used by statisticians and other researchers as a a scientific credo to capture the notion that "the simpler of two explanations is to be preferred" \parencite{Lazar2010}.  
 
 %----- Theoretical Section
+\newpage
 \section{Theoretical Section}\label{sec:theorysuper}
 \subsection{Model Complexity}
 Overfitting is a problem. Especially when dimensionality issues arise. For example, 50 observations and 20 features. Model will perform well/almost perfect on training data, but will do terrible on training data.\\
@@ -162,7 +164,7 @@ R_{emp}(\beta) = \frac{1}{n} \sum_{i=1}^n L(y_i, f_\beta(x_i)).
 &=\underset{\beta \in \boldsymbol{\beta}}{\argmin}\left\{\sum_{i=1}^n L(y_i, f_\beta(x_i)) + \lambda\cdot J(\beta)\right\}
 \end{align*}
 
-It is important to note here that as $J(\beta)$ is only a function of the coefficients $\beta$, it only affects the generalization error of the model, not the training error given by the empirical risk functional $R_{emp}(\beta)$.
+It is important to note here that as $J(\beta)$ is only a function of the coefficients $\beta$ and neither the targets $y_i$ nor the inputs $x_i$. It only affects the generalization error of the model, not the training error given by the empirical risk functional $R_{emp}(\beta)$.
 
 \begin{lightbluebox}
 Ad Solution (3) because it is relatively easy to implement: Simple approach => Start with simplest model and iteratively add one feature OR iteratively get rid of feature by feature. (Problem: Very arbitrary and hard to reasonably do) Thus, adjust risk function minimization. Important: Regularization adjusts generalization error, not training error!
@@ -178,18 +180,73 @@ where $R_{emp}(\beta) = \sum_i^n L(y_i, f(x_i, \beta))$. Note: Regularization te
 \textbf{Literature}
 \parencite{Taxonomy2017}
 \end{lightbluebox}
+
+\subsection{Short Deviation to Bayesian Shrinkage Priors}
+
 \newpage
 
 %----- Literature Review -----
 \section{Literature Review}
 
-The concept of a penalized regression has been around for quite some time and been studied widely in various fields of scientific research. 
+The concept of a penalized regression has been around for quite some time and been studied widely in various fields of scientific research. Arguably, this methodological approach to penalized regression started with the publication of two pieces of literature published by Arthur Hoerl and Robert Kennard in 1970 \parencite{HoerlKennard1970a, HoerlKennard1970b}. With these two papers the authors introduced the widely known \textit{Ridge Regression}, which has been developed from the previously known concept of Ridge analysis. In its core, the authors were trying to tackle the problem of high variances of the regression coefficients in high-dimensional problem settings. This shrinkage estimator, which uses the squared coefficient as a penalty term, "attempt[s] to shrink the coefficients to
+reduce these variances, while adding some bias." \parencite{Hoerl2020} This closely resembles the previously discussed issue of the \textit{Bias-Variance-Tradeoff}, which has been discussed in the \textit{Under- and Overfitting} chapter in section \ref{sec:theorysuper} (Roger W. Hoerl, Arthur Hoerl's son, published a historical overview of the development of the concept of \textit{Ridge Regression} in 2020 \parencite{Hoerl2020}). The closed from solution of the Ridge estimator is given by
+$$\hat{\beta}_{Ridge} = \left(X^TX+\lambda I\right)^{-1}X^Ty$$,
+which adjusts the OLS estimator by shifting the main diagonal entries of the design matrix by $\lambda$ ($\lambda \geq 0$). It can be shown that this closed form estimator is equivalent to a Lagrangian problem of the following form \parencite{VanWieringen2015}:
+$$\hat{\beta}_{Ridge}(\lambda) = \underset{\beta}{\argmin}\left\{\norm{y-X\beta}_2^2 + \lambda\norm{\beta}_2^2\right\}$$
+This resembles an example of the above defined regularization framework with squared residual loss and a penalty term of the form $\norm{\beta}_2^2$, which only depends on the parameter $\beta$. In case of $\lambda$ being equal to zero, this reduces to the \textit{maximum likelihood (ML) estimator}. 
 
-\subsubsection{Short Deviation to Bayesian Shrinkage Priors}
+The publications of Arthur Hoerl and Robert Kennard have led to further advancements, although it took more than 25 years, in shrinkage estimation or related concepts. One concept which is almost as famous \textit{Ridge Regression} is the \textit{Least Absolute Shrinkage and Selection Operator}, more commonly know as \textit{LASSO}, developed by \textcite{Tibishirani1996}. He argues that the two at the time most prominent shrinkage methods - Ridge and Subset Selection - both have their drawbacks. Ridge regression on the one hand is an optimization problem which continuously shrinks coefficients towards zero, but doesn't select them in a discrete sense, which makes it hard to interpret these models. Subset Selection on the other hand chooses variables in a discrete sense - a variables either stays within the model or it doesn't - and thus creates easily interpretable models, but "[s]mall changes in the data can result in very different models being selected and this can reduce its prediction accuracy." \parencite{Tibishirani1996} \textit{LASSO} is trying to combine both methods' advantages by using $\norm{\beta}_1$ as a penalty term.\\
+\begin{lightbluebox}
+Bit more on LASSO?
+\end{lightbluebox}
+
+\textit{LASSO} and to some extend \textit{Ridge} can be viewed as a special case of a $l_p$-norm regularization with corresponding values for $p$ ($p = 1$ for LASSO and $p=2$ for Ridge) \parencite{FrankFriedman1993}. 
+
+$$\norm{\beta}_p =  \left(\sum_{i=1}^p|\beta_i|^p\right)^{1/p}$$
+
+An approach combining these two methods is called \textit{Elastic Net} regularization and has been developed by \\
+\begin{lightbluebox}
+Talk about Elastic Net
+\end{lightbluebox}
+
+\begin{lightbluebox}
+Talk about non-convex penalties
+\end{lightbluebox}
+
+
+\begin{lightbluebox}
+Use tree to classify regularization methods.
+\end{lightbluebox}
+\begin{center}
+\begin{tikzpicture}[
+    level 1/.style={sibling distance=5.2cm},
+    level 2/.style={sibling distance=2.6cm},
+    level 3/.style={sibling distance=2.6cm, level distance=2.5cm},
+    every node/.style={draw, rectangle, align=center}
+]
+\node {Classification of \\ Penalty Terms}
+    child { node {Behaviour at Zero}
+        child { node {Singularity} child { node {TG, \\ MCP,\\ SCAD, \\ LAPLACE, \\ LASSO}}}
+        child { node {Differentiable} child { node {Gaussian,\\ Ridge}}}
+    }
+    child { node {(Non-)Convexity}
+        child { node {Convex} child { node {LASSO, \\ Ridge}}}
+        child { node {Concave} child { node {TG,\\ Gaussian, \\ Arctan}}}
+    }
+    child { node {Behaviour at Limits}
+        child { node {Divergent} child { node {TG,\\ LASSO, \\ Ridge}}}
+        child { node {Convergent} child { node {Arctan, \\ Gaussian}}}
+    };
+\end{tikzpicture}  
+
+\end{center}
 
 \subsection{Duality of the Ridge Regression}
 
+The main motivation for this thesis stems from the striking duality that exists between Bayesian shrinkage priors and approaches to regularization. Both approaches aim at tackeling the issue of model complexity and overfitting by making it necessary for the data to be more convincing that the value of an estimate is statistically significant differnt from zero. Bayesian statistics use specific prior distributions with a usually a lot of mass around zero and heavy tails. Popular examples...  
+
 \subsection{Triple-Gamma-Prior by \textcite{TGP2020}}
+A new development in the are of shrinkage priors has been made by \textcite{TGP2020}
 
 %----- Model Setup and Derivation
 \newpage
@@ -271,22 +328,21 @@ To align with the general specification structure of regularization problems, wh
 
 \newpage
 \subsection{Varying the Hyperparameters}
-After closer inspection of equation \ref{eq:tgr}, it can easily be seen that this resembles the general penalized regression already seen in \textcite{ESLpage398} and in section \ref{sec:theorysuper} as $R(\beta) + \lambda\cdot J(\beta)$. The first term, alos called the empirical loss in machine learning literature, is the widely known residual sum of squares:
+After closer inspection of equation \ref{eq:tgr}, it can easily be seen that this resembles the general penalized regression already seen in \textcite{ESLpage398} and in section \ref{sec:theorysuper} as $R(\beta) + \lambda\cdot J(\beta)$. The first term, also called the empirical loss in machine learning literature, is the widely known residual sum of squares:
 \[
 R(\beta)=\frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2
 \] 
 The second part of the optimization problem can be viewed as a penalty imposed on the total risk based on the size of the estimates:
 \[
-J(\beta) = \sum_j^p -\log\left(U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right)\right)
+J_{TG}(\beta) = \sum_j^p -\log\left(U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right)\right)
 \]
-In contrast to the \textit{LASSO} penalty, which uses the the absolute value of the coefficient, or the \textit{Ridge} penalty, which uses the square of the estimate, this penalty derived from \textcite{TGP2020} is based on the $\log$ of the confluent hyper-geometric of the second kind. Notably, this penalty term has three additional hyper-parameters: $c^\xi$, $a^\xi$ and $\kappa$ as $\phi^\xi = (2c^\xi)/(\kappa^2_B a^\xi)$.
+In contrast to the \textit{LASSO} penalty, which uses the the absolute value of the coefficient, or the \textit{Ridge} penalty, which uses the square of the estimate, this penalty derived from \textcite{TGP2020} is based on the $\log$ of the confluent hyper-geometric of the second kind. Notably, this penalty term has three additional hyper-parameters: $c^\xi$, $a^\xi$ and $\kappa_B$ as $\phi^\xi = (2c^\xi)/(\kappa^2_B a^\xi)$. Here, the restrictions $a^\xi>0.5$ and $0 < c^\xi < \infty$ are necessary to ensure that the penalty for a $\beta_j$ being equal to zero remains finite and not diverges to negative infinity at zero. This results, which has already been presented and proven as part of Theorem 2 in \textcite[5--6]{TGP2020}, ensures that the negative $\log$ of the hypergeometric function remains finite and thus does not produce parameter estimates which are zero for every variables. (\textbf{BESSER SCHREIBEN?})\\
+\begin{lightbluebox}
+Write more to fill this page
+\end{lightbluebox}
+\newpage
 
-\begin{figure}[!h]
-\centering
-\includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/simpleTGpenalty.png}
-\caption{Basic Representation of the Triple-Gamma-Penalty using Hyperparameters $c^\xi = 0.1, \kappa_B = 2, a^\xi = 0.75$ compared to \textit{LASSO} and \textit{Ridge} Penalties}
-\label{fig:basicTGPen}
-\end{figure}
+\textit{Variations of the Hyperparameter $a^\xi$}\\
 
 \begin{figure}[!h]
 \centering
@@ -295,12 +351,18 @@ In contrast to the \textit{LASSO} penalty, which uses the the absolute value of 
 \label{fig:basicTGPen}
 \end{figure}
 
+
+\textit{Variations of the Hyperparameter $c^\xi$}\\
+
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_ChangeInC.png}
 \caption{Triple-Gamma-Penalty using different values of $c^\xi$}
 \label{fig:basicTGPen}
 \end{figure}
+
+\textit{Variations of the Hyperparameter $\kappa_B$}\\
+
 
 \begin{figure}[!h]
 \centering
@@ -309,9 +371,20 @@ In contrast to the \textit{LASSO} penalty, which uses the the absolute value of 
 \label{fig:basicTGPen}
 \end{figure}
 
+\subsection{Comparison to already existing Penalty Terms}\label{subsec:comparepenalties}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/simpleTGpenalty.png}
+\caption{Basic Representation of the Triple-Gamma-Penalty using Hyperparameters $c^\xi = 0.1, \kappa_B = 2, a^\xi = 0.75$ compared to \textit{LASSO} and \textit{Ridge} Penalties}
+\label{fig:basicTGPen}
+\end{figure}
+
 \subsection{Restricted Strong Convexity (RSC) of the Triple-Gamma-Regularization}
 
 \subsection{Alternative Specification (with +1 to mimic artan)}
+
+As previously mentioned, the \textit{Arctan} penalty developed by \textcite{WangZhu2016} has a similar structure as the \textit{Triple-Gamma-Penalty} in small neighbourhoods near $\beta = 0$ when using specific hyper-parameters (see section \ref{subsec:comparepenalties}). The distinctive structural difference between these two penalties emerge when looking at the limits when  $\underset{\beta \to +/- \infty}{\lim J_{TG}(\beta)}$
 
 \subsection{Approaches to Estimation}
 

@@ -111,6 +111,115 @@
       \field{volume}{2}
       \field{year}{2009}
     \endentry
+    \entry{HoerlKennard1970b}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=073bf156684ab93b481fb9a5dd6a82c7}{%
+           family={Hoerl},
+           familyi={H\bibinitperiod},
+           given={Arthur\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=39f4e06a9e51f345e243e2b24175e7e4}{%
+           family={Kennard},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{fullhash}{5ca383125b65b015cb46067f1150f462}
+      \strng{bibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorbibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authornamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorfullhash}{5ca383125b65b015cb46067f1150f462}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{1}
+      \field{title}{Ridge regression: applications to nonorthogonal problems}
+      \field{type}{Journal Article}
+      \field{volume}{12}
+      \field{year}{1970}
+      \field{pages}{69\bibrangedash 82}
+      \range{pages}{14}
+    \endentry
+    \entry{HoerlKennard1970a}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=073bf156684ab93b481fb9a5dd6a82c7}{%
+           family={Hoerl},
+           familyi={H\bibinitperiod},
+           given={Arthur\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=39f4e06a9e51f345e243e2b24175e7e4}{%
+           family={Kennard},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{fullhash}{5ca383125b65b015cb46067f1150f462}
+      \strng{bibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorbibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authornamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorfullhash}{5ca383125b65b015cb46067f1150f462}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{1}
+      \field{title}{Ridge regression: Biased estimation for nonorthogonal problems}
+      \field{type}{Journal Article}
+      \field{volume}{12}
+      \field{year}{1970}
+      \field{pages}{55\bibrangedash 67}
+      \range{pages}{13}
+    \endentry
+    \entry{Hoerl2020}{article}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=6c7d44e7e24f393242be8ae50f098c37}{%
+           family={Hoerl},
+           familyi={H\bibinitperiod},
+           given={Roger\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{6c7d44e7e24f393242be8ae50f098c37}
+      \strng{fullhash}{6c7d44e7e24f393242be8ae50f098c37}
+      \strng{bibnamehash}{6c7d44e7e24f393242be8ae50f098c37}
+      \strng{authorbibnamehash}{6c7d44e7e24f393242be8ae50f098c37}
+      \strng{authornamehash}{6c7d44e7e24f393242be8ae50f098c37}
+      \strng{authorfullhash}{6c7d44e7e24f393242be8ae50f098c37}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{4}
+      \field{title}{Ridge regression: a historical context}
+      \field{type}{Journal Article}
+      \field{volume}{62}
+      \field{year}{2020}
+      \field{pages}{420\bibrangedash 425}
+      \range{pages}{6}
+    \endentry
     \entry{Taxonomy2017}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=ed1b962bfbafbd86c7c79e24054fa4d7}{%
@@ -182,6 +291,38 @@
       \field{pages}{243\bibrangedash 246}
       \range{pages}{4}
     \endentry
+    \entry{Tibishirani1996}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{fullhash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{bibnamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authorbibnamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authornamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authorfullhash}{88eea600247d798f8b2ce0b2dc614492}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1369-7412}
+      \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
+      \field{number}{1}
+      \field{title}{Regression shrinkage and selection via the lasso}
+      \field{type}{Journal Article}
+      \field{volume}{58}
+      \field{year}{1996}
+      \field{pages}{267\bibrangedash 288}
+      \range{pages}{22}
+    \endentry
     \entry{Tricomi1947}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c54cf2b98f346dbaff84f7f733e4fd07}{%
@@ -224,6 +365,35 @@
       \verb{url}
       \verb https://doi.org/10.1007/BF02415375
       \endverb
+    \endentry
+    \entry{Vapnik1991}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c2b3e05872463585b4be6aab10d10d63}{%
+           family={Vapnik},
+           familyi={V\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c2b3e05872463585b4be6aab10d10d63}
+      \strng{fullhash}{c2b3e05872463585b4be6aab10d10d63}
+      \strng{bibnamehash}{c2b3e05872463585b4be6aab10d10d63}
+      \strng{authorbibnamehash}{c2b3e05872463585b4be6aab10d10d63}
+      \strng{authornamehash}{c2b3e05872463585b4be6aab10d10d63}
+      \strng{authorfullhash}{c2b3e05872463585b4be6aab10d10d63}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{note}{Definition of Empirical Risk Minimization}
+      \field{title}{Principles of risk minimization for learning theory}
+      \field{type}{Journal Article}
+      \field{volume}{4}
+      \field{year}{1991}
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
@@ -319,6 +489,115 @@
       \field{volume}{2}
       \field{year}{2009}
     \endentry
+    \entry{HoerlKennard1970b}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=073bf156684ab93b481fb9a5dd6a82c7}{%
+           family={Hoerl},
+           familyi={H\bibinitperiod},
+           given={Arthur\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=39f4e06a9e51f345e243e2b24175e7e4}{%
+           family={Kennard},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{fullhash}{5ca383125b65b015cb46067f1150f462}
+      \strng{bibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorbibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authornamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorfullhash}{5ca383125b65b015cb46067f1150f462}
+      \field{extraname}{1}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{1}
+      \field{title}{Ridge regression: applications to nonorthogonal problems}
+      \field{type}{Journal Article}
+      \field{volume}{12}
+      \field{year}{1970}
+      \field{pages}{69\bibrangedash 82}
+      \range{pages}{14}
+    \endentry
+    \entry{HoerlKennard1970a}{article}{}
+      \name{author}{2}{}{%
+        {{un=1,uniquepart=given,hash=073bf156684ab93b481fb9a5dd6a82c7}{%
+           family={Hoerl},
+           familyi={H\bibinitperiod},
+           given={Arthur\bibnamedelima E},
+           giveni={A\bibinitperiod\bibinitdelim E\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=39f4e06a9e51f345e243e2b24175e7e4}{%
+           family={Kennard},
+           familyi={K\bibinitperiod},
+           given={Robert\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{fullhash}{5ca383125b65b015cb46067f1150f462}
+      \strng{bibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorbibnamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authornamehash}{5ca383125b65b015cb46067f1150f462}
+      \strng{authorfullhash}{5ca383125b65b015cb46067f1150f462}
+      \field{extraname}{2}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{1}
+      \field{title}{Ridge regression: Biased estimation for nonorthogonal problems}
+      \field{type}{Journal Article}
+      \field{volume}{12}
+      \field{year}{1970}
+      \field{pages}{55\bibrangedash 67}
+      \range{pages}{13}
+    \endentry
+    \entry{Hoerl2020}{article}{}
+      \name{author}{1}{}{%
+        {{un=1,uniquepart=given,hash=6c7d44e7e24f393242be8ae50f098c37}{%
+           family={Hoerl},
+           familyi={H\bibinitperiod},
+           given={Roger\bibnamedelima W},
+           giveni={R\bibinitperiod\bibinitdelim W\bibinitperiod},
+           givenun=1}}%
+      }
+      \strng{namehash}{6c7d44e7e24f393242be8ae50f098c37}
+      \strng{fullhash}{6c7d44e7e24f393242be8ae50f098c37}
+      \strng{bibnamehash}{6c7d44e7e24f393242be8ae50f098c37}
+      \strng{authorbibnamehash}{6c7d44e7e24f393242be8ae50f098c37}
+      \strng{authornamehash}{6c7d44e7e24f393242be8ae50f098c37}
+      \strng{authorfullhash}{6c7d44e7e24f393242be8ae50f098c37}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0040-1706}
+      \field{journaltitle}{Technometrics}
+      \field{number}{4}
+      \field{title}{Ridge regression: a historical context}
+      \field{type}{Journal Article}
+      \field{volume}{62}
+      \field{year}{2020}
+      \field{pages}{420\bibrangedash 425}
+      \range{pages}{6}
+    \endentry
     \entry{Taxonomy2017}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=ed1b962bfbafbd86c7c79e24054fa4d7}{%
@@ -390,6 +669,38 @@
       \field{pages}{243\bibrangedash 246}
       \range{pages}{4}
     \endentry
+    \entry{Tibishirani1996}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=88eea600247d798f8b2ce0b2dc614492}{%
+           family={Tibshirani},
+           familyi={T\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{fullhash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{bibnamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authorbibnamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authornamehash}{88eea600247d798f8b2ce0b2dc614492}
+      \strng{authorfullhash}{88eea600247d798f8b2ce0b2dc614492}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1369-7412}
+      \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
+      \field{number}{1}
+      \field{title}{Regression shrinkage and selection via the lasso}
+      \field{type}{Journal Article}
+      \field{volume}{58}
+      \field{year}{1996}
+      \field{pages}{267\bibrangedash 288}
+      \range{pages}{22}
+    \endentry
     \entry{Tricomi1947}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=c54cf2b98f346dbaff84f7f733e4fd07}{%
@@ -433,9 +744,40 @@
       \verb https://doi.org/10.1007/BF02415375
       \endverb
     \endentry
+    \entry{Vapnik1991}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c2b3e05872463585b4be6aab10d10d63}{%
+           family={Vapnik},
+           familyi={V\bibinitperiod},
+           given={Vladimir},
+           giveni={V\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c2b3e05872463585b4be6aab10d10d63}
+      \strng{fullhash}{c2b3e05872463585b4be6aab10d10d63}
+      \strng{bibnamehash}{c2b3e05872463585b4be6aab10d10d63}
+      \strng{authorbibnamehash}{c2b3e05872463585b4be6aab10d10d63}
+      \strng{authornamehash}{c2b3e05872463585b4be6aab10d10d63}
+      \strng{authorfullhash}{c2b3e05872463585b4be6aab10d10d63}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Advances in neural information processing systems}
+      \field{note}{Definition of Empirical Risk Minimization}
+      \field{title}{Principles of risk minimization for learning theory}
+      \field{type}{Journal Article}
+      \field{volume}{4}
+      \field{year}{1991}
+    \endentry
   \enddatalist
   \missing{ESLpage398}
-  \missing{Vapnik1991}
+  \missing{FrankFriedman1993}
+  \missing{VanWieringen2015}
+  \missing{WangZhu2016}
 \endrefsection
 \endinput
 
