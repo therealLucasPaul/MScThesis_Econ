@@ -11,12 +11,16 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{lscape}
-\usepackage{multirow}
-\usepackage{booktabs}
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{amssymb}
 \usepackage{tikz}
+
+% Packages for Tables -----
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage[justification=centering]{caption} % Centers the caption
+% -----
 
 % Colorbox for Notes ------
 \usepackage{tcolorbox}
@@ -344,15 +348,20 @@ Write more to fill this page
 
 \textit{Variations of the Hyperparameter $a^\xi$}\\
 
+The first hyper-parameter which can be adjusted is $a^\xi$. A plot with a set of different values for $a^\xi$ can be found in figure \ref{fig:VariationInA}. As already mentioned earlier, the necessary restriction for for this hyper-parameter is that it has to be strictly greater than $0.5$ to guarantee the finiteness of the penalty. To demonstrate the effects of changes in $a^\xi$, the other parameters have been set to $c^\xi=0.1$ and $\kappa_B=2$. It can easily be seen from the figure that $a^\xi$ steers the sharpness of the penalty in small neighbourhoods around $\beta=0$. As $a^\xi$ increases, the penalty because smoother at $\beta=0$ with it eventually converging a \textit{Gaussian Penalty} like behaviour. From a modelling perspective, this opens up the possibility of steering the degree of variable selection the penalty performs. Nonetheless, the overall structure of the penalty in the tails does not change systematically apart from a parallel shift, which can be readjusted by specifying a different weighting parameter $\lambda$ or a different value for $\kappa_B$ (more on effect of $\kappa_B$ on the penalty can be found later in this chapter).\\ 
+
 \begin{figure}[!h]
 \centering
 \includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png}
 \caption{Triple-Gamma-Penalty using different values of $a^\xi$}
-\label{fig:basicTGPen}
+\label{fig:VariationInA}
 \end{figure}
 
+Seeing this, it is apparent that a value of $a^\xi$ close but strictly larger that $0.5$ mimics the behaviour of the \textit{Arctan Penalty} by \textcite{WangZhu2016} in small neighbourhoods of $\beta=0$. Similar, large positive values for $a^\xi$ lead to a \textit{Gaussian Penalty} like behaviour in small neighbourhoods of $\beta = 0$ as recently proposed by \textcite{JohnVettamWu2022}.\\
 
 \textit{Variations of the Hyperparameter $c^\xi$}\\
+
+In contrast to the hyperparameter $a^\xi$, which mainly affects the behaviour at and around $\beta=0$, changes in $c^\xi$ mainly affect the behaviour in the tails.
 
 \begin{figure}[!h]
 \centering
@@ -370,6 +379,23 @@ Write more to fill this page
 \caption{Triple-Gamma-Penalty using different values of $\kappa_B$}
 \label{fig:basicTGPen}
 \end{figure}
+
+%---- Table Summarizing the Effects of Changes in the Hyperparameters
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{lcccccc}\toprule
+		& \multicolumn{2}{c}{Change} & \multicolumn{3}{c}{Mathematical Properties}\\
+		\cmidrule(r{4pt}){2-3} \cmidrule(l){4-5}
+Variable     	& \textbf{Positive} Change  & \textbf{Negative} Change & Defined Range & Misc.\\\midrule
+$a^\xi$  	& 11034 & 1.3e-7 & 3.9 & 15846 \\
+$c^\xi$ 		& 21952 & 1.3e-7 & 6.2 & 31516 \\
+$\kappa_B$ 	& 15883 & 5.2e-8 & 7.1 & 32023 \\\bottomrule
+\end{tabular}
+\caption{Summary of the effects of changes in the hyperparameters $a^\xi$, $c^\xi$ and $\kappa_B$ on the penalty structure}
+\label{tab:VariationsInHyperparameters}
+\end{table}
+\newpage
 
 \subsection{Comparison to already existing Penalty Terms}\label{subsec:comparepenalties}
 

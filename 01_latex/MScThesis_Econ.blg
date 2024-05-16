@@ -1,24 +1,11 @@
-[1] Config.pm:307> INFO - This is Biber 2.19
-[1] Config.pm:310> INFO - Logfile is 'MScThesis_Econ.blg'
-[436] biber-MSWIN64:340> INFO - === 
-[555] Biber.pm:419> INFO - Reading 'MScThesis_Econ.bcf'
-[1018] Biber.pm:979> INFO - Found 14 citekeys in bib section 0
-[1110] Biber.pm:4419> INFO - Processing section 0
-[1158] Biber.pm:4610> INFO - Looking for bibtex file 'ref.bib' for section 0
-[1265] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1351] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
-[1608] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1609] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1609] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[1609] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1677] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1678] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1678] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[1678] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1711] bbl.pm:660> INFO - Writing 'MScThesis_Econ.bbl' with encoding 'UTF-8'
-[1744] bbl.pm:763> INFO - Output to MScThesis_Econ.bbl
-[1745] Biber.pm:131> WARN - I didn't find a database entry for 'VanWieringen2015' (section 0)
-[1745] Biber.pm:131> WARN - I didn't find a database entry for 'FrankFriedman1993' (section 0)
-[1745] Biber.pm:131> WARN - I didn't find a database entry for 'ESLpage398' (section 0)
-[1746] Biber.pm:131> WARN - I didn't find a database entry for 'WangZhu2016' (section 0)
-[1746] Biber.pm:133> INFO - WARNINGS: 4
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'MScThesis_Econ.blg'
+[230] biber-MSWIN64:340> INFO - === 
+[295] Biber.pm:419> INFO - Reading 'MScThesis_Econ.bcf'
+[575] Biber.pm:979> INFO - Found 15 citekeys in bib section 0
+[618] Biber.pm:4419> INFO - Processing section 0
+[642] Biber.pm:4610> INFO - Looking for bibtex file 'ref.bib' for section 0
+[728] bibtex.pm:1713> INFO - LaTeX decoding ...
+[802] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
+[966] Utils.pm:410> ERROR - BibTeX subsystem: C:\Users\LUCASP~1\AppData\Local\Temp\biber_tmp_VCs3\e800e2552f53b910154f366d4c3730d7_9184.utf8, line 33, syntax error: found "BibtextID", expected ","
+[966] Biber.pm:136> INFO - ERRORS: 1

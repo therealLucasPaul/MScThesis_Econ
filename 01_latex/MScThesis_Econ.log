@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.15)  16 MAY 2024 08:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.15)  16 MAY 2024 11:54
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -204,55 +204,28 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 (C:\Program Files\MiKTeX 2.9\tex/latex/graphics-def\pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 )))
-(C:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty
-Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
-\multirow@colwidth=\skip57
-\multirow@cntb=\count280
-\multirow@dima=\skip58
-\bigstrutjot=\dimen169
-)
-(C:\Program Files\MiKTeX 2.9\tex/latex/booktabs\booktabs.sty
-Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen170
-\lightrulewidth=\dimen171
-\cmidrulewidth=\dimen172
-\belowrulesep=\dimen173
-\belowbottomsep=\dimen174
-\aboverulesep=\dimen175
-\abovetopsep=\dimen176
-\cmidrulesep=\dimen177
-\cmidrulekern=\dimen178
-\defaultaddspace=\dimen179
-\@cmidla=\count281
-\@cmidlb=\count282
-\@aboverulesep=\dimen180
-\@belowrulesep=\dimen181
-\@thisruleclass=\count283
-\@lastruleclass=\count284
-\@thisrulewidth=\dimen182
-)
 (C:\Program Files\MiKTeX 2.9\tex/latex/graphics\graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
-\Gin@req@height=\dimen183
-\Gin@req@width=\dimen184
+\Gin@req@height=\dimen169
+\Gin@req@width=\dimen170
 )
 (C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/caption\caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen185
-\captionmargin=\dimen186
-\caption@leftmargin=\dimen187
-\caption@rightmargin=\dimen188
-\caption@width=\dimen189
-\caption@indent=\dimen190
-\caption@parindent=\dimen191
-\caption@hangindent=\dimen192
+\caption@tempdima=\dimen171
+\captionmargin=\dimen172
+\caption@leftmargin=\dimen173
+\caption@rightmargin=\dimen174
+\caption@width=\dimen175
+\caption@indent=\dimen176
+\caption@parindent=\dimen177
+\caption@hangindent=\dimen178
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count285
-\c@continuedfloat=\count286
+\c@caption@flags=\count280
+\c@continuedfloat=\count281
 )
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -270,8 +243,8 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (C:\Program Files\MiKTeX 2.9\tex/latex/pgf/utilities\pgfrcs.sty
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-common.tex
 \pgfutil@everybye=\toks26
-\pgfutil@tempdima=\dimen193
-\pgfutil@tempdimb=\dimen194
+\pgfutil@tempdima=\dimen179
+\pgfutil@tempdimb=\dimen180
 )
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgfutil-latex.def
 \pgfutil@abb=\box54
@@ -295,26 +268,26 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 ode.tex
 \pgfkeys@tmptoks=\toks29
 ))
-\pgf@x=\dimen195
-\pgf@y=\dimen196
-\pgf@xa=\dimen197
-\pgf@ya=\dimen198
-\pgf@xb=\dimen199
-\pgf@yb=\dimen256
-\pgf@xc=\dimen257
-\pgf@yc=\dimen258
-\pgf@xd=\dimen259
-\pgf@yd=\dimen260
+\pgf@x=\dimen181
+\pgf@y=\dimen182
+\pgf@xa=\dimen183
+\pgf@ya=\dimen184
+\pgf@xb=\dimen185
+\pgf@yb=\dimen186
+\pgf@xc=\dimen187
+\pgf@yc=\dimen188
+\pgf@xd=\dimen189
+\pgf@yd=\dimen190
 \w@pgf@writea=\write3
 \r@pgf@reada=\read3
-\c@pgf@counta=\count287
-\c@pgf@countb=\count288
-\c@pgf@countc=\count289
-\c@pgf@countd=\count290
+\c@pgf@counta=\count282
+\c@pgf@countb=\count283
+\c@pgf@countc=\count284
+\c@pgf@countd=\count285
 \t@pgf@toka=\toks30
 \t@pgf@tokb=\toks31
 \t@pgf@tokc=\toks32
-\pgf@sys@id@count=\count291
+\pgf@sys@id@count=\count286
  (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgf.cfg
 File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -329,8 +302,8 @@ File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsyssoftpath.code.te
 x
 File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfsyssoftpath@smallbuffer@items=\count292
-\pgfsyssoftpath@bigbuffer@items=\count293
+\pgfsyssoftpath@smallbuffer@items=\count287
+\pgfsyssoftpath@bigbuffer@items=\count288
 )
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/systemlayer\pgfsysprotocol.code.te
 x
@@ -360,8 +333,8 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathutil.code.tex)
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathparser.code.tex
-\pgfmath@dimen=\dimen261
-\pgfmath@count=\count294
+\pgfmath@dimen=\dimen191
+\pgfmath@count=\count289
 \pgfmath@box=\box55
 \pgfmath@toks=\toks33
 \pgfmath@stack@operand=\toks34
@@ -386,56 +359,56 @@ x)
 metics.code.tex)
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathcalc.code.tex)
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmathfloat.code.tex
-\c@pgfmathroundto@lastzeros=\count295
+\c@pgfmathroundto@lastzeros=\count290
 ))
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfint.code.tex)
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepoints.code.tex
 File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@picminx=\dimen262
-\pgf@picmaxx=\dimen263
-\pgf@picminy=\dimen264
-\pgf@picmaxy=\dimen265
-\pgf@pathminx=\dimen266
-\pgf@pathmaxx=\dimen267
-\pgf@pathminy=\dimen268
-\pgf@pathmaxy=\dimen269
-\pgf@xx=\dimen270
-\pgf@xy=\dimen271
-\pgf@yx=\dimen272
-\pgf@yy=\dimen273
-\pgf@zx=\dimen274
-\pgf@zy=\dimen275
+\pgf@picminx=\dimen192
+\pgf@picmaxx=\dimen193
+\pgf@picminy=\dimen194
+\pgf@picmaxy=\dimen195
+\pgf@pathminx=\dimen196
+\pgf@pathmaxx=\dimen197
+\pgf@pathminy=\dimen198
+\pgf@pathmaxy=\dimen199
+\pgf@xx=\dimen256
+\pgf@xy=\dimen257
+\pgf@yx=\dimen258
+\pgf@yy=\dimen259
+\pgf@zx=\dimen260
+\pgf@zy=\dimen261
 )
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathconstruct.co
 de.tex
 File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@path@lastx=\dimen276
-\pgf@path@lasty=\dimen277
+\pgf@path@lastx=\dimen262
+\pgf@path@lasty=\dimen263
 )
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorepathusage.code.t
 ex
 File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@shorten@end@additional=\dimen278
-\pgf@shorten@start@additional=\dimen279
+\pgf@shorten@end@additional=\dimen264
+\pgf@shorten@start@additional=\dimen265
 )
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorescopes.code.tex
 File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
 \pgfpic=\box56
 \pgf@hbox=\box57
 \pgf@layerbox@main=\box58
-\pgf@picture@serial@count=\count296
+\pgf@picture@serial@count=\count291
 )
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoregraphicstate.cod
 e.tex
 File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgflinewidth=\dimen280
+\pgflinewidth=\dimen266
 )
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoretransformations.
 code.tex
 File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@pt@x=\dimen281
-\pgf@pt@y=\dimen282
-\pgf@pt@temp=\dimen283
+\pgf@pt@x=\dimen267
+\pgf@pt@y=\dimen268
+\pgf@pt@temp=\dimen269
 )
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorequick.code.tex
 File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
@@ -449,12 +422,12 @@ File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcorearrows.code.tex
 File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfarrowsep=\dimen284
+\pgfarrowsep=\dimen270
 ) (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreshade.code.tex
 File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@max=\dimen285
-\pgf@sys@shading@range@num=\count297
-\pgf@shadingcount=\count298
+\pgf@max=\dimen271
+\pgf@sys@shading@range@num=\count292
+\pgf@shadingcount=\count293
 ) (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/basiclayer\pgfcoreimage.code.tex
 File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )
@@ -486,8 +459,8 @@ File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
 (C:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-0-65.s
 ty
 Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
-\pgf@nodesepstart=\dimen286
-\pgf@nodesepend=\dimen287
+\pgf@nodesepstart=\dimen272
+\pgf@nodesepend=\dimen273
 )
 (C:\Program Files\MiKTeX 2.9\tex/latex/pgf/compatibility\pgfcomp-version-1-18.s
 ty
@@ -499,8 +472,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/math\pgfmath.code.tex))
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/utilities\pgffor.code.tex
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
-\pgffor@iter=\dimen288
-\pgffor@skip=\dimen289
+\pgffor@iter=\dimen274
+\pgffor@skip=\dimen275
 \pgffor@stack=\toks36
 \pgffor@toks=\toks37
 ))
@@ -510,38 +483,65 @@ Package: tikz 2023-01-15 v3.1.10 (3.1.10)
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/libraries\pgflibraryplothandlers.c
 ode.tex
 File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgf@plot@mark@count=\count299
-\pgfplotmarksize=\dimen290
+\pgf@plot@mark@count=\count294
+\pgfplotmarksize=\dimen276
 )
-\tikz@lastx=\dimen291
-\tikz@lasty=\dimen292
-\tikz@lastxsaved=\dimen293
-\tikz@lastysaved=\dimen294
-\tikz@lastmovetox=\dimen295
-\tikz@lastmovetoy=\dimen296
-\tikzleveldistance=\dimen297
-\tikzsiblingdistance=\dimen298
+\tikz@lastx=\dimen277
+\tikz@lasty=\dimen278
+\tikz@lastxsaved=\dimen279
+\tikz@lastysaved=\dimen280
+\tikz@lastmovetox=\dimen281
+\tikz@lastmovetoy=\dimen282
+\tikzleveldistance=\dimen283
+\tikzsiblingdistance=\dimen284
 \tikz@figbox=\box61
 \tikz@figbox@bg=\box62
 \tikz@tempbox=\box63
 \tikz@tempbox@bg=\box64
-\tikztreelevel=\count300
-\tikznumberofchildren=\count301
-\tikznumberofcurrentchild=\count302
-\tikz@fig@count=\count303
+\tikztreelevel=\count295
+\tikznumberofchildren=\count296
+\tikznumberofcurrentchild=\count297
+\tikz@fig@count=\count298
 
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/modules\pgfmodulematrix.code.tex
 File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
-\pgfmatrixcurrentrow=\count304
-\pgfmatrixcurrentcolumn=\count305
-\pgf@matrix@numberofcolumns=\count306
+\pgfmatrixcurrentrow=\count299
+\pgfmatrixcurrentcolumn=\count300
+\pgf@matrix@numberofcolumns=\count301
 )
-\tikz@expandcount=\count307
+\tikz@expandcount=\count302
 
 (C:\Program Files\MiKTeX 2.9\tex/generic/pgf/frontendlayer/tikz/libraries\tikzl
 ibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(C:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip57
+\multirow@cntb=\count303
+\multirow@dima=\skip58
+\bigstrutjot=\dimen285
+)
+(C:\Program Files\MiKTeX 2.9\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen286
+\lightrulewidth=\dimen287
+\cmidrulewidth=\dimen288
+\belowrulesep=\dimen289
+\belowbottomsep=\dimen290
+\aboverulesep=\dimen291
+\abovetopsep=\dimen292
+\cmidrulesep=\dimen293
+\cmidrulekern=\dimen294
+\defaultaddspace=\dimen295
+\@cmidla=\count304
+\@cmidlb=\count305
+\@aboverulesep=\dimen296
+\@belowrulesep=\dimen297
+\@thisruleclass=\count306
+\@lastruleclass=\count307
+\@thisrulewidth=\dimen298
+)
 (C:\Program Files\MiKTeX 2.9\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2023/06/19 version 6.0.4 text color boxes
 
@@ -982,7 +982,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip81
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 43.
+Package hyperref Info: Option `colorlinks' set `true' on input line 47.
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
@@ -1022,30 +1022,27 @@ LaTeX Warning: Label `fig:basicTGPen' multiply defined.
 
 LaTeX Warning: Label `fig:basicTGPen' multiply defined.
 
-
-LaTeX Warning: Label `fig:basicTGPen' multiply defined.
-
 )
 \openout1 = `MScThesis_Econ.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
-LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1151,28 +1148,14 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                FrankFriedman1993
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                VanWieringen2015
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                WangZhu2016
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 76.
-Package biblatex Info: Reference segment=0 on input line 76.
-Package hyperref Info: Link coloring ON on input line 76.
+Package biblatex Info: Reference section=0 on input line 80.
+Package biblatex Info: Reference segment=0 on input line 80.
+Package hyperref Info: Link coloring ON on input line 80.
  (MScThesis_Econ.out) (MScThesis_Econ.out)
 \@outlinefile=\write5
 \openout5 = `MScThesis_Econ.out'.
@@ -1180,15 +1163,15 @@ Package hyperref Info: Link coloring ON on input line 76.
 <WU.png, id=97, 2007.5pt x 1039.885pt>
 File: WU.png Graphic file (type png)
 <use WU.png>
-Package pdftex.def Info: WU.png  used on input line 81.
+Package pdftex.def Info: WU.png  used on input line 85.
 (pdftex.def)             Requested size: 200.76175pt x 103.99458pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 87.
 
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 83.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 87.
 
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
@@ -1197,7 +1180,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 <GitHub.png, id=100, 3854.4pt x 2168.1pt>
 File: GitHub.png Graphic file (type png)
 <use GitHub.png>
-Package pdftex.def Info: GitHub.png  used on input line 95.
+Package pdftex.def Info: GitHub.png  used on input line 99.
 (pdftex.def)             Requested size: 38.52272pt x 21.66904pt.
  [1
 
@@ -1215,162 +1198,174 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.123 \newpage
+l.127 \newpage
                [1]
-Underfull \hbox (badness 10000) in paragraph at lines 126--127
+Underfull \hbox (badness 10000) in paragraph at lines 130--131
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 142--145
+Underfull \hbox (badness 10000) in paragraph at lines 146--149
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 146--147
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
 
  []
 
 [3] [4]
-
-LaTeX Warning: Citation 'VanWieringen2015' on page 5 undefined on input line 19
-4.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 198--201
+Underfull \hbox (badness 10000) in paragraph at lines 202--205
 
  []
 
 [5]
-
-LaTeX Warning: Citation 'FrankFriedman1993' on page 6 undefined on input line 2
-03.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--210
+Underfull \hbox (badness 10000) in paragraph at lines 211--214
 
  []
 
 [6]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textcite' on input line 248.
+(hyperref)                removing `\textcite' on input line 252.
 
 [7]
-Underfull \hbox (badness 10000) in paragraph at lines 254--255
+Underfull \hbox (badness 10000) in paragraph at lines 258--259
 
  []
 
 [8]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 298
+LaTeX Font Info:    Trying to load font information for U+euf on input line 302
 .
  (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 298--299
+Underfull \hbox (badness 10000) in paragraph at lines 302--303
 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 308--310
+Underfull \hbox (badness 10000) in paragraph at lines 312--314
 
  []
 
 
-Overfull \hbox (14.7145pt too wide) detected at line 322
+Overfull \hbox (14.7145pt too wide) detected at line 326
 []
  []
 
 [10]
 
-LaTeX Warning: Citation 'ESLpage398' on page 11 undefined on input line 331.
+LaTeX Warning: Citation 'ESLpage398' on page 11 undefined on input line 335.
 
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 3
-31.
+35.
 (C:\Program Files\MiKTeX 2.9\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <12> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 331.
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 335.
 
 
-LaTeX Warning: Citation '' on page 11 undefined on input line 331.
+LaTeX Warning: Citation '' on page 11 undefined on input line 335.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 338--342
+Underfull \hbox (badness 10000) in paragraph at lines 342--346
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 345--346
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png, id=247, 462.5
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+ []
+
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png, id=252, 462.5
 28pt x 346.896pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png Graphic f
 ile (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInA.png  used on input line 349.
+geInA.png  used on input line 355.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 355--356
+LaTeX Warning: Citation 'WangZhu2016' on page 12 undefined on input line 360.
+
+
+LaTeX Warning: Citation '' on page 12 undefined on input line 360.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 360--361
 
  []
 
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC.png, id=248, 462.5
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--363
+
+ []
+
+[12 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>]
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC.png, id=261, 462.5
 28pt x 346.896pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC.png Graphic f
 ile (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInC.png  used on input line 359.
+geInC.png  used on input line 368.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
 
  []
 
-[12 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png> <../02_si
-mulation/021_simulation_figures/TGPenalty_ChangeInC.png>]
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png, id=257, 4
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png, id=262, 4
 62.528pt x 346.896pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png Graph
 ic file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInKappa.png  used on input line 369.
+geInKappa.png  used on input line 378.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
-<../02_simulation/021_simulation_figures/simpleTGpenalty.png, id=258, 462.528pt
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[13 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC.png>]
+<../02_simulation/021_simulation_figures/simpleTGpenalty.png, id=270, 462.528pt
  x 346.896pt>
 File: ../02_simulation/021_simulation_figures/simpleTGpenalty.png Graphic file 
 (type png)
 <use ../02_simulation/021_simulation_figures/simpleTGpenalty.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/simpleTGpenalt
-y.png  used on input line 378.
+y.png  used on input line 404.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+LaTeX Warning: Citation 'WangZhu2016' on page 14 undefined on input line 413.
 
 
-LaTeX Warning: Citation 'WangZhu2016' on page 13 undefined on input line 387.
+LaTeX Warning: Citation '' on page 14 undefined on input line 413.
 
 
-LaTeX Warning: Citation '' on page 13 undefined on input line 387.
-
-
-Overfull \hbox (52.26517pt too wide) in paragraph at lines 387--388
+Overfull \hbox (52.26517pt too wide) in paragraph at lines 413--414
 []\OT1/cmr/m/n/12 As pre-vi-ously men-tioned, the \OT1/cmr/m/it/12 Arc-tan \OT1
 /cmr/m/n/12 penalty de-vel-oped by [][]
  []
 
-[13 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>]
-[14 <../02_simulation/021_simulation_figures/simpleTGpenalty.png>]
-Overfull \hbox (6.20493pt too wide) in paragraph at lines 415--415
+[14 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png> <../0
+2_simulation/021_simulation_figures/simpleTGpenalty.png>] [15]
+Overfull \hbox (6.20493pt too wide) in paragraph at lines 441--441
 [][]\OT1/cmr/m/n/12 Hoerl, A. E., & Ken-nard, R. W. (1970b). Ridge re-gres-sion
 : Bi-ased es-ti-ma-tion for nonorthog-
+ []
+
+
+Overfull \hbox (35.87369pt too wide) in paragraph at lines 441--441
+[][]\OT1/cmr/m/n/12 van Wierin-gen, W. N. (2015). Lec-ture notes on ridge re-gr
+es-sion. \OT1/cmr/m/it/12 arXiv preprint arXiv:1509.09169\OT1/cmr/m/n/12 . 
  []
 
 [3] (MScThesis_Econ.aux)
@@ -1389,10 +1384,10 @@ Package logreq Info: Writing requests to 'MScThesis_Econ.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34604 strings out of 475551
- 665825 string characters out of 5770464
+ 34633 strings out of 475551
+ 666736 string characters out of 5770464
  1936238 words of memory out of 5000000
- 55273 multiletter control sequences out of 15000+600000
+ 55297 multiletter control sequences out of 15000+600000
  569108 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,14n,89p,1228b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1415,9 +1410,9 @@ amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eu
 fm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
 0.pfb>
-Output written on MScThesis_Econ.pdf (18 pages, 673454 bytes).
+Output written on MScThesis_Econ.pdf (19 pages, 678289 bytes).
 PDF statistics:
- 374 PDF objects out of 1000 (max. 8388607)
- 60 named destinations out of 1000 (max. 500000)
+ 388 PDF objects out of 1000 (max. 8388607)
+ 65 named destinations out of 1000 (max. 500000)
  227 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,0 +1,37 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+
+\usepackage[style=apa, backend=biber]{biblatex}
+\addbibresource[]{ref.bib}
+
+\author{Lucas Paul Unterweger}
+\title{Basic Layouts for \LaTeX Document of the Thesis}
+\author{Lucas Unterweger}
+\begin{document}
+\maketitle
+\newpage
+
+\section{Tables}
+
+\begin{table}[!h]
+\centering
+\begin{tabular}{lcccccc}\toprule
+		& \multicolumn{3}{c}{Group 1} & \multicolumn{3}{c}{Group 2}\\
+		\cmidrule(r{4pt}){2-4} \cmidrule(l){5-7}
+     	& Column 1  & Column 2 & Column 3 & Column 4  & Column 5 & Column 6\\\midrule
+Row 1   	& 11034 & 1.3e-7 & 3.9 & 15846 & 2.7e-11 & 5.6 \\
+Row 2 	& 21952 & 1.3e-7 & 6.2 & 31516 & 2.7e-11 & 8.8 \\
+Row 3 	& 15883 & 5.2e-8 & 7.1 & 32023 & 1.1e-11 & 1.4e1\\
+Row 4   	& 11180 & 8.0e-9 & 4.3 & 17348 & 1.5e-11 & 6.6 \\\bottomrule
+\end{tabular}
+\caption{This is a sample table for the thesis.}
+\label{tab:table1}
+\end{table}
+
+\end{document}
