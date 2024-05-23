@@ -1,9 +1,9 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'Helper File for Latex Document.blg'
-[139] biber-MSWIN64:340> INFO - === 
-[184] Biber.pm:419> INFO - Reading 'Helper File for Latex Document.bcf'
-[358] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
-[384] bbl.pm:660> INFO - Writing 'Helper File for Latex Document.bbl' with encoding 'UTF-8'
-[384] bbl.pm:763> INFO - Output to Helper File for Latex Document.bbl
-[385] Biber.pm:131> WARN - The file 'Helper File for Latex Document.bcf' does not contain any citations!
-[385] Biber.pm:133> INFO - WARNINGS: 1
+[1] Config.pm:310> INFO - Logfile is 'Helper File for Latex Document.blg'
+[242] biber-MSWIN64:340> INFO - === 
+[306] Biber.pm:419> INFO - Reading 'Helper File for Latex Document.bcf'
+[583] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[625] bbl.pm:660> INFO - Writing 'Helper File for Latex Document.bbl' with encoding 'UTF-8'
+[625] bbl.pm:763> INFO - Output to Helper File for Latex Document.bbl
+[626] Biber.pm:131> WARN - The file 'Helper File for Latex Document.bcf' does not contain any citations!
+[626] Biber.pm:133> INFO - WARNINGS: 1

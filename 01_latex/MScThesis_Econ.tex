@@ -20,6 +20,8 @@
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage[justification=centering]{caption} % Centers the caption
+\usepackage{makecell}
+\usepackage{lscape}
 % -----
 
 % Colorbox for Notes ------
@@ -92,8 +94,13 @@ Examiner: & Peter Knaus, PhD \\
 Submission date: & TBA \\
 \end{tabular}
 \vfill
-{\large \textbf{Triple-Gamma-Regularization} \textit{or}\\ \textbf{On the Duality of Frequentist Point Estimates and Bayesian Shrinkage Priors}\\
-\normalsize \textit{An Extension based on the Triple-Gamma-Prior}}
+{\large \textbf{Triple-Gamma-Regularization} \\
+\normalsize \textit{A Flexible Non-Convex Regularization Penalty based on the Triple-Gamma-Prior}}
+
+% Old Title
+%\textit{or}\\ \textbf{On the Duality of Frequentist Point Estimates and Bayesian %Shrinkage Priors}\\
+%\normalsize \textit{An Extension based on the Triple-Gamma-Prior}}
+
 \vfill
 by\\ \vspace{3mm}
 {\Large Lucas Unterweger \href{https://github.com/therealLucasPaul}{\includegraphics[scale=0.01]{GitHub.png}}}\\
@@ -186,6 +193,7 @@ where $R_{emp}(\beta) = \sum_i^n L(y_i, f(x_i, \beta))$. Note: Regularization te
 \end{lightbluebox}
 
 \subsection{Short Deviation to Bayesian Shrinkage Priors}
+Explain how Bayesians battle model complexity. 
 
 \newpage
 
@@ -244,6 +252,8 @@ Use tree to classify regularization methods.
 \end{tikzpicture}  
 
 \end{center}
+
+Vielleicht als Tabelle mit drei Spalten.
 
 \subsection{Duality of the Ridge Regression}
 
@@ -358,20 +368,32 @@ The first hyper-parameter which can be adjusted is $a^\xi$. A plot with a set of
 \end{figure}
 
 Seeing this, it is apparent that a value of $a^\xi$ close but strictly larger that $0.5$ mimics the behaviour of the \textit{Arctan Penalty} by \textcite{WangZhu2016} in small neighbourhoods of $\beta=0$. Similar, large positive values for $a^\xi$ lead to a \textit{Gaussian Penalty} like behaviour in small neighbourhoods of $\beta = 0$ as recently proposed by \textcite{JohnVettamWu2022}.\\
+\newpage
 
 \textit{Variations of the Hyperparameter $c^\xi$}\\
 
-In contrast to the hyperparameter $a^\xi$, which mainly affects the behaviour at and around $\beta=0$, changes in $c^\xi$ mainly affect the behaviour in the tails.
+In contrast to the hyperparameter $a^\xi$, which mainly affects the behaviour at and around $\beta=0$, changes in $c^\xi$ mainly affect the behaviour in the tails. However, the effect that a change in $c^\xi$ has on the penalty structure can be split up in two rough subsets of $(0,\infty)$. The effect of the first subset of values for $c^\xi$ which are strictly greater than $0$ but less or equal than $0.1$ can be found in figure \ref{fig:ChangeInC_SmallValues} (as already mentioned before, by definition, $c^\xi$ has to be strictly greater than zero: $c^\xi > 0$). Here, it can be seen that as the values for $c^\xi$ become smaller, a shifting effect takes place which generally does not influence the overall structure of the penalty, but increases the amount of penalty which is added to the risk function for $\beta$-values which are different from zero (In a sense, this has a similar effect to changes in $\kappa_B$, which will be explained later). Or, to put it differently, with values of $c^\xi$ closer to zero, the data has be become even more convincing that the value is significantly different from zero.\\
+
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_ChangeInC.png}
-\caption{Triple-Gamma-Penalty using different values of $c^\xi$}
-\label{fig:basicTGPen}
+\includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png}
+\caption{Triple-Gamma-Penalty using different values of $c^\xi$ with $0 < c^\xi \leq 0.1$}
+\label{fig:ChangeInC_SmallValues}
+\end{figure}
+
+However, the more interesting effect that a change in $c^\xi$ has on the penalty structure can be seen for values of $c^\xi$ that are greater than $0.1$. In figure \ref{fig:ChangeInC_LargeValues}, a plot can be found with the Triple-Gamma-Penalty for larger values of $c^\xi$. Again, starting from the baseline with $c^\xi = 0.1$, higher values for this hyper-parameter mainly change the behaviour of the penalty in the tails. A result that has already been shown by \textcite{TGP2020} in Table 1, where multiple different hyper-parameter settings are presented, is that with an increasing value for $c^\xi$ and with $a^\xi = 1$ \textbf{as well as kappaB = ??}, the Triple-Gamma-Prior converges to a \textit{LASSO} like shrinkage behaviour. A property which carries over to the proposed regularization setting when using the proposed hyper-parameter values, thus showing that the Triple-Gamma-Penalty can be used both as a non-convex penalty as well as a \textit{LASSO} penalty, creating increased flexibility in modelling approaches. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png}
+\caption{Triple-Gamma-Penalty using different values of $c^\xi$ with $c^\xi \geq 0.1$}
+\label{fig:ChangeInC_LargeValues}
 \end{figure}
 
 \textit{Variations of the Hyperparameter $\kappa_B$}\\
 
+The third and final hyper-parameter $\kappa_B$ enters the Triple-Gamma-Penalty $J_{TG}(\beta)$ as part of $\phi^\xi = \frac{2c^\xi}{\kappa_B^2 a^\xi}$ as can be seen from equation \ref{eq:tgr}. Notably, $\kappa_B$ is squared and thus only the absolute value of $\kappa_B$, $|\kappa_B|$, influences the structure of the penalty. 
 
 \begin{figure}[!h]
 \centering
@@ -380,28 +402,31 @@ In contrast to the hyperparameter $a^\xi$, which mainly affects the behaviour at
 \label{fig:basicTGPen}
 \end{figure}
 
+\newpage
 %---- Table Summarizing the Effects of Changes in the Hyperparameters
-
+\begin{landscape}
 \begin{table}[!h]
-\centering
+\begin{center}
 \begin{tabular}{lcccccc}\toprule
-		& \multicolumn{2}{c}{Change} & \multicolumn{3}{c}{Mathematical Properties}\\
+		& \multicolumn{2}{l}{Change} & \multicolumn{3}{c}{Mathematical Properties}\\
 		\cmidrule(r{4pt}){2-3} \cmidrule(l){4-5}
 Variable     	& \textbf{Positive} Change  & \textbf{Negative} Change & Defined Range & Misc.\\\midrule
-$a^\xi$  	& 11034 & 1.3e-7 & 3.9 & 15846 \\
-$c^\xi$ 		& 21952 & 1.3e-7 & 6.2 & 31516 \\
-$\kappa_B$ 	& 15883 & 5.2e-8 & 7.1 & 32023 \\\bottomrule
+$a^\xi$  	& \makecell{Shifting towards\\ \textit{Gaussian}-like behaviour\\ at $\beta = 0$} & \makecell{Shifting towards singularity\\ at $\beta = 0$; Higher\\ immediate penalty for coefficients\\ $\beta \neq 0$} & $(0.5, \infty)$ & Expl.\\
+$c^\xi$ 		& \makecell{Generally, convergence towards \\ convexity and, given certain \\ settings for $a^\xi$ and\\ $\kappa_B$, LASSO. Higher values\\ increase the additional penalty\\ for higher absolute values of $\beta$.} &  \makecell{For values smaller \\ than $0.1$, similar effect\\ to increase in $a^\xi$} & $(0, \infty)$ & Expl. \\
+$\kappa_B$ 	& 15883 & 5.2e-8 & $(-\infty, \infty)/{0}$ & Expl. \\\bottomrule
 \end{tabular}
 \caption{Summary of the effects of changes in the hyperparameters $a^\xi$, $c^\xi$ and $\kappa_B$ on the penalty structure}
 \label{tab:VariationsInHyperparameters}
 \end{table}
+\end{center}
+\end{landscape}
 \newpage
 
 \subsection{Comparison to already existing Penalty Terms}\label{subsec:comparepenalties}
 
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/simpleTGpenalty.png}
+\includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/ComparisonToOtherPenalties.png}
 \caption{Basic Representation of the Triple-Gamma-Penalty using Hyperparameters $c^\xi = 0.1, \kappa_B = 2, a^\xi = 0.75$ compared to \textit{LASSO} and \textit{Ridge} Penalties}
 \label{fig:basicTGPen}
 \end{figure}
@@ -419,7 +444,9 @@ As previously mentioned, the \textit{Arctan} penalty developed by \textcite{Wang
 Use the earlier derivation, code up the functions and simulate data to check behaviour for different datasets. Compare to base OLS, Ridge and Lasso Regression?
 \subsection{Computational Performance}
 Talking about Gradient Descent Methods in more depth. Why Gradient Clipping. Maybe more modern estimation techniques? 
-\subsection{Implementation as Python Library}
+
+See how computation times change when increasing the size of the data set or when the number of parameter changes. => Use Stochastic Gradient Descent (SGD)
+\subsection{Implementation as Python Package}
 
 How to use it. 
 Explanation of Functions. Input - Output Tables

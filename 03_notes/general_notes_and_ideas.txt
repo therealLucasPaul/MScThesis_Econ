@@ -1,3 +1,7 @@
 ## General Notes and Ideas
 
 Estimation Method: Gradient Clipping mit PyTorch
+
+
+## TODOS:
+Der Definitonsbereich von KappaB muss angepasst werden, weil die Division durch 0 eigentlich nur c^\xi betrifft

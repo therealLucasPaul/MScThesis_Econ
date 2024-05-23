@@ -10,15 +10,15 @@
 \contentsline {subsection}{\numberline {3.2}Triple-Gamma-Prior by \blx@tocontentsinit {0}\textcite {TGP2020}}{7}{subsection.3.2}%
 \contentsline {section}{\numberline {4}Model Setup and Derivation}{8}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Varying the Hyperparameters}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Comparison to already existing Penalty Terms}{14}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Restricted Strong Convexity (RSC) of the Triple-Gamma-Regularization}{15}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Alternative Specification (with +1 to mimic artan)}{15}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Approaches to Estimation}{15}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Simulation Section}{15}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Computational Performance}{15}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Implementation as Python Library}{15}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Small Applied Section}{15}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{15}{section.7}%
-\contentsline {section}{\numberline {8}Possible Extensions and Criticism}{15}{section.8}%
-\contentsline {section}{\numberline {9}References}{15}{section.9}%
+\contentsline {subsection}{\numberline {4.2}Comparison to already existing Penalty Terms}{17}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Restricted Strong Convexity (RSC) of the Triple-Gamma-Regularization}{17}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Alternative Specification (with +1 to mimic artan)}{17}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Approaches to Estimation}{17}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Simulation Section}{17}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Computational Performance}{17}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Implementation as Python Package}{18}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Small Applied Section}{18}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{18}{section.7}%
+\contentsline {section}{\numberline {8}Possible Extensions and Criticism}{18}{section.8}%
+\contentsline {section}{\numberline {9}References}{18}{section.9}%
 \contentsline {section}{References}{iii}{section.9}%
