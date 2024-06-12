@@ -5,3 +5,17 @@ Estimation Method: Gradient Clipping mit PyTorch
 
 ## TODOS:
 Der Definitonsbereich von KappaB muss angepasst werden, weil die Division durch 0 eigentlich nur c^\xi betrifft
+
+
+## Punkte nach Formeln; Beistriche wenn mehrere Formeln untereinander
+
+
+## Simulation Study
+Bei Simulation: Early Stopping mit prozentualem loss
+
+Variation von N (50, 100, 250, 1000, 10000)
+Variation von Sparsity mit prozentuellem Anteil (10%, 30%, 50%, 90% signifikant)
+Variation von Anzahl der Parameter (3, 10, 20, 40)
+
+Für jeden Fall den Datensatz ~50 Mal durchlaufen lassen und Test Error (oder eine andere Metrik berechnen; MSE zu prediction/true parameter values) berechnen.
+ {"oM":"l","Sl":2}

@@ -1,21 +1,21 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'MScThesis_Econ.blg'
-[290] biber-MSWIN64:340> INFO - === 
-[368] Biber.pm:419> INFO - Reading 'MScThesis_Econ.bcf'
-[728] Biber.pm:979> INFO - Found 15 citekeys in bib section 0
-[794] Biber.pm:4419> INFO - Processing section 0
-[824] Biber.pm:4610> INFO - Looking for bibtex file 'ref.bib' for section 0
-[920] bibtex.pm:1713> INFO - LaTeX decoding ...
-[992] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
-[1264] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1264] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1264] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[1264] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1337] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1337] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1337] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[1337] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1386] bbl.pm:660> INFO - Writing 'MScThesis_Econ.bbl' with encoding 'UTF-8'
-[1427] bbl.pm:763> INFO - Output to MScThesis_Econ.bbl
-[1428] Biber.pm:131> WARN - I didn't find a database entry for 'ESLpage398' (section 0)
-[1428] Biber.pm:133> INFO - WARNINGS: 1
+[148] biber-MSWIN64:340> INFO - === 
+[202] Biber.pm:419> INFO - Reading 'MScThesis_Econ.bcf'
+[454] Biber.pm:979> INFO - Found 15 citekeys in bib section 0
+[495] Biber.pm:4419> INFO - Processing section 0
+[513] Biber.pm:4610> INFO - Looking for bibtex file 'ref.bib' for section 0
+[568] bibtex.pm:1713> INFO - LaTeX decoding ...
+[609] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
+[760] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[760] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[760] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[760] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[801] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[801] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[801] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[801] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[825] bbl.pm:660> INFO - Writing 'MScThesis_Econ.bbl' with encoding 'UTF-8'
+[844] bbl.pm:763> INFO - Output to MScThesis_Econ.bbl
+[845] Biber.pm:131> WARN - I didn't find a database entry for 'ESLpage398' (section 0)
+[845] Biber.pm:133> INFO - WARNINGS: 1

@@ -1,0 +1,6 @@
+\babel@toc {english}{}\relax 
+\contentsline {figure}{\numberline {1}{\ignorespaces Triple-Gamma-Penalty using different values of $a^\xi $}}{12}{figure.caption.1}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Triple-Gamma-Penalty using different values of $c^\xi $ with $0 < c^\xi \leq 0.1$}}{13}{figure.caption.2}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Triple-Gamma-Penalty using different values of $c^\xi $ with $c^\xi \geq 0.1$}}{14}{figure.caption.3}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Triple-Gamma-Penalty using different values of $\kappa _B$}}{15}{figure.caption.4}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Basic Representation of the Triple-Gamma-Penalty using Hyperparameters $c^\xi = 0.1, \kappa _B = 2, a^\xi = 0.75$ compared to \textit {LASSO} and \textit {Ridge} Penalties}}{17}{figure.caption.6}%

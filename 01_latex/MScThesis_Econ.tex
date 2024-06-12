@@ -119,6 +119,14 @@ Lorem ipsum...
 \end{abstract}
 
 \clearpage
+
+\section*{Acknowledgements}
+\thispagestyle{empty}
+
+I like to acknowledge ...
+
+\clearpage
+
 \thispagestyle{plain}
 \tableofcontents
 \pagebreak
@@ -198,7 +206,7 @@ Explain how Bayesians battle model complexity.
 \newpage
 
 %----- Literature Review -----
-\section{Literature Review}
+\section{Literature Review}\label{sec:litreview}
 
 The concept of a penalized regression has been around for quite some time and been studied widely in various fields of scientific research. Arguably, this methodological approach to penalized regression started with the publication of two pieces of literature published by Arthur Hoerl and Robert Kennard in 1970 \parencite{HoerlKennard1970a, HoerlKennard1970b}. With these two papers the authors introduced the widely known \textit{Ridge Regression}, which has been developed from the previously known concept of Ridge analysis. In its core, the authors were trying to tackle the problem of high variances of the regression coefficients in high-dimensional problem settings. This shrinkage estimator, which uses the squared coefficient as a penalty term, "attempt[s] to shrink the coefficients to
 reduce these variances, while adding some bias." \parencite{Hoerl2020} This closely resembles the previously discussed issue of the \textit{Bias-Variance-Tradeoff}, which has been discussed in the \textit{Under- and Overfitting} chapter in section \ref{sec:theorysuper} (Roger W. Hoerl, Arthur Hoerl's son, published a historical overview of the development of the concept of \textit{Ridge Regression} in 2020 \parencite{Hoerl2020}). The closed from solution of the Ridge estimator is given by
@@ -393,13 +401,15 @@ However, the more interesting effect that a change in $c^\xi$ has on the penalty
 
 \textit{Variations of the Hyperparameter $\kappa_B$}\\
 
-The third and final hyper-parameter $\kappa_B$ enters the Triple-Gamma-Penalty $J_{TG}(\beta)$ as part of $\phi^\xi = \frac{2c^\xi}{\kappa_B^2 a^\xi}$ as can be seen from equation \ref{eq:tgr}. Notably, $\kappa_B$ is squared and thus only the absolute value of $\kappa_B$, $|\kappa_B|$, influences the structure of the penalty. 
+The third and final hyper-parameter $\kappa_B$ enters the Triple-Gamma-Penalty $J_{TG}(\beta)$ as part of $\phi^\xi = \frac{2c^\xi}{\kappa_B^2 a^\xi}$ as can be seen from equation \ref{eq:tgr}. Notably, $\kappa_B$ is squared and thus only the absolute value of $\kappa_B$, $|\kappa_B|$, influences the structure of the penalty. The overall third function value is defined as $\frac{\beta_j^2}{2\phi^\xi}$ and by plugging in $\phi^\xi$ we get $\frac{\beta_j^2\kappa_ B^2a^\xi}{4c^\xi}$, it can be seen that a value of $\kappa_B = 0$ leads to the entire parameter value being zero for all values of $\beta_j$. Hence, a change in $\beta_j$ won't influence the penalty and furthermore won't have an influence on the overall risk minimization problem, the result being that the optimal set of parameters will only depend on the chosen loss function.\\
 
-\begin{figure}[!h]
+For all values of $\kappa_B \neq 0$, the value of the hyper-parameter will influence the penalty structure. A plot with several different values for the absolute value of $\kappa_B$ can be found in figure \ref{fig:TGPenalty_ChangeInKappa}.
+
+\begin{figure}[t]
 \centering
 \includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png}
 \caption{Triple-Gamma-Penalty using different values of $\kappa_B$}
-\label{fig:basicTGPen}
+\label{fig:TGPenalty_ChangeInKappa}
 \end{figure}
 
 \newpage
@@ -413,20 +423,22 @@ The third and final hyper-parameter $\kappa_B$ enters the Triple-Gamma-Penalty $
 Variable     	& \textbf{Positive} Change  & \textbf{Negative} Change & Defined Range & Misc.\\\midrule
 $a^\xi$  	& \makecell{Shifting towards\\ \textit{Gaussian}-like behaviour\\ at $\beta = 0$} & \makecell{Shifting towards singularity\\ at $\beta = 0$; Higher\\ immediate penalty for coefficients\\ $\beta \neq 0$} & $(0.5, \infty)$ & Expl.\\
 $c^\xi$ 		& \makecell{Generally, convergence towards \\ convexity and, given certain \\ settings for $a^\xi$ and\\ $\kappa_B$, LASSO. Higher values\\ increase the additional penalty\\ for higher absolute values of $\beta$.} &  \makecell{For values smaller \\ than $0.1$, similar effect\\ to increase in $a^\xi$} & $(0, \infty)$ & Expl. \\
-$\kappa_B$ 	& 15883 & 5.2e-8 & $(-\infty, \infty)/{0}$ & Expl. \\\bottomrule
+$\kappa_B$ 	& 15883 & 5.2e-8 & $(-\infty, \infty)/\{0\}$ & Expl. \\\bottomrule
 \end{tabular}
 \caption{Summary of the effects of changes in the hyperparameters $a^\xi$, $c^\xi$ and $\kappa_B$ on the penalty structure}
 \label{tab:VariationsInHyperparameters}
-\end{table}
 \end{center}
+\end{table}
 \end{landscape}
 \newpage
 
 \subsection{Comparison to already existing Penalty Terms}\label{subsec:comparepenalties}
 
+As already mentioned in section \ref{sec:litreview}, several other penalty terms have already been widely studied in the literature. Convex penalties like \textit{Ridge} \parencite{HoerlKennard1970a} or non-convex penalties like the \textit{Ar(c)tan} \parencite{WangZhu2016} and Gaussian \parencite{JohnVettamWu2022} have managed to establish itself as prominent approaches to regularization. It is now certainly of interest to see how the \textit{Triple-Gamma} penalty compares to the established methods. Seeing that, due to its flexibility, there is not \textit{one} \textit{Triple-Gamma} penalty, three distinct hyper-parameter setting have been chosen to represent the proposed penalty term. 
+
 \begin{figure}[!h]
 \centering
-\includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/ComparisonToOtherPenalties.png}
+\includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_Comparison.png}
 \caption{Basic Representation of the Triple-Gamma-Penalty using Hyperparameters $c^\xi = 0.1, \kappa_B = 2, a^\xi = 0.75$ compared to \textit{LASSO} and \textit{Ridge} Penalties}
 \label{fig:basicTGPen}
 \end{figure}
@@ -452,10 +464,20 @@ How to use it.
 Explanation of Functions. Input - Output Tables
 
 %----- Small Applied Section
-\section{Small Applied Section}
-Here I am planning to apply the TGP using Peter's Bayesian Package and the self coded frequentist code on a small dataset.
-\section{Conclusion}
+%\section{Small Applied Section}
+%Here I am planning to apply the TGP using Peter's Bayesian Package and the self coded frequentist code on a small dataset.
 \section{Possible Extensions and Criticism}
+\section{Conclusion}
+
+\newpage
+\section{List of Figures}
+\listoffigures
+
+\newpage
+\section{List of Tables}
+\listoftables
+
+\newpage
 \section{References}
 
 \pagebreak

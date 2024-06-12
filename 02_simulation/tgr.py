@@ -10,7 +10,7 @@ import log_hyperu as hyperu
 class TripleGammaRegularization(nn.Module):
     def __init__(self, num_features):
         super(TripleGammaRegularization, self).__init__()
-        self.linear = nn.Linear(12, 1, bias=False)
+        self.linear = nn.Linear(10, 1, bias=False)
 
     def forward(self, x):
         return self.linear(x)
@@ -49,10 +49,10 @@ def TripleGammaModel(X, y, penalty, a, c, kappa,  norm=True, num_epochs=1000, lr
         loss_list.append(loss)
         
         #Gradient Clipping???
-        nn.utils.clip_grad_norm_(model.parameters(), 1.0)
+        #nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         optimizer.step()
 
-        if (epoch+1) % 100 == 0:
-            print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
+        #if (epoch+1) % 100 == 0:
+        #    print(f'Epoch [{epoch+1}/{num_epochs}], Loss: {loss.item()}')
 
     return model, coef_list, loss_list
