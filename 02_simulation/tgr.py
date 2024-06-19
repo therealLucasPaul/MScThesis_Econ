@@ -48,6 +48,8 @@ def TripleGammaModel(X, y, penalty, a, c, kappa,  norm=True, num_epochs=1000, lr
         coef_list.append(model.linear.weight)
         loss_list.append(loss)
         
+        ## Store best model with smallest loss?
+        
         #Gradient Clipping???
         #nn.utils.clip_grad_norm_(model.parameters(), 1.0)
         optimizer.step()
