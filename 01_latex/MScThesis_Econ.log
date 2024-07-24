@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.15)  30 MAY 2024 16:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.15)  24 JUL 2024 12:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1035,24 +1035,24 @@ Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (MScThesis_Econ.aux)
 \openout1 = `MScThesis_Econ.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 87.
+LaTeX Font Info:    ... okay on input line 87.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1151,39 +1151,74 @@ Package biblatex Info: ... file 'MScThesis_Econ.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
+(biblatex)                21
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                ESL
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
 (biblatex)                ESLpage398
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                Fu1998
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                WangEtAl2020
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                ZouHastie2005
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
 )
-Package biblatex Info: Reference section=0 on input line 82.
-Package biblatex Info: Reference segment=0 on input line 82.
-Package hyperref Info: Link coloring ON on input line 82.
+Package biblatex Info: Reference section=0 on input line 87.
+Package biblatex Info: Reference segment=0 on input line 87.
+Package hyperref Info: Link coloring ON on input line 87.
  (MScThesis_Econ.out) (MScThesis_Econ.out)
 \@outlinefile=\write5
 \openout5 = `MScThesis_Econ.out'.
 
-<WU.png, id=101, 2007.5pt x 1039.885pt>
+<WU.png, id=97, 2007.5pt x 1039.885pt>
 File: WU.png Graphic file (type png)
 <use WU.png>
-Package pdftex.def Info: WU.png  used on input line 87.
+Package pdftex.def Info: WU.png  used on input line 92.
 (pdftex.def)             Requested size: 200.76175pt x 103.99458pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 94.
 
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
 
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<GitHub.png, id=104, 3854.4pt x 2168.1pt>
+<GitHub.png, id=100, 3854.4pt x 2168.1pt>
 File: GitHub.png Graphic file (type png)
 <use GitHub.png>
-Package pdftex.def Info: GitHub.png  used on input line 106.
+Package pdftex.def Info: GitHub.png  used on input line 111.
 (pdftex.def)             Requested size: 38.52272pt x 21.66904pt.
  [1
 
@@ -1203,182 +1238,228 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.142 \newpage
+l.147 \newpage
                [1]
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 161--164
-
- []
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 165--166
-
- []
-
-[3] [4]
-Underfull \hbox (badness 10000) in paragraph at lines 218--221
-
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 227--230
-
- []
-
-[6]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textcite' on input line 270.
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 276--277
-
- []
-
-[8]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 320
-.
- (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Underfull \hbox (badness 10000) in paragraph at lines 320--321
-
- []
-
-[9]
-Underfull \hbox (badness 10000) in paragraph at lines 330--332
-
- []
+LaTeX Warning: Citation 'ESL' on page 2 undefined on input line 151.
 
 
-Overfull \hbox (14.7145pt too wide) detected at line 344
-[]
- []
+LaTeX Warning: Citation '21' on page 2 undefined on input line 151.
 
-[10]
 
-LaTeX Warning: Citation 'ESLpage398' on page 11 undefined on input line 353.
+LaTeX Warning: Citation 'ESL' on page 2 undefined on input line 151.
 
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 3
-53.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+51.
 (C:\Program Files\MiKTeX 2.9\tex/latex/base\omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <12> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 353.
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 151.
 
 
-LaTeX Warning: Citation '' on page 11 undefined on input line 353.
+LaTeX Warning: Citation '' on page 2 undefined on input line 151.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 360--364
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+<PolynomialFit_Plot.png, id=157, 626.34pt x 434.12187pt>
+File: PolynomialFit_Plot.png Graphic file (type png)
+<use PolynomialFit_Plot.png>
+Package pdftex.def Info: PolynomialFit_Plot.png  used on input line 167.
+(pdftex.def)             Requested size: 313.16922pt x 217.0604pt.
+[2] [3 <./PolynomialFit_Plot.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 193--196
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 197--198
+
+ []
+
+[4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 250--253
+
+ []
+
+[7]
+
+LaTeX Warning: Citation 'Fu1998' on page 8 undefined on input line 259.
+
+
+LaTeX Warning: Citation '' on page 8 undefined on input line 259.
+
+
+LaTeX Warning: Citation 'WangEtAl2020' on page 8 undefined on input line 259.
+
+
+LaTeX Warning: Citation '' on page 8 undefined on input line 259.
+
+
+LaTeX Warning: Citation 'ZouHastie2005' on page 8 undefined on input line 259.
+
+
+LaTeX Warning: Citation '' on page 8 undefined on input line 259.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 260--262
+
+ []
+
+[8]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textcite' on input line 299.
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 305--306
+
+ []
+
+[10]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 349
+.
+ (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Underfull \hbox (badness 10000) in paragraph at lines 349--350
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 367--368
+Underfull \hbox (badness 10000) in paragraph at lines 359--361
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+Overfull \hbox (14.7145pt too wide) detected at line 373
+[]
+ []
+
+[12]
+
+LaTeX Warning: Citation 'ESLpage398' on page 13 undefined on input line 382.
+
+
+LaTeX Warning: Citation '' on page 13 undefined on input line 382.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--393
 
  []
 
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png, id=261, 462.5
+[13]
+Underfull \hbox (badness 10000) in paragraph at lines 396--397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 398--399
+
+ []
+
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png, id=281, 462.5
 28pt x 346.896pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png Graphic f
 ile (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInA.png  used on input line 373.
+geInA.png  used on input line 402.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 378--379
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
-[12 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+[14 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 410--411
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+Underfull \hbox (badness 10000) in paragraph at lines 412--413
 
  []
 
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png, id=273,
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png, id=291,
  462.528pt x 346.896pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png Gra
 phic file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInC_Part2.png  used on input line 388.
+geInC_Part2.png  used on input line 417.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
-[13 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png>]
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png, id=283,
+[15 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png>]
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png, id=302,
  462.528pt x 346.896pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png Gra
 phic file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInC_Part1.png  used on input line 397.
+geInC_Part1.png  used on input line 426.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
+Underfull \hbox (badness 10000) in paragraph at lines 431--432
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 404--405
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
 
  []
 
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png, id=286, 5
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png, id=305, 5
 66.5968pt x 327.3831pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png Graph
 ic file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInKappa.png  used on input line 410.
+geInKappa.png  used on input line 439.
 (pdftex.def)             Requested size: 424.94655pt x 245.53671pt.
-[14 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png>]
-[15 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>]
-[16
+[16 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png>]
+[17 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>]
+[18
 
 ]
-<../02_simulation/021_simulation_figures/TGPenalty_Comparison.png, id=308, 534.
-0753pt x 341.8371pt>
+<../02_simulation/021_simulation_figures/TGPenalty_Comparison.png, id=326, 461.
+8053pt x 349.0641pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_Comparison.png Graphic 
 file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_Comparison.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Comp
-arison.png  used on input line 441.
-(pdftex.def)             Requested size: 400.55548pt x 256.37718pt.
- [17
+arison.png  used on input line 470.
+(pdftex.def)             Requested size: 346.3531pt x 261.79742pt.
+ [19
 
  <../02_simulation/021_simulation_figures/TGPenalty_Comparison.png>]
-[18] (MScThesis_Econ.lof)
+[20] (MScThesis_Econ.lof)
 \tf@lof=\write7
 \openout7 = `MScThesis_Econ.lof'.
 
- [19] (MScThesis_Econ.lot)
+ [21] (MScThesis_Econ.lot)
 \tf@lot=\write8
 \openout8 = `MScThesis_Econ.lot'.
 
- [20] [21]
-Overfull \hbox (6.20493pt too wide) in paragraph at lines 490--490
+ [22] [23]
+Overfull \hbox (6.20493pt too wide) in paragraph at lines 519--519
 [][]\OT1/cmr/m/n/12 Hoerl, A. E., & Ken-nard, R. W. (1970b). Ridge re-gres-sion
 : Bi-ased es-ti-ma-tion for nonorthog-
  []
 
 
-Overfull \hbox (35.87369pt too wide) in paragraph at lines 490--490
+Overfull \hbox (35.87369pt too wide) in paragraph at lines 519--519
 [][]\OT1/cmr/m/n/12 van Wierin-gen, W. N. (2015). Lec-ture notes on ridge re-gr
 es-sion. \OT1/cmr/m/it/12 arXiv preprint arXiv:1509.09169\OT1/cmr/m/n/12 . 
  []
@@ -1389,19 +1470,19 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `MScThesis_Econ.out' has not changed.
-(rerunfilecheck)             Checksum: 6811B0EAC6913A5843BD6073B3780526;4459.
+(rerunfilecheck)             Checksum: 3E946FCB6EBBAD61C574CB3E96A2ABE7;4630.
 Package logreq Info: Writing requests to 'MScThesis_Econ.run.xml'.
 \openout1 = `MScThesis_Econ.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34903 strings out of 475551
- 671018 string characters out of 5770464
+ 34937 strings out of 475551
+ 671547 string characters out of 5770464
  1936238 words of memory out of 5000000
- 55545 multiletter control sequences out of 15000+600000
- 568761 words of font info for 74 fonts, out of 8000000 for 9000
+ 55572 multiletter control sequences out of 15000+600000
+ 570806 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,16n,89p,1228b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 84i,16n,89p,1534b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
 ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
 les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Program Files/Mi
@@ -1414,16 +1495,17 @@ tra/cmmib8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr1
 0.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
 /Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program 
 Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fon
-ts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eu
-fm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm1
-0.pfb>
-Output written on MScThesis_Econ.pdf (26 pages, 758888 bytes).
+eX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.
+pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MScThesis_Econ.pdf (28 pages, 796419 bytes).
 PDF statistics:
- 448 PDF objects out of 1000 (max. 8388607)
- 75 named destinations out of 1000 (max. 500000)
- 240 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 477 PDF objects out of 1000 (max. 8388607)
+ 79 named destinations out of 1000 (max. 500000)
+ 237 words of extra memory for PDF output out of 10000 (max. 10000000)
 

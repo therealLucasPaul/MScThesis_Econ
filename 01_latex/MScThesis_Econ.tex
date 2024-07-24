@@ -48,6 +48,11 @@
 	citecolor  = blue, 
 }
 
+\definecolor{green1}{HTML}{2CA02C}
+\definecolor{blue1}{HTML}{1F77B4}
+\definecolor{red1}{HTML}{D62728}
+\definecolor{orange1}{HTML}{FF7F0E}
+
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
@@ -141,13 +146,40 @@ Willam of Ockham, born in Ockham, Surrey, probably lived between 1287 and 1348 a
 %----- Theoretical Section
 \newpage
 \section{Theoretical Section}\label{sec:theorysuper}
-\subsection{Model Complexity}
-Overfitting is a problem. Especially when dimensionality issues arise. For example, 50 observations and 20 features. Model will perform well/almost perfect on training data, but will do terrible on training data.\\
-\subsection{Under- and Overfitting}
+Generally speaking, a major part of statistical learning deals with trying to describe a certain output variable $Y$ with a set of input variables $X_1, \cdots, X_p$ by trying to find a functional form $f$ which uses the given information in the inputs and - ideally - describes the hidden relationship between $Y$ and the inputs $X_i$ as accurately as possible. However, it comes as no surprise that the functional form $f$ depends on the statistical problem at hand. What type of data has been collected? Are we assuming a linear or non-linear relationship between the predictors? How much data is available and can its quality be guaranteed? But more importantly, it is necessary to ask the question whether the goal of the statistical learning method is \textit{inference} or \textit{prediction}.\\
+
+The first of these two goals - \textit{inference} - aims at understanding the relationship that may or may not exist between the input variables $X_i$ and the output $Y$. Especially applied sciences like Economics, Psychology and Medicine often try to find a (causal) relationship within their theoretical framework to evaluate a policy, a medication or a new form of therapy. Linear models for example often provide a simple and straightforward framework which provide the scientist with interpretable effects. \textit{Prediction} on the other hand aims at forecasting the output variable $Y$ as accurately as possible and using every bit of information that is available, but disregards interpretability. \parencite{ESL,21} These goals can be summarized by viewing it as a decision between \textit{prediction accuracy} and \textit{model interpretability}, which has thoroughly been explained by \textcite{ESL}.\\
+
+For the purpose of this thesis, the following chapters will restrict itself to the case of linear models, hence where assume that the functional form $f$ is linear in its inputs. The commonly known \textit{least squares estimator} is one way of estimating such a functional form and due to its many desirable properties has gained popularity in various  scientific fields. 
+
+\subsection{Model Complexity and the Problem of Under- and Overfitting}
+
+\begin{lightbluebox}
+- BIAS VARIANCE TRADE-OFF
+- DIMENSIONALITY PROBLEM
 
 General problem: Fit vs. Complexity. What to choose and where is the optimal balance?
+\end{lightbluebox}
+
+In general, a linear regression model fitted with least squares on a sufficient amount of data points ($n \gg p$) will produce estimates which both have low bias and low variance and thus tends to perform well out of sample. However, problems arise with this approach arise when the sample size decreases, because the variance in the estimates will increase. The main idea behind this can be easily be visualized by trying to fit a polynomial curve on a two dimensional space and then altering the available sample for polynomials of different order. 
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{PolynomialFit_Plot.png}
+\caption{1st and 8th order polynomial fit to data \\ (\textcolor{green1}{Green} \& \textcolor{blue1}{Blue} Lines fitted with red data point; \textcolor{orange1}{Orange} \& \textcolor{red1}{Red} Lines fitted without).}
+\label{fig:polyfit}
+\end{figure}
+
+Such a plot can be found in figure \ref{fig:polyfit}. Here, the black points represent the main data sample plotted on a two-dimensional $Y$-$X$-space. The red dot plotted at $(5,4)$ represents the additional data point which is used to alter the respective sample. Polynomials of specific orders can now be used to emulate certain levels of model complexity. For example, a first order polynomial has two coefficients to estimate: the intercept $\beta_0$ and the slope $\beta_1$. A polynomial of order of order eight has nine coefficients to estimate. What can now be seen in figure \ref{fig:polyfit} is the change in estimates if we include/exclude the additional red data point. A first-order polynomial needs at least two data points and as $n=9 > p = 2$, the overall fit of the polynomial doesn't change drastically with the additional tenth data point. In the case of the eighth-order polynomial, we need at least nine data points to create a fit as we have nine predictors (one intercept and one coefficient for each of the eight powers). In this case $n=p$ and adding another data point drastically changes the estimates coefficients, which means that the model won't perform well in out-of-sample scenarios. This emphasizes the importance a sufficient sample size when fitting linear models. And this leads us to the core field of study of this thesis: What are ways to improve the generalization of a linear model in scenarios where the sample size is not sufficiently large enough?
+
+
+ 	
+\begin{lightbluebox}
+
+- WAYS TO BATTLE COMPLEXITY
 
 Solutions (find source, seen in LMU course): (1) More data (Not always feasible) (2) Better data (Same issue) (3) Reduce Model Complexity (Regularization) (4) Less aggressive optimization (Maybe short review; Idea: Stop optimization when generalization error degrades)
+\end{lightbluebox}
+
 
 \subsubsection{Regularization}
 
@@ -200,7 +232,7 @@ where $R_{emp}(\beta) = \sum_i^n L(y_i, f(x_i, \beta))$. Note: Regularization te
 \parencite{Taxonomy2017}
 \end{lightbluebox}
 
-\subsection{Short Deviation to Bayesian Shrinkage Priors}
+\subsection{Bayesian View on Battling Model Complexity using Shrinkage Priors}
 Explain how Bayesians battle model complexity. 
 
 \newpage
@@ -224,14 +256,11 @@ Bit more on LASSO?
 
 $$\norm{\beta}_p =  \left(\sum_{i=1}^p|\beta_i|^p\right)^{1/p}$$
 
-An approach combining these two methods is called \textit{Elastic Net} regularization and has been developed by \\
-\begin{lightbluebox}
-Talk about Elastic Net
-\end{lightbluebox}
+Work published by researchers in the nineties, like the previously mentioned \textcite{FrankFriedman1993} or \textcite{Fu1998}, as well as more recent literature like \textcite{WangEtAl2020} have repeatedly shown there is no go-to-method to tackle regularization problems, as the effectiveness of a specific approach highly depends on the data siuation at hand. Due to this particular situation in the literature, several other methods have been proposed in the recent years and decades. An approach combining \textit{Ridge} and \textit{LASSO} two methods is called \textit{Elastic Net} regularization and has been developed by \textcite{ZouHastie2005}. The authors there elaborate on some of the shortcomings of the LASSO method. For example, in a special case where there are more predictors $p$ than data points $n$ ($p > n$), LASSO only selects up to $n$ variables due to the nature of the convex optimization problem. Should several of the included variables be highly \textit{pairwise} correlated with each other, \textit{LASSO} tends to only select on of these variables. In its core, \textit{Elastic Net Regularization} linearly combines the penalty terms of \textit{Ridge} and \textit{LASSO} regularization, yielding a loss function of the form:\\
+$$J(\beta) = \lambda_1 \norm{\beta}_2^2 + \lambda_2 \norm{\beta}_1$$
+The authors have	 shown that, especially when it comes to encouraging the aforementioned grouping effects, \textit{Elastic Net} tends to perform better than the \textit{LASSO}.\\
 
-\begin{lightbluebox}
-Talk about non-convex penalties
-\end{lightbluebox}
+Recent years however have opened up a new subfield of approaches to regularization. Methods like \textit{LASSO, Bridge} \parencite{FrankFriedman1993}, \textit{Ridge} and \textit{Elastic Net}\footnote{Elastic Net, due to its mathematical definition, can be view as a generalization of \textit{Ridge} and \textit{LASSO}.} are convex functions in its parameters and are thus usually classified as \textit{Convex Regularization Penalties}. Recently, the literature has shifted towards penalties which are non-convex functions in its parameters, usually called \textit{Non-Convex Regularization Penalties}\footnote{Note: They are called \textit{non-convex} penalties and not \textit{concave} penalties, because non-convexity does not necessarily imply concavity.}. One recent example of such a penalty includes \textcite{JohnVettamWu2022}, who proposed a penalty structure called \textit{Gaussian penalty} and which is based on a Gaussian-like function by using $J(\beta) = 1 - e^{-\kappa\beta^2}$. Another method proposed by \textcite{WangZhu2016} is called the \textit{Atan penalty} - or \textit{Arctan} penalty - an makes use of the favourable properties of the \textit{Arctan} function by using the penalty $J(\beta, \gamma) = (\gamma + \frac{2}{\pi})\arctan(\frac{|\beta|}{\gamma})$.
 
 
 \begin{lightbluebox}
@@ -434,7 +463,7 @@ $\kappa_B$ 	& 15883 & 5.2e-8 & $(-\infty, \infty)/\{0\}$ & Expl. \\\bottomrule
 
 \subsection{Comparison to already existing Penalty Terms}\label{subsec:comparepenalties}
 
-As already mentioned in section \ref{sec:litreview}, several other penalty terms have already been widely studied in the literature. Convex penalties like \textit{Ridge} \parencite{HoerlKennard1970a} or non-convex penalties like the \textit{Ar(c)tan} \parencite{WangZhu2016} and Gaussian \parencite{JohnVettamWu2022} have managed to establish itself as prominent approaches to regularization. It is now certainly of interest to see how the \textit{Triple-Gamma} penalty compares to the established methods. Seeing that, due to its flexibility, there is not \textit{one} \textit{Triple-Gamma} penalty, three distinct hyper-parameter setting have been chosen to represent the proposed penalty term. 
+As already mentioned in section \ref{sec:litreview}, several other penalty terms have already been widely studied in the literature. Convex penalties like \textit{Ridge} \parencite{HoerlKennard1970a} or non-convex penalties like the \textit{Ar(c)tan} \parencite{WangZhu2016} and \textit{Gaussian} \parencite{JohnVettamWu2022} have managed to establish itself as prominent approaches to regularization. It is now certainly of interest to see how the \textit{Triple-Gamma} penalty compares to the established methods. Seeing that, due to its flexibility, there is not \textit{one} \textit{Triple-Gamma} penalty, three distinct hyper-parameter setting have been chosen to represent the proposed penalty term. 
 
 \begin{figure}[!h]
 \centering

@@ -1,25 +1,24 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
 \contentsline {section}{\numberline {2}Theoretical Section}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Model Complexity}{2}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Under- and Overfitting}{2}{subsection.2.2}%
-\contentsline {subsubsection}{\numberline {2.2.1}Regularization}{2}{subsubsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.3}Short Deviation to Bayesian Shrinkage Priors}{4}{subsection.2.3}%
-\contentsline {section}{\numberline {3}Literature Review}{5}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Duality of the Ridge Regression}{6}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Triple-Gamma-Prior by \blx@tocontentsinit {0}\textcite {TGP2020}}{7}{subsection.3.2}%
-\contentsline {section}{\numberline {4}Model Setup and Derivation}{8}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Varying the Hyperparameters}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Comparison to already existing Penalty Terms}{17}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Restricted Strong Convexity (RSC) of the Triple-Gamma-Regularization}{17}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Alternative Specification (with +1 to mimic artan)}{17}{subsection.4.4}%
-\contentsline {subsection}{\numberline {4.5}Approaches to Estimation}{18}{subsection.4.5}%
-\contentsline {section}{\numberline {5}Simulation Section}{18}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Computational Performance}{18}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Implementation as Python Package}{18}{subsection.5.2}%
-\contentsline {section}{\numberline {6}Possible Extensions and Criticism}{18}{section.6}%
-\contentsline {section}{\numberline {7}Conclusion}{18}{section.7}%
-\contentsline {section}{\numberline {8}List of Figures}{19}{section.8}%
-\contentsline {section}{\numberline {9}List of Tables}{20}{section.9}%
-\contentsline {section}{\numberline {10}References}{21}{section.10}%
+\contentsline {subsection}{\numberline {2.1}Model Complexity and the Problem of Under- and Overfitting}{2}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Regularization}{4}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}Bayesian View on Battling Model Complexity using Shrinkage Priors}{6}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Literature Review}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Duality of the Ridge Regression}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Triple-Gamma-Prior by \blx@tocontentsinit {0}\textcite {TGP2020}}{9}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Model Setup and Derivation}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Varying the Hyperparameters}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Comparison to already existing Penalty Terms}{19}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Restricted Strong Convexity (RSC) of the Triple-Gamma-Regularization}{19}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Alternative Specification (with +1 to mimic artan)}{19}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Approaches to Estimation}{20}{subsection.4.5}%
+\contentsline {section}{\numberline {5}Simulation Section}{20}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Computational Performance}{20}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Implementation as Python Package}{20}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Possible Extensions and Criticism}{20}{section.6}%
+\contentsline {section}{\numberline {7}Conclusion}{20}{section.7}%
+\contentsline {section}{\numberline {8}List of Figures}{21}{section.8}%
+\contentsline {section}{\numberline {9}List of Tables}{22}{section.9}%
+\contentsline {section}{\numberline {10}References}{23}{section.10}%
 \contentsline {section}{References}{iv}{section.10}%
