@@ -1,26 +1,24 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'MScThesis_Econ.blg'
-[278] biber-MSWIN64:340> INFO - === 
-[345] Biber.pm:419> INFO - Reading 'MScThesis_Econ.bcf'
-[681] Biber.pm:979> INFO - Found 20 citekeys in bib section 0
-[729] Biber.pm:4419> INFO - Processing section 0
-[759] Biber.pm:4610> INFO - Looking for bibtex file 'ref.bib' for section 0
-[858] bibtex.pm:1713> INFO - LaTeX decoding ...
-[943] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
-[1200] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1200] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1200] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[1200] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1261] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1261] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1262] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[1262] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1313] bbl.pm:660> INFO - Writing 'MScThesis_Econ.bbl' with encoding 'UTF-8'
-[1344] bbl.pm:763> INFO - Output to MScThesis_Econ.bbl
-[1344] Biber.pm:131> WARN - I didn't find a database entry for 'ESL' (section 0)
-[1344] Biber.pm:131> WARN - I didn't find a database entry for '21' (section 0)
-[1345] Biber.pm:131> WARN - I didn't find a database entry for 'Fu1998' (section 0)
-[1345] Biber.pm:131> WARN - I didn't find a database entry for 'WangEtAl2020' (section 0)
-[1345] Biber.pm:131> WARN - I didn't find a database entry for 'ZouHastie2005' (section 0)
-[1345] Biber.pm:131> WARN - I didn't find a database entry for 'ESLpage398' (section 0)
-[1345] Biber.pm:133> INFO - WARNINGS: 6
+[185] biber-MSWIN64:340> INFO - === 
+[234] Biber.pm:419> INFO - Reading 'MScThesis_Econ.bcf'
+[457] Biber.pm:979> INFO - Found 24 citekeys in bib section 0
+[485] Biber.pm:4419> INFO - Processing section 0
+[505] Biber.pm:4610> INFO - Looking for bibtex file 'ref.bib' for section 0
+[564] bibtex.pm:1713> INFO - LaTeX decoding ...
+[633] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
+[859] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[859] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[859] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[859] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[923] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[923] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[923] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[923] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[959] bbl.pm:660> INFO - Writing 'MScThesis_Econ.bbl' with encoding 'UTF-8'
+[994] bbl.pm:763> INFO - Output to MScThesis_Econ.bbl
+[994] Biber.pm:131> WARN - I didn't find a database entry for 'ESL' (section 0)
+[994] Biber.pm:131> WARN - I didn't find a database entry for '21' (section 0)
+[994] Biber.pm:131> WARN - I didn't find a database entry for 'QiCuiLiuPang2021' (section 0)
+[994] Biber.pm:131> WARN - I didn't find a database entry for 'ESLpage398' (section 0)
+[994] Biber.pm:133> INFO - WARNINGS: 4

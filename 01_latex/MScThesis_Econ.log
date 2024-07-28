@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.15)  24 JUL 2024 12:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.15)  28 JUL 2024 15:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1172,21 +1172,7 @@ Package biblatex Warning: The following entry could not be found
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                Fu1998
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                WangEtAl2020
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                ZouHastie2005
+(biblatex)                QiCuiLiuPang2021
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
@@ -1198,7 +1184,7 @@ Package hyperref Info: Link coloring ON on input line 87.
 \@outlinefile=\write5
 \openout5 = `MScThesis_Econ.out'.
 
-<WU.png, id=97, 2007.5pt x 1039.885pt>
+<WU.png, id=105, 2007.5pt x 1039.885pt>
 File: WU.png Graphic file (type png)
 <use WU.png>
 Package pdftex.def Info: WU.png  used on input line 92.
@@ -1215,7 +1201,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 94.
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<GitHub.png, id=100, 3854.4pt x 2168.1pt>
+<GitHub.png, id=108, 3854.4pt x 2168.1pt>
 File: GitHub.png Graphic file (type png)
 <use GitHub.png>
 Package pdftex.def Info: GitHub.png  used on input line 111.
@@ -1269,7 +1255,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--152
 
  []
 
-<PolynomialFit_Plot.png, id=157, 626.34pt x 434.12187pt>
+<PolynomialFit_Plot.png, id=167, 626.34pt x 434.12187pt>
 File: PolynomialFit_Plot.png Graphic file (type png)
 <use PolynomialFit_Plot.png>
 Package pdftex.def Info: PolynomialFit_Plot.png  used on input line 167.
@@ -1290,25 +1276,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--253
  []
 
 [7]
-
-LaTeX Warning: Citation 'Fu1998' on page 8 undefined on input line 259.
-
-
-LaTeX Warning: Citation '' on page 8 undefined on input line 259.
-
-
-LaTeX Warning: Citation 'WangEtAl2020' on page 8 undefined on input line 259.
-
-
-LaTeX Warning: Citation '' on page 8 undefined on input line 259.
-
-
-LaTeX Warning: Citation 'ZouHastie2005' on page 8 undefined on input line 259.
-
-
-LaTeX Warning: Citation '' on page 8 undefined on input line 259.
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
@@ -1318,168 +1285,205 @@ Underfull \hbox (badness 10000) in paragraph at lines 260--262
 
  []
 
-[8]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textcite' on input line 299.
+Underfull \hbox (badness 10000) in paragraph at lines 263--264
+
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 265--266
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
+
+ []
+
+
+LaTeX Warning: Citation 'QiCuiLiuPang2021' on page 9 undefined on input line 29
+2.
+
+
+LaTeX Warning: Citation '' on page 9 undefined on input line 292.
+
+
+Overfull \hbox (72.42146pt too wide) in paragraph at lines 296--313
+ [] 
+ []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 320--321
 
  []
 
 [10]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 349
-.
- (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)
-Underfull \hbox (badness 10000) in paragraph at lines 349--350
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 359--361
 
- []
-
-
-Overfull \hbox (14.7145pt too wide) detected at line 373
-[]
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textcite' on input line 343.
 
 [12]
-
-LaTeX Warning: Citation 'ESLpage398' on page 13 undefined on input line 382.
-
-
-LaTeX Warning: Citation '' on page 13 undefined on input line 382.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 389--393
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
 
  []
 
 [13]
-Underfull \hbox (badness 10000) in paragraph at lines 396--397
+LaTeX Font Info:    Trying to load font information for U+euf on input line 401
+.
+ (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 411--413
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 398--399
+Overfull \hbox (14.7145pt too wide) detected at line 425
+[]
+ []
+
+[15]
+
+LaTeX Warning: Citation 'ESLpage398' on page 16 undefined on input line 434.
+
+
+LaTeX Warning: Citation '' on page 16 undefined on input line 434.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--445
 
  []
 
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png, id=281, 462.5
+[16]
+Underfull \hbox (badness 10000) in paragraph at lines 448--449
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
+
+ []
+
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png, id=336, 462.5
 28pt x 346.896pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png Graphic f
 ile (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInA.png  used on input line 402.
+geInA.png  used on input line 454.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 407--408
+Underfull \hbox (badness 10000) in paragraph at lines 459--460
 
  []
 
-[14 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 410--411
+[17 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 462--463
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 412--413
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
 
  []
 
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png, id=291,
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png, id=346,
  462.528pt x 346.896pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png Gra
 phic file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInC_Part2.png  used on input line 417.
+geInC_Part2.png  used on input line 469.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
-[15 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png>]
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png, id=302,
+[18 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png>]
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png, id=356,
  462.528pt x 346.896pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png Gra
 phic file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInC_Part1.png  used on input line 426.
+geInC_Part1.png  used on input line 478.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--432
+Underfull \hbox (badness 10000) in paragraph at lines 483--484
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 433--434
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
 
  []
 
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png, id=305, 5
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png, id=359, 5
 66.5968pt x 327.3831pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png Graph
 ic file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInKappa.png  used on input line 439.
+geInKappa.png  used on input line 491.
 (pdftex.def)             Requested size: 424.94655pt x 245.53671pt.
-[16 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png>]
-[17 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>]
-[18
+[19 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png>]
+[20 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>]
+[21
 
 ]
-<../02_simulation/021_simulation_figures/TGPenalty_Comparison.png, id=326, 461.
+<../02_simulation/021_simulation_figures/TGPenalty_Comparison.png, id=381, 461.
 8053pt x 349.0641pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_Comparison.png Graphic 
 file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_Comparison.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Comp
-arison.png  used on input line 470.
+arison.png  used on input line 526.
 (pdftex.def)             Requested size: 346.3531pt x 261.79742pt.
- [19
+ [22
 
  <../02_simulation/021_simulation_figures/TGPenalty_Comparison.png>]
-[20] (MScThesis_Econ.lof)
+[23] (MScThesis_Econ.lof)
 \tf@lof=\write7
 \openout7 = `MScThesis_Econ.lof'.
 
- [21] (MScThesis_Econ.lot)
+ [24] (MScThesis_Econ.lot)
 \tf@lot=\write8
 \openout8 = `MScThesis_Econ.lot'.
 
- [22] [23]
-Overfull \hbox (6.20493pt too wide) in paragraph at lines 519--519
+ [25]
+Overfull \hbox (6.20493pt too wide) in paragraph at lines 601--601
 [][]\OT1/cmr/m/n/12 Hoerl, A. E., & Ken-nard, R. W. (1970b). Ridge re-gres-sion
 : Bi-ased es-ti-ma-tion for nonorthog-
  []
 
 
-Overfull \hbox (35.87369pt too wide) in paragraph at lines 519--519
+Overfull \hbox (35.87369pt too wide) in paragraph at lines 601--601
 [][]\OT1/cmr/m/n/12 van Wierin-gen, W. N. (2015). Lec-ture notes on ridge re-gr
 es-sion. \OT1/cmr/m/it/12 arXiv preprint arXiv:1509.09169\OT1/cmr/m/n/12 . 
  []
 
-[4] (MScThesis_Econ.aux)
+[4] [5] (MScThesis_Econ.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `MScThesis_Econ.out' has not changed.
-(rerunfilecheck)             Checksum: 3E946FCB6EBBAD61C574CB3E96A2ABE7;4630.
+(rerunfilecheck)             Checksum: 5C745968F419B49B1AC1A9527BE4F407;5212.
 Package logreq Info: Writing requests to 'MScThesis_Econ.run.xml'.
 \openout1 = `MScThesis_Econ.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34937 strings out of 475551
- 671547 string characters out of 5770464
- 1936238 words of memory out of 5000000
- 55572 multiletter control sequences out of 15000+600000
+ 34960 strings out of 475551
+ 672223 string characters out of 5770464
+ 1938238 words of memory out of 5000000
+ 55583 multiletter control sequences out of 15000+600000
  570806 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  84i,16n,89p,1534b,5050s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1503,9 +1507,9 @@ m/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.
 pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/Progr
 am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MScThesis_Econ.pdf (28 pages, 796419 bytes).
+Output written on MScThesis_Econ.pdf (31 pages, 818763 bytes).
 PDF statistics:
- 477 PDF objects out of 1000 (max. 8388607)
- 79 named destinations out of 1000 (max. 500000)
- 237 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 534 PDF objects out of 1000 (max. 8388607)
+ 91 named destinations out of 1000 (max. 500000)
+ 253 words of extra memory for PDF output out of 10000 (max. 10000000)
 

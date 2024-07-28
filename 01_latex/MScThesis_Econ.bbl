@@ -63,6 +63,44 @@
       \field{pages}{20}
       \range{pages}{1}
     \endentry
+    \entry{FanLi2001}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2eb00838f3cea970c7377bfea9631787}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Jianqing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2ad436fe263af9170cfac2259cc239f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Runze},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{fullhash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{bibnamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authorbibnamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authornamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authorfullhash}{4919a69c8da15306fbf0ed5ef6882210}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0162-1459}
+      \field{journaltitle}{Journal of the American statistical Association}
+      \field{number}{456}
+      \field{title}{Variable selection via nonconcave penalized likelihood and its oracle properties}
+      \field{type}{Journal Article}
+      \field{volume}{96}
+      \field{year}{2001}
+      \field{pages}{1348\bibrangedash 1360}
+      \range{pages}{13}
+    \endentry
     \entry{FrankFriedman1993}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=2ba2d65f4d722da7ba0134d6ff755a91}{%
@@ -100,6 +138,38 @@
       \field{year}{1993}
       \field{pages}{109\bibrangedash 135}
       \range{pages}{27}
+    \endentry
+    \entry{Fu1998}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a197290a649422bdffa9b4246227fecd}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Wenjiang\bibnamedelima J},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a197290a649422bdffa9b4246227fecd}
+      \strng{fullhash}{a197290a649422bdffa9b4246227fecd}
+      \strng{bibnamehash}{a197290a649422bdffa9b4246227fecd}
+      \strng{authorbibnamehash}{a197290a649422bdffa9b4246227fecd}
+      \strng{authornamehash}{a197290a649422bdffa9b4246227fecd}
+      \strng{authorfullhash}{a197290a649422bdffa9b4246227fecd}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1061-8600}
+      \field{journaltitle}{Journal of computational and graphical statistics}
+      \field{number}{3}
+      \field{title}{Penalized regressions: the bridge versus the lasso}
+      \field{type}{Journal Article}
+      \field{volume}{7}
+      \field{year}{1998}
+      \field{pages}{397\bibrangedash 416}
+      \range{pages}{20}
     \endentry
     \entry{ESL2009}{book}{}
       \name{author}{4}{}{%
@@ -443,6 +513,44 @@
       \verb https://doi.org/10.1007/BF02415375
       \endverb
     \endentry
+    \entry{TrzaskoManduca2009}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=394ef805ff27fda811a54c41e5faf1d2}{%
+           family={Trzasko},
+           familyi={T\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b50ffd11c72b7a78505a6e1a62ff71d4}{%
+           family={Manduca},
+           familyi={M\bibinitperiod},
+           given={Armando},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \strng{fullhash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \strng{bibnamehash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \strng{authorbibnamehash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \strng{authornamehash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \strng{authorfullhash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1053-587X}
+      \field{journaltitle}{IEEE Transactions on Signal Processing}
+      \field{number}{11}
+      \field{title}{Relaxed conditions for sparse signal recovery with general concave priors}
+      \field{type}{Journal Article}
+      \field{volume}{57}
+      \field{year}{2009}
+      \field{pages}{4347\bibrangedash 4354}
+      \range{pages}{8}
+    \endentry
     \entry{VanWieringen2015}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ff3388cee5607ea4b85de7e183af17c3}{%
@@ -501,14 +609,63 @@
       \field{volume}{4}
       \field{year}{1991}
     \endentry
+    \entry{WangEtAl2020}{article}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=66dfac55d28d09b3d290ce69004e7324}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=113304d28a0077c0bfaa7ef4b3987ea5}{%
+           family={Mukherjee},
+           familyi={M\bibinitperiod},
+           given={Sach},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=71425b355b472529d862b325802115e6}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Sylvia},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59bf60865aaf453a192037b85f89b443}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Steven\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{97dcbc4c28838898d54aa3718ba34016}
+      \strng{fullhash}{d8d794f26c3e328f73ef8e0921f5a6ec}
+      \strng{bibnamehash}{d8d794f26c3e328f73ef8e0921f5a6ec}
+      \strng{authorbibnamehash}{d8d794f26c3e328f73ef8e0921f5a6ec}
+      \strng{authornamehash}{97dcbc4c28838898d54aa3718ba34016}
+      \strng{authorfullhash}{d8d794f26c3e328f73ef8e0921f5a6ec}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0960-3174}
+      \field{journaltitle}{Statistics and computing}
+      \field{note}{Paper with simulation study}
+      \field{title}{High-dimensional regression in practice: an empirical study of finite-sample prediction, variable selection and ranking}
+      \field{type}{Journal Article}
+      \field{volume}{30}
+      \field{year}{2020}
+      \field{pages}{697\bibrangedash 719}
+      \range{pages}{23}
+    \endentry
     \entry{WangZhu2016}{article}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=9931acf7fd6155cb1f86d7fe16ad91c6}{%
+        {{un=1,uniquepart=given,hash=9931acf7fd6155cb1f86d7fe16ad91c6}{%
            family={Wang},
            familyi={W\bibinitperiod},
            given={Yanxin},
            giveni={Y\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=b91cb5d0661220eb12d7c6c739583449}{%
            family={Zhu},
            familyi={Z\bibinitperiod},
@@ -526,7 +683,6 @@
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1687-952X}
@@ -535,6 +691,70 @@
       \field{type}{Journal Article}
       \field{volume}{2016}
       \field{year}{2016}
+    \endentry
+    \entry{Zhang2010}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=87216fbf7f1a495422bf2597d030b10a}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Cun-Hui},
+           giveni={C\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{87216fbf7f1a495422bf2597d030b10a}
+      \strng{fullhash}{87216fbf7f1a495422bf2597d030b10a}
+      \strng{bibnamehash}{87216fbf7f1a495422bf2597d030b10a}
+      \strng{authorbibnamehash}{87216fbf7f1a495422bf2597d030b10a}
+      \strng{authornamehash}{87216fbf7f1a495422bf2597d030b10a}
+      \strng{authorfullhash}{87216fbf7f1a495422bf2597d030b10a}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nearly unbiased variable selection under minimax concave penalty}
+      \field{type}{Journal Article}
+      \field{year}{2010}
+    \endentry
+    \entry{ZouHastie2005}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f15b129e88b4820c7ed982265e79986b}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c346171da05683239c65d0053413406e}
+      \strng{fullhash}{c346171da05683239c65d0053413406e}
+      \strng{bibnamehash}{c346171da05683239c65d0053413406e}
+      \strng{authorbibnamehash}{c346171da05683239c65d0053413406e}
+      \strng{authornamehash}{c346171da05683239c65d0053413406e}
+      \strng{authorfullhash}{c346171da05683239c65d0053413406e}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1369-7412}
+      \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
+      \field{number}{2}
+      \field{title}{Regularization and variable selection via the elastic net}
+      \field{type}{Journal Article}
+      \field{volume}{67}
+      \field{year}{2005}
+      \field{pages}{301\bibrangedash 320}
+      \range{pages}{20}
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
@@ -582,6 +802,44 @@
       \field{pages}{20}
       \range{pages}{1}
     \endentry
+    \entry{FanLi2001}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2eb00838f3cea970c7377bfea9631787}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Jianqing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2ad436fe263af9170cfac2259cc239f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Runze},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{fullhash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{bibnamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authorbibnamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authornamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authorfullhash}{4919a69c8da15306fbf0ed5ef6882210}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0162-1459}
+      \field{journaltitle}{Journal of the American statistical Association}
+      \field{number}{456}
+      \field{title}{Variable selection via nonconcave penalized likelihood and its oracle properties}
+      \field{type}{Journal Article}
+      \field{volume}{96}
+      \field{year}{2001}
+      \field{pages}{1348\bibrangedash 1360}
+      \range{pages}{13}
+    \endentry
     \entry{FrankFriedman1993}{article}{}
       \name{author}{2}{}{%
         {{un=0,uniquepart=base,hash=2ba2d65f4d722da7ba0134d6ff755a91}{%
@@ -619,6 +877,38 @@
       \field{year}{1993}
       \field{pages}{109\bibrangedash 135}
       \range{pages}{27}
+    \endentry
+    \entry{Fu1998}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a197290a649422bdffa9b4246227fecd}{%
+           family={Fu},
+           familyi={F\bibinitperiod},
+           given={Wenjiang\bibnamedelima J},
+           giveni={W\bibinitperiod\bibinitdelim J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a197290a649422bdffa9b4246227fecd}
+      \strng{fullhash}{a197290a649422bdffa9b4246227fecd}
+      \strng{bibnamehash}{a197290a649422bdffa9b4246227fecd}
+      \strng{authorbibnamehash}{a197290a649422bdffa9b4246227fecd}
+      \strng{authornamehash}{a197290a649422bdffa9b4246227fecd}
+      \strng{authorfullhash}{a197290a649422bdffa9b4246227fecd}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1061-8600}
+      \field{journaltitle}{Journal of computational and graphical statistics}
+      \field{number}{3}
+      \field{title}{Penalized regressions: the bridge versus the lasso}
+      \field{type}{Journal Article}
+      \field{volume}{7}
+      \field{year}{1998}
+      \field{pages}{397\bibrangedash 416}
+      \range{pages}{20}
     \endentry
     \entry{ESL2009}{book}{}
       \name{author}{4}{}{%
@@ -962,6 +1252,44 @@
       \verb https://doi.org/10.1007/BF02415375
       \endverb
     \endentry
+    \entry{TrzaskoManduca2009}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=394ef805ff27fda811a54c41e5faf1d2}{%
+           family={Trzasko},
+           familyi={T\bibinitperiod},
+           given={Joshua},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=b50ffd11c72b7a78505a6e1a62ff71d4}{%
+           family={Manduca},
+           familyi={M\bibinitperiod},
+           given={Armando},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \strng{fullhash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \strng{bibnamehash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \strng{authorbibnamehash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \strng{authornamehash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \strng{authorfullhash}{868a6dfbdb861ef3cc2d49193c44274b}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1053-587X}
+      \field{journaltitle}{IEEE Transactions on Signal Processing}
+      \field{number}{11}
+      \field{title}{Relaxed conditions for sparse signal recovery with general concave priors}
+      \field{type}{Journal Article}
+      \field{volume}{57}
+      \field{year}{2009}
+      \field{pages}{4347\bibrangedash 4354}
+      \range{pages}{8}
+    \endentry
     \entry{VanWieringen2015}{article}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=ff3388cee5607ea4b85de7e183af17c3}{%
@@ -1020,14 +1348,63 @@
       \field{volume}{4}
       \field{year}{1991}
     \endentry
+    \entry{WangEtAl2020}{article}{}
+      \name{author}{4}{}{%
+        {{un=1,uniquepart=given,hash=66dfac55d28d09b3d290ce69004e7324}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Fan},
+           giveni={F\bibinitperiod},
+           givenun=1}}%
+        {{un=0,uniquepart=base,hash=113304d28a0077c0bfaa7ef4b3987ea5}{%
+           family={Mukherjee},
+           familyi={M\bibinitperiod},
+           given={Sach},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=71425b355b472529d862b325802115e6}{%
+           family={Richardson},
+           familyi={R\bibinitperiod},
+           given={Sylvia},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=59bf60865aaf453a192037b85f89b443}{%
+           family={Hill},
+           familyi={H\bibinitperiod},
+           given={Steven\bibnamedelima M},
+           giveni={S\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{97dcbc4c28838898d54aa3718ba34016}
+      \strng{fullhash}{d8d794f26c3e328f73ef8e0921f5a6ec}
+      \strng{bibnamehash}{d8d794f26c3e328f73ef8e0921f5a6ec}
+      \strng{authorbibnamehash}{d8d794f26c3e328f73ef8e0921f5a6ec}
+      \strng{authornamehash}{97dcbc4c28838898d54aa3718ba34016}
+      \strng{authorfullhash}{d8d794f26c3e328f73ef8e0921f5a6ec}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0960-3174}
+      \field{journaltitle}{Statistics and computing}
+      \field{note}{Paper with simulation study}
+      \field{title}{High-dimensional regression in practice: an empirical study of finite-sample prediction, variable selection and ranking}
+      \field{type}{Journal Article}
+      \field{volume}{30}
+      \field{year}{2020}
+      \field{pages}{697\bibrangedash 719}
+      \range{pages}{23}
+    \endentry
     \entry{WangZhu2016}{article}{}
       \name{author}{2}{}{%
-        {{un=0,uniquepart=base,hash=9931acf7fd6155cb1f86d7fe16ad91c6}{%
+        {{un=1,uniquepart=given,hash=9931acf7fd6155cb1f86d7fe16ad91c6}{%
            family={Wang},
            familyi={W\bibinitperiod},
            given={Yanxin},
            giveni={Y\bibinitperiod},
-           givenun=0}}%
+           givenun=1}}%
         {{un=0,uniquepart=base,hash=b91cb5d0661220eb12d7c6c739583449}{%
            family={Zhu},
            familyi={Z\bibinitperiod},
@@ -1045,7 +1422,6 @@
       \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
       \field{extradatescope}{labelyear}
       \field{labeldatesource}{}
-      \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{1687-952X}
@@ -1055,13 +1431,75 @@
       \field{volume}{2016}
       \field{year}{2016}
     \endentry
+    \entry{Zhang2010}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=87216fbf7f1a495422bf2597d030b10a}{%
+           family={Zhang},
+           familyi={Z\bibinitperiod},
+           given={Cun-Hui},
+           giveni={C\bibinithyphendelim H\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{87216fbf7f1a495422bf2597d030b10a}
+      \strng{fullhash}{87216fbf7f1a495422bf2597d030b10a}
+      \strng{bibnamehash}{87216fbf7f1a495422bf2597d030b10a}
+      \strng{authorbibnamehash}{87216fbf7f1a495422bf2597d030b10a}
+      \strng{authornamehash}{87216fbf7f1a495422bf2597d030b10a}
+      \strng{authorfullhash}{87216fbf7f1a495422bf2597d030b10a}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Nearly unbiased variable selection under minimax concave penalty}
+      \field{type}{Journal Article}
+      \field{year}{2010}
+    \endentry
+    \entry{ZouHastie2005}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f15b129e88b4820c7ed982265e79986b}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0cb8fe4210baa81c4b0e67913b4d2768}{%
+           family={Hastie},
+           familyi={H\bibinitperiod},
+           given={Trevor},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c346171da05683239c65d0053413406e}
+      \strng{fullhash}{c346171da05683239c65d0053413406e}
+      \strng{bibnamehash}{c346171da05683239c65d0053413406e}
+      \strng{authorbibnamehash}{c346171da05683239c65d0053413406e}
+      \strng{authornamehash}{c346171da05683239c65d0053413406e}
+      \strng{authorfullhash}{c346171da05683239c65d0053413406e}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1369-7412}
+      \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
+      \field{number}{2}
+      \field{title}{Regularization and variable selection via the elastic net}
+      \field{type}{Journal Article}
+      \field{volume}{67}
+      \field{year}{2005}
+      \field{pages}{301\bibrangedash 320}
+      \range{pages}{20}
+    \endentry
   \enddatalist
   \missing{21}
   \missing{ESL}
   \missing{ESLpage398}
-  \missing{Fu1998}
-  \missing{WangEtAl2020}
-  \missing{ZouHastie2005}
+  \missing{QiCuiLiuPang2021}
 \endrefsection
 \endinput
 

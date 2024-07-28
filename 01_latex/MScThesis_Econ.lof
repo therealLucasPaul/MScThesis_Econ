@@ -1,7 +1,7 @@
 \babel@toc {english}{}\relax 
 \contentsline {figure}{\numberline {1}{\ignorespaces 1st and 8th order polynomial fit to data (\textcolor {green1}{Green} \& \textcolor {blue1}{Blue} Lines fitted with red data point; \textcolor {orange1}{Orange} \& \textcolor {red1}{Red} Lines fitted without).}}{3}{figure.caption.1}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Triple-Gamma-Penalty using different values of $a^\xi $}}{14}{figure.caption.2}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Triple-Gamma-Penalty using different values of $c^\xi $ with $0 < c^\xi \leq 0.1$}}{15}{figure.caption.3}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Triple-Gamma-Penalty using different values of $c^\xi $ with $c^\xi \geq 0.1$}}{16}{figure.caption.4}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Triple-Gamma-Penalty using different values of $\kappa _B$}}{17}{figure.caption.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Basic Representation of the Triple-Gamma-Penalty using Hyperparameters $c^\xi = 0.1, \kappa _B = 2, a^\xi = 0.75$ compared to \textit {LASSO} and \textit {Ridge} Penalties}}{19}{figure.caption.7}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Triple-Gamma-Penalty using different values of $a^\xi $}}{17}{figure.caption.3}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Triple-Gamma-Penalty using different values of $c^\xi $ with $0 < c^\xi \leq 0.1$}}{18}{figure.caption.4}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Triple-Gamma-Penalty using different values of $c^\xi $ with $c^\xi \geq 0.1$}}{19}{figure.caption.5}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Triple-Gamma-Penalty using different values of $\kappa _B$}}{20}{figure.caption.6}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Basic Representation of the Triple-Gamma-Penalty using Hyperparameters $c^\xi = 0.1, \kappa _B = 2, a^\xi = 0.75$ compared to \textit {LASSO} and \textit {Ridge} Penalties}}{22}{figure.caption.8}%
