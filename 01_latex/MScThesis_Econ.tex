@@ -16,12 +16,15 @@
 \usepackage{amssymb}
 \usepackage{tikz}
 
+
 % Packages for Tables -----
 \usepackage{multirow}
 \usepackage{booktabs}
 \usepackage[justification=centering]{caption} % Centers the caption
 \usepackage{makecell}
 \usepackage{lscape}
+\usepackage{adjustbox}
+
 % -----
 
 % Colorbox for Notes ------
@@ -143,6 +146,12 @@ I like to acknowledge ...
 \section{Introduction}
 Willam of Ockham, born in Ockham, Surrey, probably lived between 1287 and 1348 and is nowadays recognized as a pre-eminent philosopher of the middle ages. Although     his name itself is no common knowledge, a principle carrying his name is: \textit{Ockham's Razor}. Interestingly, the main formulation of the principle (\textit{Entia non sunt multiplicanda praeter necessitatem} [plurality should not be posited without necessity]) can not be traced back to Ockham directly, but variations of it can be found in Ockham's writings. Since then nonetheless, the principle has long been used by statisticians and other researchers as a a scientific credo to capture the notion that "the simpler of two explanations is to be preferred" \parencite{Lazar2010}.  
 
+\begin{lightbluebox}
+Finish Intro
+\end{lightbluebox}
+
+The remaining thesis is structure as follows: Section 3 will provide a literature review about the history of regularization and advancements in the field along with an overview of established concepts and their respective advantages and disadvantages. Section 4 will quickly discuss the mathematical building block for this thesis by showcasing the bridge between regularization and Bayesian shrinkage prior as well as introduce the Triple-Gamma-Prior by \textcite{TGP2020} as the shrinkage prior of choice. Section 5 will then derive the proposed penalty by utilizing the bridge explained in section 4. Section 6 will then apply the newly derived regularization penalty and apply it in the context of a simulation study to see its effects and possible fields of application. The remaining sections 7 and 8 will discuss shortcomings of the method and possible extensions and end with a summarizing conclusion. 
+
 %----- Theoretical Section
 \newpage
 \section{Theoretical Section}\label{sec:theorysuper}
@@ -169,17 +178,9 @@ In general, a linear regression model fitted with least squares on a sufficient 
 \label{fig:polyfit}
 \end{figure}
 
-Such a plot can be found in figure \ref{fig:polyfit}. Here, the black points represent the main data sample plotted on a two-dimensional $Y$-$X$-space. The red dot plotted at $(5,4)$ represents the additional data point which is used to alter the respective sample. Polynomials of specific orders can now be used to emulate certain levels of model complexity. For example, a first order polynomial has two coefficients to estimate: the intercept $\beta_0$ and the slope $\beta_1$. A polynomial of order of order eight has nine coefficients to estimate. What can now be seen in figure \ref{fig:polyfit} is the change in estimates if we include/exclude the additional red data point. A first-order polynomial needs at least two data points and as $n=9 > p = 2$, the overall fit of the polynomial doesn't change drastically with the additional tenth data point. In the case of the eighth-order polynomial, we need at least nine data points to create a fit as we have nine predictors (one intercept and one coefficient for each of the eight powers). In this case $n=p$ and adding another data point drastically changes the estimates coefficients, which means that the model won't perform well in out-of-sample scenarios. This emphasizes the importance a sufficient sample size when fitting linear models. And this leads us to the core field of study of this thesis: What are ways to improve the generalization of a linear model in scenarios where the sample size is not sufficiently large enough?
+Such a plot can be found in figure \ref{fig:polyfit}. Here, the black points represent the main data sample plotted on a two-dimensional $Y$-$X$-space. The red dot plotted at $(5,4)$ represents the additional data point which is used to alter the respective sample. Polynomials of specific orders can now be used to emulate certain levels of model complexity. For example, a first order polynomial has two coefficients to estimate: the intercept $\beta_0$ and the slope $\beta_1$. A polynomial of order of order eight has nine coefficients to estimate. What can now be seen in figure \ref{fig:polyfit} is the change in estimates if we include/exclude the additional red data point. A first-order polynomial needs at least two data points and as $n=9 > p = 2$, the overall fit of the polynomial doesn't change drastically with the additional tenth data point. In the case of the eighth-order polynomial, we need at least nine data points to create a fit as we have nine predictors (one intercept and one coefficient for each of the eight powers). In this case $n=p$ and adding another data point drastically changes the estimates coefficients, which means that the model won't perform well in out-of-sample scenarios. This emphasizes the importance a sufficient sample size when fitting linear models. And this leads us to the core field of study of this thesis: What are ways to improve the generalization of a linear model in scenarios where the sample size is not sufficiently large enough or high-dimensionality becomes a problem?\\
 
-
- 	
-\begin{lightbluebox}
-
-- WAYS TO BATTLE COMPLEXITY
-
-Solutions (find source, seen in LMU course): (1) More data (Not always feasible) (2) Better data (Same issue) (3) Reduce Model Complexity (Regularization) (4) Less aggressive optimization (Maybe short review; Idea: Stop optimization when generalization error degrades)
-\end{lightbluebox}
-
+As already pointed out by \textcite{FanLi2006} almost 20 years ago, "high dimensional data analysis will be the most important research topic in statistics in the 21st century" and the advancements in data availability in recent decades have supported their hypothesis. The main problem to solve is how to accurately approach the problem of feature selection and make models generalize better. A first approach could be to increase the sample size to re-establish the unbiasedness of methods like OLS, however either the problem at hand involves a scenario with only few data points to begin with, or due to an extensive number of features, the collection of a sufficient amount of data points is practically not feasible. Another approach could be to use common variable selection methods like \textit{AIC} and \textit{BIC}, but as \textcite{FanLi2006} point out, "[t]raditional variable selection such as $C_p$, AIC and BIC involves a combinatorial optimization problem, which is NP-hard, with computational time increasing exponentially with the dimensionality." A third and computationally more feasible approach involves a concept called \textit{penalized regression}, more commonly known as \textit{Regularization}.
 
 \subsubsection{Regularization}
 
@@ -198,42 +199,29 @@ However, this only describes a subset of \textit{regularization} methods as stat
 
 Building on that, they split up the majority of \textit{regularization} methods into  (1) methods applied to the data set like transformations or modifications of the inputs, (2) methods altering the selected model family , (3) methods applied to the error/loss function $L(y_i, f_\beta(x_i))$ , (4) methods applied to regularization/penalty term as described above and (5) alterations of the optimization procedure itself. 
 
-\begin{lightbluebox}
-Vielleicht noch genauer auf die Taxonomy eingehen? 
-\end{lightbluebox} 
-
-Unsurprisingly, this thesis is concerned with the fourth group of regularization methods, which add a penalty/regularizer term $J(\beta)$ into the risk function, but before advancing to literature that deals with this kind of problem, it is necessary to establish a terminology which will be used throughout this thesis. \textbf{TODO}
+Unsurprisingly, this thesis is concerned with the fourth group of regularization methods, which add a penalty/regularization term $J(\beta)$ into the risk function, but before advancing to literature that deals with this kind of problem, it is necessary to establish a terminology which will be used throughout this thesis. This terminology will be the following:
 
 Let $\mathcal{D}$ be a training data set with $n \in \mathbb{N}$ observations, where every  consists of a target variable $y_i \in \mathbb{R}$ along with a number of corresponding inputs $x_i \in \mathbb{R}$. Given a linear function $f_\beta(x_i)$ of the inputs parametrized by coefficients $\beta \in \boldsymbol{\beta}$, $L(y_i f_\beta(x_i))$ is the \textbf{Loss} function measuring the discrepancy between the actual target $y_i$ and the output of the linear function $f_\beta(x_i)$. According to \textcite{Vapnik1991}, the \textbf{Empirical Risk Functional} is then 
 \[
 R_{emp}(\beta) = \frac{1}{n} \sum_{i=1}^n L(y_i, f_\beta(x_i)).
 \]
 \textbf{Regularization} in this thesis' context refers then to adding some penalty function $J(\beta)$ dependent on the set of parameters $\beta$, multiplied by some weighting parameter $\lambda$, to the empirical risk functional $R_{emp}(\beta)$. Thus, $R_{reg} = R_{emp}(\beta) + \lambda\cdot J(\beta)$. This results in the overall optimization problem
-\begin{align*}
-&\underset{\beta \in \boldsymbol{\beta}}{\argmin}\left\{R_{reg}(\beta)\right\}\\
-&=\underset{\beta \in \boldsymbol{\beta}}{\argmin}\left\{R_{emp}(\beta) + \lambda\cdot J(\beta)\right\}\\
-&=\underset{\beta \in \boldsymbol{\beta}}{\argmin}\left\{\sum_{i=1}^n L(y_i, f_\beta(x_i)) + \lambda\cdot J(\beta)\right\}
-\end{align*}
+\begin{align}
+&\underset{\beta \in \boldsymbol{\beta}}{\argmin}\left\{R_{reg}(\beta)\right\}\nonumber\\
+&=\underset{\beta \in \boldsymbol{\beta}}{\argmin}\left\{R_{emp}(\beta) + \lambda\cdot J(\beta)\right\}\nonumber\\
+&=\underset{\beta \in \boldsymbol{\beta}}{\argmin}\left\{\sum_{i=1}^n L(y_i, f_\beta(x_i)) + \lambda\cdot J(\beta)\right\}\label{eq:genreg}
+\end{align}
 
 It is important to note here that as $J(\beta)$ is only a function of the coefficients $\beta$ and neither the targets $y_i$ nor the inputs $x_i$. It only affects the generalization error of the model, not the training error given by the empirical risk functional $R_{emp}(\beta)$.
 
-\begin{lightbluebox}
-Ad Solution (3) because it is relatively easy to implement: Simple approach => Start with simplest model and iteratively add one feature OR iteratively get rid of feature by feature. (Problem: Very arbitrary and hard to reasonably do) Thus, adjust risk function minimization. Important: Regularization adjusts generalization error, not training error!
-
-Short break: Talk about Taxonomy by Kukacka et al 2017 on the differing use of the term "regularization" 
-
-What is needed: 
-\[
-R_{reg}(\beta) = R_{emp}(\beta)+ \lambda \cdot J(\beta)
-\]
-where $R_{emp}(\beta) = \sum_i^n L(y_i, f(x_i, \beta))$. Note: Regularization term does not depend on data, just on parametrization. $\lambda$ controls the strength of regularization. Thus, $\lambda = 0$ means simple MSE optimization and $\lambda \to \infty$ chooses simplest model. As $\lambda$ is set manually, this also bears some problems. However, typical solution is cross-validation. 
-
-\textbf{Literature}
-\parencite{Taxonomy2017}
-\end{lightbluebox}
 
 \subsection{Bayesian View on Battling Model Complexity using Shrinkage Priors}\label{sec:BayesianShrinkagePriors}
-Explain how Bayesians battle model complexity. 
+To build on the mathematical connection between the Bayesian and Frequentist approach to battle model complexity, which will be used as the building block of this thesis later on, it is necessary to make a quick detour and quickly recap on how Bayesian statisticians tackle model complexity. 
+
+\begin{lightbluebox}
+Explain Shrinkage Prior
+\end{lightbluebox}
+
 
 \newpage
 
@@ -248,9 +236,6 @@ $$\hat{\beta}_{Ridge}(\lambda) = \underset{\beta}{\argmin}\left\{\norm{y-X\beta}
 This resembles an example of the above defined regularization framework with squared residual loss and a penalty term of the form $\norm{\beta}_2^2$, which only depends on the parameter $\beta$. In case of $\lambda$ being equal to zero, this reduces to the \textit{maximum likelihood (ML) estimator}. 
 
 The publications of Arthur Hoerl and Robert Kennard have led to further advancements, although it took more than 25 years, in shrinkage estimation or related concepts. One concept which is almost as famous \textit{Ridge Regression} is the \textit{Least Absolute Shrinkage and Selection Operator}, more commonly know as \textit{LASSO}, developed by \textcite{Tibishirani1996}. He argues that the two at the time most prominent shrinkage methods - Ridge and Subset Selection - both have their drawbacks. Ridge regression on the one hand is an optimization problem which continuously shrinks coefficients towards zero, but doesn't select them in a discrete sense, which makes it hard to interpret these models. Subset Selection on the other hand chooses variables in a discrete sense - a variables either stays within the model or it doesn't - and thus creates easily interpretable models, but "[s]mall changes in the data can result in very different models being selected and this can reduce its prediction accuracy." \parencite{Tibishirani1996} \textit{LASSO} is trying to combine both methods' advantages by using $\norm{\beta}_1$ as a penalty term.\\
-\begin{lightbluebox}
-Bit more on LASSO?
-\end{lightbluebox}
 
 \textit{LASSO} and to some extend \textit{Ridge} can be viewed as a special case of a $l_p$-norm regularization with corresponding values for $p$ ($p = 1$ for LASSO and $p=2$ for Ridge) \parencite{FrankFriedman1993}. 
 
@@ -351,14 +336,19 @@ carry over into the frequentist framework?
 
 Yet, before diving into the mathematical core of this thesis which derives said concept, it is necessary to have a look at the Triple-Gamma-Prior in depth to explain why this particular prior might prove itself to provide a useful building block for a novel regularization penalty.
 
+\begin{lightbluebox}
+Describe TRIPLE GAMMA PRIOR
+\end{lightbluebox}
+
+
 %----- Model Setup and Derivation
 \newpage
-\section{Model Setup and Derivation}
+\section{Model Setup and Derivation}\label{sec:modelderivation}
 Coming to the theoretical framework of the \textit{triple-gamma-regularization}, let's assume we have a response variable $y$ and $p$ predictors along with $n$ data points. More formally, let $y=[y_1  \quad y_2 \cdots y_n]^T$ and $x_i = [x_{i1} \quad x_{i2} \cdots x_{in}]^T$ with $\forall i\in \{1,...,n\}: y_i, x_i \in \mathbb{R}$. Here, $x_i$ is the $i$-th predictor, thus resulting in the design matrix $X = [x_1 \quad x_2 \cdots x_p]$.\\
 
 Starting from the Bayesian framework, the standard linear regression model is given by
 \[
-y_i = x_i^T\cdot \beta + \varepsilon_i \quad i\in \{1,...,n\} 
+y_i = x_i^T\cdot \beta + \varepsilon_i \quad i\in \{1,...,n\}. 
 \]
 with the assumed distribution of $\varepsilon_i \sim N(0,\sigma^2)$. Thus it follows that $y\sim N_n(X\beta,\sigma^2I)$. The posterior distribution of the parameter vector $\beta$, according to Bayes' Rule, is then proportional to the product of the likelihood of the data and the prior distribution, which can be seen in equation \ref{eq:bayes}.
 \begin{equation}\label{eq:bayes}
@@ -377,17 +367,17 @@ The log of the likelihood function is then given by
 \log \mathcal{L}( \mathbf{y} |\beta, \sigma^2 , \mathbf{X}) &= \log \left( \frac{1}{(2\pi\sigma^2)^{n/2}} \exp\left(-\frac{1}{2\sigma^2} (\mathbf{y} - \mathbf{X}\beta)^\top (\mathbf{y} - \mathbf{X}\beta)\right) \right) \\
 &= \log \left( \frac{1}{(2\pi\sigma^2)^{n/2}} \right) + \log \exp\left(-\frac{1}{2\sigma^2} (\mathbf{y} - \mathbf{X}\beta)^\top (\mathbf{y} - \mathbf{X}\beta)\right) \\
 &= -\frac{n}{2} \log(2\pi\sigma^2) - \frac{1}{2\sigma^2} (\mathbf{y} - \mathbf{X}\beta)^\top (\mathbf{y} - \mathbf{X}\beta)\\
-&\propto - \frac{1}{2\sigma^2} (\mathbf{y} - \mathbf{X}\beta)^\top (\mathbf{y} - \mathbf{X}\beta) = - \frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2\\
+&\propto - \frac{1}{2\sigma^2} (\mathbf{y} - \mathbf{X}\beta)^\top (\mathbf{y} - \mathbf{X}\beta) = - \frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2.\\
 \end{align*}
 
 The marginal prior distribution for the parameter vector $\beta$ stems from the Triple-Gamma-Prior constructed in \textcite{TGP2020} given in Theorem 1 (a) and is given by
 \begin{align*}
 p(\sqrt{\beta_j}|\phi^\xi, a^\xi, c^\xi) &= \frac{\Gamma(c^\xi + \frac{1}{2})}{\sqrt{2\pi \phi^\xi}\cdot B(a^\xi, c^\xi)}\cdot U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right)\\
-&\propto U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right)
+&\propto U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right).
 \end{align*}
 Here, $U(a,b,z)$ refers the confluent hyper-geometric function of the second kind which was introduced by \textcite{Tricomi1947}. As this prior is specified for the parameter $\sqrt{\beta_j}$, we transform the prior by squaring the parameter to gain
 \begin{align*}
-p(\beta_j|\phi^\xi, a^\xi, c^\xi) &\propto U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right)
+p(\beta_j|\phi^\xi, a^\xi, c^\xi) &\propto U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right).
 \end{align*}
 Now, assuming that the parameters are independent a priori, the prior distribution is given by
 \begin{align}
@@ -395,43 +385,43 @@ p(\beta) 	&= \prod_j^p p(\beta_j) \nonumber\\
 			&= \prod_j^p p(\beta_j|\phi^\xi, a^\xi, c^\xi) \nonumber\\
 			&\propto \prod_j^p U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right) \nonumber\\
 			&= \prod_j^p \frac{1}{\Gamma(c^\xi + \frac{1}{2})}\int_0^\infty e^{-(\frac{\beta_j^2}{2\phi^\xi})t}t^{c^\xi + \frac{1}{2}-1}(1+t)^{\frac{3}{2}-a^\xi-c^\xi + \frac{1}{2}-1}dt \nonumber\\
-			&\propto \prod_j^p \int_0^\infty \exp\left(-\frac{\beta_j^2}{2\phi^\xi}t\right)t^{c^\xi - \frac{1}{2}}(1+t)^{1-a^\xi-c^\xi} dt \label{eq:prior}
+			&\propto \prod_j^p \int_0^\infty \exp\left(-\frac{\beta_j^2}{2\phi^\xi}t\right)t^{c^\xi - \frac{1}{2}}(1+t)^{1-a^\xi-c^\xi} dt. \label{eq:prior}
 \end{align}
 
 Here, in line 1 the assumption of independence between the parameters has been used to describe the distribution of the parameter vector as the product of its individual parameter distributions. In line 2, the marginal prior from \textcite{TGP2020} has been used as the prior distribution for each individual parameter $\beta_j$. In line 3, scaling parameters have been removed by using the proportionality assumption. The last two lines of the derivation insert the integral representation of the confluent hyper-geometric function of the second kind, $U(a,b,z)$, which is valid in the case of a positive real part for the first parameter ($\mathfrak{Re}(a) > 0$) and again apply proportionality.\\
 
 Taking the $\log$ of the prior distribution and using the properties of the logarithmic function yields the general result
 \[
-\log(p(\beta))=\log(\prod_j^p p(\beta_j|\phi^\xi, a^\xi, c^\xi))=\sum_j^p \log(p(\beta_j|\phi^\xi, a^\xi, c^\xi))
+\log(p(\beta))=\log(\prod_j^p p(\beta_j|\phi^\xi, a^\xi, c^\xi))=\sum_j^p \log(p(\beta_j|\phi^\xi, a^\xi, c^\xi)).
 \]
 
-A common approach to estimation in regularization settings is the \textit{maximum a posteriori probability (MAP)} estimator \MC ,which is defined as
+A common approach to estimation in regularization settings is the \textit{maximum a posteriori probability (MAP)} estimator, which is defined as
 \[
-\hat{\beta}_{MAP}(x) = \underset{\beta \in \mathbb{R}^p}{\argmax}\left\{f(x|\beta)g(\beta)\right\}
+\hat{\beta}_{MAP}(x) = \underset{\beta \in \mathbb{R}^p}{\argmax}\left\{f(x|\beta)g(\beta)\right\}.
 \]
 where $f(x|\beta)$ describes the the probability density function of a variable $x$, which is parametrized by the parameter vector $\beta$. The second function $g(\beta)$ incorporates our prior information about the parameter vector $\beta$ into the optimization problem.\\  
 
 Returning to our specific problem at hand, the posterior distribution of our parameter vector $\mathbf{\beta}$ can be retrieved by applying Bayes' theorem and the previously gained results in equations \ref{eq:prior} and \ref{eq:likelihood}. Thus, the posterior distribution of the parameter vector $\beta$ is proportional to
 \begin{align}
 p(\beta|y, X, \sigma^2) 	&\propto p(y|X,\beta,\sigma)\times p(\beta) \nonumber\\
-						&\propto \frac{1}{(2\pi\sigma^2)^{n/2}}e^{-\frac{1}{2\sigma^2}(y-X\beta)^T(y-X\beta)} \times \prod_j^p U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right)\label{eq:posterior}
+						&\propto \frac{1}{(2\pi\sigma^2)^{n/2}}e^{-\frac{1}{2\sigma^2}(y-X\beta)^T(y-X\beta)} \times \prod_j^p U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right).\label{eq:posterior}
 \end{align} 
 
 Making use of the monotonicity of the logarithmic function and seeing that it is easier to optimize the log-posterior, Taking the log of the posterior probability distribution, we take the log of result \ref{eq:posterior}. 
 \begin{align}
 \log(\beta| X, y, \sigma^2) 	&= \log\left(\frac{1}{(2\pi\sigma^2)^{n/2}}\right) - \frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2 + \log\left(\prod_j^p U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right)\right)\nonumber\\
 							&= \log\left(\frac{1}{(2\pi\sigma^2)^{n/2}}\right) - \frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta^2}_2^2 + \sum_j^p \log\left(U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right)\right)\nonumber\\
-							&\propto -\frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2 + \sum_j^p \log\left(U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right)\right)\nonumber\\
+							&\propto -\frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2 + \sum_j^p \log\left(U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right)\right)\nonumber
 \end{align}
 
-To align with the general specification structure of regularization problems, which can be seen from equation \textbf{missEQ}, a parameter $\lambda$ will be multiplicatively added in front of the penalty term, which makes it possible to adjust the strength of the influence that the penalty has on the chosen parameters. By minimizing the negative log-posterior adjusted with $\lambda$, we can retrieve the \textit{maximum a posteriori probability (MAP)} estimator using \textbf{Triple-Gamma-Regularization}:
+To align with the general specification structure of regularization problems, which can be seen from equation \ref{eq:genreg}, a parameter $\lambda$ will be multiplicatively added in front of the penalty term, which makes it possible to adjust the strength of the influence that the penalty has on the chosen parameters. By minimizing the negative log-posterior adjusted with $\lambda$, we can retrieve the \textit{maximum a posteriori probability (MAP)} estimator using \textbf{Triple-Gamma-Regularization}:
 \begin{equation}\label{eq:tgr}
 \hat{\beta}_{MAP} = \underset{\beta \in \mathbb{R}^p}{\argmin} \left(\frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2 + \lambda \sum_j^p -\log\left(U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right)\right)\right) 
 \end{equation}
 
 \newpage
 \subsection{Varying the Hyperparameters}
-After closer inspection of equation \ref{eq:tgr}, it can easily be seen that this resembles the general penalized regression already seen in \textcite{ESLpage398} and in section \ref{sec:theorysuper} as $R(\beta) + \lambda\cdot J(\beta)$. The first term, also called the empirical loss in machine learning literature, is the widely known residual sum of squares:
+After closer inspection of equation \ref{eq:tgr}, it can easily be seen that this resembles the general penalized regression already seen in \textcite[398]{ESL2009} and in section \ref{sec:theorysuper} as $R(\beta) + \lambda\cdot J(\beta)$. The first term, also called the empirical loss in machine learning literature, is the widely known residual sum of squares:
 \[
 R(\beta)=\frac{1}{2\sigma^2}\norm{\mathbf{y} - \mathbf{X}\beta}_2^2
 \] 
@@ -439,17 +429,17 @@ The second part of the optimization problem can be viewed as a penalty imposed o
 \[
 J_{TG}(\beta) = \sum_j^p -\log\left(U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j^2}{2\phi^\xi}\right)\right)
 \]
-In contrast to the \textit{LASSO} penalty, which uses the the absolute value of the coefficient, or the \textit{Ridge} penalty, which uses the square of the estimate, this penalty derived from \textcite{TGP2020} is based on the $\log$ of the confluent hyper-geometric of the second kind. Notably, this penalty term has three additional hyper-parameters: $c^\xi$, $a^\xi$ and $\kappa_B$ as $\phi^\xi = (2c^\xi)/(\kappa^2_B a^\xi)$. Here, the restrictions $a^\xi>0.5$ and $0 < c^\xi < \infty$ are necessary to ensure that the penalty for a $\beta_j$ being equal to zero remains finite and not diverges to negative infinity at zero. This results, which has already been presented and proven as part of Theorem 2 in \textcite[5--6]{TGP2020}, ensures that the negative $\log$ of the hypergeometric function remains finite and thus does not produce parameter estimates which are zero for every variables. (\textbf{BESSER SCHREIBEN?})\\
-\begin{lightbluebox}
-Write more to fill this page
-\end{lightbluebox}
+In contrast to the \textit{LASSO} penalty, which uses the the absolute value of the coefficient, or the \textit{Ridge} penalty, which uses the square of the estimate, this penalty derived from \textcite{TGP2020} is based on the $\log$ of the confluent hyper-geometric of the second kind introduced by \textcite{Tricomi1947}. Notably, this penalty term has three additional hyper-parameters: $c^\xi$, $a^\xi$ and $\kappa_B$ as $\phi^\xi = (2c^\xi)/(\kappa^2_B a^\xi)$. Here, the restrictions $a^\xi>0.5$ and $0 < c^\xi < \infty$ are necessary to ensure that the penalty for a $\beta_j$ being equal to zero remains finite and not diverges to negative infinity at zero. This results, which has already been presented and proven as part of Theorem 2 in \textcite[5--6]{TGP2020}, ensures that the negative $\log$ of the hypergeometric function remains finite and thus does not produce parameter estimates which are zero for every variables.\\
+
+In contrast to penalties like \textit{LASSO} and \textit{Ridge} which have a pre-defined structure, the hyperparameters of \textit{Triple-Gamma} penalty make it possible to adjust the structure of the penalty and thus its influence on the overall optimization problem. Of course, the other penalties have simpler mathematical structures, but are very limited in adapting to different settings. Thus, the \textit{Triple-Gamma} penalty trades some of the mathematical simplicity to gain more flexibility by introducing these hyperparameters. The next few pages will elaborate on the different effects that different values of these hyperparameters have on the overall structure of the penalty.    
+
 \newpage
 
 \textit{Variations of the Hyperparameter $a^\xi$}\\
 
 The first hyper-parameter which can be adjusted is $a^\xi$. A plot with a set of different values for $a^\xi$ can be found in figure \ref{fig:VariationInA}. As already mentioned earlier, the necessary restriction for for this hyper-parameter is that it has to be strictly greater than $0.5$ to guarantee the finiteness of the penalty. To demonstrate the effects of changes in $a^\xi$, the other parameters have been set to $c^\xi=0.1$ and $\kappa_B=2$. It can easily be seen from the figure that $a^\xi$ steers the sharpness of the penalty in small neighbourhoods around $\beta=0$. As $a^\xi$ increases, the penalty because smoother at $\beta=0$ with it eventually converging a \textit{Gaussian Penalty} like behaviour. From a modelling perspective, this opens up the possibility of steering the degree of variable selection the penalty performs. Nonetheless, the overall structure of the penalty in the tails does not change systematically apart from a parallel shift, which can be readjusted by specifying a different weighting parameter $\lambda$ or a different value for $\kappa_B$ (more on effect of $\kappa_B$ on the penalty can be found later in this chapter).\\ 
 
-\begin{figure}[!h]
+\begin{figure}[h!]
 \centering
 \includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png}
 \caption{Triple-Gamma-Penalty using different values of $a^\xi$}
@@ -471,7 +461,7 @@ In contrast to the hyperparameter $a^\xi$, which mainly affects the behaviour at
 \label{fig:ChangeInC_SmallValues}
 \end{figure}
 
-However, the more interesting effect that a change in $c^\xi$ has on the penalty structure can be seen for values of $c^\xi$ that are greater than $0.1$. In figure \ref{fig:ChangeInC_LargeValues}, a plot can be found with the Triple-Gamma-Penalty for larger values of $c^\xi$. Again, starting from the baseline with $c^\xi = 0.1$, higher values for this hyper-parameter mainly change the behaviour of the penalty in the tails. A result that has already been shown by \textcite{TGP2020} in Table 1, where multiple different hyper-parameter settings are presented, is that with an increasing value for $c^\xi$ and with $a^\xi = 1$ \textbf{as well as kappaB = ??}, the Triple-Gamma-Prior converges to a \textit{LASSO} like shrinkage behaviour. A property which carries over to the proposed regularization setting when using the proposed hyper-parameter values, thus showing that the Triple-Gamma-Penalty can be used both as a non-convex penalty as well as a \textit{LASSO} penalty, creating increased flexibility in modelling approaches. 
+However, the more interesting effect that a change in $c^\xi$ has on the penalty structure can be seen for values of $c^\xi$ that are greater than $0.1$. In figure \ref{fig:ChangeInC_LargeValues}, a plot can be found with the Triple-Gamma-Penalty for larger values of $c^\xi$. Again, starting from the baseline with $c^\xi = 0.1$, higher values for this hyper-parameter mainly change the behaviour of the penalty in the tails. A result that has already been shown by \textcite{TGP2020} in Table 1, where multiple different hyper-parameter settings are presented, is that with an increasing value for $c^\xi$ and with $a^\xi = 1$ as well as $\kappa_B = 2$, the Triple-Gamma-Prior converges to a \textit{LASSO} like shrinkage behaviour. A property which carries over to the proposed regularization setting when using the proposed hyper-parameter values, thus showing that the Triple-Gamma-Penalty can be used both as a non-convex penalty as well as a \textit{LASSO} penalty, creating increased flexibility in modelling approaches. 
 
 \begin{figure}[!h]
 \centering
@@ -484,38 +474,48 @@ However, the more interesting effect that a change in $c^\xi$ has on the penalty
 
 The third and final hyper-parameter $\kappa_B$ enters the Triple-Gamma-Penalty $J_{TG}(\beta)$ as part of $\phi^\xi = \frac{2c^\xi}{\kappa_B^2 a^\xi}$ as can be seen from equation \ref{eq:tgr}. Notably, $\kappa_B$ is squared and thus only the absolute value of $\kappa_B$, $|\kappa_B|$, influences the structure of the penalty. The overall third function value is defined as $\frac{\beta_j^2}{2\phi^\xi}$ and by plugging in $\phi^\xi$ we get $\frac{\beta_j^2\kappa_ B^2a^\xi}{4c^\xi}$, it can be seen that a value of $\kappa_B = 0$ leads to the entire parameter value being zero for all values of $\beta_j$. Hence, a change in $\beta_j$ won't influence the penalty and furthermore won't have an influence on the overall risk minimization problem, the result being that the optimal set of parameters will only depend on the chosen loss function.\\
 
-For all values of $\kappa_B \neq 0$, the value of the hyper-parameter will influence the penalty structure. A plot with several different values for the absolute value of $\kappa_B$ can be found in figure \ref{fig:TGPenalty_ChangeInKappa}.
+For all values of $\kappa_B \neq 0$, the value of the hyper-parameter will influence the penalty structure. A plot with several different values for the absolute value of $\kappa_B$ can be found in figure \ref{fig:TGPenalty_ChangeInKappa}. It can be seen that $\kappa_B$ has a scaling effect on the strength of the penalty, thus playing a similar role as the generally multiplicatively added regularization parameter $\lambda$. For small values of $\kappa_B$, the penalty only has a weak singularity in small neighbourhoods around $0$, thus making it more likely for the parameters to be different from zero. As $\kappa_B$ increases, the spike becomes more pronounced and thus increases the added penalty for parameters different from zero. \\
 
-\begin{figure}[t]
+\begin{figure}[h!]
 \centering
 \includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png}
 \caption{Triple-Gamma-Penalty using different values of $\kappa_B$}
 \label{fig:TGPenalty_ChangeInKappa}
 \end{figure}
 
+Although it has a scaling effect like $\lambda$, it still has this structural effect as well. Allowing myself to use a Bayesian analogy in this setting, it can be viewed as follows: Increasing $\kappa_B$ corresponds to a way of putting more prior knowledge on zero and thus pulling coefficients stronger towards zero.\\
+
+A summary of all these effects can be found in table \ref{tab:VariationsInHyperparameters} below where the effects of positive and negative changes in the hyperparameters as well as defined ranges for these parameters are defined. 
+
 \newpage
 %---- Table Summarizing the Effects of Changes in the Hyperparameters
 \begin{landscape}
-\begin{table}[!h]
-\begin{center}
+\hspace{3cm}
+\begin{table}[h!]
+\centering
 \begin{tabular}{lcccccc}\toprule
-		& \multicolumn{2}{l}{Change} & \multicolumn{3}{c}{Mathematical Properties}\\
+		& \multicolumn{2}{c}{Change} & \multicolumn{2}{c}{Mathematical Properties}\\
 		\cmidrule(r{4pt}){2-3} \cmidrule(l){4-5}
 Variable     	& \textbf{Positive} Change  & \textbf{Negative} Change & Defined Range & Misc.\\\midrule
-$a^\xi$  	& \makecell{Shifting towards\\ \textit{Gaussian}-like behaviour\\ at $\beta = 0$} & \makecell{Shifting towards singularity\\ at $\beta = 0$; Higher\\ immediate penalty for coefficients\\ $\beta \neq 0$} & $(0.5, \infty)$ & Expl.\\
-$c^\xi$ 		& \makecell{Generally, convergence towards \\ convexity and, given certain \\ settings for $a^\xi$ and\\ $\kappa_B$, LASSO. Higher values\\ increase the additional penalty\\ for higher absolute values of $\beta$.} &  \makecell{For values smaller \\ than $0.1$, similar effect\\ to increase in $a^\xi$} & $(0, \infty)$ & Expl. \\
-$\kappa_B$ 	& 15883 & 5.2e-8 & $(-\infty, \infty)/\{0\}$ & Expl. \\\bottomrule
+$a^\xi$  	& \makecell{Shifting towards\\ \textit{Gaussian}-like behaviour\\ at $\beta = 0$} & \makecell{Shifting towards singularity\\ at $\beta = 0$; Higher\\ immediate penalty\\ for coefficients\\ $\beta \neq 0$} & $(0.5, \infty)$ & -\\
+$c^\xi$ 		& \makecell{Generally, convergence towards \\ convexity and, given certain \\ settings for $a^\xi$ and\\ $\kappa_B$, LASSO. Higher values\\ increase the additional penalty\\ for higher absolute values of $\beta$.} &  \makecell{For values smaller \\ than $0.1$, similar effect\\ to increase in $a^\xi$} & $(0, \infty)$ & - \\
+$\kappa_B$ 	& \makecell{The singularity\\ at $\beta=0$ becomes more\\ pronounced, putting more\\ \textit{prior knowledge} on $\beta$\\ being zero.} & \makecell{The reverse effect\\ to the positive effect.} & $(-\infty, \infty)$ & \makecell{When $\kappa_B=0$, the\\ value of $\beta$ doesn't affect\\ the overall penalty anymore,\\ thus reverting the optimization\\ problem back to the\\ non-penalized one.} \\\bottomrule
 \end{tabular}
 \caption{Summary of the effects of changes in the hyperparameters $a^\xi$, $c^\xi$ and $\kappa_B$ on the penalty structure}
 \label{tab:VariationsInHyperparameters}
-\end{center}
 \end{table}
 \end{landscape}
+
 \newpage
 
 \subsection{Comparison to already existing Penalty Terms}\label{subsec:comparepenalties}
 
 As already mentioned in section \ref{sec:litreview}, several other penalty terms have already been widely studied in the literature. Convex penalties like \textit{Ridge} \parencite{HoerlKennard1970a} or non-convex penalties like the \textit{Ar(c)tan} \parencite{WangZhu2016} and \textit{Gaussian} \parencite{JohnVettamWu2022} have managed to establish itself as prominent approaches to regularization. It is now certainly of interest to see how the \textit{Triple-Gamma} penalty compares to the established methods. Seeing that, due to its flexibility, there is not \textit{one} \textit{Triple-Gamma} penalty, three distinct hyper-parameter setting have been chosen to represent the proposed penalty term. 
+\begin{enumerate}
+\item Setting 1: \quad $a^\xi=0.75$, $c^\xi=0.1$, $\kappa_B = 2$
+\item Setting 2: \quad $a^\xi=5$, $c^\xi=0.01$, $\kappa_B = 2$
+\item Setting 3: \quad $a^\xi=0.51$, $c^\xi=0.001$, $\kappa_B = 1$
+\end{enumerate}
 
 \begin{lightbluebox}
 Describe differences
@@ -528,11 +528,11 @@ Describe differences
 \label{fig:DifferentPenalties}
 \end{figure}
 
-\subsection{Restricted Strong Convexity (RSC) of the Triple-Gamma-Regularization}
+%\subsection{Restricted Strong Convexity (RSC) of the Triple-Gamma-Regularization}
 
-\begin{lightbluebox}
-Weglassen?
-\end{lightbluebox}
+%\begin{lightbluebox}
+%Weglassen?
+%\end{lightbluebox}
 
 \subsection{Alternative Specification (with +1 to mimic artan)}
 
@@ -541,17 +541,48 @@ As previously mentioned, the \textit{Arctan} penalty developed by \textcite{Wang
 \begin{lightbluebox}
 Propose different conecpts?
 \end{lightbluebox}
-\subsection{Approaches to Estimation}
+
 
 %----- Simulation Section
-\section{Simulation Section}
-Use the earlier derivation, code up the functions and simulate data to check behaviour for different datasets. Compare to base OLS, Ridge and Lasso Regression?
+\newpage
+\section{Simulation Study}
+To test the proposed method of section \ref{sec:modelderivation} a simulation study will now be conducted whether, and if so, in what scenarios, the \textit{Triple-Gamma} penalty might be valuable addition to the literature. Of course several previously introduced methods have also been tested using simulation studies, but the methodology behind these studies usually varies from paper to paper. However, before moving on to this section of the thesis, the question remains on how to solve the optimization problem in \ref{eq:tgr}. 
 
-\begin{lightbluebox}
-Ganze Simulation
-\end{lightbluebox}
+\subsection{Approaches to Estimation}
+As already mentioned in chapter \ref{sec:litreview}, non-convex penalties like the \textit{Triple-Gamma} penalty are usually harder to solve than convex optimization problems. The reason being that convex functions have a unique global minimum, whereas non-convex functions can have multiple local minima, which are not necessarily a global minimum. \textbf{(SOURCE)}. In addition, unlike for example \textit{Ridge} regression, the \textit{Triple-Gamma} penalty like many other established penalties in the literature does not have a closed form solution for this optimization problem. Thus, it is necessary to apply an optimization algorithm which solves this problem iteratively. An algorithm which has established itself to solve these kinds of problems is called \textit{Gradient Descent} \parencite[229--248]{GrippoSciandrone2023}. In its essence, the algorithm tries to minimize a loss function by iteratively adjusting the model parameters in the direction that reduces the loss most. It calculates the gradient of the loss function with respect to the model parameters and then updates the parameters by a learning rate. This iterative process can either be repeated until a specified number of iterations is reached or a local (or global) minimum has been found. As already mentioned, this can lead to problems when dealing with non-convex optimization problems as multiple local minima might exist, which do not necessarily need to be global ones. Various approaches to deal with this have been proposed. One method uses random starting points to cover various areas of the optimization space to cover potential multiple local minima. Another method is called \textit{Stochastic Gradient Descent (SGD)} and uses different batches of the dataset to estimate the model parameters \parencite{Amari1993}. The \textit{Gradient Descent} method will be used for the simulation study in the following chapter.\\
+
+For the sake of completeness and as a stepping stone for further research, it is necessary to mention a different approach to solve the optimization problem which is called \textit{Local Linear Approximation (LLA)} algorithm and has been proposed by \textcite{ZouLi2008}. Their resulting \textit{one-step LLA estimates} have several computational advantages and "alleviate the computation burden in the iterative algorithm and overcome the potential local maxima problem in maximizing the nonconcave penalized likelihood" \parencite{ZouLi2008}. Still, to the best of my knowledge, no easily accessible programming packages exist for this algorithm.
+
+\subsection{Scenario Simulation}
+Various simulation studies comparing different regularization penalties have been published so far. \textcite{VettamJohn2022} for example have compared \textit{LASSO, Ridge, MCP, SCAD, Laplace} and \textit{Arctan} in the context of the estimation of neural networks. \textcite{WangEtAl2020} have tested a range of penalties in the context of linear models and analysed various the performance of penalties using levels of sparsity, dimensionality and data availability. The authors tested the performance based on three criteria: \textit{prediction}, \textit{variables selection} and \textit{variables ranking}. This simulation study will focus on the the first two metrics.\\
+
+\textit{Prediction} is usually measured by splitting a simulated dataset into a training dataset and a test dataset. The model is fitted on the training dataset and then tested on the test dataset using a metric like the \textit{mean squared error (MSE)}. \textit{Variable Selection} is measured in various ways. \textcite{WangEtAl2020} used \textit{true-positive} and \textit{false-positive} rates as their metric of choice. As several of the tested methods in this simulation study do not perform variable selection naturally due to its \textit{smooth-at-origin} property and thus report estimates larger than zero, a different metric will be chosen for this simulation study. To test whether models accurately predict the underlying data generating process and also result in estimates close to its true coefficients, the square of the absolute deviation between the true coefficient and the estimated coefficient of each variable will be computed and summed up. Using this metric, models whose estimates are close the true coefficients will perform than models whose estimates are far off.\\
+
+To evaluate the models in a wide range of contexts, every simulation scenario will vary in terms off three variables: \textit{sample size $N$} (ie $N=100$ meaning that for every run, a total of $100$ observations will be generated), \textit{dimensionality $p$} (ie $p=10$ meaning a total of ten covariates will included in the model) and \textit{sparsity $s$} (ie $s=0.1$ meaning that 10\% of the covariates have a true coefficients different from zero). The set of values chosen for each scenario variable can be found in table \ref{tab:Scenarios}. Using this values, all possible combinations of these variable settings will be formed, resulting in a total of $48$ possible scenarios. 
+
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{lc}\toprule
+Variable & Values\\\midrule
+Sample Size $N$ & $50, 100, 500, 1000$\\
+Dimensionality $p$ & $3, 10, 40$\\
+Sparsity $s$ & $0.1, 0.3, 0.5, 0.9$\\\bottomrule
+\end{tabular}
+\caption{Scenarios Values}
+\label{tab:Scenarios}
+\end{center}
+\end{table}
+
+The remaining issue to cover deals with the weighting/regularization parameter $\lambda$ (see section \ref{sec:theorysuper}) and how it is set. This key parameter controlling the strength of the influence of the penalty on the overall optimization result is usually set by the user, however another \textit{hands-off} method is cross-validation, which will be used for this simulation \parencite[250--251]{ESL2009}. A grid of possible values for $\lambda$ is chosen, the model is being estimated for every possible value, and the best model will be chosen based on the chosen cross-validation metric. For this simulation study, all values between $0$ and $1$ based on $0.01$ steps will be tested. The simulations have been run with Python (Version 3.11.4) along with scikit-learn (Version 1.4.1.post1) and PyTorch (Version 2.2.2).\footnote{More information on the packages used and its installed version can be found in the accompanying GitHub repository.}
+
+\subsection{Simulation Study for Prediction} 
+
+\subsection{Simulation Study for Variable Selection}
+
 
 \subsection{Implementation as Python Package}
+
+This section provides a brief overview of the Python script, which has been used to run the simulations of the previous section, along with input/output descriptions of the defined functions.
 \begin{lightbluebox}
 How to use it. 
 Explanation of Functions. Input - Output Tables
@@ -567,12 +598,9 @@ Kurzes Ansprechen von Computations Efficieny
 \end{lightbluebox}
 
 
-%----- Small Applied Section
-%\section{Small Applied Section}
-%Here I am planning to apply the TGP using Peter's Bayesian Package and the self coded frequentist code on a small dataset.
 \section{Possible Extensions and Criticism}
 
-\subsection{Implementation as Python Package}
+
 \begin{lightbluebox}
 Interessante unifying properties, aber langsam implementiert. 
 \end{lightbluebox}

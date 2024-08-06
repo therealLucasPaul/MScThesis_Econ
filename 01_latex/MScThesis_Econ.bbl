@@ -19,6 +19,38 @@
 
 \refsection{0}
   \datalist[entry]{apa/apasortcite//global/global}
+    \entry{Amari1993}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=41ebde581fd80bf05430e25dac85f7ce}{%
+           family={Amari},
+           familyi={A\bibinitperiod},
+           given={Shun-ichi},
+           giveni={S\bibinithyphendelim i\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{41ebde581fd80bf05430e25dac85f7ce}
+      \strng{fullhash}{41ebde581fd80bf05430e25dac85f7ce}
+      \strng{bibnamehash}{41ebde581fd80bf05430e25dac85f7ce}
+      \strng{authorbibnamehash}{41ebde581fd80bf05430e25dac85f7ce}
+      \strng{authornamehash}{41ebde581fd80bf05430e25dac85f7ce}
+      \strng{authorfullhash}{41ebde581fd80bf05430e25dac85f7ce}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0925-2312}
+      \field{journaltitle}{Neurocomputing}
+      \field{number}{4-5}
+      \field{title}{Backpropagation and stochastic gradient descent method}
+      \field{type}{Journal Article}
+      \field{volume}{5}
+      \field{year}{1993}
+      \field{pages}{185\bibrangedash 196}
+      \range{pages}{12}
+    \endentry
     \entry{TGP2020}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=77d9dfbba2e075ba7c86c1cba3f09301}{%
@@ -84,6 +116,7 @@
       \strng{authorbibnamehash}{4919a69c8da15306fbf0ed5ef6882210}
       \strng{authornamehash}{4919a69c8da15306fbf0ed5ef6882210}
       \strng{authorfullhash}{4919a69c8da15306fbf0ed5ef6882210}
+      \field{extraname}{1}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
@@ -100,6 +133,40 @@
       \field{year}{2001}
       \field{pages}{1348\bibrangedash 1360}
       \range{pages}{13}
+    \endentry
+    \entry{FanLi2006}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2eb00838f3cea970c7377bfea9631787}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Jianqing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2ad436fe263af9170cfac2259cc239f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Runze},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{fullhash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{bibnamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authorbibnamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authornamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authorfullhash}{4919a69c8da15306fbf0ed5ef6882210}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint math/0602133}
+      \field{title}{Statistical challenges with high dimensionality: Feature selection in knowledge discovery}
+      \field{type}{Journal Article}
+      \field{year}{2006}
     \endentry
     \entry{FrankFriedman1993}{article}{}
       \name{author}{2}{}{%
@@ -170,6 +237,43 @@
       \field{year}{1998}
       \field{pages}{397\bibrangedash 416}
       \range{pages}{20}
+    \endentry
+    \entry{GrippoSciandrone2023}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bb6b1ff2b248ff87d413e44ee5636eca}{%
+           family={Grippo},
+           familyi={G\bibinitperiod},
+           given={Luigi},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2feee18617c50e9b86680cdf907d0955}{%
+           family={Sciandrone},
+           familyi={S\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature}%
+      }
+      \strng{namehash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \strng{fullhash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \strng{bibnamehash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \strng{authorbibnamehash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \strng{authornamehash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \strng{authorfullhash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3031267907}
+      \field{title}{Introduction to Methods for Nonlinear Optimization}
+      \field{type}{Book}
+      \field{volume}{152}
+      \field{year}{2023}
     \endentry
     \entry{ESL2009}{book}{}
       \name{author}{4}{}{%
@@ -609,6 +713,43 @@
       \field{volume}{4}
       \field{year}{1991}
     \endentry
+    \entry{VettamJohn2022}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1e8869482028890c1d00fba8d66b4310}{%
+           family={Vettam},
+           familyi={V\bibinitperiod},
+           given={Sujit},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2ac54d52cb69bbcfa26f6e76b40d1ea}{%
+           family={John},
+           familyi={J\bibinitperiod},
+           given={Majnu},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \strng{fullhash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \strng{bibnamehash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \strng{authorbibnamehash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \strng{authornamehash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \strng{authorfullhash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2590-0374}
+      \field{journaltitle}{Results in Applied Mathematics}
+      \field{title}{On two recent nonconvex penalties for regularization in machine learning}
+      \field{type}{Journal Article}
+      \field{volume}{14}
+      \field{year}{2022}
+      \field{pages}{100256}
+      \range{pages}{1}
+    \endentry
     \entry{WangEtAl2020}{article}{}
       \name{author}{4}{}{%
         {{un=1,uniquepart=given,hash=66dfac55d28d09b3d290ce69004e7324}{%
@@ -755,9 +896,78 @@
       \field{year}{2005}
       \field{pages}{301\bibrangedash 320}
       \range{pages}{20}
+    \endentry
+    \entry{ZouLi2008}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f15b129e88b4820c7ed982265e79986b}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2ad436fe263af9170cfac2259cc239f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Runze},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cad9cf5126b34208a6df63cde16e102b}
+      \strng{fullhash}{cad9cf5126b34208a6df63cde16e102b}
+      \strng{bibnamehash}{cad9cf5126b34208a6df63cde16e102b}
+      \strng{authorbibnamehash}{cad9cf5126b34208a6df63cde16e102b}
+      \strng{authornamehash}{cad9cf5126b34208a6df63cde16e102b}
+      \strng{authorfullhash}{cad9cf5126b34208a6df63cde16e102b}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of statistics}
+      \field{number}{4}
+      \field{title}{One-step sparse estimates in nonconcave penalized likelihood models}
+      \field{type}{Journal Article}
+      \field{volume}{36}
+      \field{year}{2008}
+      \field{pages}{1509}
+      \range{pages}{1}
     \endentry
   \enddatalist
   \datalist[entry]{apa/global//global/global}
+    \entry{Amari1993}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=41ebde581fd80bf05430e25dac85f7ce}{%
+           family={Amari},
+           familyi={A\bibinitperiod},
+           given={Shun-ichi},
+           giveni={S\bibinithyphendelim i\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{41ebde581fd80bf05430e25dac85f7ce}
+      \strng{fullhash}{41ebde581fd80bf05430e25dac85f7ce}
+      \strng{bibnamehash}{41ebde581fd80bf05430e25dac85f7ce}
+      \strng{authorbibnamehash}{41ebde581fd80bf05430e25dac85f7ce}
+      \strng{authornamehash}{41ebde581fd80bf05430e25dac85f7ce}
+      \strng{authorfullhash}{41ebde581fd80bf05430e25dac85f7ce}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0925-2312}
+      \field{journaltitle}{Neurocomputing}
+      \field{number}{4-5}
+      \field{title}{Backpropagation and stochastic gradient descent method}
+      \field{type}{Journal Article}
+      \field{volume}{5}
+      \field{year}{1993}
+      \field{pages}{185\bibrangedash 196}
+      \range{pages}{12}
+    \endentry
     \entry{TGP2020}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=77d9dfbba2e075ba7c86c1cba3f09301}{%
@@ -823,6 +1033,7 @@
       \strng{authorbibnamehash}{4919a69c8da15306fbf0ed5ef6882210}
       \strng{authornamehash}{4919a69c8da15306fbf0ed5ef6882210}
       \strng{authorfullhash}{4919a69c8da15306fbf0ed5ef6882210}
+      \field{extraname}{1}
       \field{sortinit}{F}
       \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
       \field{extradatescope}{labelyear}
@@ -839,6 +1050,40 @@
       \field{year}{2001}
       \field{pages}{1348\bibrangedash 1360}
       \range{pages}{13}
+    \endentry
+    \entry{FanLi2006}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=2eb00838f3cea970c7377bfea9631787}{%
+           family={Fan},
+           familyi={F\bibinitperiod},
+           given={Jianqing},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2ad436fe263af9170cfac2259cc239f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Runze},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{fullhash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{bibnamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authorbibnamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authornamehash}{4919a69c8da15306fbf0ed5ef6882210}
+      \strng{authorfullhash}{4919a69c8da15306fbf0ed5ef6882210}
+      \field{extraname}{2}
+      \field{sortinit}{F}
+      \field{sortinithash}{2638baaa20439f1b5a8f80c6c08a13b4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint math/0602133}
+      \field{title}{Statistical challenges with high dimensionality: Feature selection in knowledge discovery}
+      \field{type}{Journal Article}
+      \field{year}{2006}
     \endentry
     \entry{FrankFriedman1993}{article}{}
       \name{author}{2}{}{%
@@ -909,6 +1154,43 @@
       \field{year}{1998}
       \field{pages}{397\bibrangedash 416}
       \range{pages}{20}
+    \endentry
+    \entry{GrippoSciandrone2023}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=bb6b1ff2b248ff87d413e44ee5636eca}{%
+           family={Grippo},
+           familyi={G\bibinitperiod},
+           given={Luigi},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2feee18617c50e9b86680cdf907d0955}{%
+           family={Sciandrone},
+           familyi={S\bibinitperiod},
+           given={Marco},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Nature}%
+      }
+      \strng{namehash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \strng{fullhash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \strng{bibnamehash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \strng{authorbibnamehash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \strng{authornamehash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \strng{authorfullhash}{af5d3e4f8d970c6b39b9188635a5cc1f}
+      \field{sortinit}{G}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{3031267907}
+      \field{title}{Introduction to Methods for Nonlinear Optimization}
+      \field{type}{Book}
+      \field{volume}{152}
+      \field{year}{2023}
     \endentry
     \entry{ESL2009}{book}{}
       \name{author}{4}{}{%
@@ -1348,6 +1630,43 @@
       \field{volume}{4}
       \field{year}{1991}
     \endentry
+    \entry{VettamJohn2022}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=1e8869482028890c1d00fba8d66b4310}{%
+           family={Vettam},
+           familyi={V\bibinitperiod},
+           given={Sujit},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d2ac54d52cb69bbcfa26f6e76b40d1ea}{%
+           family={John},
+           familyi={J\bibinitperiod},
+           given={Majnu},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \strng{fullhash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \strng{bibnamehash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \strng{authorbibnamehash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \strng{authornamehash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \strng{authorfullhash}{ed1f2b8e04ccfb88f6baac801f9d1156}
+      \field{sortinit}{V}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2590-0374}
+      \field{journaltitle}{Results in Applied Mathematics}
+      \field{title}{On two recent nonconvex penalties for regularization in machine learning}
+      \field{type}{Journal Article}
+      \field{volume}{14}
+      \field{year}{2022}
+      \field{pages}{100256}
+      \range{pages}{1}
+    \endentry
     \entry{WangEtAl2020}{article}{}
       \name{author}{4}{}{%
         {{un=1,uniquepart=given,hash=66dfac55d28d09b3d290ce69004e7324}{%
@@ -1494,11 +1813,47 @@
       \field{year}{2005}
       \field{pages}{301\bibrangedash 320}
       \range{pages}{20}
+    \endentry
+    \entry{ZouLi2008}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=f15b129e88b4820c7ed982265e79986b}{%
+           family={Zou},
+           familyi={Z\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f2ad436fe263af9170cfac2259cc239f}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Runze},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{cad9cf5126b34208a6df63cde16e102b}
+      \strng{fullhash}{cad9cf5126b34208a6df63cde16e102b}
+      \strng{bibnamehash}{cad9cf5126b34208a6df63cde16e102b}
+      \strng{authorbibnamehash}{cad9cf5126b34208a6df63cde16e102b}
+      \strng{authornamehash}{cad9cf5126b34208a6df63cde16e102b}
+      \strng{authorfullhash}{cad9cf5126b34208a6df63cde16e102b}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Annals of statistics}
+      \field{number}{4}
+      \field{title}{One-step sparse estimates in nonconcave penalized likelihood models}
+      \field{type}{Journal Article}
+      \field{volume}{36}
+      \field{year}{2008}
+      \field{pages}{1509}
+      \range{pages}{1}
     \endentry
   \enddatalist
   \missing{21}
   \missing{ESL}
-  \missing{ESLpage398}
   \missing{QiCuiLiuPang2021}
 \endrefsection
 \endinput
