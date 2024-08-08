@@ -1,27 +1,24 @@
 \babel@toc {english}{}\relax 
 \contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
-\contentsline {section}{\numberline {2}Theoretical Section}{2}{section.2}%
-\contentsline {subsection}{\numberline {2.1}Model Complexity and the Problem of Under- and Overfitting}{2}{subsection.2.1}%
-\contentsline {subsubsection}{\numberline {2.1.1}Regularization}{4}{subsubsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.2}Bayesian View on Battling Model Complexity using Shrinkage Priors}{5}{subsection.2.2}%
-\contentsline {section}{\numberline {3}Literature Review}{7}{section.3}%
-\contentsline {section}{\numberline {4}Bayesian-Frequentist Duality of Ridge and LASSO Regression}{10}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Triple-Gamma-Prior by \blx@tocontentsinit {0}\textcite {TGP2020}}{12}{subsection.4.1}%
-\contentsline {section}{\numberline {5}Model Setup and Derivation}{13}{section.5}%
-\contentsline {subsection}{\numberline {5.1}Varying the Hyperparameters}{16}{subsection.5.1}%
-\contentsline {subsection}{\numberline {5.2}Comparison to already existing Penalty Terms}{22}{subsection.5.2}%
-\contentsline {subsection}{\numberline {5.3}Alternative Specification (with +1 to mimic artan)}{22}{subsection.5.3}%
-\contentsline {section}{\numberline {6}Simulation Study}{24}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Approaches to Estimation}{24}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}Scenario Simulation}{25}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Simulation Study for Prediction}{26}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Simulation Study for Variable Selection}{26}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Implementation as Python Package}{26}{subsection.6.5}%
-\contentsline {subsection}{\numberline {6.6}Computational Performance}{26}{subsection.6.6}%
-\contentsline {section}{\numberline {7}Possible Extensions and Criticism}{26}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{27}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Implementation as Python Package}{27}{subsection.8.1}%
-\contentsline {section}{\numberline {9}List of Figures}{28}{section.9}%
-\contentsline {section}{\numberline {10}List of Tables}{29}{section.10}%
+\contentsline {section}{\numberline {2}Theoretical Section}{3}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Model Complexity and the Problem of Under- and Overfitting}{3}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}Regularization}{5}{subsubsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.2}Bayesian View on Battling Model Complexity using Shrinkage Priors}{6}{subsection.2.2}%
+\contentsline {section}{\numberline {3}Literature Review}{8}{section.3}%
+\contentsline {section}{\numberline {4}Bayesian-Frequentist Duality of Ridge and LASSO Regression}{11}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Triple-Gamma-Prior by \blx@tocontentsinit {0}\textcite {TGP2020}}{13}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Model Setup and Derivation}{15}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Varying the Hyperparameters}{18}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Comparison to already existing Penalty Terms}{24}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Simulation Study}{26}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Approaches to Estimation}{26}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Scenario Simulation}{27}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Simulation Study for Prediction}{28}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Computational Efficiency}{31}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Implementation as Python Package}{37}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Possible Extensions and Criticism}{38}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{38}{section.8}%
+\contentsline {section}{\numberline {9}List of Figures}{39}{section.9}%
+\contentsline {section}{\numberline {10}List of Tables}{40}{section.10}%
 \contentsline {section}{\numberline {11}References}{iv}{section.11}%
 \contentsline {section}{References}{iv}{section.11}%

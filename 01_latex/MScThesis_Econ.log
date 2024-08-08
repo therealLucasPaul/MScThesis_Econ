@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.15)  6 AUG 2024 11:53
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (MiKTeX 23.5) (preloaded format=pdflatex 2023.7.15)  8 AUG 2024 23:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -515,10 +515,18 @@ File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
 )))
+(C:\Program Files\MiKTeX 2.9\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count303
+\float@exts=\toks38
+\float@box=\box65
+\@float@everytoks=\toks39
+\@floatcapt=\box66
+)
 (C:\Program Files\MiKTeX 2.9\tex/latex/multirow\multirow.sty
 Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
 \multirow@colwidth=\skip57
-\multirow@cntb=\count303
+\multirow@cntb=\count304
 \multirow@dima=\skip58
 \bigstrutjot=\dimen285
 )
@@ -534,12 +542,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen293
 \cmidrulekern=\dimen294
 \defaultaddspace=\dimen295
-\@cmidla=\count304
-\@cmidlb=\count305
+\@cmidla=\count305
+\@cmidlb=\count306
 \@aboverulesep=\dimen296
 \@belowrulesep=\dimen297
-\@thisruleclass=\count306
-\@lastruleclass=\count307
+\@thisruleclass=\count307
+\@lastruleclass=\count308
 \@thisrulewidth=\dimen298
 )
 (C:\Program Files\MiKTeX 2.9\tex/latex/makecell\makecell.sty
@@ -548,16 +556,16 @@ Package: makecell 2009/08/03 V0.1e Managing of Tab Column Heads and Cells
 (C:\Program Files\MiKTeX 2.9\tex/latex/tools\array.sty
 Package: array 2022/09/04 v2.5g Tabular extension package (FMi)
 \col@sep=\dimen299
-\ar@mcellbox=\box65
+\ar@mcellbox=\box67
 \extrarowheight=\dimen300
-\NC@list=\toks38
+\NC@list=\toks40
 \extratabsurround=\skip59
 \backup@length=\skip60
-\ar@cellbox=\box66
+\ar@cellbox=\box68
 )
 \rotheadsize=\dimen301
-\c@nlinenum=\count308
-\TeXr@lab=\toks39
+\c@nlinenum=\count309
+\TeXr@lab=\toks41
 )
 (C:\Program Files\MiKTeX 2.9\tex/latex/adjustbox\adjustbox.sty
 Package: adjustbox 2022/10/17 v1.3a Adjusting TeX boxes (trim, clip, ...)
@@ -567,10 +575,10 @@ Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkeyval.tex
 (C:\Program Files\MiKTeX 2.9\tex/generic/xkeyval\xkvutils.tex
-\XKV@toks=\toks40
-\XKV@tempa@toks=\toks41
+\XKV@toks=\toks42
+\XKV@tempa@toks=\toks43
 )
-\XKV@depth=\count309
+\XKV@depth=\count310
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Program Files\MiKTeX 2.9\tex/latex/adjustbox\adjcalc.sty
@@ -582,7 +590,7 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/collectbox\collectbox.sty
 Package: collectbox 2022/10/17 v0.4c Collect macro arguments as boxes
-\collectedbox=\box67
+\collectedbox=\box69
 )
 \tc@llx=\dimen302
 \tc@lly=\dimen303
@@ -604,22 +612,41 @@ File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/ifoddpage\ifoddpage.sty
 Package: ifoddpage 2022/10/18 v1.2 Conditionals for odd/even page detection
-\c@checkoddpage=\count310
+\c@checkoddpage=\count311
 )
 (C:\Program Files\MiKTeX 2.9\tex/latex/varwidth\varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box68
-\sift@deathcycles=\count311
+\@vwid@box=\box70
+\sift@deathcycles=\count312
 \@vwid@loff=\dimen314
 \@vwid@roff=\dimen315
 ))
+(C:\Program Files\MiKTeX 2.9\tex/latex/tools\longtable.sty
+Package: longtable 2021-09-01 v4.17 Multi-page Table package (DPC)
+\LTleft=\skip61
+\LTright=\skip62
+\LTpre=\skip63
+\LTpost=\skip64
+\LTchunksize=\count313
+\LTcapwidth=\dimen316
+\LT@head=\box71
+\LT@firsthead=\box72
+\LT@foot=\box73
+\LT@lastfoot=\box74
+\LT@gbox=\box75
+\LT@cols=\count314
+\LT@rows=\count315
+\c@LT@tables=\count316
+\c@LT@chunks=\count317
+\LT@p@ftn=\toks44
+)
 (C:\Program Files\MiKTeX 2.9\tex/latex/tcolorbox\tcolorbox.sty
 Package: tcolorbox 2023/06/19 version 6.0.4 text color boxes
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/tools\verbatim.sty
 Package: verbatim 2022-07-02 v1.5u LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks42
-\verbatim@line=\toks43
+\every@verbatim=\toks45
+\verbatim@line=\toks46
 \verbatim@in@stream=\read4
 )
 (C:\Program Files\MiKTeX 2.9\tex/latex/environ\environ.sty
@@ -630,19 +657,19 @@ Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
 ))
 (C:\Program Files\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count312
+\etb@tempcnta=\count318
 )
-\tcb@titlebox=\box69
-\tcb@upperbox=\box70
-\tcb@lowerbox=\box71
-\tcb@phantombox=\box72
-\c@tcbbreakpart=\count313
-\c@tcblayer=\count314
-\c@tcolorbox@number=\count315
-\tcb@temp=\box73
-\tcb@temp=\box74
-\tcb@temp=\box75
-\tcb@temp=\box76
+\tcb@titlebox=\box76
+\tcb@upperbox=\box77
+\tcb@lowerbox=\box78
+\tcb@phantombox=\box79
+\c@tcbbreakpart=\count319
+\c@tcblayer=\count320
+\c@tcolorbox@number=\count321
+\tcb@temp=\box80
+\tcb@temp=\box81
+\tcb@temp=\box82
+\tcb@temp=\box83
 )
 (C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\biblatex.sty
 Package: biblatex 2023/03/05 v3.19 programmable bibliographies (PK/MW)
@@ -669,7 +696,7 @@ Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
 ))
 (C:\Program Files\MiKTeX 2.9\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count316
+\lrq@indent=\count322
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -681,63 +708,63 @@ Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip17
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count317
-\c@listtotal=\count318
-\c@listcount=\count319
-\c@liststart=\count320
-\c@liststop=\count321
-\c@citecount=\count322
-\c@citetotal=\count323
-\c@multicitecount=\count324
-\c@multicitetotal=\count325
-\c@instcount=\count326
-\c@maxnames=\count327
-\c@minnames=\count328
-\c@maxitems=\count329
-\c@minitems=\count330
-\c@citecounter=\count331
-\c@maxcitecounter=\count332
-\c@savedcitecounter=\count333
-\c@uniquelist=\count334
-\c@uniquename=\count335
-\c@refsection=\count336
-\c@refsegment=\count337
-\c@maxextratitle=\count338
-\c@maxextratitleyear=\count339
-\c@maxextraname=\count340
-\c@maxextradate=\count341
-\c@maxextraalpha=\count342
-\c@abbrvpenalty=\count343
-\c@highnamepenalty=\count344
-\c@lownamepenalty=\count345
-\c@maxparens=\count346
-\c@parenlevel=\count347
-\blx@tempcnta=\count348
-\blx@tempcntb=\count349
-\blx@tempcntc=\count350
-\c@blx@maxsection=\count351
-\blx@maxsegment@0=\count352
-\blx@notetype=\count353
-\blx@parenlevel@text=\count354
-\blx@parenlevel@foot=\count355
-\blx@sectionciteorder@0=\count356
-\blx@sectionciteorderinternal@0=\count357
-\blx@entrysetcounter=\count358
-\blx@biblioinstance=\count359
-\labelnumberwidth=\skip61
-\labelalphawidth=\skip62
-\biblabelsep=\skip63
-\bibitemsep=\skip64
-\bibnamesep=\skip65
-\bibinitsep=\skip66
-\bibparsep=\skip67
-\bibhang=\skip68
+\c@tabx@nest=\count323
+\c@listtotal=\count324
+\c@listcount=\count325
+\c@liststart=\count326
+\c@liststop=\count327
+\c@citecount=\count328
+\c@citetotal=\count329
+\c@multicitecount=\count330
+\c@multicitetotal=\count331
+\c@instcount=\count332
+\c@maxnames=\count333
+\c@minnames=\count334
+\c@maxitems=\count335
+\c@minitems=\count336
+\c@citecounter=\count337
+\c@maxcitecounter=\count338
+\c@savedcitecounter=\count339
+\c@uniquelist=\count340
+\c@uniquename=\count341
+\c@refsection=\count342
+\c@refsegment=\count343
+\c@maxextratitle=\count344
+\c@maxextratitleyear=\count345
+\c@maxextraname=\count346
+\c@maxextradate=\count347
+\c@maxextraalpha=\count348
+\c@abbrvpenalty=\count349
+\c@highnamepenalty=\count350
+\c@lownamepenalty=\count351
+\c@maxparens=\count352
+\c@parenlevel=\count353
+\blx@tempcnta=\count354
+\blx@tempcntb=\count355
+\blx@tempcntc=\count356
+\c@blx@maxsection=\count357
+\blx@maxsegment@0=\count358
+\blx@notetype=\count359
+\blx@parenlevel@text=\count360
+\blx@parenlevel@foot=\count361
+\blx@sectionciteorder@0=\count362
+\blx@sectionciteorderinternal@0=\count363
+\blx@entrysetcounter=\count364
+\blx@biblioinstance=\count365
+\labelnumberwidth=\skip65
+\labelalphawidth=\skip66
+\biblabelsep=\skip67
+\bibitemsep=\skip68
+\bibnamesep=\skip69
+\bibinitsep=\skip70
+\bibparsep=\skip71
+\bibhang=\skip72
 \blx@bcfin=\read5
 \blx@bcfout=\write4
 \blx@langwohyphens=\language80
-\c@mincomprange=\count360
-\c@maxcomprange=\count361
-\c@mincompwidth=\count362
+\c@mincomprange=\count366
+\c@maxcomprange=\count367
+\c@mincompwidth=\count368
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -752,98 +779,98 @@ File: apa.dbx 2023/03/20 v9.17 APA biblatex style data model
 )
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count363
-\c@savedafterword=\count364
-\c@annotator=\count365
-\c@savedannotator=\count366
-\c@author=\count367
-\c@savedauthor=\count368
-\c@bookauthor=\count369
-\c@savedbookauthor=\count370
-\c@commentator=\count371
-\c@savedcommentator=\count372
-\c@editor=\count373
-\c@savededitor=\count374
-\c@editora=\count375
-\c@savededitora=\count376
-\c@editorb=\count377
-\c@savededitorb=\count378
-\c@editorc=\count379
-\c@savededitorc=\count380
-\c@foreword=\count381
-\c@savedforeword=\count382
-\c@holder=\count383
-\c@savedholder=\count384
-\c@introduction=\count385
-\c@savedintroduction=\count386
-\c@namea=\count387
-\c@savednamea=\count388
-\c@nameb=\count389
-\c@savednameb=\count390
-\c@namec=\count391
-\c@savednamec=\count392
-\c@translator=\count393
-\c@savedtranslator=\count394
-\c@shortauthor=\count395
-\c@savedshortauthor=\count396
-\c@shorteditor=\count397
-\c@savedshorteditor=\count398
-\c@narrator=\count399
-\c@savednarrator=\count400
-\c@execproducer=\count401
-\c@savedexecproducer=\count402
-\c@execdirector=\count403
-\c@savedexecdirector=\count404
-\c@with=\count405
-\c@savedwith=\count406
-\c@labelname=\count407
-\c@savedlabelname=\count408
-\c@institution=\count409
-\c@savedinstitution=\count410
-\c@lista=\count411
-\c@savedlista=\count412
-\c@listb=\count413
-\c@savedlistb=\count414
-\c@listc=\count415
-\c@savedlistc=\count416
-\c@listd=\count417
-\c@savedlistd=\count418
-\c@liste=\count419
-\c@savedliste=\count420
-\c@listf=\count421
-\c@savedlistf=\count422
-\c@location=\count423
-\c@savedlocation=\count424
-\c@organization=\count425
-\c@savedorganization=\count426
-\c@origlocation=\count427
-\c@savedoriglocation=\count428
-\c@origpublisher=\count429
-\c@savedorigpublisher=\count430
-\c@publisher=\count431
-\c@savedpublisher=\count432
-\c@language=\count433
-\c@savedlanguage=\count434
-\c@origlanguage=\count435
-\c@savedoriglanguage=\count436
-\c@citation=\count437
-\c@savedcitation=\count438
-\c@pageref=\count439
-\c@savedpageref=\count440
-\shorthandwidth=\skip69
-\shortjournalwidth=\skip70
-\shortserieswidth=\skip71
-\shorttitlewidth=\skip72
-\shortauthorwidth=\skip73
-\shorteditorwidth=\skip74
-\locallabelnumberwidth=\skip75
-\locallabelalphawidth=\skip76
-\localshorthandwidth=\skip77
-\localshortjournalwidth=\skip78
-\localshortserieswidth=\skip79
-\localshorttitlewidth=\skip80
-\localshortauthorwidth=\skip81
-\localshorteditorwidth=\skip82
+\c@afterword=\count369
+\c@savedafterword=\count370
+\c@annotator=\count371
+\c@savedannotator=\count372
+\c@author=\count373
+\c@savedauthor=\count374
+\c@bookauthor=\count375
+\c@savedbookauthor=\count376
+\c@commentator=\count377
+\c@savedcommentator=\count378
+\c@editor=\count379
+\c@savededitor=\count380
+\c@editora=\count381
+\c@savededitora=\count382
+\c@editorb=\count383
+\c@savededitorb=\count384
+\c@editorc=\count385
+\c@savededitorc=\count386
+\c@foreword=\count387
+\c@savedforeword=\count388
+\c@holder=\count389
+\c@savedholder=\count390
+\c@introduction=\count391
+\c@savedintroduction=\count392
+\c@namea=\count393
+\c@savednamea=\count394
+\c@nameb=\count395
+\c@savednameb=\count396
+\c@namec=\count397
+\c@savednamec=\count398
+\c@translator=\count399
+\c@savedtranslator=\count400
+\c@shortauthor=\count401
+\c@savedshortauthor=\count402
+\c@shorteditor=\count403
+\c@savedshorteditor=\count404
+\c@narrator=\count405
+\c@savednarrator=\count406
+\c@execproducer=\count407
+\c@savedexecproducer=\count408
+\c@execdirector=\count409
+\c@savedexecdirector=\count410
+\c@with=\count411
+\c@savedwith=\count412
+\c@labelname=\count413
+\c@savedlabelname=\count414
+\c@institution=\count415
+\c@savedinstitution=\count416
+\c@lista=\count417
+\c@savedlista=\count418
+\c@listb=\count419
+\c@savedlistb=\count420
+\c@listc=\count421
+\c@savedlistc=\count422
+\c@listd=\count423
+\c@savedlistd=\count424
+\c@liste=\count425
+\c@savedliste=\count426
+\c@listf=\count427
+\c@savedlistf=\count428
+\c@location=\count429
+\c@savedlocation=\count430
+\c@organization=\count431
+\c@savedorganization=\count432
+\c@origlocation=\count433
+\c@savedoriglocation=\count434
+\c@origpublisher=\count435
+\c@savedorigpublisher=\count436
+\c@publisher=\count437
+\c@savedpublisher=\count438
+\c@language=\count439
+\c@savedlanguage=\count440
+\c@origlanguage=\count441
+\c@savedoriglanguage=\count442
+\c@citation=\count443
+\c@savedcitation=\count444
+\c@pageref=\count445
+\c@savedpageref=\count446
+\shorthandwidth=\skip73
+\shortjournalwidth=\skip74
+\shortserieswidth=\skip75
+\shorttitlewidth=\skip76
+\shortauthorwidth=\skip77
+\shorteditorwidth=\skip78
+\locallabelnumberwidth=\skip79
+\locallabelalphawidth=\skip80
+\localshorthandwidth=\skip81
+\localshortjournalwidth=\skip82
+\localshortserieswidth=\skip83
+\localshorttitlewidth=\skip84
+\localshortauthorwidth=\skip85
+\localshorteditorwidth=\skip86
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
@@ -855,19 +882,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2023/03/05 v3.19 biblatex compatibility (PK/MW)
-\c@textcitecount=\count441
-\c@textcitetotal=\count442
-\c@textcitemaxnames=\count443
-\c@biburlbigbreakpenalty=\count444
-\c@biburlbreakpenalty=\count445
-\c@biburlnumpenalty=\count446
-\c@biburlucpenalty=\count447
-\c@biburllcpenalty=\count448
+\c@textcitecount=\count447
+\c@textcitetotal=\count448
+\c@textcitemaxnames=\count449
+\c@biburlbigbreakpenalty=\count450
+\c@biburlbreakpenalty=\count451
+\c@biburlnumpenalty=\count452
+\c@biburlucpenalty=\count453
+\c@biburllcpenalty=\count454
 \biburlbigskip=\muskip18
 \biburlnumskip=\muskip19
 \biburlucskip=\muskip20
 \biburllcskip=\muskip21
-\c@smartand=\count449
+\c@smartand=\count455
 )
 Package biblatex Info: Trying to load bibliography style 'apa'...
 Package biblatex Info: ... file 'apa.bbx' found.
@@ -879,8 +906,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/biblatex/bbx\standard.bbx
 File: standard.bbx 2023/03/05 v3.19 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count450
-\c@bbx:relatedtotal=\count451
+\c@bbx:relatedcount=\count456
+\c@bbx:relatedtotal=\count457
 )
 Package biblatex Info: Delimiter 'nameyeardelim' in context 'bib' already defin
 ed, overwriting.
@@ -930,8 +957,8 @@ Package: expl3 2023-06-30 L3 programming layer (loader)
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2023-04-19 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count452
-\l__pdf_internal_box=\box77
+\l__color_backend_stack_int=\count458
+\l__pdf_internal_box=\box84
 ))
 Package biblatex Info: ... and expl3
 (biblatex)             2023-06-30 L3 programming layer (loader) 
@@ -971,11 +998,11 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (C:\Program Files\MiKTeX 2.9\tex/generic/gettitlestring\gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count453
+\c@section@level=\count459
 )
-\@linkdim=\dimen316
-\Hy@linkcounter=\count454
-\Hy@pagecounter=\count455
+\@linkdim=\dimen317
+\Hy@linkcounter=\count460
+\Hy@pagecounter=\count461
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2023-06-25 v7.01a Hyperref: PDFDocEncoding definition (HO)
@@ -985,7 +1012,7 @@ Now handling font encoding PD1 ...
 (C:\Program Files\MiKTeX 2.9\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count456
+\Hy@SavedSpaceFactor=\count462
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/hyperref\puenc.def
 File: puenc.def 2023-06-25 v7.01a Hyperref: PDF Unicode definition (HO)
@@ -999,9 +1026,9 @@ Package hyperref Info: Plain pages OFF on input line 4182.
 Package hyperref Info: Backreferencing OFF on input line 4187.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4434.
-\c@Hy@tempcnt=\count457
+\c@Hy@tempcnt=\count463
 LaTeX Info: Redefining \url on input line 4772.
-\XeTeXLinkMargin=\dimen317
+\XeTeXLinkMargin=\dimen318
 
 (C:\Program Files\MiKTeX 2.9\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
@@ -1010,9 +1037,9 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count458
-\Field@Width=\dimen318
-\Fld@charsize=\dimen319
+\Fld@menulength=\count464
+\Field@Width=\dimen319
+\Fld@charsize=\dimen320
 Package hyperref Info: Hyper figures OFF on input line 6051.
 Package hyperref Info: Link nesting OFF on input line 6056.
 Package hyperref Info: Hyper index ON on input line 6059.
@@ -1025,9 +1052,9 @@ Package hyperref Info: PDF/A mode OFF on input line 6081.
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count459
-\c@Item=\count460
-\c@Hfootnote=\count461
+\Hy@abspage=\count465
+\c@Item=\count466
+\c@Hfootnote=\count467
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -1039,8 +1066,8 @@ Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
 kage
 with kernel methods
 )
-\Fld@listcount=\count462
-\c@bookmark@seq@number=\count463
+\Fld@listcount=\count468
+\c@bookmark@seq@number=\count469
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/rerunfilecheck\rerunfilecheck.sty
 Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
@@ -1051,62 +1078,62 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 85.
 )
-\Hy@SectionHShift=\skip83
+\Hy@SectionHShift=\skip87
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 52.
+Package hyperref Info: Option `colorlinks' set `true' on input line 54.
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2022/11/09 v4.1 Extensive control of page headers and footers
 
-\f@nch@headwidth=\skip84
-\f@nch@O@elh=\skip85
-\f@nch@O@erh=\skip86
-\f@nch@O@olh=\skip87
-\f@nch@O@orh=\skip88
-\f@nch@O@elf=\skip89
-\f@nch@O@erf=\skip90
-\f@nch@O@olf=\skip91
-\f@nch@O@orf=\skip92
+\f@nch@headwidth=\skip88
+\f@nch@O@elh=\skip89
+\f@nch@O@erh=\skip90
+\f@nch@O@olh=\skip91
+\f@nch@O@orh=\skip92
+\f@nch@O@elf=\skip93
+\f@nch@O@erf=\skip94
+\f@nch@O@olf=\skip95
+\f@nch@O@orf=\skip96
 )
 (C:\Program Files\MiKTeX 2.9\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2021/07/05 v2.14 Sectioning titles
-\ttl@box=\box78
-\beforetitleunit=\skip93
-\aftertitleunit=\skip94
-\ttl@plus=\dimen320
-\ttl@minus=\dimen321
-\ttl@toksa=\toks44
-\titlewidth=\dimen322
-\titlewidthlast=\dimen323
-\titlewidthfirst=\dimen324
+\ttl@box=\box85
+\beforetitleunit=\skip97
+\aftertitleunit=\skip98
+\ttl@plus=\dimen321
+\ttl@minus=\dimen322
+\ttl@toksa=\toks47
+\titlewidth=\dimen323
+\titlewidthlast=\dimen324
+\titlewidthfirst=\dimen325
 )
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count464
-\@quotereset=\count465
+\@quotelevel=\count470
+\@quotereset=\count471
 (MScThesis_Econ.aux)
 \openout1 = `MScThesis_Econ.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 90.
-LaTeX Font Info:    ... okay on input line 90.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1144,17 +1171,17 @@ LaTeX Font Info:    ... okay on input line 90.
 
 (C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count466
-\scratchdimen=\dimen325
-\scratchbox=\box79
-\nofMPsegments=\count467
-\nofMParguments=\count468
-\everyMPshowfont=\toks45
-\MPscratchCnt=\count469
-\MPscratchDim=\dimen326
-\MPnumerator=\count470
-\makeMPintoPDFobject=\count471
-\everyMPtoPDFconversion=\toks46
+\scratchcounter=\count472
+\scratchdimen=\dimen326
+\scratchbox=\box86
+\nofMPsegments=\count473
+\nofMParguments=\count474
+\everyMPshowfont=\toks48
+\MPscratchCnt=\count475
+\MPscratchDim=\dimen327
+\MPnumerator=\count476
+\makeMPintoPDFobject=\count477
+\everyMPtoPDFconversion=\toks49
 ) (C:\Program Files\MiKTeX 2.9\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -1164,7 +1191,13 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+
+(C:\Program Files\MiKTeX 2.9\tex/latex/caption\ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
 Package caption Info: End \AtBeginDocument code.
 Package biblatex Info: Trying to load language 'english' -> 'english-apa'...
 Package biblatex Info: ... file 'english-apa.lbx' found.
@@ -1205,59 +1238,45 @@ Package biblatex Info: ... file 'MScThesis_Econ.bbl' found.
 
 Package biblatex Warning: The following entry could not be found
 (biblatex)                in the database:
-(biblatex)                21
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                ESL
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
 (biblatex)                QiCuiLiuPang2021
 (biblatex)                Please verify the spelling and rerun
 (biblatex)                LaTeX afterwards.
 
 )
-Package biblatex Info: Reference section=0 on input line 90.
-Package biblatex Info: Reference segment=0 on input line 90.
-Package hyperref Info: Link coloring ON on input line 90.
+Package biblatex Info: Reference section=0 on input line 92.
+Package biblatex Info: Reference segment=0 on input line 92.
+Package hyperref Info: Link coloring ON on input line 92.
  (MScThesis_Econ.out) (MScThesis_Econ.out)
 \@outlinefile=\write5
 \openout5 = `MScThesis_Econ.out'.
 
-<WU.png, id=109, 2007.5pt x 1039.885pt>
+<WU.png, id=97, 2007.5pt x 1039.885pt>
 File: WU.png Graphic file (type png)
 <use WU.png>
-Package pdftex.def Info: WU.png  used on input line 95.
+Package pdftex.def Info: WU.png  used on input line 97.
 (pdftex.def)             Requested size: 200.76175pt x 103.99458pt.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 99.
 
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 99.
 
 
 (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-<GitHub.png, id=112, 3854.4pt x 2168.1pt>
+<GitHub.png, id=100, 3854.4pt x 2168.1pt>
 File: GitHub.png Graphic file (type png)
 <use GitHub.png>
-Package pdftex.def Info: GitHub.png  used on input line 114.
+Package pdftex.def Info: GitHub.png  used on input line 116.
 (pdftex.def)             Requested size: 38.52272pt x 21.66904pt.
  [1
 
 {C:/Users/Lucas Paul/AppData/Local/MiKTeX/2.9/fonts/map/pdftex/pdftex.map} <./W
 U.png> <./GitHub.png>]
-\c@savepage=\count472
+\c@savepage=\count478
  [1] [2
 
 ] (MScThesis_Econ.toc)
@@ -1267,78 +1286,63 @@ U.png> <./GitHub.png>]
  [3
 
 ]
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 153--154
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 155--156
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 157--158
+
+ []
+
+
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.156 \newpage
-               [1]
-Underfull \hbox (badness 10000) in paragraph at lines 158--159
+l.158 
+       [1] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
 
-LaTeX Warning: Citation 'ESL' on page 2 undefined on input line 160.
-
-
-LaTeX Warning: Citation '21' on page 2 undefined on input line 160.
-
-
-LaTeX Warning: Citation 'ESL' on page 2 undefined on input line 160.
-
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
-60.
-(C:\Program Files\MiKTeX 2.9\tex/latex/base\omlcmr.fd
-File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <12> not available
-(Font)              Font shape `OML/cmm/b/it' tried instead on input line 160.
-
-
-LaTeX Warning: Citation '' on page 2 undefined on input line 160.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 160--161
+Underfull \hbox (badness 10000) in paragraph at lines 166--167
 
  []
 
-<PolynomialFit_Plot.png, id=173, 626.34pt x 434.12187pt>
+<PolynomialFit_Plot.png, id=167, 626.34pt x 434.12187pt>
 File: PolynomialFit_Plot.png Graphic file (type png)
 <use PolynomialFit_Plot.png>
-Package pdftex.def Info: PolynomialFit_Plot.png  used on input line 176.
+Package pdftex.def Info: PolynomialFit_Plot.png  used on input line 182.
 (pdftex.def)             Requested size: 313.16922pt x 217.0604pt.
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 181--182
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 187--188
 
  []
 
-[3 <./PolynomialFit_Plot.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 194--197
+[4 <./PolynomialFit_Plot.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 200--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--199
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
-[4] [5] [6]
-Underfull \hbox (badness 10000) in paragraph at lines 238--239
-
- []
-
-[7]
+[5] [6] [7]
 Underfull \hbox (badness 10000) in paragraph at lines 244--245
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 245--247
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 248--249
 
  []
 
@@ -1348,195 +1352,302 @@ Underfull \hbox (badness 10000) in paragraph at lines 250--251
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 275--276
+Underfull \hbox (badness 10000) in paragraph at lines 251--253
 
  []
 
 
-LaTeX Warning: Citation 'QiCuiLiuPang2021' on page 9 undefined on input line 27
-7.
+Underfull \hbox (badness 10000) in paragraph at lines 254--255
 
-
-LaTeX Warning: Citation '' on page 9 undefined on input line 277.
-
-
-Overfull \hbox (72.42146pt too wide) in paragraph at lines 281--298
- [] 
  []
 
 [9]
-Underfull \hbox (badness 10000) in paragraph at lines 305--306
+Underfull \hbox (badness 10000) in paragraph at lines 256--257
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
+
+ []
+
+
+LaTeX Warning: Citation 'QiCuiLiuPang2021' on page 10 undefined on input line 2
+83.
+
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 2
+83.
+(C:\Program Files\MiKTeX 2.9\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/bx/n' in size <12> not available
+(Font)              Font shape `OML/cmm/b/it' tried instead on input line 283.
+
+
+LaTeX Warning: Citation '' on page 10 undefined on input line 283.
+
 [10]
-Underfull \hbox (badness 10000) in paragraph at lines 311--312
+Overfull \hbox (72.42146pt too wide) in paragraph at lines 292--309
+ [] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 316--317
 
  []
 
 [11]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\textcite' on input line 328.
-
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 347--348
+Underfull \hbox (badness 10000) in paragraph at lines 322--323
 
  []
 
-[13]
-LaTeX Font Info:    Trying to load font information for U+euf on input line 391
+[12]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\textcite' on input line 339.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--349
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
+
+ []
+
+[13] [14]
+Underfull \hbox (badness 10000) in paragraph at lines 373--374
+
+ []
+
+[15]
+LaTeX Font Info:    Trying to load font information for U+euf on input line 417
 .
  (C:\Program Files\MiKTeX 2.9\tex/latex/amsfonts\ueuf.fd
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 401--403
-
- []
-
-
-Overfull \hbox (14.7145pt too wide) detected at line 415
-[]
- []
-
-[15]
-Underfull \hbox (badness 10000) in paragraph at lines 431--433
+Underfull \hbox (badness 10000) in paragraph at lines 417--418
 
  []
 
 [16]
-Underfull \hbox (badness 10000) in paragraph at lines 438--439
+Underfull \hbox (badness 10000) in paragraph at lines 427--429
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 440--441
+Overfull \hbox (14.7145pt too wide) detected at line 441
+[]
+ []
+
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 457--459
 
  []
 
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png, id=346, 462.5
+[18]
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 466--467
+
+ []
+
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png, id=348, 462.5
 28pt x 346.896pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png Graphic f
 ile (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInA.png  used on input line 444.
+geInA.png  used on input line 470.
 (pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 449--450
-
- []
-
-[17 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 452--453
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 454--455
-
- []
-
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png, id=356,
- 462.528pt x 346.896pt>
-File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png Gra
-phic file (type png)
-<use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png>
-Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInC_Part2.png  used on input line 459.
-(pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
-[18 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png>]
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png, id=366,
- 462.528pt x 346.896pt>
-File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png Gra
-phic file (type png)
-<use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png>
-Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInC_Part1.png  used on input line 468.
-(pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 473--474
-
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 475--476
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 477--478
+[19 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInA.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 478--479
 
  []
 
-[19 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png>]
-<../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png, id=375, 5
+
+Underfull \hbox (badness 10000) in paragraph at lines 480--481
+
+ []
+
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png, id=358,
+ 462.528pt x 346.896pt>
+File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png Gra
+phic file (type png)
+<use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png>
+Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
+geInC_Part2.png  used on input line 485.
+(pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
+[20 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part2.png>]
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png, id=368,
+ 462.528pt x 346.896pt>
+File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png Gra
+phic file (type png)
+<use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png>
+Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
+geInC_Part1.png  used on input line 494.
+(pdftex.def)             Requested size: 346.89514pt x 260.17136pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 501--502
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
+
+ []
+
+[21 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInC_Part1.png>]
+<../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png, id=378, 5
 66.5968pt x 327.3831pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png Graph
 ic file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Chan
-geInKappa.png  used on input line 481.
+geInKappa.png  used on input line 507.
 (pdftex.def)             Requested size: 424.94655pt x 245.53671pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
+Underfull \hbox (badness 10000) in paragraph at lines 512--513
 
  []
 
-[20 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>]
-[21
+[22 <../02_simulation/021_simulation_figures/TGPenalty_ChangeInKappa.png>]
+[23
 
 ]
-<../02_simulation/021_simulation_figures/TGPenalty_Comparison.png, id=392, 461.
-8053pt x 349.0641pt>
+<../02_simulation/021_simulation_figures/TGPenalty_DifferentSettings.png, id=39
+5, 595.5048pt x 365.6862pt>
+File: ../02_simulation/021_simulation_figures/TGPenalty_DifferentSettings.png G
+raphic file (type png)
+<use ../02_simulation/021_simulation_figures/TGPenalty_DifferentSettings.png>
+Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Diff
+erentSettings.png  used on input line 558.
+(pdftex.def)             Requested size: 446.62752pt x 274.26398pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 563--564
+
+ []
+
+[24
+
+ <../02_simulation/021_simulation_figures/TGPenalty_DifferentSettings.png>]
+<../02_simulation/021_simulation_figures/TGPenalty_Comparison.png, id=403, 492.
+8814pt x 398.2077pt>
 File: ../02_simulation/021_simulation_figures/TGPenalty_Comparison.png Graphic 
 file (type png)
 <use ../02_simulation/021_simulation_figures/TGPenalty_Comparison.png>
 Package pdftex.def Info: ../02_simulation/021_simulation_figures/TGPenalty_Comp
-arison.png  used on input line 521.
-(pdftex.def)             Requested size: 346.3531pt x 261.79742pt.
- [22
+arison.png  used on input line 567.
+(pdftex.def)             Requested size: 369.66014pt x 298.65504pt.
 
- <../02_simulation/021_simulation_figures/TGPenalty_Comparison.png>]
-[23]
-Underfull \hbox (badness 10000) in paragraph at lines 547--548
+[25 <../02_simulation/021_simulation_figures/TGPenalty_Comparison.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 590--591
 
  []
 
-[24]
-Underfull \hbox (badness 10000) in paragraph at lines 552--553
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 595--596
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 554--555
+Underfull \hbox (badness 10000) in paragraph at lines 597--600
 
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[25] [26] [27] (MScThesis_Econ.lof)
+[27]
+Underfull \hbox (badness 10000) in paragraph at lines 621--622
+
+ []
+
+[28]
+Underfull \hbox (badness 10000) in paragraph at lines 623--624
+
+ []
+
+<../02_simulation/021_simulation_figures/Scenarion_100_25_3.png, id=449, 722.7p
+t x 361.35pt>
+File: ../02_simulation/021_simulation_figures/Scenarion_100_25_3.png Graphic fi
+le (type png)
+<use ../02_simulation/021_simulation_figures/Scenarion_100_25_3.png>
+Package pdftex.def Info: ../02_simulation/021_simulation_figures/Scenarion_100_
+25_3.png  used on input line 629.
+(pdftex.def)             Requested size: 397.48622pt x 198.74312pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 634--635
+
+ []
+
+[29 <../02_simulation/021_simulation_figures/Scenarion_100_25_3.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 636--637
+
+ []
+
+[30]
+<../02_simulation/021_simulation_figures/ComputationTime_Example.png, id=465, 7
+22.7pt x 433.62pt>
+File: ../02_simulation/021_simulation_figures/ComputationTime_Example.png Graph
+ic file (type png)
+<use ../02_simulation/021_simulation_figures/ComputationTime_Example.png>
+Package pdftex.def Info: ../02_simulation/021_simulation_figures/ComputationTim
+e_Example.png  used on input line 649.
+(pdftex.def)             Requested size: 397.48622pt x 238.49173pt.
+ [31 <../02_simulation/021_simulation_figures/ComputationTime_Example.png>] [32
+] [33
+
+] [34] [35] [36]
+Overfull \hbox (1.78503pt too wide) in paragraph at lines 745--745
+[]|\OT1/cmtt/m/n/12 TripleGammaReg[]Loss| 
+ []
+
+[37
+
+]
+Overfull \hbox (27.263pt too wide) in paragraph at lines 763--764
+[]\OT1/cmr/bx/n/12 Output: \OT1/cmtt/m/n/12 model \OT1/cmr/m/n/12 (Ini-tial-iza
+-tion of the class TripleGam-maReg-u-lar-iza-tion), \OT1/cmtt/m/n/12 coef[]list
+
+ []
+
+[38] (MScThesis_Econ.lof
+Overfull \hbox (37.63506pt too wide) in paragraph at lines 10--10
+ [][] [][][]\OT1/cmr/m/n/12 Time nec-es-sary to com-pute all three sce-nar-ios 
+of the Triple-Gamma-Regularization 
+ []
+
+)
 \tf@lof=\write7
 \openout7 = `MScThesis_Econ.lof'.
 
- [28] (MScThesis_Econ.lot)
+ [39] (MScThesis_Econ.lot)
 \tf@lot=\write8
 \openout8 = `MScThesis_Econ.lot'.
 
- [29]
-Overfull \hbox (6.20493pt too wide) in paragraph at lines 624--624
+ [40]
+Overfull \hbox (6.20493pt too wide) in paragraph at lines 794--794
 [][]\OT1/cmr/m/n/12 Hoerl, A. E., & Ken-nard, R. W. (1970b). Ridge re-gres-sion
 : Bi-ased es-ti-ma-tion for nonorthog-
  []
 
 [4]
-Overfull \hbox (35.87369pt too wide) in paragraph at lines 624--624
+Overfull \hbox (35.87369pt too wide) in paragraph at lines 794--794
 [][]\OT1/cmr/m/n/12 van Wierin-gen, W. N. (2015). Lec-ture notes on ridge re-gr
 es-sion. \OT1/cmr/m/it/12 arXiv preprint arXiv:1509.09169\OT1/cmr/m/n/12 . 
  []
@@ -1547,41 +1658,44 @@ LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-06-30>
  ***********
 Package rerunfilecheck Info: File `MScThesis_Econ.out' has not changed.
-(rerunfilecheck)             Checksum: 3F88018133A6C69C60A4E1F793549F72;5196.
+(rerunfilecheck)             Checksum: 07A016429D27E28C491D8DC77A4E6B14;4367.
 Package logreq Info: Writing requests to 'MScThesis_Econ.run.xml'.
 \openout1 = `MScThesis_Econ.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 36122 strings out of 475551
- 693228 string characters out of 5770464
- 1937238 words of memory out of 5000000
- 56697 multiletter control sequences out of 15000+600000
- 572082 words of font info for 88 fonts, out of 8000000 for 9000
+ 36388 strings out of 475551
+ 698761 string characters out of 5770464
+ 2075238 words of memory out of 5000000
+ 56936 multiletter control sequences out of 15000+600000
+ 572934 words of font info for 91 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 84i,17n,107p,1994b,5183s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Fi
-les/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cmextra/cmmib8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.p
-fb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Pr
-ogram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pf
-b><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:
-/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on MScThesis_Econ.pdf (35 pages, 844422 bytes).
+ 84i,17n,107p,1979b,5183s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Lucas Paul\AppData\Local\MiKTeX\2.9\fonts/pk/ljfour/jknappen/ec/dp
+i600\tcrm1200.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+bx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Fil
+es/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmmib10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cmextra/cmmib8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files/M
+iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmti10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
+ti12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:/
+Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on MScThesis_Econ.pdf (46 pages, 1052119 bytes).
 PDF statistics:
- 580 PDF objects out of 1000 (max. 8388607)
- 103 named destinations out of 1000 (max. 500000)
- 261 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 675 PDF objects out of 1000 (max. 8388607)
+ 119 named destinations out of 1000 (max. 500000)
+ 252 words of extra memory for PDF output out of 10000 (max. 10000000)
 

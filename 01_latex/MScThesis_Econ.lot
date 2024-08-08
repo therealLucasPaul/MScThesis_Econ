@@ -1,4 +1,8 @@
 \babel@toc {english}{}\relax 
-\contentsline {table}{\numberline {1}{\ignorespaces Classification of several Penalties}}{10}{table.caption.2}%
-\contentsline {table}{\numberline {2}{\ignorespaces Summary of the effects of changes in the hyperparameters $a^\xi $, $c^\xi $ and $\kappa _B$ on the penalty structure}}{21}{table.caption.7}%
-\contentsline {table}{\numberline {3}{\ignorespaces Scenarios Values}}{26}{table.caption.9}%
+\contentsline {table}{\numberline {1}{\ignorespaces Classification of several Penalties}}{11}{table.caption.2}%
+\contentsline {table}{\numberline {2}{\ignorespaces Summary of the effects of changes in the hyperparameters $a^\xi $, $c^\xi $ and $\kappa _B$ on the penalty structure}}{23}{table.caption.7}%
+\contentsline {table}{\numberline {3}{\ignorespaces Three Example Settings of the \textit {Triple-Gamma} Penalty}}{24}{table.caption.8}%
+\contentsline {table}{\numberline {4}{\ignorespaces Scenarios Values}}{28}{table.caption.11}%
+\contentsline {table}{\numberline {5}{\ignorespaces Mean and Standard Deviations of MSE on the Validation Set for different Scenarios (25 runs per scenario)}}{34}{table.5}%
+\contentsline {table}{\numberline {5}{\ignorespaces Mean and Standard Deviations of MSE on the Validation Set for different Scenarios (25 runs per scenario)}}{35}{table.5}%
+\contentsline {table}{\numberline {5}{\ignorespaces Mean and Standard Deviations of MSE on the Validation Set for different Scenarios (25 runs per scenario)}}{36}{table.5}%

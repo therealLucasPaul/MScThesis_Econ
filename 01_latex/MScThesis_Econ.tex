@@ -15,6 +15,7 @@
 \usepackage{caption}
 \usepackage{amssymb}
 \usepackage{tikz}
+\usepackage{float}
 
 
 % Packages for Tables -----
@@ -24,6 +25,7 @@
 \usepackage{makecell}
 \usepackage{lscape}
 \usepackage{adjustbox}
+\usepackage{longtable}
 
 % -----
 
@@ -123,7 +125,9 @@ by\\ \vspace{3mm}
 \thispagestyle{empty}
 
 \begin{abstract}
-Lorem ipsum...
+\begin{lightbluebox}
+Add abstract as soon as the thesis is 100\% finished.
+\end{lightbluebox}
 \end{abstract}
 
 \clearpage
@@ -131,7 +135,7 @@ Lorem ipsum...
 \section*{Acknowledgements}
 \thispagestyle{empty}
 
-I like to acknowledge ...
+This completion oft his thesis would not have been possible without so many amazing people in my life who supported me throughout the process of writing this master's thesis and the master program as a whole. I want to thank my mum, Daniela, and my dad, Werner, who always picked me up when I lost my motivation to continue and who convinced me to keep going time after time. I want to thank my brother, Tobias, who always readily listened to me complaining for hours and hours on end about things he probably barely understood and yet always agreed with me about my computational issues while doing the simulations. And most of all I want to thank my advisor, Peter, who always supported me from the day I randomly dropped an e-mail into his e-mail inbox about becoming his tutor in econometrics, although not having met once during the distance learning phase of the COVID pandemic, up until today. From working as a tutor in his team, writing a bachelor thesis, and to the support during this master thesis now. Even though sometimes living 12h time differences apart, one in Boston the other in Manila, he always answered any questions I had and supported me in whatever way he could and I want to sincerely thank him for that!  
 
 \clearpage
 
@@ -144,11 +148,13 @@ I like to acknowledge ...
 \pagebreak
 %----- Introduction -----
 \section{Introduction}
-Willam of Ockham, born in Ockham, Surrey, probably lived between 1287 and 1348 and is nowadays recognized as a pre-eminent philosopher of the middle ages. Although     his name itself is no common knowledge, a principle carrying his name is: \textit{Ockham's Razor}. Interestingly, the main formulation of the principle (\textit{Entia non sunt multiplicanda praeter necessitatem} [plurality should not be posited without necessity]) can not be traced back to Ockham directly, but variations of it can be found in Ockham's writings. Since then nonetheless, the principle has long been used by statisticians and other researchers as a a scientific credo to capture the notion that "the simpler of two explanations is to be preferred" \parencite{Lazar2010}.  
+Willam of Ockham, born in Ockham, Surrey, probably lived between 1287 and 1348 and is nowadays recognized as a pre-eminent philosopher of the middle ages. Although     his name itself is no common knowledge, a principle carrying his name is: \textit{Ockham's Razor}. Interestingly, the main formulation of the principle (\textit{Entia non sunt multiplicanda praeter necessitatem} [plurality should not be posited without necessity]) can not be traced back to Ockham directly, but variations of it can be found in Ockham's writings. Since then nonetheless, the principle has long been used by statisticians and other researchers as a a scientific credo to capture the notion that "the simpler of two explanations is to be preferred" \parencite{Lazar2010}. Recent decades and its advancements in information technology have opened the gates to seemingly unlimited amounts of data and information. Whether it is data about the carbon dioxide levels near bus stations in a city, the intraday trading volume of a specific financial asset or the rhythm of a beating heart throughout a day, new techniques and approaches in measuring digital and natural phenomena have enables researchers all around the globe to study previously unknown effects, test novel hypotheses and find relationships between real world process that would have otherwise remained hidden from the eye of human civilization.\\
 
-\begin{lightbluebox}
-Finish Intro
-\end{lightbluebox}
+Yet, these advancements come at a cost. Conventional statistical models like the \textit{ordinary least squares (OLS)} have troubles handling statistical problem in higher dimensions. When the relative number of features to the number of data points in a statistical model is very high, the estimates of these models suffer from high variance and thus generalize poorly. Frequentist statisticians have developed penalized regression approaches to battle these issues by incorporating a penalty term into the optimization problems used to estimate the coefficients of linear models. In recent decades, various penalty terms have been published with each of its own advantages and disadvantages, yet to this day no a single method has emerged to triumph above them all \parencite{WangEtAl2020}.\\
+
+Bayesian statisticians have developed their own tools to handle high-dimensional statistical problems and commonly use specific probability distributions to battle model complexity by shrinking the estimates of less important variables towards zero (thus the name \textit{shrinkage prior}). Although these two fields of statistical thought use different approaches to tackle the same problem, a striking mathematical connection exists between those two methods. A bridge which allows mathematicians to derive a regularization penalty from specific prior distributions, which raises the question: "Does there exist a already known prior distribution in the Bayesian setting which can be used to derive a regularization penalty which might perform better than existing penalties?".\\
+
+A prior distribution which might have these suitable properties is the unifying shrinkage prior developed by \textcite{TGP2020} called \textit{Triple-Gamma-Prior}. Its unifying properties and the fact that a closed-form solution for the marginal prior exists might lead to favourable properties in the realm of frequentist statistics, but before that it is necessary to have a closer look at what the exact problem is that Bayesian shrinkage prior and regularization approaches are trying to solve. An overview of this along with a theoretical basis of the necessary concepts will be presented in section 2.\\
 
 The remaining thesis is structure as follows: Section 3 will provide a literature review about the history of regularization and advancements in the field along with an overview of established concepts and their respective advantages and disadvantages. Section 4 will quickly discuss the mathematical building block for this thesis by showcasing the bridge between regularization and Bayesian shrinkage prior as well as introduce the Triple-Gamma-Prior by \textcite{TGP2020} as the shrinkage prior of choice. Section 5 will then derive the proposed penalty by utilizing the bridge explained in section 4. Section 6 will then apply the newly derived regularization penalty and apply it in the context of a simulation study to see its effects and possible fields of application. The remaining sections 7 and 8 will discuss shortcomings of the method and possible extensions and end with a summarizing conclusion. 
 
@@ -157,7 +163,7 @@ The remaining thesis is structure as follows: Section 3 will provide a literatur
 \section{Theoretical Section}\label{sec:theorysuper}
 Generally speaking, a major part of statistical learning deals with trying to describe a certain output variable $Y$ with a set of input variables $X_1, \cdots, X_p$ by trying to find a functional form $f$ which uses the given information in the inputs and - ideally - describes the hidden relationship between $Y$ and the inputs $X_i$ as accurately as possible. However, it comes as no surprise that the functional form $f$ depends on the statistical problem at hand. What type of data has been collected? Are we assuming a linear or non-linear relationship between the predictors? How much data is available and can its quality be guaranteed? But more importantly, it is necessary to ask the question whether the goal of the statistical learning method is \textit{inference} or \textit{prediction}.\\
 
-The first of these two goals - \textit{inference} - aims at understanding the relationship that may or may not exist between the input variables $X_i$ and the output $Y$. Especially applied sciences like Economics, Psychology and Medicine often try to find a (causal) relationship within their theoretical framework to evaluate a policy, a medication or a new form of therapy. Linear models for example often provide a simple and straightforward framework which provide the scientist with interpretable effects. \textit{Prediction} on the other hand aims at forecasting the output variable $Y$ as accurately as possible and using every bit of information that is available, but disregards interpretability. \parencite{ESL,21} These goals can be summarized by viewing it as a decision between \textit{prediction accuracy} and \textit{model interpretability}, which has thoroughly been explained by \textcite{ESL}.\\
+The first of these two goals - \textit{inference} - aims at understanding the relationship that may or may not exist between the input variables $X_i$ and the output $Y$. Especially applied sciences like Economics, Psychology and Medicine often try to find a (causal) relationship within their theoretical framework to evaluate a policy, a medication or a new form of therapy. Linear models for example often provide a simple and straightforward framework which provide the scientist with interpretable effects. \textit{Prediction} on the other hand aims at forecasting the output variable $Y$ as accurately as possible and using every bit of information that is available, but disregards interpretability. \parencite[21]{ESL2009} These goals can be summarized by viewing it as a decision between \textit{prediction accuracy} and \textit{model interpretability}, which has thoroughly been explained by \textcite{ESL2009}.\\
 
 For the purpose of this thesis, the following chapters will restrict itself to the case of linear models, hence where assume that the functional form $f$ is linear in its inputs. The commonly known \textit{least squares estimator} is one way of estimating such a functional form and due to its many desirable properties has gained popularity in various  scientific fields. 
 
@@ -188,7 +194,7 @@ Focusing on option three to battle model complexity, regularization methods have
 \[
 \underset{f \in \mathcal{H}}{\min}\left\{\sum_{i=1}^N L(y_i, f(x_i)) + \lambda{J}(f)\right\}
 \]
-where $L(.)$ refers to a loss function defined as some function of the true values and the predicted values and $J(f)$ is penalty based on the chosen functional from a space of functions $\mathcal{H}$. In the context of penalized linear regression, this is equivalent to finding the set of risk minimizing coefficients $\hat{\beta}$ from the set of all possible combinations of coefficients $\boldsymbol{\beta}$. \MC Thus, resulting in the general class of regularization problems of the form:
+where $L(.)$ refers to a loss function defined as some function of the true values and the predicted values and $J(f)$ is penalty based on the chosen functional from a space of functions $\mathcal{H}$. In the context of penalized linear regression, this is equivalent to finding the set of risk minimizing coefficients $\hat{\beta}$ from the set of all possible combinations of coefficients $\beta$. \MC Thus, resulting in the general class of regularization problems of the form:
 \[
 \underset{\beta \in \boldsymbol{\beta}}{\min}\left\{\sum_{i=1}^N L(y_i, f_\beta(x_i)) + \lambda{J}(\beta)\right\}
 \]
@@ -275,10 +281,15 @@ Seeing this vast array of different pieces of literature immediately raises the 
 As already mentioned earlier in section \ref{sec:theorysuper}, a penalty function is a function dependent on the parameter of the model and it does not depend on the data at hand. Thus, changes in your data set does not effect the penalty directly, but only the overall optimization problem through the empirical risk functional $R_{emp}$. The following table classifies some of the existing concepts based on the three criteria mentioned earlier. A visualisation of them can be found in figure \ref{fig:DifferentPenalties} in chapter \ref{subsec:comparepenalties}.\\
 
 Depending on what property a penalty has, it can perform specific tasks or provide challenges in application. As thoroughly described by \parencite{JohnVettamWu2022}, penalties with a singularity at origin tend to be suitable when the goal of the statistical analysis is variable selection but "could pose theoretical and computational challenges when the focus is on regularization alone without variable selection." In addition, it has been shown in the literature that "objective functions which are a sum of a nonconvex, singular-at-origin penalty function coupled with either a smooth nonconvex loss function or a nonsmooth convex loss function, often fails to satisfy a theoretical condition known as ‘Clarke regularity’." (A result presented in \textcite{QiCuiLiuPang2021}) 
-Convex penalties are generally easier to implement using common optimization algorithms than non-convex penalties and, more importantly, penalties which are divergent and its limits, which most convex penalties are, yield biased results. Due to the fact that, when using divergent and convex penalties like LASSO and Ridge, the additional penalty for larger estimates keeps rising with estimates which deviate from zero, estimates are getting artificially pulled towards zero and are thus biased. Non-Convex penalties, which are usually convergent in its limits towards $-\infty$ and $+\infty$, tend to yield unbiased results as the additional penalty becomes zero as soon as a certain threshold is crossed (Again, referring to the visualisation in figure \ref{fig:DifferentPenalties}).    
+Convex penalties are generally easier to implement using common optimization algorithms than non-convex penalties and, more importantly, penalties which are divergent and its limits, which most convex penalties are, yield biased results. Due to the fact that, when using divergent and convex penalties like LASSO and Ridge, the additional penalty for larger estimates keeps rising with estimates which deviate from zero, estimates are getting artificially pulled towards zero and are thus biased. Non-Convex penalties, which are usually convergent in its limits towards $-\infty$ and $+\infty$, tend to yield unbiased results as the additional penalty becomes zero as soon as a certain threshold is crossed (Again, referring to the visualisation in figure \ref{fig:DifferentPenalties}).
+
+\begin{lightbluebox}
+Still have to figure out how to fit this table.
+\end{lightbluebox}    
+
 \begin{table}[!h]
 \begin{center}
-\begin{tabular}{lcccc}\toprule
+\begin{tabular}{llccc}\toprule
  \multicolumn{2}{c}{Penalty} & \multicolumn{3}{c}{Classification}\\
 		\cmidrule(r{4pt}){1-2} \cmidrule(l){3-5}
 Penalty     	& Reference  & \makecell{Behaviour\\ at Origin} & (Non-)Convexity & Limits\\\midrule
@@ -334,12 +345,27 @@ be used to derive a new regularization penalty and do its advantages
 carry over into the frequentist framework?
 \end{quote}
 
-Yet, before diving into the mathematical core of this thesis which derives said concept, it is necessary to have a look at the Triple-Gamma-Prior in depth to explain why this particular prior might prove itself to provide a useful building block for a novel regularization penalty.
+Yet, before diving into the mathematical core of this thesis which derives said concept, it is necessary to have a look at the Triple-Gamma-Prior in depth to explain why this particular prior might prove itself to provide a useful building block for a novel regularization penalty.\\
+
+As already mentioned above, BMA and shrinkage priors are two Bayesian approaches to deal with statistical problems in high-dimensional settings. The prior is generally constructed for variance selection in sparse state space and TVP models and is named the Triple-Gamma-Prior as it's representation is given by three Gamma distributions. A key advantage of this prior is its unifying property. As cam be seen in table 1 in \textcite{TGP2020}, special cases of the prior, depending on certain values in its hyperparameters, are the Normal-Exponential-Gamma, the Horseshoe and the double Gamma prior. In addition, it can also be seen as a special case of the LASSO prior. Another advantage is its function as a bridge between spike-and-slap and continuous shrinkage prior as the hyperparameters can be used both for steering the shrinkage effect on noise while also preventing overshrinking the signal. Computationally the shrinkage prior performs better than commonly used spike-and-slab priors as it is a continuous shrinkage prior which can more easily implemented using Markov-Chain-Monte-Carlo (MCMC) methods.\\ 
+
+Mathematically, the prior builds on the work by \textcite{BittoFS2019} in which the authors introduced the \textit{double gamma prior} with the following hierarchical representation:
+
+$$\theta_j|\xi^2_j \sim \mathcal{G}\left(\frac{1}{2}, \frac{1}{2\xi^2_j} \right), \quad \xi^2_j | a^\xi, \kappa^2_B \sim \mathcal{G}\left(a^\xi, \frac{a^\xi\kappa_B^2}{2}\right)$$
+
+It is important to note here, that the \textit{double gamma prior} is a global-local shrinkage prior, where the global hyperparameter $\kappa^2_B$ is the same for all parameters $\theta_j$ and the local hyperparameter $\xi^2_j$ is the local component. The \textit{Triple-Gamma-Prior} now adds a third Gamma prior into this framework by replacing $\kappa_B^2$ in the second-level prior with $\kappa_j^2$, which follows
+$$\kappa_j^2 | c^\xi, \kappa_B^2 \sim \mathcal{G}\left(c^\xi, \frac{c^\xi}{\kappa_B^2}\right)$$ 
+
+The core property which is relevant to this thesis can be found in \textit{Theorem 1 (b)} in \textcite{TGP2020} which shows that the \textit{Triple-Gamma-Prior} has a closed-form marginal prior distribution for the parameter $\theta_j$, or to stick with the terminology of this thesis $\beta_j$. The prior is given by
+$$p(\sqrt{\beta_j}|\phi^\xi, a^\xi, c^\xi) = \frac{\Gamma(c^\xi + \frac{1}{2})}{\sqrt{2\pi \phi^\xi}\cdot B(a^\xi, c^\xi)}\cdot U\left(c^\xi + \frac{1}{2}, \frac{3}{2}-a^\xi, \frac{\beta_j}{2\phi^\xi}\right),$$
+where $\phi^\xi = \frac{2c^\xi}{\kappa^2_Ba^\xi}$ and $U(a,b,z)$ is the confluent hyper-geometric function of the second kind of \textcite{Tricomi1947} given by
+$$U(a,b,z) = \frac{1}{\Gamma(a)}\int_0^\infty e^{-zt}t^{a-1}(1+t)^{b-a-1}dt$$
+
+According to the mathematical connection described above, this prior can now be used to derive a novel regularization penalty.
 
 \begin{lightbluebox}
-Describe TRIPLE GAMMA PRIOR
+Should I talk more extensively about the TGP? Is there something important I forgot to mention?
 \end{lightbluebox}
-
 
 %----- Model Setup and Derivation
 \newpage
@@ -511,101 +537,240 @@ $\kappa_B$ 	& \makecell{The singularity\\ at $\beta=0$ becomes more\\ pronounced
 \subsection{Comparison to already existing Penalty Terms}\label{subsec:comparepenalties}
 
 As already mentioned in section \ref{sec:litreview}, several other penalty terms have already been widely studied in the literature. Convex penalties like \textit{Ridge} \parencite{HoerlKennard1970a} or non-convex penalties like the \textit{Ar(c)tan} \parencite{WangZhu2016} and \textit{Gaussian} \parencite{JohnVettamWu2022} have managed to establish itself as prominent approaches to regularization. It is now certainly of interest to see how the \textit{Triple-Gamma} penalty compares to the established methods. Seeing that, due to its flexibility, there is not \textit{one} \textit{Triple-Gamma} penalty, three distinct hyper-parameter setting have been chosen to represent the proposed penalty term. 
-\begin{enumerate}
-\item Setting 1: \quad $a^\xi=0.75$, $c^\xi=0.1$, $\kappa_B = 2$
-\item Setting 2: \quad $a^\xi=5$, $c^\xi=0.01$, $\kappa_B = 2$
-\item Setting 3: \quad $a^\xi=0.51$, $c^\xi=0.001$, $\kappa_B = 1$
-\end{enumerate}
 
-\begin{lightbluebox}
-Describe differences
-\end{lightbluebox}
+\begin{table}[h!]
+\centering
+\begin{tabular}{l|ccc}\toprule
+		& \multicolumn{3}{c}{Hyperparameter} \\\cmidrule(r{4pt}){2-4}
+     	& $a^\xi$  & $c^\xi$ & $\kappa_B$\\\midrule
+Setting 1&	$0.75$	&	$0.1$ &	$2$\\
+Setting 2&	$5$  &   $0.01$ & $2$\\
+Setting 3&  $0.51$  & $0.001$&$1$\\ \bottomrule
+\end{tabular}
+\caption{Three Example Settings of the \textit{Triple-Gamma} Penalty}
+\label{tab:TGSettings}
+\end{table}
 
-\begin{figure}[!h]
+A visualisation of these settings can be found in figure \ref{fig:DifferentTGPSettings}. It can be seen that all settings differ heavily in its structure and thus its influence on the optimization problem and in the end the resulting parameters. 
+
+\begin{figure}[H]
+\centering
+\includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_DifferentSettings.png}
+\caption{Different Settings of the Triple-Gamma-Penalty}
+\label{fig:DifferentTGPSettings}
+\end{figure}
+
+\textit{Setting 1} is a \textit{LASSO} like regularization penalty, but still keeps the non-convex shape of the Triple-Gamma penalty. \textit{Setting 2} introduces the smooth-at-origin property but keeps a similar shape than \textit{setting 1} in the tails. \textit{Setting 3} has the most distinct structure with a strong singularity at origin but tails which fall of very quickly and thus adds relatively little penalty for parameters that are above $1$ in absolute terms.\\
+
+\begin{figure}[h!]
 \centering
 \includegraphics[scale=0.75]{../02_simulation/021_simulation_figures/TGPenalty_Comparison.png}
 \caption{Basic Representation of the Triple-Gamma-Penalty using Hyperparameters $c^\xi = 0.1, \kappa_B = 2, a^\xi = 0.75$ compared to \textit{LASSO} and \textit{Ridge} Penalties}
 \label{fig:DifferentPenalties}
 \end{figure}
 
-%\subsection{Restricted Strong Convexity (RSC) of the Triple-Gamma-Regularization}
+Additionally, a comparison of these \textit{Triple-Gamma} settings to a selection of other regularization penalties can be found in figure \ref{fig:DifferentPenalties}. As can be seen here, \textit{setting 1} of the \textit{Triple-Gamma} penalty imitates a \textit{LASSO} penalty with a slightly decreasing additional penalty, resulting in a weakened bias which is common to \textit{LASSO} estimates. \textit{Setting 3} has a similar structure than the non-convex penalties \textit{Gaussian} and \textit{Arctan}, but with a string singularity at zero. Here, it can clearly be seen that the \textit{Triple-Gamma} penalty is not a penalty which converges in the tails, as do \textit{Gaussian} and \textit{Arctan}, but still has a considerably weaker bias as convex methods like \textit{LASSO} and \textit{Ridge}. Overall, figure \ref{fig:DifferentPenalties} showcases the variety of possible penalties that can be implemented using the \textit{Triple-Gamma} penalty. 
+
+
+%\subsection{Alternative Specification (with +1 to mimic artan)}
+
+%Before moving on to the simulation study in section \ref{sec:simstudy_overall}, this might be the suitable place in this thesis to elaborate on a related concept. As previously mentioned, the \textit{Arctan} penalty developed by \textcite{WangZhu2016} has a similar structure as the \textit{Triple-Gamma-Penalty} in small neighbourhoods near $\beta = 0$ when using specific hyper-parameters (see section \ref{subsec:comparepenalties}). The distinctive structural difference between these two penalties emerge when looking at the limits when  $\underset{\beta \to +/- \infty}{\lim J_{TG}(\beta)}$
 
 %\begin{lightbluebox}
-%Weglassen?
+%Propose different concepts?
 %\end{lightbluebox}
-
-\subsection{Alternative Specification (with +1 to mimic artan)}
-
-As previously mentioned, the \textit{Arctan} penalty developed by \textcite{WangZhu2016} has a similar structure as the \textit{Triple-Gamma-Penalty} in small neighbourhoods near $\beta = 0$ when using specific hyper-parameters (see section \ref{subsec:comparepenalties}). The distinctive structural difference between these two penalties emerge when looking at the limits when  $\underset{\beta \to +/- \infty}{\lim J_{TG}(\beta)}$
-
-\begin{lightbluebox}
-Propose different conecpts?
-\end{lightbluebox}
 
 
 %----- Simulation Section
 \newpage
-\section{Simulation Study}
+\section{Simulation Study}\label{sec:simstudy_overall}
 To test the proposed method of section \ref{sec:modelderivation} a simulation study will now be conducted whether, and if so, in what scenarios, the \textit{Triple-Gamma} penalty might be valuable addition to the literature. Of course several previously introduced methods have also been tested using simulation studies, but the methodology behind these studies usually varies from paper to paper. However, before moving on to this section of the thesis, the question remains on how to solve the optimization problem in \ref{eq:tgr}. 
 
 \subsection{Approaches to Estimation}
-As already mentioned in chapter \ref{sec:litreview}, non-convex penalties like the \textit{Triple-Gamma} penalty are usually harder to solve than convex optimization problems. The reason being that convex functions have a unique global minimum, whereas non-convex functions can have multiple local minima, which are not necessarily a global minimum. \textbf{(SOURCE)}. In addition, unlike for example \textit{Ridge} regression, the \textit{Triple-Gamma} penalty like many other established penalties in the literature does not have a closed form solution for this optimization problem. Thus, it is necessary to apply an optimization algorithm which solves this problem iteratively. An algorithm which has established itself to solve these kinds of problems is called \textit{Gradient Descent} \parencite[229--248]{GrippoSciandrone2023}. In its essence, the algorithm tries to minimize a loss function by iteratively adjusting the model parameters in the direction that reduces the loss most. It calculates the gradient of the loss function with respect to the model parameters and then updates the parameters by a learning rate. This iterative process can either be repeated until a specified number of iterations is reached or a local (or global) minimum has been found. As already mentioned, this can lead to problems when dealing with non-convex optimization problems as multiple local minima might exist, which do not necessarily need to be global ones. Various approaches to deal with this have been proposed. One method uses random starting points to cover various areas of the optimization space to cover potential multiple local minima. Another method is called \textit{Stochastic Gradient Descent (SGD)} and uses different batches of the dataset to estimate the model parameters \parencite{Amari1993}. The \textit{Gradient Descent} method will be used for the simulation study in the following chapter.\\
+As already mentioned in chapter \ref{sec:litreview}, non-convex penalties like the \textit{Triple-Gamma} penalty are usually harder to solve than convex optimization problems. The reason being that convex functions have a unique global minimum, whereas non-convex functions can have multiple local minima, which are not necessarily a global minimum. \MC In addition, unlike for example \textit{Ridge} regression, the \textit{Triple-Gamma} penalty like many other established penalties in the literature does not have a closed form solution for this optimization problem. Thus, it is necessary to apply an optimization algorithm which solves this problem iteratively. An algorithm which has established itself to solve these kinds of problems is called \textit{Gradient Descent} \parencite[229--248]{GrippoSciandrone2023}. In its essence, the algorithm tries to minimize a loss function by iteratively adjusting the model parameters in the direction that reduces the loss most. It calculates the gradient of the loss function with respect to the model parameters and then updates the parameters by a learning rate. This iterative process can either be repeated until a specified number of iterations is reached or a local (or global) minimum has been found. As already mentioned, this can lead to problems when dealing with non-convex optimization problems as multiple local minima might exist, which do not necessarily need to be global ones. Various approaches to deal with this have been proposed. One method uses random starting points to cover various areas of the optimization space to cover potential multiple local minima. Another method is called \textit{Stochastic Gradient Descent (SGD)} and uses different batches of the dataset to estimate the model parameters \parencite{Amari1993}. The \textit{Gradient Descent} method will be used for the simulation study in the following chapter.\\
 
 For the sake of completeness and as a stepping stone for further research, it is necessary to mention a different approach to solve the optimization problem which is called \textit{Local Linear Approximation (LLA)} algorithm and has been proposed by \textcite{ZouLi2008}. Their resulting \textit{one-step LLA estimates} have several computational advantages and "alleviate the computation burden in the iterative algorithm and overcome the potential local maxima problem in maximizing the nonconcave penalized likelihood" \parencite{ZouLi2008}. Still, to the best of my knowledge, no easily accessible programming packages exist for this algorithm.
 
 \subsection{Scenario Simulation}
-Various simulation studies comparing different regularization penalties have been published so far. \textcite{VettamJohn2022} for example have compared \textit{LASSO, Ridge, MCP, SCAD, Laplace} and \textit{Arctan} in the context of the estimation of neural networks. \textcite{WangEtAl2020} have tested a range of penalties in the context of linear models and analysed various the performance of penalties using levels of sparsity, dimensionality and data availability. The authors tested the performance based on three criteria: \textit{prediction}, \textit{variables selection} and \textit{variables ranking}. This simulation study will focus on the the first two metrics.\\
+Various simulation studies comparing different regularization penalties have been published so far. \textcite{VettamJohn2022} for example have compared \textit{LASSO, Ridge, MCP, SCAD, Laplace} and \textit{Arctan} in the context of the estimation of neural networks. \textcite{WangEtAl2020} have tested a range of penalties in the context of linear models and analysed various the performance of penalties using levels of sparsity, dimensionality and data availability. The authors tested the performance based on three criteria: \textit{prediction}, \textit{variables selection} and \textit{variables ranking}. This simulation study will focus on the the first of these metrics.\\
 
-\textit{Prediction} is usually measured by splitting a simulated dataset into a training dataset and a test dataset. The model is fitted on the training dataset and then tested on the test dataset using a metric like the \textit{mean squared error (MSE)}. \textit{Variable Selection} is measured in various ways. \textcite{WangEtAl2020} used \textit{true-positive} and \textit{false-positive} rates as their metric of choice. As several of the tested methods in this simulation study do not perform variable selection naturally due to its \textit{smooth-at-origin} property and thus report estimates larger than zero, a different metric will be chosen for this simulation study. To test whether models accurately predict the underlying data generating process and also result in estimates close to its true coefficients, the square of the absolute deviation between the true coefficient and the estimated coefficient of each variable will be computed and summed up. Using this metric, models whose estimates are close the true coefficients will perform than models whose estimates are far off.\\
+\textit{Prediction} is usually measured by splitting a simulated dataset into a training dataset and a test dataset. The model is fitted on the training dataset and then tested on the test dataset using a metric like the \textit{mean squared error (MSE)}. \textit{\textit{Variable Selection} is measured in various ways. \textcite{WangEtAl2020} used \textit{true-positive} and \textit{false-positive} rates as their metric of choice. As several of the tested methods in this simulation study do not perform variable selection naturally due to its \textit{smooth-at-origin} property and thus report estimates larger than zero, a different metric will be chosen for this simulation study. To test whether models accurately predict the underlying data generating process and also result in estimates close to its true coefficients, the square of the absolute deviation between the true coefficient and the estimated coefficient of each variable will be computed and summed up. Using this metric, models whose estimates are close the true coefficients will perform than models whose estimates are far off.\\}
+\begin{lightbluebox}
+Some of the previous paragraph is in italic, because I initially planned on running a second simulation study on this metric as well, but implementation and runtime issues made it difficult. Will probably just mention it. 
+\end{lightbluebox}
 
-To evaluate the models in a wide range of contexts, every simulation scenario will vary in terms off three variables: \textit{sample size $N$} (ie $N=100$ meaning that for every run, a total of $100$ observations will be generated), \textit{dimensionality $p$} (ie $p=10$ meaning a total of ten covariates will included in the model) and \textit{sparsity $s$} (ie $s=0.1$ meaning that 10\% of the covariates have a true coefficients different from zero). The set of values chosen for each scenario variable can be found in table \ref{tab:Scenarios}. Using this values, all possible combinations of these variable settings will be formed, resulting in a total of $48$ possible scenarios. 
+To evaluate the models in a wide range of contexts, every simulation scenario will vary in terms off three variables: \textit{sample size $N$} (ie $N=100$ meaning that for every run, a total of $100$ observations will be generated), \textit{dimensionality $p$} (ie $p=10$ meaning a total of ten covariates will included in the model) and \textit{sparsity $s$} (ie $s=0.1$ meaning that 10\% of the covariates have a true coefficients different from zero). The set of values chosen for each scenario variable can be found in table \ref{tab:Scenarios}. Using this values, all possible combinations of these variable settings will be formed, resulting in a total of $36$ possible scenarios. 
 
 \begin{table}[h!]
 \begin{center}
 \begin{tabular}{lc}\toprule
 Variable & Values\\\midrule
 Sample Size $N$ & $50, 100, 500, 1000$\\
-Dimensionality $p$ & $3, 10, 40$\\
-Sparsity $s$ & $0.1, 0.3, 0.5, 0.9$\\\bottomrule
+Dimensionality $p$ & $3, 10, 25$\\
+Sparsity $s$ & $0.1, 0.5, 0.9$\\\bottomrule
 \end{tabular}
 \caption{Scenarios Values}
 \label{tab:Scenarios}
 \end{center}
 \end{table}
 
-The remaining issue to cover deals with the weighting/regularization parameter $\lambda$ (see section \ref{sec:theorysuper}) and how it is set. This key parameter controlling the strength of the influence of the penalty on the overall optimization result is usually set by the user, however another \textit{hands-off} method is cross-validation, which will be used for this simulation \parencite[250--251]{ESL2009}. A grid of possible values for $\lambda$ is chosen, the model is being estimated for every possible value, and the best model will be chosen based on the chosen cross-validation metric. For this simulation study, all values between $0$ and $1$ based on $0.01$ steps will be tested. The simulations have been run with Python (Version 3.11.4) along with scikit-learn (Version 1.4.1.post1) and PyTorch (Version 2.2.2).\footnote{More information on the packages used and its installed version can be found in the accompanying GitHub repository.}
+The remaining issue to cover deals with the weighting/regularization parameter $\lambda$ (see section \ref{sec:theorysuper}) and how it is set. This key parameter controlling the strength of the influence of the penalty on the overall optimization result is usually set by the user, however another \textit{hands-off} method is cross-validation, which will be used for this simulation \parencite[250--251]{ESL2009}. A grid of possible values for $\lambda$ is chosen, the model is being estimated for every possible value, and the best model will be chosen based on the chosen cross-validation metric. For this simulation study, all values between $0$ and $1$ based on $0.01$ steps will be tested on the first generated dataset. To save time when it comes to computation, the search will be stopped if the chosen metric hasn't improved for more than 10 new values for $\lambda$. After his run, these optimal values will be used in the overall simulation. \textbf{For the application of the gradient descent algorithm a maximum number of 750 epochs has been set.} The simulations have been run with Python (Version 3.11.4) along with scikit-learn (Version 1.4.1.post1) and PyTorch (Version 2.2.2).\footnote{More information on the packages used and its installed version can be found in the accompanying GitHub repository.}
 
 \subsection{Simulation Study for Prediction} 
 
-\subsection{Simulation Study for Variable Selection}
+For the simulation study testing the models prediction accuracy the key metric to test performance will be the \textit{mean-squared-error (MSE)}. The data is being generated the following way: Given a set of scenario parameters $N_i$, $p_i$ and $s_i$, the first $s_i*p_i$ coefficients, rounded to the next larger integer, will be generated from a normal distribution with mean $0$ and variance $1$, the remaining coefficients will be set to zero. Then, $N_i$ draws will be generated from a normal distribution with mean $0$ and variance $1$ for each of the $p_i$ features. Using these coefficients and the data from the features a response variable $y$ will be computed and noise drawn from a normal distribution with mean $0$ and variance $1$ multiplied with $0.5$ will be added as noise. First, the grid search for the optimal $\lambda$ will be performed by generating a sample dataset using the above generating process. Then, every method that is part of the simulation will be estimated on the dataset for every $\lambda_i$ in the set $\lambda_i \in \{0, 0.01, 0.02, \cdots, 1\}$. For every method separately, the $\lambda_i$ which generates the lowest validation loss on the testset will be used for the overall simulation.\\
 
+Using the set of scenario variables mentioned in table \ref{tab:Scenarios}, all possible combinations will be formed resulting in the overall $36$ scenarios. The code iterates through the list of scenarios, generates 25 datasets based on these scenarios variables and all tested methods will be estimated on every one the test part of these datasets. Afterwards, the validation loss will be computed for each method and stored. This procedure results in tables \ref{tab:PredSim}, which shows the mean and standard deviation of the distribution of the validation loss for every scenario and every methods. The values colored in \textcolor{red}{red} indicate the smallest means for every scenario. Before advancing to the overall results of this simulation study, it might be useful to have a look at a specific scenario to better understand the results in table \ref{tab:PredSim}, which will be the scenario with $N=100, p=25, s=0.1$.\\
+
+In this scenario, we are dealing with a dataset of $100$ observations, $25$ features and $3$ non-zero coefficients.\footnote{$25 \times 0.1 = 2.5$ and $ceil(2.5)=3$.} A figure with boxplots showcasing the distributions of the Mean-Squared-Error rates on the validation set for all methods can be found in figure \ref{fig:SpecificScenario}
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.55]{../02_simulation/021_simulation_figures/Scenarion_100_25_3.png}
+\caption{Distribution of MSE on Validation Set in the Scenario with $100$ Observations, $25$ Features and $3$ non-zero Coefficients}
+\label{fig:SpecificScenario}
+\end{figure} 	
+
+This scenario, which is a good exmaple for a sparse scenario, where a lot of features are in the dataset but only a small part of it is different from zero, i.e. has an effect on the outcome. Here, \textit{LASSO} performs well which was to be expected, but it can also be seen that the first and second setting of the \textit{Triple-Gamma} Penalty can both produce similar results when it comes to predictive power. \textit{Setting 2} even has a lower mean in MSE ($0.25255$) than \textit{LASSO} regression ($0.2858$). \textit{OLS} manages to perform quite well, yet has a visible shift towards higher \textit{MSE} values. \textit{Arctan, Gaussian} and the third setting of the \textit{Triple-Gamma} penalty perform significantly worse in this scenario.\\
+
+Generally, it can be seen table \ref{tab:Scenarios} that the larger the sample size gets, the better OLS performs on the dataset as enough data is present for the OLS regression to work properly. However, in sparse data settings as well as when the sample size is low, regularization approaches regularly outperform the OLS method, which aligns with theory. Essentially, \textit{LASSO} and the \textit{first} and \textit{second} setting of the \textit{Triple-Gamma} penalty outperform most other methods in these scenarios. Especially, the two models estimated with these two settings of the \textit{Triple-Gamma} approach manage to work best in these scenarios in most cases, highlighting the potential benefit that the \textit{Triple-Gamma} regularization might have in these scenarios.\\
+
+\begin{lightbluebox}
+I will extend my discussion on the results and go a bit more into detail. But the general idea of the results should be there.
+\end{lightbluebox}
+
+\newpage
+\subsection{Computational Efficiency}
+At this point of the thesis it is necessary to quickly cover the topic of computational efficiency. As mentioned earlier, this simulation study has been implemented using Python along with PyTorch. As the \textit{Triple-Gamma} penalty is not a simple algebraic computation, as for example computing the absolute value of a real number in the case of \textit{LASSO} or computing the arcus tangens in the case of the \textit{Arctan} penalty, it is apparent that the computation of the loss function given a set of parameters is not very straight-forward and computationally expensive. In its current implementation, the Python function computing the \textit{Triple-Gamma-Loss} has to access a second function which approximates the logarithm of the confluent hyper-geometric  function of the second kind. More importantly, it does so for every parameter in the model. This is, to no surprise, very inefficient and makes computations in high dimensions unnecessarily complicated. In figure \ref{fig:ComputationTime} a plot can be found which shows the time to estimate all three settings of the \textit{Triple-Gamma-Regularization} on a dataset generated with parameters $N=100$ and $s=0.1$ with an increasing number of features $p$.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[scale=0.55]{../02_simulation/021_simulation_figures/ComputationTime_Example.png}
+\caption{Time necessary to compute all three scenarios of the Triple-Gamma-Regularization with $N=100$ and $s=0.1$ dependent on the number of Features $p$}
+\label{fig:ComputationTime}
+\end{figure} 	
+
+As can be seen from figure \ref{fig:ComputationTime} above, the time to estimates these models increases drastically with an increased number of variables. Setting aside that it might even grow exponentially, it can be seen that the computation time also increasingly becomes more unstable. Several approaches might help in resolving these issues, like using \textit{Stochastic Gradient Descend (SDG)}, which splits up the training dataset stochastically into smaller batches, \MC or choosing a different estimation algorithm altogether (see section 6.1). Another approach could be to implement the underlying estimation in a more efficient programming language when it comes to runtime like C++. All in all, this definitely opens up a field for further research to make the overall method more suitable for application. 
+
+\begin{landscape}
+\begin{longtable}{ccc|llllllll}
+\caption{Mean and Standard Deviations of MSE on the Validation Set for different Scenarios (25 runs per scenario)} \\
+\toprule
+\makecell{\textbf{Sample} \\ \textbf{Size}} & \makecell{\textbf{Features}} & \makecell{\textbf{Non-zero} \\ \textbf{Features}} & \makecell{\textbf{OLS}} & \makecell{\textbf{LASSO}} & \makecell{\textbf{Ridge}} & \makecell{\textbf{TGR} \\ \textbf{Setting 1}} & \makecell{\textbf{TGR} \\ \textbf{Setting 2}} & \makecell{\textbf{TGR} \\ \textbf{Setting 3}} & \makecell{\textbf{Arctan}} & \makecell{\textbf{Gaussian}} \\
+\midrule
+\endhead
+\midrule \multicolumn{11}{r}{{Continued on next page}} \\
+\endfoot
+
+\bottomrule
+\endlastfoot
+
+\multicolumn{11}{c}{{\tablename\ \thetable{} -- continued from previous page}} \\
+\toprule
+\makecell{\textbf{Sample} \\ \textbf{Size}} & \makecell{\textbf{Features}} & \makecell{\textbf{Non-zero} \\ \textbf{Features}} & \makecell{\textbf{OLS}} & \makecell{\textbf{LASSO}} & \makecell{\textbf{Ridge}} & \makecell{\textbf{TGR} \\ \textbf{Setting 1}} & \makecell{\textbf{TGR} \\ \textbf{Setting 2}} & \makecell{\textbf{TGR} \\ \textbf{Setting 3}} & \makecell{\textbf{Arctan}} & \makecell{\textbf{Gaussian}} \\
+\midrule
+\endfirsthead
+
+\makecell{50} & \makecell{3} & \makecell{1} & \makecell{0,25234 \\(0,16398)} & \makecell{0,2219 \\(0,16634)} & \makecell{0,27945 \\(0,30662)} & \makecell{0,22478 \\(0,15457)} & \makecell{\textcolor{red}{0,21905} \\(0,16378)} & \makecell{0,35557 \\(0,9856)} & \makecell{0,97859 \\(1,75094)} & \makecell{0,93073 \\(1,07439)}\\
+\makecell{50} & \makecell{3} & \makecell{2} & \makecell{0,22655 \\(0,11512)} & \makecell{0,23138 \\(0,11184)} & \makecell{0,39515 \\(0,51324)} & \makecell{0,23436 \\(0,10803)} & \makecell{\textcolor{red}{0,21497} \\(0,11079)} & \makecell{0,47195 \\(0,78161)} & \makecell{1,3962 \\(2,19764)} & \makecell{1,18809 \\(3,67118)}\\
+\makecell{50} & \makecell{3} & \makecell{3} & \makecell{0,20423 \\(0,13742)} & \makecell{0,21708 \\(0,15681)} & \makecell{0,53198 \\(0,60466)} & \makecell{\textcolor{red}{0,19216} \\(0,14344)} & \makecell{0,20721 \\(0,15232)} & \makecell{0,90621 \\(1,94347)} & \makecell{1,92277 \\(5,64658)} & \makecell{2,41364 \\(5,04711)}\\
+\makecell{50} & \makecell{10} & \makecell{1} & \makecell{0,28023 \\(0,17155)} & \makecell{0,22356 \\(0,13548)} & \makecell{0,29245 \\(0,54917)} & \makecell{0,21951 \\(0,14297)} & \makecell{\textcolor{red}{0,2116} \\(0,12048)} & \makecell{0,42564 \\(1,06699)} & \makecell{0,80753 \\(1,6802)} & \makecell{0,82095 \\(2,02455)}\\
+\makecell{50} & \makecell{10} & \makecell{5} & \makecell{0,28965 \\(0,1554)} & \makecell{0,28843 \\(0,15598)} & \makecell{0,93375 \\(0,7604)} & \makecell{\textcolor{red}{0,26844} \\(0,11256)} & \makecell{0,28782 \\(0,13445)} & \makecell{2,89328 \\(2,27582)} & \makecell{4,5195 \\(5,73895)} & \makecell{4,47004 \\(4,20082)} \\
+\makecell{50} & \makecell{10} & \makecell{9} & \makecell{\textcolor{red}{0,30136} \\(0,1306)} & \makecell{0,37676 \\(0,14906)} & \makecell{2,00818 \\(1,17919)} & \makecell{0,33526 \\(0,1349)} & \makecell{0,35175 \\(0,16711)} & \makecell{5,72024 \\(3,36261)} & \makecell{10,64451 \\(5,36156)} & \makecell{10,72909 \\(5,46578)}\\
+\makecell{50} & \makecell{25} & \makecell{3} & \makecell{0,51829 \\(0,36764)} & \makecell{0,36501 \\(0,21862)} & \makecell{0,62776 \\(0,65178)} & \makecell{0,3955 \\(0,29328)} & \makecell{\textcolor{red}{0,30886} \\(0,22148)} & \makecell{1,46023 \\(1,78356)} & \makecell{1,77643 \\(2,71921)} & \makecell{1,88994 \\(2,21)}\\
+\makecell{50} & \makecell{25} & \makecell{13} & \makecell{0,67486 \\(0,35518)} & \makecell{\textcolor{red}{0,54569} \\(0,36132)} & \makecell{2,9942 \\(2,02239)} & \makecell{0,91695 \\(0,77358)} & \makecell{0,80402 \\(0,50006)} & \makecell{9,23039 \\(5,06033)} & \makecell{11,46166 \\(6,86366)} & \makecell{12,24814 \\(6,86801)}\\
+\makecell{50} & \makecell{25} & \makecell{23} & \makecell{\textcolor{red}{0,77777} \\(0,47943)} & \makecell{1,31854 \\(0,74119)} & \makecell{4,98093 \\(3,66703)} & \makecell{2,14074 \\(1,62387)} & \makecell{2,11424 \\(1,4291)} & \makecell{14,84778 \\(9,21278)} & \makecell{21,84308 \\(11,33141)} & \makecell{21,33126 \\(12,44137)}\\
+\makecell{100} & \makecell{3} & \makecell{1} & \makecell{0,26113 \\(0,06292)} & \makecell{0,24148 \\(0,05724)} & \makecell{0,28637 \\(0,1803)} & \makecell{0,24006 \\(0,06026)} & \makecell{\textcolor{red}{0,23919} \\(0,06046)} & \makecell{0,33325 \\(0,35087)} & \makecell{0,80169 \\(1,85348)} & \makecell{0,62443 \\(1,84042)}\\
+\makecell{100} & \makecell{3} & \makecell{2} & \makecell{0,23982 \\(0,06316)} & \makecell{0,23845 \\(0,06489)} & \makecell{0,41608 \\(0,15747)} & \makecell{\textcolor{red}{0,2366} \\(0,06092)} & \makecell{0,24922 \\(0,06462)} & \makecell{0,53486 \\(0,6425)} & \makecell{1,56864 \\(1,05884)} & \makecell{1,62051 \\(1,20262)}\\
+\makecell{100} & \makecell{3} & \makecell{3} & \makecell{0,29648 \\(0,09054)} & \makecell{\textcolor{red}{0,27556} \\(0,08227)} & \makecell{0,44406 \\(0,48781)} & \makecell{0,27967 \\(0,08737)} & \makecell{0,29763 \\(0,08619)} & \makecell{0,81765 \\(1,02153)} & \makecell{2,19614 \\(3,74058)} & \makecell{1,87073 \\(3,38036)}\\
+\makecell{100} & \makecell{10} & \makecell{1} & \makecell{0,2734 \\(0,07944)} & \makecell{0,26898 \\(0,08039)} & \makecell{0,40486 \\(0,13091)} & \makecell{\textcolor{red}{0,26611} \\(0,07539)} & \makecell{0,26677 \\(0,07919)} & \makecell{0,55277 \\(0,78647)} & \makecell{1,05805 \\(0,81199)} & \makecell{1,13716 \\(0,95467)}\\
+\makecell{100} & \makecell{10} & \makecell{5} & \makecell{0,26237 \\(0,09054)} & \makecell{0,251 \\(0,09586)} & \makecell{1,06942 \\(0,5515)} & \makecell{\textcolor{red}{0,243} \\(0,08831)} & \makecell{0,25305 \\(0,0991)} & \makecell{2,7111 \\(1,97029)} & \makecell{5,93076 \\(3,65107)} & \makecell{5,18044 \\(3,10735)}\\
+\makecell{100} & \makecell{10} & \makecell{9} & \makecell{\textcolor{red}{0,25386} \\(0,10201)} & \makecell{0,32494 \\(0,12919)} & \makecell{1,72644 \\(0,9834)} & \makecell{0,2797 \\(0,1147)} & \makecell{0,30738 \\(0,11993)} & \makecell{5,6015 \\(4,00655)} & \makecell{9,87634 \\(5,05172)} & \makecell{9,13047 \\(5,53228)}\\
+\makecell{100} & \makecell{25} & \makecell{3} & \makecell{0,35328 \\(0,113)} & \makecell{0,2858 \\(0,07274)} & \makecell{0,87797 \\(0,56232)} & \makecell{0,28449 \\(0,07773)} & \makecell{\textcolor{red}{0,25255} \\(0,0729)} & \makecell{2,90378 \\(1,76077)} & \makecell{3,90851 \\(2,74017)} & \makecell{3,94007 \\(2,62225)}\\
+\makecell{100} & \makecell{25} & \makecell{13} & \makecell{0,39073 \\(0,1303)} & \makecell{0,43176 \\(0,12362)} & \makecell{2,56021 \\(1,25941)} & \makecell{0,5217 \\(0,31652)} & \makecell{\textcolor{red}{0,35142} \\(0,1927)} & \makecell{8,24937 \\(4,35583)} & \makecell{11,40495 \\(5,75347)} & \makecell{10,7303 \\(5,60251)}\\
+\makecell{100} & \makecell{25} & \makecell{23} & \makecell{\textcolor{red}{0,34696} \\(0,1123)} & \makecell{0,55041 \\(0,18314)} & \makecell{4,83633 \\(2,02043)} & \makecell{1,02786 \\(0,97606)} & \makecell{0,97566 \\(0,9903)} & \makecell{20,17376 \\(7,27886)} & \makecell{25,35184 \\(10,40436)} & \makecell{24,57685 \\(10,40762)}\\
+\makecell{500} & \makecell{3} & \makecell{1} & \makecell{\textcolor{red}{0,25492} \\(0,03172)} & \makecell{0,25986 \\(0,03346)} & \makecell{0,34586 \\(0,39479)} & \makecell{0,25577 \\(0,03298)} & \makecell{0,2552 \\(0,0348)} & \makecell{0,39464 \\(0,80202)} & \makecell{0,9333 \\(2,63126)} & \makecell{1,14691 \\(2,72861)}\\
+\makecell{500} & \makecell{3} & \makecell{2} & \makecell{\textcolor{red}{0,26374} \\(0,0221)} & \makecell{0,26873 \\(0,02096)} & \makecell{0,54005 \\(0,23233)} & \makecell{0,26467 \\(0,02099)} & \makecell{0,2691 \\(0,02182)} & \makecell{0,75057 \\(1,08099)} & \makecell{2,1697 \\(1,72071)} & \makecell{2,26932 \\(2,01686)}\\
+\makecell{500} & \makecell{3} & \makecell{3} & \makecell{\textcolor{red}{0,26158} \\(0,04296)} & \makecell{0,27067 \\(0,04119)} & \makecell{0,61755 \\(0,27379)} & \makecell{0,26586 \\(0,04229)} & \makecell{0,26434 \\(0,03968)} & \makecell{1,05504 \\(0,79724)} & \makecell{2,96089 \\(2,38658)} & \makecell{3,16231 \\(2,07472)}\\
+\makecell{500} & \makecell{10} & \makecell{1} & \makecell{0,24745 \\(0,04425)} & \makecell{0,25079 \\(0,03818)} & \makecell{0,33238 \\(0,1129)} & \makecell{\textcolor{red}{0,244} \\(0,03922)} & \makecell{0,2541 \\(0,03966)} & \makecell{0,64 \\(0,43651)} & \makecell{1,06196 \\(0,93851)} & \makecell{1,20499 \\(1,01908)}\\
+\makecell{500} & \makecell{10} & \makecell{5} & \makecell{\textcolor{red}{0,24921} \\(0,04205)} & \makecell{0,26579 \\(0,04301)} & \makecell{0,81008 \\(0,57001)} & \makecell{0,25288 \\(0,04222)} & \makecell{0,26072 \\(0,03949)} & \makecell{2,6974 \\(2,56921)} & \makecell{3,61381 \\(4,61234)} & \makecell{3,85227 \\(4,56494)}\\
+\makecell{500} & \makecell{10} & \makecell{9} & \makecell{\textcolor{red}{0,24397} \\(0,03147)} & \makecell{0,28519 \\(0,043)} & \makecell{1,44095 \\(0,7961)} & \makecell{0,25363 \\(0,07933)} & \makecell{0,28111 \\(0,10408)} & \makecell{5,84618 \\(3,07682)} & \makecell{8,56159 \\(6,16018)} & \makecell{9,97515 \\(5,99551)}\\
+\makecell{500} & \makecell{25} & \makecell{3} & \makecell{0,26085 \\(0,03684)} & \makecell{0,25511 \\(0,03815)} & \makecell{0,57272 \\(0,29767)} & \makecell{\textcolor{red}{0,2472} \\(0,03757)} & \makecell{0,24907 \\(0,04021)} & \makecell{2,09905 \\(1,77082)} & \makecell{2,7201 \\(2,04823)} & \makecell{2,72876 \\(2,27602)}\\
+\makecell{500} & \makecell{25} & \makecell{13} & \makecell{\textcolor{red}{0,27144} \\(0,02889)} & \makecell{0,32268 \\(0,04375)} & \makecell{1,86148 \\(0,69901)} & \makecell{0,29349 \\(0,11735)} & \makecell{0,30065 \\(0,05267)} & \makecell{9,38381 \\(3,4034)} & \makecell{12,09481 \\(4,82712)} & \makecell{12,38708 \\(4,64426)}\\
+\makecell{500} & \makecell{25} & \makecell{23} & \makecell{\textcolor{red}{0,2755} \\(0,03552)} & \makecell{0,39447 \\(0,06411)} & \makecell{3,1937 \\(1,276)} & \makecell{0,41115 \\(1,11575)} & \makecell{0,45642 \\(1,0544)} & \makecell{16,75672 \\(6,37604)} & \makecell{21,00113 \\(9,35346)} & \makecell{20,08944 \\(9,5086)}\\
+\makecell{1000} & \makecell{3} & \makecell{1} & \makecell{\textcolor{red}{0,25053} \\(0,02649)} & \makecell{0,25757 \\(0,0281)} & \makecell{0,34022 \\(0,20817)} & \makecell{0,25349 \\(0,02671)} & \makecell{0,25861 \\(0,02731)} & \makecell{0,41004 \\(0,69077)} & \makecell{1,07548 \\(1,89567)} & \makecell{1,1043 \\(1,5998)}\\
+\makecell{1000} & \makecell{3} & \makecell{2} & \makecell{0,25114 \\(0,02077)} & \makecell{0,25515 \\(0,02314)} & \makecell{0,46823 \\(0,17607)} & \makecell{\textcolor{red}{0,24898} \\(0,02115)} & \makecell{0,24944 \\(0,02262)} & \makecell{1,07539 \\(0,93913)} & \makecell{2,16733 \\(1,47574)} & \makecell{1,7779 \\(1,61607)}\\
+\makecell{1000} & \makecell{3} & \makecell{3} & \makecell{0,25034 \\(0,0289)} & \makecell{0,25653 \\(0,031)} & \makecell{0,53652 \\(0,28536)} & \makecell{0,25239 \\(0,02764)} & \makecell{\textcolor{red}{0,24992} \\(0,02859)} & \makecell{0,78222 \\(0,9846)} & \makecell{3,06023 \\(1,5519)} & \makecell{2,33984 \\(2,22089)}\\
+\makecell{1000} & \makecell{10} & \makecell{1} & \makecell{0,25044 \\(0,01971)} & \makecell{0,25084 \\(0,02246)} & \makecell{0,33524 \\(0,27203)} & \makecell{0,25095 \\(0,02019)} & \makecell{\textcolor{red}{0,24915} \\(0,02237)} & \makecell{0,7077 \\(1,02835)} & \makecell{1,27558 \\(1,87087)} & \makecell{1,51029 \\(1,54743)}\\
+\makecell{1000} & \makecell{10} & \makecell{5} & \makecell{\textcolor{red}{0,24012} \\(0,02191)} & \makecell{0,26252 \\(0,02371)} & \makecell{0,68128 \\(0,39154)} & \makecell{0,24393 \\(0,02244)} & \makecell{0,25507 \\(0,02319)} & \makecell{2,60964 \\(1,90423)} & \makecell{4,16242 \\(3,10798)} & \makecell{4,29199 \\(2,78838)}\\
+\makecell{1000} & \makecell{10} & \makecell{9} & \makecell{\textcolor{red}{0,2563} \\(0,02596)} & \makecell{0,28626 \\(0,02975)} & \makecell{1,32663 \\(0,38829)} & \makecell{0,25664 \\(0,02786)} & \makecell{0,26883 \\(0,03265)} & \makecell{4,90589 \\(1,77821)} & \makecell{8,38851 \\(3,19513)} & \makecell{8,28297 \\(3,29618)}\\
+\makecell{1000} & \makecell{25} & \makecell{3} & \makecell{0,25279 \\(0,02674)} & \makecell{0,25831 \\(0,02874)} & \makecell{0,78625 \\(0,34754)} & \makecell{0,26149 \\(0,03574)} & \makecell{\textcolor{red}{0,25134} \\(0,02827)} & \makecell{3,05865 \\(1,72991)} & \makecell{3,65552 \\(2,50772)} & \makecell{3,84833 \\(2,32238)}\\
+\makecell{1000} & \makecell{25} & \makecell{13} & \makecell{\textcolor{red}{0,2587} \\(0,02206)} & \makecell{0,31177 \\(0,03114)} & \makecell{2,03451 \\(0,70594)} & \makecell{0,30109 \\(0,07099)} & \makecell{0,28809 \\(0,02876)} & \makecell{9,19749 \\(3,68473)} & \makecell{12,10087 \\(5,07376)} & \makecell{12,51176 \\(5,42773)}\\
+\makecell{1000} & \makecell{25} & \makecell{23} & \makecell{\textcolor{red}{0,26145} \\(0,02966)} & \makecell{0,35083 \\(0,03516)} & \makecell{3,77492 \\(1,0891)} & \makecell{0,41261 \\(0,36625)} & \makecell{0,4022 \\(0,33202)} & \makecell{19,54978 \\(5,65596)} & \makecell{26,04359 \\(6,87056)} & \makecell{25,08614 \\(7,12848)}\\
+\bottomrule
+\label{tab:PredSim}
+\end{longtable}
+\end{landscape}
+
+
+%\subsection{Simulation Study for Variable Selection}
+
+%As described in the introductory part of this section, the variable selection part of the simulation study will explore how accurately specific models can estimate the underlying data generating process without worrying about predictive power on a test dataset. Thus, no validation set will be used to measure performance, but rather the deviation of the estimated coefficients to the true data generating coefficients. To showcase this overall procedure, the scenario 
 
 \subsection{Implementation as Python Package}
+As mentioned before, this simulation study has been run using Python (Version 3.11.4) along with scikit-learn (Version 1.4.1.post1) and PyTorch (Version 2.2.2). The accompanying code, a list of packages used and its version and other material can be found on \href{https://github.com/therealLucasPaul/MScThesis_Econ}{GitHub}. The script \textit{tgr.py} can be used as a script to apply \textit{Triple-Gamma-Regularization} on a dataset of choice. To make its application easier, the following subsections provides important information on how to use it.
 
-This section provides a brief overview of the Python script, which has been used to run the simulations of the previous section, along with input/output descriptions of the defined functions.
-\begin{lightbluebox}
-How to use it. 
-Explanation of Functions. Input - Output Tables
-\end{lightbluebox}
+\subsubsection*{General Functions}
 
-\subsection{Computational Performance}
-Talking about Gradient Descent Methods in more depth. Why Gradient Clipping. Maybe more modern estimation techniques? 
+\begin{longtable}{|p{4cm}|p{9cm}|}
+\hline
+\textbf{Function Name} & \textbf{Description} \\
+\hline
+\endfirsthead
 
-See how computation times change when increasing the size of the data set or when the number of parameter changes. => Use Stochastic Gradient Descent (SGD)
+\hline
+\textbf{Function Name} & \textbf{Description} \\
+\hline
+\endhead
 
-\begin{lightbluebox}
-Kurzes Ansprechen von Computations Efficieny
-\end{lightbluebox}
+\hline
+\endfoot
 
+\hline
+\endlastfoot
+
+\makecell{\texttt{TripleGamma-}\\\texttt{Regularization}} & Here a class is defining a simple neural network. It uses the \texttt{nn.Module} and initializes a linear model with 10 input features and 1 output feature without an intercept. \\
+\hline
+	\texttt{TripleGammaReg\_Loss} & This function computes the loss for the Triple Gamma Regularization. It takes the predicted values (\texttt{Y\_HAT}), the true values (\texttt{Y}), the coefficients of the model (\texttt{coefficients}), the regularization parameter (\texttt{lamda}), and the regularization parameters \texttt{a}, \texttt{c} and \texttt{kappa} as input. The loss is computed according to the theoretical formulation by using the script \texttt{log\_hyperu.py}, which approximates the log of the confluent hyper-geometric function of the second kind. \\
+\hline
+\texttt{TripleGammaModel} & This function trains the \textit{Triple-Gamma} Regularization model. It takes the feature matrix (\texttt{X}), the target values (\texttt{y}), the regularization parameter (\texttt{penalty}), regularization hyper-parameters \texttt{a}, \texttt{c}, \texttt{kappa}, the number of epochs (\texttt{num\_epochs}), and the learning rate (\texttt{lr}) as input. It initializes the \texttt{PyTorch} model and optimizer, uses Gradient Descent to train the model for the specified number of epochs, and returns the trained model, a list of model coefficients for each epoch, and a list of loss values for each epoch.\\
+\hline
+\end{longtable}
+
+\subsubsection*{Dependencies}
+To successfully run the script, the following dependencies are required:
+\begin{itemize}
+    \item \texttt{torch}: PyTorch library including sub modules \texttt{torch.nn} and \texttt{torch.optim} for building and training neural networks with at least version 2.2.2
+    \item \texttt{log\_hyperu as hyperu}: The custom module for computing the logarithm of the hypergeometric function, which can be found on GitHub.
+\end{itemize}
+
+\subsubsection*{Data Types of Inputs and Outputs of the Functions}
+\begin{itemize}
+  	\item \texttt{TripleGammaModel}
+    \begin{itemize}
+        \item \textbf{Input:} \texttt{X} (Tensor), \texttt{y} (Tensor), \texttt{penalty} (float), \texttt{a} (float), \texttt{c} (float), \texttt{kappa} (float), \texttt{num\_epochs} (int, default=1000), \texttt{lr} (float, default=0.01)
+        \item \textbf{Output:} \texttt{model} (Initialization of the class TripleGammaRegularization), \texttt{coef\_list} (list of Tensors), \texttt{loss\_list} (list of Tensors)
+    \end{itemize}
+\end{itemize}
 
 \section{Possible Extensions and Criticism}
 
 
 \begin{lightbluebox}
-Interessante unifying properties, aber langsam implementiert. 
+I will write the last two paragraphs as soon as the rest of the thesis is 100\% air tight to avoid having to rewrite the conclusions multiple times. It should take long though.
 \end{lightbluebox}
 \section{Conclusion}
-\subsection{Implementation as Python Package}
 \begin{lightbluebox}
 ENDE
 \end{lightbluebox}
@@ -628,5 +793,4 @@ ENDE
 %\bibliography{ref.bib}
 \printbibliography[]
 \clearpage
-\appendix
 \end{document}

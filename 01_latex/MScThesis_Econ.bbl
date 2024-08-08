@@ -51,6 +51,44 @@
       \field{pages}{185\bibrangedash 196}
       \range{pages}{12}
     \endentry
+    \entry{BittoFS2019}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9f183059dd648bc370c55250a6d8d354}{%
+           family={Bitto},
+           familyi={B\bibinitperiod},
+           given={Angela},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83485dfde2678ca0bd6138144fcfe9ff}{%
+           family={Frühwirth-Schnatter},
+           familyi={F\bibinithyphendelim S\bibinitperiod},
+           given={Sylvia},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \strng{fullhash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \strng{bibnamehash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \strng{authorbibnamehash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \strng{authornamehash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \strng{authorfullhash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{Achieving shrinkage in a time-varying parameter model framework}
+      \field{type}{Journal Article}
+      \field{volume}{210}
+      \field{year}{2019}
+      \field{pages}{75\bibrangedash 97}
+      \range{pages}{23}
+    \endentry
     \entry{TGP2020}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=77d9dfbba2e075ba7c86c1cba3f09301}{%
@@ -968,6 +1006,44 @@
       \field{pages}{185\bibrangedash 196}
       \range{pages}{12}
     \endentry
+    \entry{BittoFS2019}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9f183059dd648bc370c55250a6d8d354}{%
+           family={Bitto},
+           familyi={B\bibinitperiod},
+           given={Angela},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=83485dfde2678ca0bd6138144fcfe9ff}{%
+           family={Frühwirth-Schnatter},
+           familyi={F\bibinithyphendelim S\bibinitperiod},
+           given={Sylvia},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \strng{fullhash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \strng{bibnamehash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \strng{authorbibnamehash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \strng{authornamehash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \strng{authorfullhash}{822dd689ec5d0eb5fd200946b779c7ab}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0304-4076}
+      \field{journaltitle}{Journal of Econometrics}
+      \field{number}{1}
+      \field{title}{Achieving shrinkage in a time-varying parameter model framework}
+      \field{type}{Journal Article}
+      \field{volume}{210}
+      \field{year}{2019}
+      \field{pages}{75\bibrangedash 97}
+      \range{pages}{23}
+    \endentry
     \entry{TGP2020}{article}{}
       \name{author}{3}{}{%
         {{un=0,uniquepart=base,hash=77d9dfbba2e075ba7c86c1cba3f09301}{%
@@ -1852,8 +1928,6 @@
       \range{pages}{1}
     \endentry
   \enddatalist
-  \missing{21}
-  \missing{ESL}
   \missing{QiCuiLiuPang2021}
 \endrefsection
 \endinput
