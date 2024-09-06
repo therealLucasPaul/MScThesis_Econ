@@ -13,9 +13,20 @@ Der Definitonsbereich von KappaB muss angepasst werden, weil die Division durch 
 ## Simulation Study
 Bei Simulation: Early Stopping mit prozentualem loss
 
-Variation von N (50, 100, 250, 1000, 10000)
+Variation von N (50, 100, 500 ,1000)
 Variation von Sparsity mit prozentuellem Anteil (10%, 30%, 50%, 90% signifikant)
-Variation von Anzahl der Parameter (3, 10, 20, 40)
+Variation von Anzahl der Parameter (3, 10, 40)
 
 Für jeden Fall den Datensatz ~50 Mal durchlaufen lassen und Test Error (oder eine andere Metrik berechnen; MSE zu prediction/true parameter values) berechnen.
  {"oM":"l","Sl":2}
+
+
+## Complete Simulation Study
+
+- Choose one of three seeds (123, 124, 125)
+-- Choose one of the N*p*s Scenarios
+--- Generate a few datasets based on the DGP of the scenario (call this number m)
+--- Try out a range of lambda values and use specific metric to find best value for each model and each data set, take the mean of the optimal lambdas
+--- Given the optimal lambda values, estimate each model on a lot of training data sets and compute performance based on testdata set. (Call number of runs R)
+
+RUNS: 3 * len(N) * len(p) * len(s) * m * (len(lambda_list) + R) * model_runtime

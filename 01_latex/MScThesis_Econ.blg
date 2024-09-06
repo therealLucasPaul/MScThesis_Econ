@@ -1,21 +1,24 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
 [0] Config.pm:310> INFO - Logfile is 'MScThesis_Econ.blg'
-[279] biber-MSWIN64:340> INFO - === 
-[369] Biber.pm:419> INFO - Reading 'MScThesis_Econ.bcf'
-[705] Biber.pm:979> INFO - Found 27 citekeys in bib section 0
-[758] Biber.pm:4419> INFO - Processing section 0
-[789] Biber.pm:4610> INFO - Looking for bibtex file 'ref.bib' for section 0
-[907] bibtex.pm:1713> INFO - LaTeX decoding ...
-[1053] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
-[1547] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1547] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1547] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[1548] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1678] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[1679] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[1679] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
-[1679] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[1751] bbl.pm:660> INFO - Writing 'MScThesis_Econ.bbl' with encoding 'UTF-8'
-[1831] bbl.pm:763> INFO - Output to MScThesis_Econ.bbl
-[1831] Biber.pm:131> WARN - I didn't find a database entry for 'QiCuiLiuPang2021' (section 0)
-[1831] Biber.pm:133> INFO - WARNINGS: 1
+[225] biber-MSWIN64:340> INFO - === 
+[287] Biber.pm:419> INFO - Reading 'MScThesis_Econ.bcf'
+[611] Biber.pm:979> INFO - Found 30 citekeys in bib section 0
+[660] Biber.pm:4419> INFO - Processing section 0
+[686] Biber.pm:4610> INFO - Looking for bibtex file 'ref.bib' for section 0
+[775] bibtex.pm:1713> INFO - LaTeX decoding ...
+[895] bibtex.pm:1519> INFO - Found BibTeX data source 'ref.bib'
+[1305] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1305] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1305] Biber.pm:4239> INFO - Sorting list 'apa/apasortcite//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[1305] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1409] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[1409] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[1410] Biber.pm:4239> INFO - Sorting list 'apa/global//global/global' of type 'entry' with template 'apa' and locale 'en-US'
+[1410] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[1471] bbl.pm:660> INFO - Writing 'MScThesis_Econ.bbl' with encoding 'UTF-8'
+[1525] bbl.pm:763> INFO - Output to MScThesis_Econ.bbl
+[1525] Biber.pm:131> WARN - I didn't find a database entry for 'Ying2019' (section 0)
+[1525] Biber.pm:131> WARN - I didn't find a database entry for 'Mitchell1997' (section 0)
+[1525] Biber.pm:131> WARN - I didn't find a database entry for 'ParisRobilliardFonlupt2003' (section 0)
+[1526] Biber.pm:131> WARN - I didn't find a database entry for 'QiCuiLiuPang2021' (section 0)
+[1526] Biber.pm:133> INFO - WARNINGS: 4

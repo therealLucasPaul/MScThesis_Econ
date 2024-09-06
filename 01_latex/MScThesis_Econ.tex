@@ -169,12 +169,11 @@ For the purpose of this thesis, the following chapters will restrict itself to t
 
 \subsection{Model Complexity and the Problem of Under- and Overfitting}
 
-\begin{lightbluebox}
-- BIAS VARIANCE TRADE-OFF
-- DIMENSIONALITY PROBLEM
+In supervised learning, a model is fitted on an observed dataset where both inputs and outputs are given in pairs. Using this data a statistical model aims to find a functional form which maps these inputs into the output space and thus describes a relationship between those two spaces. Naturally, one would assume to find a functional form which manages to describe the relationship as closely as possible by minimizing a chosen loss function. Yet, this often ignores a problem called "overfitting" which can loosely be described as using "too much information" from the training dataset. As described by \textcite{Ying2019}, this problem arises from the fact "that over-fitted model has difficulty coping with pieces of the information in the testing set, which may be different from those in the training set". A more formal definition of overfitting has been defined by \textcite{Mitchell1997}:\\
 
-General problem: Fit vs. Complexity. What to choose and where is the optimal balance?
-\end{lightbluebox}
+\textbf{Definition 2:}Given a hypothesis space $\mathcal{H}$, a hypothesis $h \in \mathcal{H}$ is said to overfit the training data if there exists some alternative hypothesis $h' \in \mathcal{H}$ such that $h$ has smaller error than $h'$ over the training examples, but $h'$ has a smaller error than $h$ over the entire distribution of instances.\\
+
+Theoretically, this problem can emerge from a multitude of reasons. One of which being that learning every piece of information in the training dataset can lead to fitting the noise rather than fitting the underlying pattern. Another reason can be ill-chosen degrees of model complexity, because "having many hypotheses intuitively increase the risk of randomly finding a solution that learn the training set “by heart”, with limited generalization ability." \parencite{ParisRobilliardFonlupt2003}.\\  
 
 In general, a linear regression model fitted with least squares on a sufficient amount of data points ($n \gg p$) will produce estimates which both have low bias and low variance and thus tends to perform well out of sample. However, problems arise with this approach arise when the sample size decreases, because the variance in the estimates will increase. The main idea behind this can be easily be visualized by trying to fit a polynomial curve on a two dimensional space and then altering the available sample for polynomials of different order. 
 \begin{figure}
@@ -201,7 +200,7 @@ where $L(.)$ refers to a loss function defined as some function of the true valu
 where $f_\beta(x_i)$ is a linear function of the inputs $x_i$ parametrized by the coefficients $\beta$. Hence, in this setting, regularization deals with penalizing the risk function based on the value of the chosen set of coefficients. \\
 However, this only describes a subset of \textit{regularization} methods as stated by \textcite{Taxonomy2017}. The authors use a more general definition of regularization:\\
 
-\textbf{Defintion 1. Regularization} is any supplementary technique that aims at making the model generalize better, i.e. produce better results on the test set.\\
+\textbf{Defintion 2: Regularization} is any supplementary technique that aims at making the model generalize better, i.e. produce better results on the test set.\\
 
 Building on that, they split up the majority of \textit{regularization} methods into  (1) methods applied to the data set like transformations or modifications of the inputs, (2) methods altering the selected model family , (3) methods applied to the error/loss function $L(y_i, f_\beta(x_i))$ , (4) methods applied to regularization/penalty term as described above and (5) alterations of the optimization procedure itself. 
 
@@ -605,8 +604,8 @@ To evaluate the models in a wide range of contexts, every simulation scenario wi
 \begin{center}
 \begin{tabular}{lc}\toprule
 Variable & Values\\\midrule
-Sample Size $N$ & $50, 100, 500, 1000$\\
-Dimensionality $p$ & $3, 10, 25$\\
+Sample Size $N$ & $10, 100, 250$\\
+Dimensionality $p$ & $10, 50, 200$\\
 Sparsity $s$ & $0.1, 0.5, 0.9$\\\bottomrule
 \end{tabular}
 \caption{Scenarios Values}
@@ -616,32 +615,77 @@ Sparsity $s$ & $0.1, 0.5, 0.9$\\\bottomrule
 
 The remaining issue to cover deals with the weighting/regularization parameter $\lambda$ (see section \ref{sec:theorysuper}) and how it is set. This key parameter controlling the strength of the influence of the penalty on the overall optimization result is usually set by the user, however another \textit{hands-off} method is cross-validation, which will be used for this simulation \parencite[250--251]{ESL2009}. A grid of possible values for $\lambda$ is chosen, the model is being estimated for every possible value, and the best model will be chosen based on the chosen cross-validation metric. For this simulation study, all values between $0$ and $1$ based on $0.01$ steps will be tested on the first generated dataset. To save time when it comes to computation, the search will be stopped if the chosen metric hasn't improved for more than 10 new values for $\lambda$. After his run, these optimal values will be used in the overall simulation. \textbf{For the application of the gradient descent algorithm a maximum number of 750 epochs has been set.} The simulations have been run with Python (Version 3.11.4) along with scikit-learn (Version 1.4.1.post1) and PyTorch (Version 2.2.2).\footnote{More information on the packages used and its installed version can be found in the accompanying GitHub repository.}
 
-\subsection{Simulation Study for Prediction} 
+\subsection{Simulation Study} 
 
-For the simulation study testing the models prediction accuracy the key metric to test performance will be the \textit{mean-squared-error (MSE)}. The data is being generated the following way: Given a set of scenario parameters $N_i$, $p_i$ and $s_i$, the first $s_i*p_i$ coefficients, rounded to the next larger integer, will be generated from a normal distribution with mean $0$ and variance $1$, the remaining coefficients will be set to zero. Then, $N_i$ draws will be generated from a normal distribution with mean $0$ and variance $1$ for each of the $p_i$ features. Using these coefficients and the data from the features a response variable $y$ will be computed and noise drawn from a normal distribution with mean $0$ and variance $1$ multiplied with $0.5$ will be added as noise. First, the grid search for the optimal $\lambda$ will be performed by generating a sample dataset using the above generating process. Then, every method that is part of the simulation will be estimated on the dataset for every $\lambda_i$ in the set $\lambda_i \in \{0, 0.01, 0.02, \cdots, 1\}$. For every method separately, the $\lambda_i$ which generates the lowest validation loss on the testset will be used for the overall simulation.\\
+For the simulation study testing the models prediction accuracy the key metric to test performance will be the \textit{mean-squared-error (MSE)}. The data is being generated the following way: Given a set of scenario parameters $N_i$, $p_i$ and $sd_i$, the first $s_i*p_i$ coefficients, rounded to the next larger integer, will be set to $3$ and the remaining will be set to $0$. Then, $N_i$ draws will be generated from a normal distribution with mean $0$ and variance $1$ for each of the $p_i$ features. Using these coefficients and the data from the features a response variable $y$ will be computed and noise generated from a normal distribution with mean $0$ and variance $\sigma_i$. According to \textcite{WangEtAl2020}, the respective $\sigma_i$ will be computed based on the \textit{Signal-To-Noise Ration (SNR)}. The \textit{SNR} is given by $SNR = \sqrt{\beta^TX^TX\beta/(N_i\sigma_i^2)}$ and by setting the \textit{SNR} to a specific value, one can adjust how string the noise in the data is relative to the sound of the actual data generating process. For the purpose of this study, and similar to \textcite{WangEtAl2020}, a \textit{SNR} equal to one will be used. In terms of the regularization parameter $\lambda$, the search for the optimal $\lambda$ will be performed by using five-fold-cross-validation on the a set of possible $\lambda$ values. For every method and every run in every scenario separately, the optimal $\lambda^*_i$ will be chosen which generates the lowest validation loss on the testset. This grid-serach procedure will be performed for every $\lambda_i \in \{0.001, 0.01, 0.1, 0.25, 0.4, 0.5, 0.6, 0.75, 0.9, 0.95\}$.\\
 
-Using the set of scenario variables mentioned in table \ref{tab:Scenarios}, all possible combinations will be formed resulting in the overall $36$ scenarios. The code iterates through the list of scenarios, generates 25 datasets based on these scenarios variables and all tested methods will be estimated on every one the test part of these datasets. Afterwards, the validation loss will be computed for each method and stored. This procedure results in tables \ref{tab:PredSim}, which shows the mean and standard deviation of the distribution of the validation loss for every scenario and every methods. The values colored in \textcolor{red}{red} indicate the smallest means for every scenario. Before advancing to the overall results of this simulation study, it might be useful to have a look at a specific scenario to better understand the results in table \ref{tab:PredSim}, which will be the scenario with $N=100, p=25, s=0.1$.\\
+Using the set of scenario variables mentioned in table \ref{tab:Scenarios}, all possible combinations will be formed resulting in the overall $27$ scenarios. The code iterates through the list of scenarios, generates 15 datasets based on these scenarios variables and all tested methods will be estimated on every one the test part of these datasets. Afterwards, the validation loss will be computed for each method and stored. This procedure results in tables \ref{tab:PredSim}, which shows the mean and standard deviation of the distribution of the validation loss for every scenario and every method. The values colored in \textcolor{red}{red} indicate the smallest means for every scenario. Before advancing to the overall results of this simulation study, it might be useful to have a look at a specific scenario to better understand the results in table \ref{tab:PredSim}, which will be the scenario with $N=100, p=200, s=0.1$.\\
 
-In this scenario, we are dealing with a dataset of $100$ observations, $25$ features and $3$ non-zero coefficients.\footnote{$25 \times 0.1 = 2.5$ and $ceil(2.5)=3$.} A figure with boxplots showcasing the distributions of the Mean-Squared-Error rates on the validation set for all methods can be found in figure \ref{fig:SpecificScenario}
+In this scenario, we are dealing with a dataset of $100$ observations, $200$ features and $20$ non-zero coefficients.\footnote{$200 \times 0.1 = 20$.} A figure with boxplots showcasing the distributions of the Mean-Squared-Error rates on the validation set for all methods can be found in figure \ref{fig:SpecificScenario}.
 
 \begin{figure}[h!]
 \centering
-\includegraphics[scale=0.55]{../02_simulation/021_simulation_figures/Scenarion_100_25_3.png}
+\includegraphics[scale=0.5]{../02_simulation/021_simulation_figures/Scenarion_100_200_20.png}
 \caption{Distribution of MSE on Validation Set in the Scenario with $100$ Observations, $25$ Features and $3$ non-zero Coefficients}
 \label{fig:SpecificScenario}
 \end{figure} 	
 
-This scenario, which is a good exmaple for a sparse scenario, where a lot of features are in the dataset but only a small part of it is different from zero, i.e. has an effect on the outcome. Here, \textit{LASSO} performs well which was to be expected, but it can also be seen that the first and second setting of the \textit{Triple-Gamma} Penalty can both produce similar results when it comes to predictive power. \textit{Setting 2} even has a lower mean in MSE ($0.25255$) than \textit{LASSO} regression ($0.2858$). \textit{OLS} manages to perform quite well, yet has a visible shift towards higher \textit{MSE} values. \textit{Arctan, Gaussian} and the third setting of the \textit{Triple-Gamma} penalty perform significantly worse in this scenario.\\
+This scenario, which is a good exmaple for a sparse scenario, where a lot of features are in the dataset but only a small part of it is different from zero, i.e. has an effect on the outcome. Here, \textit{Ridge} performs best by far in manages to produce the smallest mean in loss with about $300$. Except for \textit{Gaussian}, every method produces a right-skewed distribution indicating that most methods produce average losses of around $400$ most of the time with common outliers up to $750$.  
 
-Generally, it can be seen table \ref{tab:Scenarios} that the larger the sample size gets, the better OLS performs on the dataset as enough data is present for the OLS regression to work properly. However, in sparse data settings as well as when the sample size is low, regularization approaches regularly outperform the OLS method, which aligns with theory. Essentially, \textit{LASSO} and the \textit{first} and \textit{second} setting of the \textit{Triple-Gamma} penalty outperform most other methods in these scenarios. Especially, the two models estimated with these two settings of the \textit{Triple-Gamma} approach manage to work best in these scenarios in most cases, highlighting the potential benefit that the \textit{Triple-Gamma} regularization might have in these scenarios.\\
+An overview of the results for each of the $27$ scenarios can be found in table \ref{tab:bestmethod}. In the left half of the table the scenario parameters are presented and in the right half the best method based on the method having the lowest mean as well as median validation loss. In general, the results confirm the results from \textcite{WangEtAl2020} that no go-to method in regularization have been found. In terms of the mean loss, \textit{LASSO}, \textit{Ridge}, \textit{Gaussian} and \textit{Arctan} have managed to perform best in one or more scenarios. When it comes to the median, \textit{LASSO}, \textit{Setting 1 and 2 of the TGR}, \textit{Ridge}, \textit{Arctan} and \textit{Gaussian} have managed to perform best in one or more scenarios. Clearly, no one single method stands out as an overall winner in this simulation. However, these results have to be taken with care as will be discussed in section \ref{sec:crit} later on. 
 
 \begin{lightbluebox}
 I will extend my discussion on the results and go a bit more into detail. But the general idea of the results should be there.
 \end{lightbluebox}
 
+\begin{table}[h!]
+\begin{center}
+\begin{tabular}{ccc|l|l}
+\toprule
+\multicolumn{3}{c}{Scenario Parameters} & \multicolumn{2}{c}{Moment}\\
+\midrule
+Samples & Features & Non-Zero Features & Best Method (Mean) & Best Method (Median) \\
+\midrule
+10 & 10 & 1 & LASSO & LASSO \\
+10 & 10 & 5 & Ridge & TGR Setting 1 \\
+10 & 10 & 9 & Ridge & Ridge \\
+10 & 50 & 5 & Ridge & Ridge \\
+10 & 50 & 25 & Gaussian & Gaussian \\
+10 & 50 & 45 & Ridge & Ridge \\
+10 & 200 & 20 & Gaussian & Arctan \\
+10 & 200 & 100 & Arctan & LASSO \\
+10 & 200 & 180 & Gaussian & Gaussian \\
+100 & 10 & 1 & Arctan & Arctan \\
+100 & 10 & 5 & Gaussian & Gaussian \\
+100 & 10 & 9 & Gaussian & Ridge \\
+100 & 50 & 5 & Gaussian & Gaussian \\
+100 & 50 & 25 & Ridge & Ridge \\
+100 & 50 & 45 & Ridge & Ridge \\
+100 & 200 & 20 & Ridge & Ridge \\
+100 & 200 & 100 & Gaussian & Ridge \\
+100 & 200 & 180 & Ridge & Ridge \\
+250 & 10 & 1 & Gaussian & Gaussian \\
+250 & 10 & 5 & Gaussian & Gaussian \\
+250 & 10 & 9 & Gaussian & TGR Setting 2 \\
+250 & 50 & 5 & Gaussian & Gaussian \\
+250 & 50 & 25 & Ridge & Ridge \\
+250 & 50 & 45 & Ridge & Ridge \\
+250 & 200 & 20 & Ridge & Ridge \\
+250 & 200 & 100 & Ridge & Ridge \\
+250 & 200 & 180 & Ridge & Ridge \\
+\bottomrule
+\end{tabular}
+\caption{Table showing the best performing methods according to smallest Mean and Median Loss accordingly}
+\end{center}
+\label{tab:bestmethod}
+\end{table}
+
+
 \newpage
 \subsection{Computational Efficiency}
-At this point of the thesis it is necessary to quickly cover the topic of computational efficiency. As mentioned earlier, this simulation study has been implemented using Python along with PyTorch. As the \textit{Triple-Gamma} penalty is not a simple algebraic computation, as for example computing the absolute value of a real number in the case of \textit{LASSO} or computing the arcus tangens in the case of the \textit{Arctan} penalty, it is apparent that the computation of the loss function given a set of parameters is not very straight-forward and computationally expensive. In its current implementation, the Python function computing the \textit{Triple-Gamma-Loss} has to access a second function which approximates the logarithm of the confluent hyper-geometric  function of the second kind. More importantly, it does so for every parameter in the model. This is, to no surprise, very inefficient and makes computations in high dimensions unnecessarily complicated. In figure \ref{fig:ComputationTime} a plot can be found which shows the time to estimate all three settings of the \textit{Triple-Gamma-Regularization} on a dataset generated with parameters $N=100$ and $s=0.1$ with an increasing number of features $p$.
+At this point of the thesis it is necessary to quickly cover the topic of computational efficiency. As mentioned earlier, this simulation study has been implemented using Python along with PyTorch. As the \textit{Triple-Gamma} penalty is not a simple algebraic computation, as for example computing the absolute value of a real number in the case of \textit{LASSO} or computing the arcus tangens in the case of the \textit{Arctan} penalty, it is apparent that the computation of the loss function given a set of parameters is not very straight-forward and computationally expensive. In its current implementation, the Python function computing the \textit{Triple-Gamma-Loss} has to access a second function which approximates the logarithm of the confluent hyper-geometric  function of the second kind. More importantly, it does so for every parameter in the model. This is, to no surprise, very inefficient and makes computations in high dimensions unnecessarily complicated. In figure \ref{fig:ComputationTime} a plot can be found which shows the time to estimate all three settings of the \textit{Triple-Gamma-Regularization} on a dataset generated with parameters $N=100$ and $s=0.1$ with an increasing number of features $p$.\\
+
+It is also worth noting that the compuational efficiency of the \textit{Triple-Gamma-Penalty} still relies on the specification of the penalty. \textit{Setting 2} for example with its very \textit{smooth-at-origin} behaviour takes significantly longer to compute compared to its \textit{singular-at-origin} specifications in \textit{setting 1} and \textit{setting 3}.
 
 
 \begin{figure}[h!]
@@ -651,11 +695,12 @@ At this point of the thesis it is necessary to quickly cover the topic of comput
 \label{fig:ComputationTime}
 \end{figure} 	
 
-As can be seen from figure \ref{fig:ComputationTime} above, the time to estimates these models increases drastically with an increased number of variables. Setting aside that it might even grow exponentially, it can be seen that the computation time also increasingly becomes more unstable. Several approaches might help in resolving these issues, like using \textit{Stochastic Gradient Descend (SDG)}, which splits up the training dataset stochastically into smaller batches, \MC or choosing a different estimation algorithm altogether (see section 6.1). Another approach could be to implement the underlying estimation in a more efficient programming language when it comes to runtime like C++. All in all, this definitely opens up a field for further research to make the overall method more suitable for application. 
+As can be seen from figure \ref{fig:ComputationTime} above, the time to estimates these models increases drastically with an increased number of variables. Setting aside that it might even grow exponentially, it can be seen that the computation time also increasingly becomes more unstable. Several approaches might help in resolving these issues, like optimizing the underlying approximation of the confluent hypergeometric funciton or choosing a different estimation algorithm altogether (see section 6.1). Another approach could be to implement the underlying estimation in a more efficient programming language when it comes to runtime like C++. All in all, this definitely opens up a field for further research to make the overall method more suitable for application. 
 
 \begin{landscape}
-\begin{longtable}{ccc|llllllll}
-\caption{Mean and Standard Deviations of MSE on the Validation Set for different Scenarios (25 runs per scenario)} \\
+\begin{longtable}{lllllllllllrrrrrrrr}
+\toprule
+\caption{Mean and Standard Deviations of MSE on the Validation Set for different Scenarios (15 runs per scenario)} \\
 \toprule
 \makecell{\textbf{Sample} \\ \textbf{Size}} & \makecell{\textbf{Features}} & \makecell{\textbf{Non-zero} \\ \textbf{Features}} & \makecell{\textbf{OLS}} & \makecell{\textbf{LASSO}} & \makecell{\textbf{Ridge}} & \makecell{\textbf{TGR} \\ \textbf{Setting 1}} & \makecell{\textbf{TGR} \\ \textbf{Setting 2}} & \makecell{\textbf{TGR} \\ \textbf{Setting 3}} & \makecell{\textbf{Arctan}} & \makecell{\textbf{Gaussian}} \\
 \midrule
@@ -672,47 +717,49 @@ As can be seen from figure \ref{fig:ComputationTime} above, the time to estimate
 \midrule
 \endfirsthead
 
-\makecell{50} & \makecell{3} & \makecell{1} & \makecell{0,25234 \\(0,16398)} & \makecell{0,2219 \\(0,16634)} & \makecell{0,27945 \\(0,30662)} & \makecell{0,22478 \\(0,15457)} & \makecell{\textcolor{red}{0,21905} \\(0,16378)} & \makecell{0,35557 \\(0,9856)} & \makecell{0,97859 \\(1,75094)} & \makecell{0,93073 \\(1,07439)}\\
-\makecell{50} & \makecell{3} & \makecell{2} & \makecell{0,22655 \\(0,11512)} & \makecell{0,23138 \\(0,11184)} & \makecell{0,39515 \\(0,51324)} & \makecell{0,23436 \\(0,10803)} & \makecell{\textcolor{red}{0,21497} \\(0,11079)} & \makecell{0,47195 \\(0,78161)} & \makecell{1,3962 \\(2,19764)} & \makecell{1,18809 \\(3,67118)}\\
-\makecell{50} & \makecell{3} & \makecell{3} & \makecell{0,20423 \\(0,13742)} & \makecell{0,21708 \\(0,15681)} & \makecell{0,53198 \\(0,60466)} & \makecell{\textcolor{red}{0,19216} \\(0,14344)} & \makecell{0,20721 \\(0,15232)} & \makecell{0,90621 \\(1,94347)} & \makecell{1,92277 \\(5,64658)} & \makecell{2,41364 \\(5,04711)}\\
-\makecell{50} & \makecell{10} & \makecell{1} & \makecell{0,28023 \\(0,17155)} & \makecell{0,22356 \\(0,13548)} & \makecell{0,29245 \\(0,54917)} & \makecell{0,21951 \\(0,14297)} & \makecell{\textcolor{red}{0,2116} \\(0,12048)} & \makecell{0,42564 \\(1,06699)} & \makecell{0,80753 \\(1,6802)} & \makecell{0,82095 \\(2,02455)}\\
-\makecell{50} & \makecell{10} & \makecell{5} & \makecell{0,28965 \\(0,1554)} & \makecell{0,28843 \\(0,15598)} & \makecell{0,93375 \\(0,7604)} & \makecell{\textcolor{red}{0,26844} \\(0,11256)} & \makecell{0,28782 \\(0,13445)} & \makecell{2,89328 \\(2,27582)} & \makecell{4,5195 \\(5,73895)} & \makecell{4,47004 \\(4,20082)} \\
-\makecell{50} & \makecell{10} & \makecell{9} & \makecell{\textcolor{red}{0,30136} \\(0,1306)} & \makecell{0,37676 \\(0,14906)} & \makecell{2,00818 \\(1,17919)} & \makecell{0,33526 \\(0,1349)} & \makecell{0,35175 \\(0,16711)} & \makecell{5,72024 \\(3,36261)} & \makecell{10,64451 \\(5,36156)} & \makecell{10,72909 \\(5,46578)}\\
-\makecell{50} & \makecell{25} & \makecell{3} & \makecell{0,51829 \\(0,36764)} & \makecell{0,36501 \\(0,21862)} & \makecell{0,62776 \\(0,65178)} & \makecell{0,3955 \\(0,29328)} & \makecell{\textcolor{red}{0,30886} \\(0,22148)} & \makecell{1,46023 \\(1,78356)} & \makecell{1,77643 \\(2,71921)} & \makecell{1,88994 \\(2,21)}\\
-\makecell{50} & \makecell{25} & \makecell{13} & \makecell{0,67486 \\(0,35518)} & \makecell{\textcolor{red}{0,54569} \\(0,36132)} & \makecell{2,9942 \\(2,02239)} & \makecell{0,91695 \\(0,77358)} & \makecell{0,80402 \\(0,50006)} & \makecell{9,23039 \\(5,06033)} & \makecell{11,46166 \\(6,86366)} & \makecell{12,24814 \\(6,86801)}\\
-\makecell{50} & \makecell{25} & \makecell{23} & \makecell{\textcolor{red}{0,77777} \\(0,47943)} & \makecell{1,31854 \\(0,74119)} & \makecell{4,98093 \\(3,66703)} & \makecell{2,14074 \\(1,62387)} & \makecell{2,11424 \\(1,4291)} & \makecell{14,84778 \\(9,21278)} & \makecell{21,84308 \\(11,33141)} & \makecell{21,33126 \\(12,44137)}\\
-\makecell{100} & \makecell{3} & \makecell{1} & \makecell{0,26113 \\(0,06292)} & \makecell{0,24148 \\(0,05724)} & \makecell{0,28637 \\(0,1803)} & \makecell{0,24006 \\(0,06026)} & \makecell{\textcolor{red}{0,23919} \\(0,06046)} & \makecell{0,33325 \\(0,35087)} & \makecell{0,80169 \\(1,85348)} & \makecell{0,62443 \\(1,84042)}\\
-\makecell{100} & \makecell{3} & \makecell{2} & \makecell{0,23982 \\(0,06316)} & \makecell{0,23845 \\(0,06489)} & \makecell{0,41608 \\(0,15747)} & \makecell{\textcolor{red}{0,2366} \\(0,06092)} & \makecell{0,24922 \\(0,06462)} & \makecell{0,53486 \\(0,6425)} & \makecell{1,56864 \\(1,05884)} & \makecell{1,62051 \\(1,20262)}\\
-\makecell{100} & \makecell{3} & \makecell{3} & \makecell{0,29648 \\(0,09054)} & \makecell{\textcolor{red}{0,27556} \\(0,08227)} & \makecell{0,44406 \\(0,48781)} & \makecell{0,27967 \\(0,08737)} & \makecell{0,29763 \\(0,08619)} & \makecell{0,81765 \\(1,02153)} & \makecell{2,19614 \\(3,74058)} & \makecell{1,87073 \\(3,38036)}\\
-\makecell{100} & \makecell{10} & \makecell{1} & \makecell{0,2734 \\(0,07944)} & \makecell{0,26898 \\(0,08039)} & \makecell{0,40486 \\(0,13091)} & \makecell{\textcolor{red}{0,26611} \\(0,07539)} & \makecell{0,26677 \\(0,07919)} & \makecell{0,55277 \\(0,78647)} & \makecell{1,05805 \\(0,81199)} & \makecell{1,13716 \\(0,95467)}\\
-\makecell{100} & \makecell{10} & \makecell{5} & \makecell{0,26237 \\(0,09054)} & \makecell{0,251 \\(0,09586)} & \makecell{1,06942 \\(0,5515)} & \makecell{\textcolor{red}{0,243} \\(0,08831)} & \makecell{0,25305 \\(0,0991)} & \makecell{2,7111 \\(1,97029)} & \makecell{5,93076 \\(3,65107)} & \makecell{5,18044 \\(3,10735)}\\
-\makecell{100} & \makecell{10} & \makecell{9} & \makecell{\textcolor{red}{0,25386} \\(0,10201)} & \makecell{0,32494 \\(0,12919)} & \makecell{1,72644 \\(0,9834)} & \makecell{0,2797 \\(0,1147)} & \makecell{0,30738 \\(0,11993)} & \makecell{5,6015 \\(4,00655)} & \makecell{9,87634 \\(5,05172)} & \makecell{9,13047 \\(5,53228)}\\
-\makecell{100} & \makecell{25} & \makecell{3} & \makecell{0,35328 \\(0,113)} & \makecell{0,2858 \\(0,07274)} & \makecell{0,87797 \\(0,56232)} & \makecell{0,28449 \\(0,07773)} & \makecell{\textcolor{red}{0,25255} \\(0,0729)} & \makecell{2,90378 \\(1,76077)} & \makecell{3,90851 \\(2,74017)} & \makecell{3,94007 \\(2,62225)}\\
-\makecell{100} & \makecell{25} & \makecell{13} & \makecell{0,39073 \\(0,1303)} & \makecell{0,43176 \\(0,12362)} & \makecell{2,56021 \\(1,25941)} & \makecell{0,5217 \\(0,31652)} & \makecell{\textcolor{red}{0,35142} \\(0,1927)} & \makecell{8,24937 \\(4,35583)} & \makecell{11,40495 \\(5,75347)} & \makecell{10,7303 \\(5,60251)}\\
-\makecell{100} & \makecell{25} & \makecell{23} & \makecell{\textcolor{red}{0,34696} \\(0,1123)} & \makecell{0,55041 \\(0,18314)} & \makecell{4,83633 \\(2,02043)} & \makecell{1,02786 \\(0,97606)} & \makecell{0,97566 \\(0,9903)} & \makecell{20,17376 \\(7,27886)} & \makecell{25,35184 \\(10,40436)} & \makecell{24,57685 \\(10,40762)}\\
-\makecell{500} & \makecell{3} & \makecell{1} & \makecell{\textcolor{red}{0,25492} \\(0,03172)} & \makecell{0,25986 \\(0,03346)} & \makecell{0,34586 \\(0,39479)} & \makecell{0,25577 \\(0,03298)} & \makecell{0,2552 \\(0,0348)} & \makecell{0,39464 \\(0,80202)} & \makecell{0,9333 \\(2,63126)} & \makecell{1,14691 \\(2,72861)}\\
-\makecell{500} & \makecell{3} & \makecell{2} & \makecell{\textcolor{red}{0,26374} \\(0,0221)} & \makecell{0,26873 \\(0,02096)} & \makecell{0,54005 \\(0,23233)} & \makecell{0,26467 \\(0,02099)} & \makecell{0,2691 \\(0,02182)} & \makecell{0,75057 \\(1,08099)} & \makecell{2,1697 \\(1,72071)} & \makecell{2,26932 \\(2,01686)}\\
-\makecell{500} & \makecell{3} & \makecell{3} & \makecell{\textcolor{red}{0,26158} \\(0,04296)} & \makecell{0,27067 \\(0,04119)} & \makecell{0,61755 \\(0,27379)} & \makecell{0,26586 \\(0,04229)} & \makecell{0,26434 \\(0,03968)} & \makecell{1,05504 \\(0,79724)} & \makecell{2,96089 \\(2,38658)} & \makecell{3,16231 \\(2,07472)}\\
-\makecell{500} & \makecell{10} & \makecell{1} & \makecell{0,24745 \\(0,04425)} & \makecell{0,25079 \\(0,03818)} & \makecell{0,33238 \\(0,1129)} & \makecell{\textcolor{red}{0,244} \\(0,03922)} & \makecell{0,2541 \\(0,03966)} & \makecell{0,64 \\(0,43651)} & \makecell{1,06196 \\(0,93851)} & \makecell{1,20499 \\(1,01908)}\\
-\makecell{500} & \makecell{10} & \makecell{5} & \makecell{\textcolor{red}{0,24921} \\(0,04205)} & \makecell{0,26579 \\(0,04301)} & \makecell{0,81008 \\(0,57001)} & \makecell{0,25288 \\(0,04222)} & \makecell{0,26072 \\(0,03949)} & \makecell{2,6974 \\(2,56921)} & \makecell{3,61381 \\(4,61234)} & \makecell{3,85227 \\(4,56494)}\\
-\makecell{500} & \makecell{10} & \makecell{9} & \makecell{\textcolor{red}{0,24397} \\(0,03147)} & \makecell{0,28519 \\(0,043)} & \makecell{1,44095 \\(0,7961)} & \makecell{0,25363 \\(0,07933)} & \makecell{0,28111 \\(0,10408)} & \makecell{5,84618 \\(3,07682)} & \makecell{8,56159 \\(6,16018)} & \makecell{9,97515 \\(5,99551)}\\
-\makecell{500} & \makecell{25} & \makecell{3} & \makecell{0,26085 \\(0,03684)} & \makecell{0,25511 \\(0,03815)} & \makecell{0,57272 \\(0,29767)} & \makecell{\textcolor{red}{0,2472} \\(0,03757)} & \makecell{0,24907 \\(0,04021)} & \makecell{2,09905 \\(1,77082)} & \makecell{2,7201 \\(2,04823)} & \makecell{2,72876 \\(2,27602)}\\
-\makecell{500} & \makecell{25} & \makecell{13} & \makecell{\textcolor{red}{0,27144} \\(0,02889)} & \makecell{0,32268 \\(0,04375)} & \makecell{1,86148 \\(0,69901)} & \makecell{0,29349 \\(0,11735)} & \makecell{0,30065 \\(0,05267)} & \makecell{9,38381 \\(3,4034)} & \makecell{12,09481 \\(4,82712)} & \makecell{12,38708 \\(4,64426)}\\
-\makecell{500} & \makecell{25} & \makecell{23} & \makecell{\textcolor{red}{0,2755} \\(0,03552)} & \makecell{0,39447 \\(0,06411)} & \makecell{3,1937 \\(1,276)} & \makecell{0,41115 \\(1,11575)} & \makecell{0,45642 \\(1,0544)} & \makecell{16,75672 \\(6,37604)} & \makecell{21,00113 \\(9,35346)} & \makecell{20,08944 \\(9,5086)}\\
-\makecell{1000} & \makecell{3} & \makecell{1} & \makecell{\textcolor{red}{0,25053} \\(0,02649)} & \makecell{0,25757 \\(0,0281)} & \makecell{0,34022 \\(0,20817)} & \makecell{0,25349 \\(0,02671)} & \makecell{0,25861 \\(0,02731)} & \makecell{0,41004 \\(0,69077)} & \makecell{1,07548 \\(1,89567)} & \makecell{1,1043 \\(1,5998)}\\
-\makecell{1000} & \makecell{3} & \makecell{2} & \makecell{0,25114 \\(0,02077)} & \makecell{0,25515 \\(0,02314)} & \makecell{0,46823 \\(0,17607)} & \makecell{\textcolor{red}{0,24898} \\(0,02115)} & \makecell{0,24944 \\(0,02262)} & \makecell{1,07539 \\(0,93913)} & \makecell{2,16733 \\(1,47574)} & \makecell{1,7779 \\(1,61607)}\\
-\makecell{1000} & \makecell{3} & \makecell{3} & \makecell{0,25034 \\(0,0289)} & \makecell{0,25653 \\(0,031)} & \makecell{0,53652 \\(0,28536)} & \makecell{0,25239 \\(0,02764)} & \makecell{\textcolor{red}{0,24992} \\(0,02859)} & \makecell{0,78222 \\(0,9846)} & \makecell{3,06023 \\(1,5519)} & \makecell{2,33984 \\(2,22089)}\\
-\makecell{1000} & \makecell{10} & \makecell{1} & \makecell{0,25044 \\(0,01971)} & \makecell{0,25084 \\(0,02246)} & \makecell{0,33524 \\(0,27203)} & \makecell{0,25095 \\(0,02019)} & \makecell{\textcolor{red}{0,24915} \\(0,02237)} & \makecell{0,7077 \\(1,02835)} & \makecell{1,27558 \\(1,87087)} & \makecell{1,51029 \\(1,54743)}\\
-\makecell{1000} & \makecell{10} & \makecell{5} & \makecell{\textcolor{red}{0,24012} \\(0,02191)} & \makecell{0,26252 \\(0,02371)} & \makecell{0,68128 \\(0,39154)} & \makecell{0,24393 \\(0,02244)} & \makecell{0,25507 \\(0,02319)} & \makecell{2,60964 \\(1,90423)} & \makecell{4,16242 \\(3,10798)} & \makecell{4,29199 \\(2,78838)}\\
-\makecell{1000} & \makecell{10} & \makecell{9} & \makecell{\textcolor{red}{0,2563} \\(0,02596)} & \makecell{0,28626 \\(0,02975)} & \makecell{1,32663 \\(0,38829)} & \makecell{0,25664 \\(0,02786)} & \makecell{0,26883 \\(0,03265)} & \makecell{4,90589 \\(1,77821)} & \makecell{8,38851 \\(3,19513)} & \makecell{8,28297 \\(3,29618)}\\
-\makecell{1000} & \makecell{25} & \makecell{3} & \makecell{0,25279 \\(0,02674)} & \makecell{0,25831 \\(0,02874)} & \makecell{0,78625 \\(0,34754)} & \makecell{0,26149 \\(0,03574)} & \makecell{\textcolor{red}{0,25134} \\(0,02827)} & \makecell{3,05865 \\(1,72991)} & \makecell{3,65552 \\(2,50772)} & \makecell{3,84833 \\(2,32238)}\\
-\makecell{1000} & \makecell{25} & \makecell{13} & \makecell{\textcolor{red}{0,2587} \\(0,02206)} & \makecell{0,31177 \\(0,03114)} & \makecell{2,03451 \\(0,70594)} & \makecell{0,30109 \\(0,07099)} & \makecell{0,28809 \\(0,02876)} & \makecell{9,19749 \\(3,68473)} & \makecell{12,10087 \\(5,07376)} & \makecell{12,51176 \\(5,42773)}\\
-\makecell{1000} & \makecell{25} & \makecell{23} & \makecell{\textcolor{red}{0,26145} \\(0,02966)} & \makecell{0,35083 \\(0,03516)} & \makecell{3,77492 \\(1,0891)} & \makecell{0,41261 \\(0,36625)} & \makecell{0,4022 \\(0,33202)} & \makecell{19,54978 \\(5,65596)} & \makecell{26,04359 \\(6,87056)} & \makecell{25,08614 \\(7,12848)}\\
+% &  &  &  Arctan &  Gaussian &  LASSO &  OLS &  Ridge &  TGR Setting 1 &  TGR Setting 2 &  TGR Setting 3 & median Arctan & median Gaussian & median LASSO & median OLS & median Ridge & median TGR Setting 1 & median TGR Setting 2 & median TGR Setting 3 \\
+%Samples & Features & Non-Zero Features &  &  &  &  &  &  &  &  &  &  &  &  %&  &  &  &  \\
+\midrule
+\multirow[t]{9}{*}{100} & \multirow[t]{3}{*}{10} & 1 & \makecell{8.143 \\ (2.511)} & \makecell{10.027 \\ (3.428)} & \makecell{8.516 \\ (2.645)} & \makecell{8.761 \\ (2.474)} & \makecell{9.398 \\ (2.78)} & \makecell{8.76 \\ (2.475)} & \makecell{8.76 \\ (2.474)} & \makecell{8.762 \\ (2.475)} \\
+ &  & 5 & \makecell{55.223 \\ (20.503)} & \makecell{50.321 \\ (17.244)} & \makecell{55.148 \\ (19.635)} & \makecell{55.609 \\ (20.961)} & \makecell{56.055 \\ (19.489)} & \makecell{55.609 \\ (20.964)} & \makecell{55.61 \\ (20.962)} & \makecell{55.609 \\ (20.965)}  \\
+ &  & 9 & \makecell{94.411 \\ (20.534)} & \makecell{91.228 \\ (33.291)} & \makecell{94.499 \\ (21.804)} & \makecell{94.328 \\ (20.518)} & \makecell{91.867 \\ (22.567)} & \makecell{94.327 \\ (20.518)} & \makecell{94.323 \\ (20.517)} & \makecell{94.331 \\ (20.516)} \\
+\cline{2-19}
+ & \multirow[t]{3}{*}{200} & 100 & \makecell{2226.539 \\ (739.514)} & \makecell{1827.873 \\ (444.322)} & \makecell{2208.412 \\ (787.768)} & \makecell{2216.253 \\ (723.275)} & \makecell{1830.305 \\ (737.83)} & \makecell{2216.27 \\ (728.55)} & \makecell{2212.339 \\ (723.82)} & \makecell{2219.283 \\ (725.999)}  \\
+ &  & 180 & \makecell{3646.99 \\ (772.852)} & \makecell{3715.863 \\ (938.21)} & \makecell{3636.415 \\ (839.114)} & \makecell{3599.837 \\ (815.794)} & \makecell{2946.407 \\ (597.781)} & \makecell{3606.205 \\ (814.385)} & \makecell{3601.481 \\ (818.954)} & \makecell{3597.845 \\ (812.657)}  \\
+ &  & 20 & \makecell{445.823 \\ (159.82)} & \makecell{416.379 \\ (171.003)} & \makecell{431.558 \\ (169.15)} & \makecell{442.394 \\ (155.412)} & \makecell{348.24 \\ (139.308)} & \makecell{438.987 \\ (151.256)} & \makecell{440.075 \\ (151.842)} & \makecell{441.839 \\ (153.669)}  \\
+\cline{2-19}
+ & \multirow[t]{3}{*}{50} & 25 & \makecell{432.699 \\ (197.61)} & \makecell{481.517 \\ (180.227)} & \makecell{368.908 \\ (162.292)} & \makecell{443.575 \\ (194.823)} & \makecell{339.177 \\ (125.94)} & \makecell{444.025 \\ (194.793)} & \makecell{443.355 \\ (194.348)} & \makecell{443.488 \\ (194.801)} \\
+ &  & 45 & \makecell{836.618 \\ (324.041)} & \makecell{814.207 \\ (342.009)} & \makecell{721.727 \\ (251.258)} & \makecell{846.918 \\ (337.334)} & \makecell{614.541 \\ (170.535)} & \makecell{846.84 \\ (337.454)} & \makecell{846.12 \\ (337.28)} & \makecell{846.476 \\ (336.935)}  \\
+ &  & 5 & \makecell{93.694 \\ (47.708)} & \makecell{67.294 \\ (34.223)} & \makecell{71.908 \\ (25.233)} & \makecell{121.977 \\ (59.6)} & \makecell{79.943 \\ (23.445)} & \makecell{121.636 \\ (59.986)} & \makecell{121.991 \\ (59.878)} & \makecell{121.864 \\ (60.022)} \\
+\cline{1-19} \cline{2-19}
+\multirow[t]{9}{*}{10} & \multirow[t]{3}{*}{10} & 1 & \makecell{11.91 \\ (17.701)} & \makecell{28.907 \\ (43.717)} & \makecell{8.635 \\ (10.314)} & \makecell{15.504 \\ (18.187)} & \makecell{9.851 \\ (10.121)} & \makecell{16.438 \\ (16.91)} & \makecell{16.028 \\ (17.231)} & \makecell{16.369 \\ (17.874)}\\
+ &  & 5 & \makecell{143.56 \\ (167.634)} & \makecell{177.867 \\ (209.043)} & \makecell{94.755 \\ (76.06)} & \makecell{141.116 \\ (171.209)} & \makecell{75.967 \\ (54.791)} & \makecell{138.544 \\ (160.823)} & \makecell{140.159 \\ (163.716)} & \makecell{138.335 \\ (165.406)} \\
+ &  & 9 & \makecell{262.25 \\ (426.742)} & \makecell{201.942 \\ (170.517)} & \makecell{226.472 \\ (407.698)} & \makecell{267.779 \\ (417.718)} & \makecell{200.697 \\ (357.116)} & \makecell{264.61 \\ (412.264)} & \makecell{266.555 \\ (410.478)} & \makecell{267.376 \\ (415.85)} \\
+\cline{2-19}
+ & \multirow[t]{3}{*}{200} & 100 & \makecell{1808.579 \\ (2076.395)} & \makecell{2980.261 \\ (2754.132)} & \makecell{1808.738 \\ (2060.886)} & \makecell{1838.216 \\ (2040.237)} & \makecell{1834.696 \\ (2044.349)} & \makecell{1835.863 \\ (2057.228)} & \makecell{1834.512 \\ (2033.185)} & \makecell{1837.199 \\ (2046.792)} \\
+ &  & 180 & \makecell{4330.096 \\ (4779.502)} & \makecell{2342.614 \\ (2243.02)} & \makecell{4156.453 \\ (4253.531)} & \makecell{4340.759 \\ (4767.094)} & \makecell{4325.067 \\ (4751.866)} & \makecell{4356.129 \\ (4776.532)} & \makecell{4355.088 \\ (4763.186)} & \makecell{4365.29 \\ (4769.61)} \\
+ &  & 20 & \makecell{593.649 \\ (857.827)} & \makecell{244.895 \\ (281.378)} & \makecell{590.32 \\ (849.003)} & \makecell{599.976 \\ (833.877)} & \makecell{597.436 \\ (838.781)} & \makecell{590.162 \\ (821.858)} & \makecell{600.672 \\ (838.178)} & \makecell{594.873 \\ (848.782)} \\
+\cline{2-19}
+ & \multirow[t]{3}{*}{50} & 25 & \makecell{388.054 \\ (321.434)} & \makecell{324.916 \\ (308.065)} & \makecell{364.883 \\ (312.231)} & \makecell{360.303 \\ (306.296)} & \makecell{354.606 \\ (301.023)} & \makecell{362.582 \\ (309.18)} & \makecell{360.177 \\ (305.899)} & \makecell{359.78 \\ (306.077)} \\
+ &  & 45 & \makecell{895.964 \\ (794.069)} & \makecell{993.069 \\ (979.897)} & \makecell{898.587 \\ (810.784)} & \makecell{898.939 \\ (794.377)} & \makecell{885.455 \\ (745.737)} & \makecell{908.628 \\ (782.478)} & \makecell{906.609 \\ (780.218)} & \makecell{908.734 \\ (788.112)} \\
+ &  & 5 & \makecell{77.59 \\ (72.053)} & \makecell{120.175 \\ (149.159)} & \makecell{74.652 \\ (76.395)} & \makecell{72.223 \\ (70.693)} & \makecell{72.033 \\ (72.748)} & \makecell{74.309 \\ (72.165)} & \makecell{75.892 \\ (73.834)} & \makecell{74.12 \\ (70.883)} \\
+\cline{1-19} \cline{2-19}
+\multirow[t]{9}{*}{250} & \multirow[t]{3}{*}{10} & 1 & \makecell{9.285 \\ (2.219)} & \makecell{8.203 \\ (1.954)} & \makecell{9.376 \\ (2.179)} & \makecell{9.701 \\ (2.323)} & \makecell{9.704 \\ (2.302)} & \makecell{9.701 \\ (2.323)} & \makecell{9.701 \\ (2.323)} & \makecell{9.701 \\ (2.323)} \\
+ &  & 5 & \makecell{50.568 \\ (8.659)} & \makecell{44.651 \\ (7.361)} & \makecell{50.586 \\ (9.112)} & \makecell{51.251 \\ (8.933)} & \makecell{51.128 \\ (9.263)} & \makecell{51.251 \\ (8.933)} & \makecell{51.251 \\ (8.933)} & \makecell{51.251 \\ (8.933)} \\
+ &  & 9 & \makecell{92.956 \\ (26.567)} & \makecell{87.92 \\ (20.76)} & \makecell{92.847 \\ (26.272)} & \makecell{92.857 \\ (26.528)} & \makecell{93.317 \\ (25.737)} & \makecell{92.857 \\ (26.528)} & \makecell{92.856 \\ (26.529)} & \makecell{92.857 \\ (26.529)} \\
+\cline{2-19}
+ & \multirow[t]{3}{*}{200} & 100 & \makecell{2191.822 \\ (464.342)} & \makecell{2207.572 \\ (460.284)} & \makecell{1783.244 \\ (466.102)} & \makecell{2256.102 \\ (467.37)} & \makecell{1397.03 \\ (284.985)} & \makecell{2255.161 \\ (465.895)} & \makecell{2256.095 \\ (466.639)} & \makecell{2256.174 \\ (465.94)} \\
+ &  & 180 & \makecell{4037.567 \\ (847.844)} & \makecell{4017.374 \\ (704.43)} & \makecell{3477.884 \\ (714.527)} & \makecell{4083.589 \\ (859.518)} & \makecell{2554.422 \\ (614.084)} & \makecell{4081.027 \\ (859.12)} & \makecell{4082.227 \\ (861.805)} & \makecell{4080.481 \\ (860.907)} \\
+ &  & 20 & \makecell{374.787 \\ (102.866)} & \makecell{292.05 \\ (66.283)} & \makecell{282.808 \\ (73.489)} & \makecell{479.24 \\ (121.248)} & \makecell{281.375 \\ (56.671)} & \makecell{479.953 \\ (121.219)} & \makecell{479.651 \\ (120.956)} & \makecell{479.596 \\ (121.574)} & \\
+\cline{2-19}
+ & \multirow[t]{3}{*}{50} & 25 & \makecell{303.069 \\ (66.83)} & \makecell{304.353 \\ (83.207)} & \makecell{296.789 \\ (68.898)} & \makecell{303.902 \\ (61.62)} & \makecell{289.719 \\ (63.05)} & \makecell{303.919 \\ (61.637)} & \makecell{303.9 \\ (61.61)} & \makecell{303.923 \\ (61.631)} \\
+ &  & 45 & \makecell{538.998 \\ (127.705)} & \makecell{565.719 \\ (125.848)} & \makecell{532.489 \\ (129.833)} & \makecell{534.825 \\ (125.456)} & \makecell{502.432 \\ (130.652)} & \makecell{534.794 \\ (125.417)} & \makecell{534.832 \\ (125.462)} & \makecell{534.779 \\ (125.407)}  \\
+ &  & 5 & \makecell{55.19 \\ (12.429)} & \makecell{43.153 \\ (10.311)} & \makecell{53.335 \\ (12.516)} & \makecell{66.509 \\ (10.663)} & \makecell{63.255 \\ (13.669)} & \makecell{66.512 \\ (10.667)} & \makecell{66.512 \\ (10.664)} & \makecell{66.516 \\ (10.66)} \\
+\cline{1-19} \cline{2-19}
 \bottomrule
-\label{tab:PredSim}
 \end{longtable}
+\label{tab:PredSim}
 \end{landscape}
-
 
 %\subsection{Simulation Study for Variable Selection}
 
@@ -764,8 +811,7 @@ To successfully run the script, the following dependencies are required:
     \end{itemize}
 \end{itemize}
 
-\section{Possible Extensions and Criticism}
-
+\section{Possible Extensions and Criticism}\label{sec:crit}
 
 \begin{lightbluebox}
 I will write the last two paragraphs as soon as the rest of the thesis is 100\% air tight to avoid having to rewrite the conclusions multiple times. It should take long though.

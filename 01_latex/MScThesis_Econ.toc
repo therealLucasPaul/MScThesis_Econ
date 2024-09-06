@@ -3,7 +3,7 @@
 \contentsline {section}{\numberline {2}Theoretical Section}{3}{section.2}%
 \contentsline {subsection}{\numberline {2.1}Model Complexity and the Problem of Under- and Overfitting}{3}{subsection.2.1}%
 \contentsline {subsubsection}{\numberline {2.1.1}Regularization}{5}{subsubsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.2}Bayesian View on Battling Model Complexity using Shrinkage Priors}{6}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.2}Bayesian View on Battling Model Complexity using Shrinkage Priors}{7}{subsection.2.2}%
 \contentsline {section}{\numberline {3}Literature Review}{8}{section.3}%
 \contentsline {section}{\numberline {4}Bayesian-Frequentist Duality of Ridge and LASSO Regression}{11}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Triple-Gamma-Prior by \blx@tocontentsinit {0}\textcite {TGP2020}}{13}{subsection.4.1}%
@@ -13,12 +13,12 @@
 \contentsline {section}{\numberline {6}Simulation Study}{26}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Approaches to Estimation}{26}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Scenario Simulation}{27}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Simulation Study for Prediction}{28}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Computational Efficiency}{31}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Implementation as Python Package}{37}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Possible Extensions and Criticism}{38}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{38}{section.8}%
-\contentsline {section}{\numberline {9}List of Figures}{39}{section.9}%
-\contentsline {section}{\numberline {10}List of Tables}{40}{section.10}%
+\contentsline {subsection}{\numberline {6.3}Simulation Study}{28}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Computational Efficiency}{30}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Implementation as Python Package}{36}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Possible Extensions and Criticism}{37}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{37}{section.8}%
+\contentsline {section}{\numberline {9}List of Figures}{38}{section.9}%
+\contentsline {section}{\numberline {10}List of Tables}{39}{section.10}%
 \contentsline {section}{\numberline {11}References}{iv}{section.11}%
 \contentsline {section}{References}{iv}{section.11}%
