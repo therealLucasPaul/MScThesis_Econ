@@ -79,27 +79,5 @@ class log_hyperu(torch.autograd.Function):
 
         return None, None, grad_x
     
-class log_hyperu_shift(torch.autograd.Function):
-    @staticmethod
-    def forward(ctx, a, b, x):
-
-        u_res = robust_hyperu(a, b, x)
-        result = torch.log(u_res)
-
-        ctx.mark_non_differentiable(a)
-        ctx.mark_non_differentiable(b)
-
-        ctx.save_for_backward(a, b, x, u_res)
-
-        return result
-
-    @staticmethod
-    def backward(ctx, grad_output):
-        
-        a, b, x, u_res = ctx.saved_tensors
-        grad_x = grad_output * (-a * torch.div(robust_hyperu(a + 1, b + 1, x), u_res))
-
-        return None, None, grad_x
-    
 # Alias the apply method:
 log_hyperu = log_hyperu.apply
