@@ -13,12 +13,11 @@
 \contentsline {section}{\numberline {6}Simulation Study}{26}{section.6}%
 \contentsline {subsection}{\numberline {6.1}Approaches to Estimation}{26}{subsection.6.1}%
 \contentsline {subsection}{\numberline {6.2}Scenario Simulation}{27}{subsection.6.2}%
-\contentsline {subsection}{\numberline {6.3}Simulation Study}{28}{subsection.6.3}%
-\contentsline {subsection}{\numberline {6.4}Computational Efficiency}{30}{subsection.6.4}%
-\contentsline {subsection}{\numberline {6.5}Implementation as Python Package}{36}{subsection.6.5}%
-\contentsline {section}{\numberline {7}Possible Extensions and Criticism}{37}{section.7}%
-\contentsline {section}{\numberline {8}Conclusion}{37}{section.8}%
-\contentsline {section}{\numberline {9}List of Figures}{38}{section.9}%
-\contentsline {section}{\numberline {10}List of Tables}{39}{section.10}%
-\contentsline {section}{\numberline {11}References}{iv}{section.11}%
-\contentsline {section}{References}{iv}{section.11}%
+\contentsline {subsection}{\numberline {6.3}Simulation Results}{28}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Computational Efficiency}{32}{subsection.6.4}%
+\contentsline {subsection}{\numberline {6.5}Implementation as Python Package}{37}{subsection.6.5}%
+\contentsline {section}{\numberline {7}Possible Extensions and Criticism}{38}{section.7}%
+\contentsline {section}{\numberline {8}Conclusion}{39}{section.8}%
+\contentsline {section}{\numberline {9}Appendix}{41}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Technical Specification of System used for Simulation}{41}{subsection.9.1}%
+\contentsline {section}{References}{44}{table.caption.18}%

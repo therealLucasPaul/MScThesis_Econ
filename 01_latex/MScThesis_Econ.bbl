@@ -44,7 +44,7 @@
       \field{issn}{0925-2312}
       \field{journaltitle}{Neurocomputing}
       \field{number}{4-5}
-      \field{title}{Backpropagation and stochastic gradient descent method}
+      \field{title}{Backpropagation and Stochastic Gradient Descent Method}
       \field{type}{Journal Article}
       \field{volume}{5}
       \field{year}{1993}
@@ -82,7 +82,7 @@
       \field{issn}{0304-4076}
       \field{journaltitle}{Journal of Econometrics}
       \field{number}{1}
-      \field{title}{Achieving shrinkage in a time-varying parameter model framework}
+      \field{title}{Achieving Shrinkage in a Time-varying Parameter Model Framework}
       \field{type}{Journal Article}
       \field{volume}{210}
       \field{year}{2019}
@@ -126,12 +126,57 @@
       \field{issn}{2225-1146}
       \field{journaltitle}{Econometrics}
       \field{number}{2}
-      \field{title}{Triple the gamma—a unifying shrinkage prior for variance and variable selection in sparse state space and TVP models}
+      \field{title}{Triple the Gamma—a Unifying Shrinkage Prior for Variance and Variable Selection in Sparse State Space and TVP Models}
       \field{type}{Journal Article}
       \field{volume}{8}
       \field{year}{2020}
       \field{pages}{20}
       \range{pages}{1}
+    \endentry
+    \entry{Carvalho2010}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=55232ef1384c95cd1e224d51498c6631}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={Carlos\bibnamedelima M},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c782f2b0a57bb490ef246bfbfd177e82}{%
+           family={Polson},
+           familyi={P\bibinitperiod},
+           given={Nicholas\bibnamedelima G},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8b1f282c41c718be6d21a92381964be}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={James\bibnamedelima G},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{d98912034a8c3acc185601ef24618ce8}
+      \strng{fullhash}{d8554a53aaf464bf8dd73adace3fcd20}
+      \strng{bibnamehash}{d8554a53aaf464bf8dd73adace3fcd20}
+      \strng{authorbibnamehash}{d8554a53aaf464bf8dd73adace3fcd20}
+      \strng{authornamehash}{d98912034a8c3acc185601ef24618ce8}
+      \strng{authorfullhash}{d8554a53aaf464bf8dd73adace3fcd20}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrika}
+      \field{number}{2}
+      \field{title}{The horseshoe estimator for sparse signals}
+      \field{volume}{97}
+      \field{year}{2010}
+      \field{pages}{465\bibrangedash 480}
+      \range{pages}{16}
     \endentry
     \entry{FanLi2001}{article}{}
       \name{author}{2}{}{%
@@ -165,7 +210,7 @@
       \field{issn}{0162-1459}
       \field{journaltitle}{Journal of the American statistical Association}
       \field{number}{456}
-      \field{title}{Variable selection via nonconcave penalized likelihood and its oracle properties}
+      \field{title}{Variable Selection via Nonconcave Penalized Likelihood and Its Oracle Properties}
       \field{type}{Journal Article}
       \field{volume}{96}
       \field{year}{2001}
@@ -202,7 +247,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint math/0602133}
-      \field{title}{Statistical challenges with high dimensionality: Feature selection in knowledge discovery}
+      \field{title}{Statistical Challenges with High Dimensionality: Feature Selection in Knowledge Discovery}
       \field{type}{Journal Article}
       \field{year}{2006}
     \endentry
@@ -237,7 +282,7 @@
       \field{issn}{0040-1706}
       \field{journaltitle}{Technometrics}
       \field{number}{2}
-      \field{title}{A statistical view of some chemometrics regression tools}
+      \field{title}{A Statistical View of Some Chemometrics Regression Tools}
       \field{type}{Journal Article}
       \field{volume}{35}
       \field{year}{1993}
@@ -269,7 +314,7 @@
       \field{issn}{1061-8600}
       \field{journaltitle}{Journal of computational and graphical statistics}
       \field{number}{3}
-      \field{title}{Penalized regressions: the bridge versus the lasso}
+      \field{title}{Penalized Regressions: the Bridge Versus the Lasso}
       \field{type}{Journal Article}
       \field{volume}{7}
       \field{year}{1998}
@@ -356,7 +401,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The elements of statistical learning: data mining, inference, and prediction}
+      \field{title}{The Elements of Statistical Learning: Data Mining, Inference, and Prediction}
       \field{type}{Book}
       \field{volume}{2}
       \field{year}{2009}
@@ -393,7 +438,7 @@
       \field{issn}{0040-1706}
       \field{journaltitle}{Technometrics}
       \field{number}{1}
-      \field{title}{Ridge regression: applications to nonorthogonal problems}
+      \field{title}{Ridge Regression: Applications to Nonorthogonal Problems}
       \field{type}{Journal Article}
       \field{volume}{12}
       \field{year}{1970}
@@ -432,7 +477,7 @@
       \field{issn}{0040-1706}
       \field{journaltitle}{Technometrics}
       \field{number}{1}
-      \field{title}{Ridge regression: Biased estimation for nonorthogonal problems}
+      \field{title}{Ridge Regression: Biased Estimation for Nonorthogonal Problems}
       \field{type}{Journal Article}
       \field{volume}{12}
       \field{year}{1970}
@@ -463,7 +508,7 @@
       \field{issn}{0040-1706}
       \field{journaltitle}{Technometrics}
       \field{number}{4}
-      \field{title}{Ridge regression: a historical context}
+      \field{title}{Ridge Regression: a Historical Context}
       \field{type}{Journal Article}
       \field{volume}{62}
       \field{year}{2020}
@@ -505,7 +550,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2204.03123}
-      \field{title}{A novel nonconvex, smooth-at-origin penalty for statistical learning}
+      \field{title}{A Novel Nonconvex, Smooth-at-origin Penalty for Statistical Learning}
       \field{type}{Journal Article}
       \field{year}{2022}
     \endentry
@@ -544,7 +589,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1710.10686}
-      \field{title}{Regularization for deep learning: A taxonomy}
+      \field{title}{Regularization for Deep Learning: A Taxonomy}
       \field{type}{Journal Article}
       \field{year}{2017}
     \endentry
@@ -573,12 +618,174 @@
       \field{issn}{1939-5108}
       \field{journaltitle}{Wiley Interdisciplinary Reviews: Computational Statistics}
       \field{number}{2}
-      \field{title}{Ockham's razor}
+      \field{title}{Ockham's Razor}
       \field{type}{Journal Article}
       \field{volume}{2}
       \field{year}{2010}
       \field{pages}{243\bibrangedash 246}
       \range{pages}{4}
+    \endentry
+    \entry{Mitchell1997}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d331eeb7f00e650950ccadcb9c47efec}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={Tom\bibnamedelima M},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d331eeb7f00e650950ccadcb9c47efec}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={Tom\bibnamedelima M},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-hill New York}%
+      }
+      \strng{namehash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \strng{fullhash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \strng{bibnamehash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \strng{authorbibnamehash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \strng{authornamehash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \strng{authorfullhash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Machine Learning}
+      \field{type}{Book}
+      \field{volume}{1}
+      \field{year}{1997}
+    \endentry
+    \entry{ParisRobilliardFonlupt2003}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c19d16aa09ee677b998554dcab9037c1}{%
+           family={Paris},
+           familyi={P\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53192aa8afe8dcd40e6d5b72606250a6}{%
+           family={Robilliard},
+           familyi={R\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=027b4737ebae088daf0c35f60780f558}{%
+           family={Fonlupt},
+           familyi={F\bibinitperiod},
+           given={Cyril},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c143c5fc7173b44fbcf919c40b70960e}
+      \strng{fullhash}{bd70beb7144df9c5fcdb146c8cfe1b64}
+      \strng{bibnamehash}{bd70beb7144df9c5fcdb146c8cfe1b64}
+      \strng{authorbibnamehash}{bd70beb7144df9c5fcdb146c8cfe1b64}
+      \strng{authornamehash}{c143c5fc7173b44fbcf919c40b70960e}
+      \strng{authorfullhash}{bd70beb7144df9c5fcdb146c8cfe1b64}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Conference on Artificial Evolution (evolution Artificielle)}
+      \field{title}{Exploring Overfitting in Genetic Programming}
+      \field{type}{Conference Proceedings}
+      \field{year}{2003}
+      \field{pages}{267\bibrangedash 277}
+      \range{pages}{11}
+    \endentry
+    \entry{PiironenVehtari2017}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=76a77e77fb27f15470bdbe10398e4fa6}{%
+           family={Piironen},
+           familyi={P\bibinitperiod},
+           given={Juho},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d36e97683cbc9d6ef06fc2ec40becb0}{%
+           family={Vehtari},
+           familyi={V\bibinitperiod},
+           given={Aki},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bd33dbf73d7f6db9279cbde85723feab}
+      \strng{fullhash}{bd33dbf73d7f6db9279cbde85723feab}
+      \strng{bibnamehash}{bd33dbf73d7f6db9279cbde85723feab}
+      \strng{authorbibnamehash}{bd33dbf73d7f6db9279cbde85723feab}
+      \strng{authornamehash}{bd33dbf73d7f6db9279cbde85723feab}
+      \strng{authorfullhash}{bd33dbf73d7f6db9279cbde85723feab}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sparsity information and regularization in the horseshoe and other shrinkage priors}
+      \field{year}{2017}
+    \endentry
+    \entry{QiCuiLiuPang2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f9e1100134c3fb6ff5417a3786b691b2}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Zhengling},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bec378c59225129240e52bcecf61041b}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Ying},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ed68a56bfd902e0756e8c08e314a25c}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yufeng},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4fb4fd4a29a50ba265a93f13436360de}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={Jong-Shi},
+           giveni={J\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{6a33afea6634524a33d60bd502c513a5}
+      \strng{fullhash}{c9363c5df2637cab9ba989c1d8bcd1ae}
+      \strng{bibnamehash}{c9363c5df2637cab9ba989c1d8bcd1ae}
+      \strng{authorbibnamehash}{c9363c5df2637cab9ba989c1d8bcd1ae}
+      \strng{authornamehash}{6a33afea6634524a33d60bd502c513a5}
+      \strng{authorfullhash}{c9363c5df2637cab9ba989c1d8bcd1ae}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematics of Operations Research}
+      \field{number}{3}
+      \field{title}{Asymptotic Properties of Stationary Solutions of Coupled Nonconvex Nonsmooth Empirical Risk Minimization}
+      \field{volume}{47}
+      \field{year}{2022}
+      \field{pages}{2034\bibrangedash 2064}
+      \range{pages}{31}
     \endentry
     \entry{Tibishirani1996}{article}{}
       \name{author}{1}{}{%
@@ -605,7 +812,7 @@
       \field{issn}{1369-7412}
       \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
       \field{number}{1}
-      \field{title}{Regression shrinkage and selection via the lasso}
+      \field{title}{Regression Shrinkage and Selection via the Lasso}
       \field{type}{Journal Article}
       \field{volume}{58}
       \field{year}{1996}
@@ -639,7 +846,7 @@
       \field{journaltitle}{Annali di Matematica Pura ed Applicata}
       \field{note}{Paper for hypergeometric function of second kind.}
       \field{number}{1}
-      \field{title}{Sulle funzioni ipergeometriche confluenti}
+      \field{title}{Sulle Funzioni Ipergeometriche Confluenti}
       \field{type}{Journal Article}
       \field{volume}{26}
       \field{year}{1947}
@@ -686,7 +893,7 @@
       \field{issn}{1053-587X}
       \field{journaltitle}{IEEE Transactions on Signal Processing}
       \field{number}{11}
-      \field{title}{Relaxed conditions for sparse signal recovery with general concave priors}
+      \field{title}{Relaxed Conditions for Sparse Signal Recovery with General Concave Priors}
       \field{type}{Journal Article}
       \field{volume}{57}
       \field{year}{2009}
@@ -718,7 +925,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1509.09169}
-      \field{title}{Lecture notes on ridge regression}
+      \field{title}{Lecture Notes on Ridge Regression}
       \field{type}{Journal Article}
       \field{year}{2015}
     \endentry
@@ -746,7 +953,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in neural information processing systems}
       \field{note}{Definition of Empirical Risk Minimization}
-      \field{title}{Principles of risk minimization for learning theory}
+      \field{title}{Principles of Risk Minimization for Learning Theory}
       \field{type}{Journal Article}
       \field{volume}{4}
       \field{year}{1991}
@@ -781,7 +988,7 @@
       \field{labeltitlesource}{title}
       \field{issn}{2590-0374}
       \field{journaltitle}{Results in Applied Mathematics}
-      \field{title}{On two recent nonconvex penalties for regularization in machine learning}
+      \field{title}{On Two Recent Nonconvex Penalties for Regularization in Machine Learning}
       \field{type}{Journal Article}
       \field{volume}{14}
       \field{year}{2022}
@@ -830,7 +1037,7 @@
       \field{issn}{0960-3174}
       \field{journaltitle}{Statistics and computing}
       \field{note}{Paper with simulation study}
-      \field{title}{High-dimensional regression in practice: an empirical study of finite-sample prediction, variable selection and ranking}
+      \field{title}{High-dimensional Regression in Practice: an Empirical Study of Finite-sample Prediction, Variable Selection and Ranking}
       \field{type}{Journal Article}
       \field{volume}{30}
       \field{year}{2020}
@@ -866,10 +1073,44 @@
       \field{labeltitlesource}{title}
       \field{issn}{1687-952X}
       \field{journaltitle}{Journal of Probability and Statistics}
-      \field{title}{Variable selection and parameter estimation with the Atan regularization method}
+      \field{title}{Variable Selection and Parameter Estimation with the Atan Regularization Method}
       \field{type}{Journal Article}
       \field{volume}{2016}
       \field{year}{2016}
+    \endentry
+    \entry{Ying2019}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bf827576bc08bcbef835217a69df8fb2}{%
+           family={Ying},
+           familyi={Y\bibinitperiod},
+           given={Xue},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{bf827576bc08bcbef835217a69df8fb2}
+      \strng{fullhash}{bf827576bc08bcbef835217a69df8fb2}
+      \strng{bibnamehash}{bf827576bc08bcbef835217a69df8fb2}
+      \strng{authorbibnamehash}{bf827576bc08bcbef835217a69df8fb2}
+      \strng{authornamehash}{bf827576bc08bcbef835217a69df8fb2}
+      \strng{authorfullhash}{bf827576bc08bcbef835217a69df8fb2}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1742-6588}
+      \field{journaltitle}{Journal of Physics: Conference Series}
+      \field{title}{An Overview of Overfitting and Its Solutions}
+      \field{type}{Conference Proceedings}
+      \field{volume}{1168}
+      \field{year}{2019}
+      \field{pages}{022022}
+      \range{pages}{1}
     \endentry
     \entry{Zhang2010}{article}{}
       \name{author}{1}{}{%
@@ -893,7 +1134,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Nearly unbiased variable selection under minimax concave penalty}
+      \field{title}{Nearly Unbiased Variable Selection Under Minimax Concave Penalty}
       \field{type}{Journal Article}
       \field{year}{2010}
     \endentry
@@ -928,7 +1169,7 @@
       \field{issn}{1369-7412}
       \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
       \field{number}{2}
-      \field{title}{Regularization and variable selection via the elastic net}
+      \field{title}{Regularization and Variable Selection via the Elastic Net}
       \field{type}{Journal Article}
       \field{volume}{67}
       \field{year}{2005}
@@ -965,7 +1206,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Annals of statistics}
       \field{number}{4}
-      \field{title}{One-step sparse estimates in nonconcave penalized likelihood models}
+      \field{title}{One-step Sparse Estimates in Nonconcave Penalized Likelihood Models}
       \field{type}{Journal Article}
       \field{volume}{36}
       \field{year}{2008}
@@ -999,7 +1240,7 @@
       \field{issn}{0925-2312}
       \field{journaltitle}{Neurocomputing}
       \field{number}{4-5}
-      \field{title}{Backpropagation and stochastic gradient descent method}
+      \field{title}{Backpropagation and Stochastic Gradient Descent Method}
       \field{type}{Journal Article}
       \field{volume}{5}
       \field{year}{1993}
@@ -1037,7 +1278,7 @@
       \field{issn}{0304-4076}
       \field{journaltitle}{Journal of Econometrics}
       \field{number}{1}
-      \field{title}{Achieving shrinkage in a time-varying parameter model framework}
+      \field{title}{Achieving Shrinkage in a Time-varying Parameter Model Framework}
       \field{type}{Journal Article}
       \field{volume}{210}
       \field{year}{2019}
@@ -1081,12 +1322,57 @@
       \field{issn}{2225-1146}
       \field{journaltitle}{Econometrics}
       \field{number}{2}
-      \field{title}{Triple the gamma—a unifying shrinkage prior for variance and variable selection in sparse state space and TVP models}
+      \field{title}{Triple the Gamma—a Unifying Shrinkage Prior for Variance and Variable Selection in Sparse State Space and TVP Models}
       \field{type}{Journal Article}
       \field{volume}{8}
       \field{year}{2020}
       \field{pages}{20}
       \range{pages}{1}
+    \endentry
+    \entry{Carvalho2010}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=55232ef1384c95cd1e224d51498c6631}{%
+           family={Carvalho},
+           familyi={C\bibinitperiod},
+           given={Carlos\bibnamedelima M},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c782f2b0a57bb490ef246bfbfd177e82}{%
+           family={Polson},
+           familyi={P\bibinitperiod},
+           given={Nicholas\bibnamedelima G},
+           giveni={N\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f8b1f282c41c718be6d21a92381964be}{%
+           family={Scott},
+           familyi={S\bibinitperiod},
+           given={James\bibnamedelima G},
+           giveni={J\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Oxford University Press}%
+      }
+      \strng{namehash}{d98912034a8c3acc185601ef24618ce8}
+      \strng{fullhash}{d8554a53aaf464bf8dd73adace3fcd20}
+      \strng{bibnamehash}{d8554a53aaf464bf8dd73adace3fcd20}
+      \strng{authorbibnamehash}{d8554a53aaf464bf8dd73adace3fcd20}
+      \strng{authornamehash}{d98912034a8c3acc185601ef24618ce8}
+      \strng{authorfullhash}{d8554a53aaf464bf8dd73adace3fcd20}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Biometrika}
+      \field{number}{2}
+      \field{title}{The horseshoe estimator for sparse signals}
+      \field{volume}{97}
+      \field{year}{2010}
+      \field{pages}{465\bibrangedash 480}
+      \range{pages}{16}
     \endentry
     \entry{FanLi2001}{article}{}
       \name{author}{2}{}{%
@@ -1120,7 +1406,7 @@
       \field{issn}{0162-1459}
       \field{journaltitle}{Journal of the American statistical Association}
       \field{number}{456}
-      \field{title}{Variable selection via nonconcave penalized likelihood and its oracle properties}
+      \field{title}{Variable Selection via Nonconcave Penalized Likelihood and Its Oracle Properties}
       \field{type}{Journal Article}
       \field{volume}{96}
       \field{year}{2001}
@@ -1157,7 +1443,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint math/0602133}
-      \field{title}{Statistical challenges with high dimensionality: Feature selection in knowledge discovery}
+      \field{title}{Statistical Challenges with High Dimensionality: Feature Selection in Knowledge Discovery}
       \field{type}{Journal Article}
       \field{year}{2006}
     \endentry
@@ -1192,7 +1478,7 @@
       \field{issn}{0040-1706}
       \field{journaltitle}{Technometrics}
       \field{number}{2}
-      \field{title}{A statistical view of some chemometrics regression tools}
+      \field{title}{A Statistical View of Some Chemometrics Regression Tools}
       \field{type}{Journal Article}
       \field{volume}{35}
       \field{year}{1993}
@@ -1224,7 +1510,7 @@
       \field{issn}{1061-8600}
       \field{journaltitle}{Journal of computational and graphical statistics}
       \field{number}{3}
-      \field{title}{Penalized regressions: the bridge versus the lasso}
+      \field{title}{Penalized Regressions: the Bridge Versus the Lasso}
       \field{type}{Journal Article}
       \field{volume}{7}
       \field{year}{1998}
@@ -1311,7 +1597,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{The elements of statistical learning: data mining, inference, and prediction}
+      \field{title}{The Elements of Statistical Learning: Data Mining, Inference, and Prediction}
       \field{type}{Book}
       \field{volume}{2}
       \field{year}{2009}
@@ -1348,7 +1634,7 @@
       \field{issn}{0040-1706}
       \field{journaltitle}{Technometrics}
       \field{number}{1}
-      \field{title}{Ridge regression: applications to nonorthogonal problems}
+      \field{title}{Ridge Regression: Applications to Nonorthogonal Problems}
       \field{type}{Journal Article}
       \field{volume}{12}
       \field{year}{1970}
@@ -1387,7 +1673,7 @@
       \field{issn}{0040-1706}
       \field{journaltitle}{Technometrics}
       \field{number}{1}
-      \field{title}{Ridge regression: Biased estimation for nonorthogonal problems}
+      \field{title}{Ridge Regression: Biased Estimation for Nonorthogonal Problems}
       \field{type}{Journal Article}
       \field{volume}{12}
       \field{year}{1970}
@@ -1418,7 +1704,7 @@
       \field{issn}{0040-1706}
       \field{journaltitle}{Technometrics}
       \field{number}{4}
-      \field{title}{Ridge regression: a historical context}
+      \field{title}{Ridge Regression: a Historical Context}
       \field{type}{Journal Article}
       \field{volume}{62}
       \field{year}{2020}
@@ -1460,7 +1746,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:2204.03123}
-      \field{title}{A novel nonconvex, smooth-at-origin penalty for statistical learning}
+      \field{title}{A Novel Nonconvex, Smooth-at-origin Penalty for Statistical Learning}
       \field{type}{Journal Article}
       \field{year}{2022}
     \endentry
@@ -1499,7 +1785,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1710.10686}
-      \field{title}{Regularization for deep learning: A taxonomy}
+      \field{title}{Regularization for Deep Learning: A Taxonomy}
       \field{type}{Journal Article}
       \field{year}{2017}
     \endentry
@@ -1528,12 +1814,174 @@
       \field{issn}{1939-5108}
       \field{journaltitle}{Wiley Interdisciplinary Reviews: Computational Statistics}
       \field{number}{2}
-      \field{title}{Ockham's razor}
+      \field{title}{Ockham's Razor}
       \field{type}{Journal Article}
       \field{volume}{2}
       \field{year}{2010}
       \field{pages}{243\bibrangedash 246}
       \range{pages}{4}
+    \endentry
+    \entry{Mitchell1997}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d331eeb7f00e650950ccadcb9c47efec}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={Tom\bibnamedelima M},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d331eeb7f00e650950ccadcb9c47efec}{%
+           family={Mitchell},
+           familyi={M\bibinitperiod},
+           given={Tom\bibnamedelima M},
+           giveni={T\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-hill New York}%
+      }
+      \strng{namehash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \strng{fullhash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \strng{bibnamehash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \strng{authorbibnamehash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \strng{authornamehash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \strng{authorfullhash}{981f98ec7dde75a9c32f3d75250a98c1}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Machine Learning}
+      \field{type}{Book}
+      \field{volume}{1}
+      \field{year}{1997}
+    \endentry
+    \entry{ParisRobilliardFonlupt2003}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=c19d16aa09ee677b998554dcab9037c1}{%
+           family={Paris},
+           familyi={P\bibinitperiod},
+           given={Gregory},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=53192aa8afe8dcd40e6d5b72606250a6}{%
+           family={Robilliard},
+           familyi={R\bibinitperiod},
+           given={Denis},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=027b4737ebae088daf0c35f60780f558}{%
+           family={Fonlupt},
+           familyi={F\bibinitperiod},
+           given={Cyril},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c143c5fc7173b44fbcf919c40b70960e}
+      \strng{fullhash}{bd70beb7144df9c5fcdb146c8cfe1b64}
+      \strng{bibnamehash}{bd70beb7144df9c5fcdb146c8cfe1b64}
+      \strng{authorbibnamehash}{bd70beb7144df9c5fcdb146c8cfe1b64}
+      \strng{authornamehash}{c143c5fc7173b44fbcf919c40b70960e}
+      \strng{authorfullhash}{bd70beb7144df9c5fcdb146c8cfe1b64}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{International Conference on Artificial Evolution (evolution Artificielle)}
+      \field{title}{Exploring Overfitting in Genetic Programming}
+      \field{type}{Conference Proceedings}
+      \field{year}{2003}
+      \field{pages}{267\bibrangedash 277}
+      \range{pages}{11}
+    \endentry
+    \entry{PiironenVehtari2017}{article}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=76a77e77fb27f15470bdbe10398e4fa6}{%
+           family={Piironen},
+           familyi={P\bibinitperiod},
+           given={Juho},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5d36e97683cbc9d6ef06fc2ec40becb0}{%
+           family={Vehtari},
+           familyi={V\bibinitperiod},
+           given={Aki},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{bd33dbf73d7f6db9279cbde85723feab}
+      \strng{fullhash}{bd33dbf73d7f6db9279cbde85723feab}
+      \strng{bibnamehash}{bd33dbf73d7f6db9279cbde85723feab}
+      \strng{authorbibnamehash}{bd33dbf73d7f6db9279cbde85723feab}
+      \strng{authornamehash}{bd33dbf73d7f6db9279cbde85723feab}
+      \strng{authorfullhash}{bd33dbf73d7f6db9279cbde85723feab}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Sparsity information and regularization in the horseshoe and other shrinkage priors}
+      \field{year}{2017}
+    \endentry
+    \entry{QiCuiLiuPang2021}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=f9e1100134c3fb6ff5417a3786b691b2}{%
+           family={Qi},
+           familyi={Q\bibinitperiod},
+           given={Zhengling},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=bec378c59225129240e52bcecf61041b}{%
+           family={Cui},
+           familyi={C\bibinitperiod},
+           given={Ying},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2ed68a56bfd902e0756e8c08e314a25c}{%
+           family={Liu},
+           familyi={L\bibinitperiod},
+           given={Yufeng},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4fb4fd4a29a50ba265a93f13436360de}{%
+           family={Pang},
+           familyi={P\bibinitperiod},
+           given={Jong-Shi},
+           giveni={J\bibinithyphendelim S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {INFORMS}%
+      }
+      \strng{namehash}{6a33afea6634524a33d60bd502c513a5}
+      \strng{fullhash}{c9363c5df2637cab9ba989c1d8bcd1ae}
+      \strng{bibnamehash}{c9363c5df2637cab9ba989c1d8bcd1ae}
+      \strng{authorbibnamehash}{c9363c5df2637cab9ba989c1d8bcd1ae}
+      \strng{authornamehash}{6a33afea6634524a33d60bd502c513a5}
+      \strng{authorfullhash}{c9363c5df2637cab9ba989c1d8bcd1ae}
+      \field{sortinit}{Q}
+      \field{sortinithash}{ce69a400a872ddd02ee7fdb3b38c6abd}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematics of Operations Research}
+      \field{number}{3}
+      \field{title}{Asymptotic Properties of Stationary Solutions of Coupled Nonconvex Nonsmooth Empirical Risk Minimization}
+      \field{volume}{47}
+      \field{year}{2022}
+      \field{pages}{2034\bibrangedash 2064}
+      \range{pages}{31}
     \endentry
     \entry{Tibishirani1996}{article}{}
       \name{author}{1}{}{%
@@ -1560,7 +2008,7 @@
       \field{issn}{1369-7412}
       \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
       \field{number}{1}
-      \field{title}{Regression shrinkage and selection via the lasso}
+      \field{title}{Regression Shrinkage and Selection via the Lasso}
       \field{type}{Journal Article}
       \field{volume}{58}
       \field{year}{1996}
@@ -1594,7 +2042,7 @@
       \field{journaltitle}{Annali di Matematica Pura ed Applicata}
       \field{note}{Paper for hypergeometric function of second kind.}
       \field{number}{1}
-      \field{title}{Sulle funzioni ipergeometriche confluenti}
+      \field{title}{Sulle Funzioni Ipergeometriche Confluenti}
       \field{type}{Journal Article}
       \field{volume}{26}
       \field{year}{1947}
@@ -1641,7 +2089,7 @@
       \field{issn}{1053-587X}
       \field{journaltitle}{IEEE Transactions on Signal Processing}
       \field{number}{11}
-      \field{title}{Relaxed conditions for sparse signal recovery with general concave priors}
+      \field{title}{Relaxed Conditions for Sparse Signal Recovery with General Concave Priors}
       \field{type}{Journal Article}
       \field{volume}{57}
       \field{year}{2009}
@@ -1673,7 +2121,7 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{arXiv preprint arXiv:1509.09169}
-      \field{title}{Lecture notes on ridge regression}
+      \field{title}{Lecture Notes on Ridge Regression}
       \field{type}{Journal Article}
       \field{year}{2015}
     \endentry
@@ -1701,7 +2149,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Advances in neural information processing systems}
       \field{note}{Definition of Empirical Risk Minimization}
-      \field{title}{Principles of risk minimization for learning theory}
+      \field{title}{Principles of Risk Minimization for Learning Theory}
       \field{type}{Journal Article}
       \field{volume}{4}
       \field{year}{1991}
@@ -1736,7 +2184,7 @@
       \field{labeltitlesource}{title}
       \field{issn}{2590-0374}
       \field{journaltitle}{Results in Applied Mathematics}
-      \field{title}{On two recent nonconvex penalties for regularization in machine learning}
+      \field{title}{On Two Recent Nonconvex Penalties for Regularization in Machine Learning}
       \field{type}{Journal Article}
       \field{volume}{14}
       \field{year}{2022}
@@ -1785,7 +2233,7 @@
       \field{issn}{0960-3174}
       \field{journaltitle}{Statistics and computing}
       \field{note}{Paper with simulation study}
-      \field{title}{High-dimensional regression in practice: an empirical study of finite-sample prediction, variable selection and ranking}
+      \field{title}{High-dimensional Regression in Practice: an Empirical Study of Finite-sample Prediction, Variable Selection and Ranking}
       \field{type}{Journal Article}
       \field{volume}{30}
       \field{year}{2020}
@@ -1821,10 +2269,44 @@
       \field{labeltitlesource}{title}
       \field{issn}{1687-952X}
       \field{journaltitle}{Journal of Probability and Statistics}
-      \field{title}{Variable selection and parameter estimation with the Atan regularization method}
+      \field{title}{Variable Selection and Parameter Estimation with the Atan Regularization Method}
       \field{type}{Journal Article}
       \field{volume}{2016}
       \field{year}{2016}
+    \endentry
+    \entry{Ying2019}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bf827576bc08bcbef835217a69df8fb2}{%
+           family={Ying},
+           familyi={Y\bibinitperiod},
+           given={Xue},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IOP Publishing}%
+      }
+      \strng{namehash}{bf827576bc08bcbef835217a69df8fb2}
+      \strng{fullhash}{bf827576bc08bcbef835217a69df8fb2}
+      \strng{bibnamehash}{bf827576bc08bcbef835217a69df8fb2}
+      \strng{authorbibnamehash}{bf827576bc08bcbef835217a69df8fb2}
+      \strng{authornamehash}{bf827576bc08bcbef835217a69df8fb2}
+      \strng{authorfullhash}{bf827576bc08bcbef835217a69df8fb2}
+      \field{sortinit}{Y}
+      \field{sortinithash}{fd67ad5a9ef0f7456bdd9aab10fe1495}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \true{uniqueprimaryauthor}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{1742-6588}
+      \field{journaltitle}{Journal of Physics: Conference Series}
+      \field{title}{An Overview of Overfitting and Its Solutions}
+      \field{type}{Conference Proceedings}
+      \field{volume}{1168}
+      \field{year}{2019}
+      \field{pages}{022022}
+      \range{pages}{1}
     \endentry
     \entry{Zhang2010}{article}{}
       \name{author}{1}{}{%
@@ -1848,7 +2330,7 @@
       \true{uniqueprimaryauthor}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Nearly unbiased variable selection under minimax concave penalty}
+      \field{title}{Nearly Unbiased Variable Selection Under Minimax Concave Penalty}
       \field{type}{Journal Article}
       \field{year}{2010}
     \endentry
@@ -1883,7 +2365,7 @@
       \field{issn}{1369-7412}
       \field{journaltitle}{Journal of the Royal Statistical Society Series B: Statistical Methodology}
       \field{number}{2}
-      \field{title}{Regularization and variable selection via the elastic net}
+      \field{title}{Regularization and Variable Selection via the Elastic Net}
       \field{type}{Journal Article}
       \field{volume}{67}
       \field{year}{2005}
@@ -1920,7 +2402,7 @@
       \field{labeltitlesource}{title}
       \field{journaltitle}{Annals of statistics}
       \field{number}{4}
-      \field{title}{One-step sparse estimates in nonconcave penalized likelihood models}
+      \field{title}{One-step Sparse Estimates in Nonconcave Penalized Likelihood Models}
       \field{type}{Journal Article}
       \field{volume}{36}
       \field{year}{2008}
@@ -1928,10 +2410,6 @@
       \range{pages}{1}
     \endentry
   \enddatalist
-  \missing{Mitchell1997}
-  \missing{ParisRobilliardFonlupt2003}
-  \missing{QiCuiLiuPang2021}
-  \missing{Ying2019}
 \endrefsection
 \endinput
 

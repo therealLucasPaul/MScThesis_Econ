@@ -83,7 +83,7 @@
       <file>MScThesis_Econ.bcf</file>
     </requires>
     <requires type="editable">
-      <file>ref.bib</file>
+      <file>corrected_ref.bib</file>
     </requires>
   </external>
 </requests>
